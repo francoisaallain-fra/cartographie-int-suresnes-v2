@@ -1,0 +1,7 @@
+beautifulsoup4==4.15.0
+certifi==2026.10.18
+numpy==2.5.4
+pyproj==3.8.0
+shapely==2.2.0
+soupsieve==3.0.3
+typing_extensions==4.16.0

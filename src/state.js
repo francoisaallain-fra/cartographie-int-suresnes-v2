@@ -1,0 +1,59 @@
+import { layerSpecs } from "./catalog.js";
+export const state = {
+  radiusMeters: 500,
+  selected: null,
+  enabled: {
+    pluOfficeRetention: true,
+    mixedBuildings: true,
+    mosOffices: true,
+    mosPavilion: false,
+    mosCollective: false,
+    mosActivities: false,
+    plu: true,
+    transport: true,
+    equipment: false,
+    offices: true,
+    neighborhood: false,
+  },
+  beforeSelection: null,
+};
+export // Polygon defaults preserve the aerial-photo view while making the slider truthful:
+// its percentage is the actual fill opacity, including fully opaque at 100%.
+const polygonDefaultOpacity = {
+  pluOfficeRetention: 10,
+  mixedBuildings: 25,
+  mosOffices: 20,
+  mosPavilion: 20,
+  mosCollective: 20,
+  mosActivities: 20,
+  plu: 5,
+};
+export const layerOpacity = Object.fromEntries(
+  layerSpecs.map((s) => [s.id, polygonDefaultOpacity[s.id] ?? 100]),
+);
+export const polygonOutlineOpacity = (id, base = 1) =>
+  Math.min(1, (layerOpacity[id] / polygonDefaultOpacity[id]) * base);
+export const amenityGroups = ["transport", "equipment", "neighborhood"];
+export function groupFor(f) {
+  return ["transport", "road"].includes(f.properties.kind)
+    ? "transport"
+    : ["school", "nursery", "health"].includes(f.properties.kind)
+      ? "equipment"
+      : ["bakery", "pharmacy"].includes(f.properties.kind)
+        ? "neighborhood"
+        : "offices";
+}
+export const runtime = {
+  map: null,
+  tiles: null,
+  bounds: null,
+  data: null,
+  sources: null,
+  groups: {},
+  markers: new Map(),
+  radiusLayer: null,
+  zoneLabels: [],
+  allPoints: [],
+  roadLayers: [],
+  railLayers: [],
+};
