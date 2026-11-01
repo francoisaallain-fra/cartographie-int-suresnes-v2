@@ -1,0 +1,1 @@
+[out:json][timeout:45];way["highway"~"^(primary|secondary|tertiary|trunk)(_link)?$"](48.84,2.18,48.90,2.26);out tags geom;

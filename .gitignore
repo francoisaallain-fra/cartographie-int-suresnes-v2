@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.openai/local/
+*.tar.gz
+test-results/
+playwright-report/
+.DS_Store

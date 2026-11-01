@@ -1,11 +1,36 @@
-# Cartographie interactive de Suresnes
+# Cartographie interactive de Suresnes v2
 
-Dépôt du site statique et de ses données. L’interface se trouve dans `dist/` ; les couches cartographiques et le paquet de données sont dans `dist/data/`.
+Application statique Leaflet indépendante de v1. Le code source est organisé dans `src/`, les données et bibliothèques conservées dans `public/`, le résultat construit dans `dist/` (non versionné).
 
-Pour afficher la carte localement :
+## Installation et commandes
 
-```bash
-python3 -m http.server 8000 -d dist
+Prérequis : Node.js 24 et pnpm 11.25.0.
+
+```sh
+pnpm install --frozen-lockfile
+pnpm dev
+pnpm lint
+pnpm format:check
+pnpm test
+pnpm build
+pnpm preview
+pnpm exec playwright install chromium
+pnpm test:e2e
 ```
 
-Ouvrir ensuite `http://localhost:8000/` dans un navigateur. Le fond IGN et certaines ressources externes nécessitent une connexion Internet. Les sources des données sont indiquées dans `dist/data/sources.json`.
+Les tests unitaires s'exécutent sans serveur. Les tests navigateur démarrent l'aperçu du build et contrôlent notamment les 60 scénarios de rayon. Le fond IGN et le logo SNCF utilisent des services externes ; la disponibilité de ces services n'est pas garantie par le dépôt.
+
+## Parcours de lecture
+
+1. `docs/ARCHITECTURE.md` : responsabilités, état et dépendances.
+2. `src/main.js` : initialisation et assemblage de la carte.
+3. `src/catalog.js` : onze couches et libellés.
+4. `src/controls.js`, `src/layers.js`, `src/selection.js` : interactions et rendu.
+5. `tests/` et `docs/RECETTE.md` : contrat fonctionnel et contrôles.
+6. `docs/DONNEES.md` : sources, scripts historiques et limites.
+
+## Publication indépendante
+
+Le manifeste `.openai/hosting.json` est lié uniquement au projet Sites `appgprj_6ae7236180948191be7fac25a4ba93ec`. Le site v2 est privé. Le dépôt GitHub de référence est `francoisaallain-fra/cartographie-int-suresnes-v2`. Aucune donnée n'est chargée depuis le site ou le dépôt v1. Les préférences locales utilisent le préfixe `suresnes-v2-`.
+
+Construire avec `pnpm build`, puis publier le dossier `dist/` avec le workflow Sites du projet v2. Le workflow GitHub exécute les contrôles ; il ne publie pas. Pour revenir en arrière, redéployer une version enregistrée du projet v2. Les données doivent être mises à jour explicitement, avec contrôle du journal qualité et des sources.

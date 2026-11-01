@@ -1,0 +1,4 @@
+public/
+dist/
+scripts/legacy-data/
+node_modules/
