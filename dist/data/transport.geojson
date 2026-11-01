@@ -1,0 +1,233 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "idfm-70845",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.225959095145179,
+          48.87600129150184
+        ]
+      },
+      "properties": {
+        "id": "idfm-70845",
+        "name": "Belvédère",
+        "kind": "transport",
+        "lines": [
+          "TRAM 2"
+        ],
+        "services": [
+          {
+            "id": "C01390",
+            "name": "TRAM 2",
+            "label": "T2",
+            "mode": "TRAMWAY",
+            "color": "#a0006e"
+          }
+        ],
+        "distance_city_m": 0,
+        "inside_city": true,
+        "source": "transport",
+        "source_url": "https://data.iledefrance-mobilites.fr/explore/dataset/emplacement-des-gares-idf/",
+        "precision": "Point IDFM ; barycentre des positions par ligne pour les correspondances. Distance à la commune en Lambert-93.",
+        "retrieved_at": "2026-10-22"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "idfm-422067",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.21660144268123,
+          48.85607083754532
+        ]
+      },
+      "properties": {
+        "id": "idfm-422067",
+        "name": "Le Val d'Or",
+        "kind": "transport",
+        "lines": [
+          "TRAIN L"
+        ],
+        "services": [
+          {
+            "id": "C01740",
+            "name": "TRAIN L",
+            "label": "L",
+            "mode": "TRAIN",
+            "color": "#c4a4cc"
+          }
+        ],
+        "distance_city_m": 409,
+        "inside_city": false,
+        "source": "transport",
+        "source_url": "https://data.iledefrance-mobilites.fr/explore/dataset/emplacement-des-gares-idf/",
+        "precision": "Point IDFM ; barycentre des positions par ligne pour les correspondances. Distance à la commune en Lambert-93.",
+        "retrieved_at": "2026-10-22"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "idfm-70763",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.220603560028724,
+          48.857471408910556
+        ]
+      },
+      "properties": {
+        "id": "idfm-70763",
+        "name": "Les Coteaux",
+        "kind": "transport",
+        "lines": [
+          "TRAM 2"
+        ],
+        "services": [
+          {
+            "id": "C01390",
+            "name": "TRAM 2",
+            "label": "T2",
+            "mode": "TRAMWAY",
+            "color": "#a0006e"
+          }
+        ],
+        "distance_city_m": 276,
+        "inside_city": false,
+        "source": "transport",
+        "source_url": "https://data.iledefrance-mobilites.fr/explore/dataset/emplacement-des-gares-idf/",
+        "precision": "Point IDFM ; barycentre des positions par ligne pour les correspondances. Distance à la commune en Lambert-93.",
+        "retrieved_at": "2026-10-22"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "idfm-71422",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.233781676970842,
+          48.88335934518982
+        ]
+      },
+      "properties": {
+        "id": "idfm-71422",
+        "name": "Puteaux",
+        "kind": "transport",
+        "lines": [
+          "TRAIN L",
+          "TRAIN U",
+          "TRAM 2"
+        ],
+        "services": [
+          {
+            "id": "C01740",
+            "name": "TRAIN L",
+            "label": "L",
+            "mode": "TRAIN",
+            "color": "#c4a4cc"
+          },
+          {
+            "id": "C01741",
+            "name": "TRAIN U",
+            "label": "U",
+            "mode": "TRAIN",
+            "color": "#b6134c"
+          },
+          {
+            "id": "C01390",
+            "name": "TRAM 2",
+            "label": "T2",
+            "mode": "TRAMWAY",
+            "color": "#a0006e"
+          }
+        ],
+        "distance_city_m": 396,
+        "inside_city": false,
+        "source": "transport",
+        "source_url": "https://data.iledefrance-mobilites.fr/explore/dataset/emplacement-des-gares-idf/",
+        "precision": "Point IDFM ; barycentre des positions par ligne pour les correspondances. Distance à la commune en Lambert-93.",
+        "retrieved_at": "2026-10-22"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "idfm-70811",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.221410602618113,
+          48.868238784846874
+        ]
+      },
+      "properties": {
+        "id": "idfm-70811",
+        "name": "Suresnes-Longchamp",
+        "kind": "transport",
+        "lines": [
+          "TRAM 2"
+        ],
+        "services": [
+          {
+            "id": "C01390",
+            "name": "TRAM 2",
+            "label": "T2",
+            "mode": "TRAMWAY",
+            "color": "#a0006e"
+          }
+        ],
+        "distance_city_m": 0,
+        "inside_city": true,
+        "source": "transport",
+        "source_url": "https://data.iledefrance-mobilites.fr/explore/dataset/emplacement-des-gares-idf/",
+        "precision": "Point IDFM ; barycentre des positions par ligne pour les correspondances. Distance à la commune en Lambert-93.",
+        "retrieved_at": "2026-10-22"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "idfm-70829",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.22102955043143,
+          48.87171419115687
+        ]
+      },
+      "properties": {
+        "id": "idfm-70829",
+        "name": "Suresnes-Mont-Valérien",
+        "kind": "transport",
+        "lines": [
+          "TRAIN L",
+          "TRAIN U"
+        ],
+        "services": [
+          {
+            "id": "C01740",
+            "name": "TRAIN L",
+            "label": "L",
+            "mode": "TRAIN",
+            "color": "#c4a4cc"
+          },
+          {
+            "id": "C01741",
+            "name": "TRAIN U",
+            "label": "U",
+            "mode": "TRAIN",
+            "color": "#b6134c"
+          }
+        ],
+        "distance_city_m": 0,
+        "inside_city": true,
+        "source": "transport",
+        "source_url": "https://data.iledefrance-mobilites.fr/explore/dataset/emplacement-des-gares-idf/",
+        "precision": "Point IDFM ; barycentre des positions par ligne pour les correspondances. Distance à la commune en Lambert-93.",
+        "retrieved_at": "2026-10-22"
+      }
+    }
+  ]
+}

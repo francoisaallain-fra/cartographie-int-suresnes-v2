@@ -1,0 +1,892 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "finess-920000650",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2213034452223597,
+          48.8711497166513
+        ]
+      },
+      "properties": {
+        "id": "finess-920000650",
+        "retrieved_at": "2026-10-19",
+        "name": "HOPITAL FOCH",
+        "kind": "health",
+        "category": "Etablissement de Soins Pluridisciplinaire",
+        "category_code": "365",
+        "address": "40 R WORTH 92151 SURESNES CEDEX",
+        "source": "health",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "precision": "Numéro / parcelle (FINESS)",
+        "geocode_quality": "1",
+        "coordinate_date": "2026-05-04",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [
+            "Le service de biologie médicale est inclus dans ce site hospitalier ; il ne crée pas un deuxième hôpital ou bâtiment."
+          ],
+          "sources": [
+            {
+              "label": "OpenStreetMap · Hôpital Foch",
+              "url": "https://www.openstreetmap.org/way/4421290"
+            },
+            {
+              "label": "FINESS · stock 04/05/2026 · HOPITAL FOCH",
+              "url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements"
+            },
+            {
+              "label": "Hôpital Foch · service de biologie médicale",
+              "url": "https://www.hopital-foch.com/offre-de-soins/biologie-medicale/"
+            }
+          ],
+          "geocode_check": {
+            "label": "40 Rue Worth 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9702790909090908,
+            "distance_m": 8.8,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "finess-920010626",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2253587613299133,
+          48.87164819024629
+        ]
+      },
+      "properties": {
+        "id": "finess-920010626",
+        "retrieved_at": "2026-10-19",
+        "name": "CDS MUNICIPAL RAYMOND BURGOS",
+        "kind": "health",
+        "category": "Centre de Santé",
+        "category_code": "124",
+        "address": "12 R CARNOT 92150 SURESNES",
+        "source": "health",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "precision": "Numéro / parcelle (FINESS)",
+        "geocode_quality": "1",
+        "coordinate_date": "2026-05-04",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · source rafraîchie, sans corroboration indépendante",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "FINESS · stock 04/05/2026 · CDS MUNICIPAL RAYMOND BURGOS",
+              "url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements"
+            }
+          ],
+          "geocode_check": {
+            "label": "12 Rue Carnot 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9747499999999999,
+            "distance_m": 0.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "finess-920028297",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.224783631405734,
+          48.86852011344144
+        ]
+      },
+      "properties": {
+        "id": "finess-920028297",
+        "retrieved_at": "2026-10-19",
+        "name": "CDS MEDICO-DENTAIRE EMDHS",
+        "kind": "health",
+        "category": "Centre de Santé",
+        "category_code": "124",
+        "address": "36 BD HENRI SELLIER 92150 SURESNES",
+        "source": "health",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "precision": "Numéro / parcelle (FINESS)",
+        "geocode_quality": "1",
+        "coordinate_date": "2026-05-04",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · source rafraîchie, sans corroboration indépendante",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "FINESS · stock 04/05/2026 · CDS MEDICO-DENTAIRE EMDHS",
+              "url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements"
+            }
+          ],
+          "geocode_check": {
+            "label": "36 Boulevard Henri Sellier 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9753427272727273,
+            "distance_m": 0.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "finess-920031812",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2239032116242425,
+          48.880398416502935
+        ]
+      },
+      "properties": {
+        "id": "finess-920031812",
+        "retrieved_at": "2026-10-19",
+        "name": "MSP DES CHENES",
+        "kind": "health",
+        "category": "Maison de santé (L.6223-3)",
+        "category_code": "603",
+        "address": "59 R DES CHENES 92150 SURESNES",
+        "source": "health",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "precision": "Numéro / parcelle (FINESS)",
+        "geocode_quality": "1",
+        "coordinate_date": "2026-05-04",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · source rafraîchie, sans corroboration indépendante",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "FINESS · stock 04/05/2026 · MSP DES CHENES",
+              "url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements"
+            }
+          ],
+          "geocode_check": {
+            "label": "59 Rue des Chênes 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9732681818181818,
+            "distance_m": 0.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "finess-920033404",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.210721572818456,
+          48.8632110308333
+        ]
+      },
+      "properties": {
+        "id": "finess-920033404",
+        "retrieved_at": "2026-10-19",
+        "name": "CDS DENTAIRE ET ORTHO JEAN JAURES",
+        "kind": "health",
+        "category": "Centre de Santé",
+        "category_code": "124",
+        "address": "19 AV EDOUARD VAILLANT 92150 SURESNES",
+        "source": "health",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "precision": "Numéro / parcelle (FINESS)",
+        "geocode_quality": "1",
+        "coordinate_date": "2026-05-04",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · source rafraîchie, sans corroboration indépendante",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "FINESS · stock 04/05/2026 · CDS DENTAIRE ET ORTHO JEAN JAURES",
+              "url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements"
+            }
+          ],
+          "geocode_check": {
+            "label": "19 Avenue Édouard Vaillant 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9702790909090908,
+            "distance_m": 0.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "finess-920036357",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.220974628841986,
+          48.87417479461157
+        ]
+      },
+      "properties": {
+        "id": "finess-920036357",
+        "retrieved_at": "2026-10-19",
+        "name": "SSR EHPAD RESIDENCE LES VIGNES",
+        "kind": "health",
+        "category": "Etablissement de santé privé autorisé en SSR",
+        "category_code": "109",
+        "address": "41 AV FRANKLIN ROOSEVELT 92150 SURESNES",
+        "source": "health",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "precision": "Numéro / parcelle (FINESS)",
+        "geocode_quality": "1",
+        "coordinate_date": "2026-05-04",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · source rafraîchie, sans corroboration indépendante",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "FINESS · stock 04/05/2026 · SSR EHPAD RESIDENCE LES VIGNES",
+              "url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements"
+            }
+          ],
+          "geocode_check": {
+            "label": "41 Avenue Franklin Roosevelt 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9715599999999999,
+            "distance_m": 0.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "finess-920037678",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.229972476690218,
+          48.873850790755675
+        ]
+      },
+      "properties": {
+        "id": "finess-920037678",
+        "retrieved_at": "2026-10-19",
+        "name": "CDS REFAEL",
+        "kind": "health",
+        "category": "Centre de Santé",
+        "category_code": "124",
+        "address": "59 R DE VERDUN 92150 SURESNES",
+        "source": "health",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "precision": "Numéro / parcelle (FINESS)",
+        "geocode_quality": "1",
+        "coordinate_date": "2026-05-04",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · source rafraîchie, sans corroboration indépendante",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "FINESS · stock 04/05/2026 · CDS REFAEL",
+              "url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements"
+            }
+          ],
+          "geocode_check": {
+            "label": "59 Rue de Verdun 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9753072727272726,
+            "distance_m": 0.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "finess-920038288",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2312227781166754,
+          48.87523213308017
+        ]
+      },
+      "properties": {
+        "id": "finess-920038288",
+        "retrieved_at": "2026-10-19",
+        "name": "CDS OPHTALMOLOGIE DE SURESNES",
+        "kind": "health",
+        "category": "Centre de Santé",
+        "category_code": "124",
+        "address": "83 R DE VERDUN 92150 SURESNES",
+        "source": "health",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "precision": "Numéro / parcelle (FINESS)",
+        "geocode_quality": "1",
+        "coordinate_date": "2026-05-04",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · source rafraîchie, sans corroboration indépendante",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "FINESS · stock 04/05/2026 · CDS OPHTALMOLOGIE DE SURESNES",
+              "url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements"
+            }
+          ],
+          "geocode_check": {
+            "label": "83 Rue de Verdun 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9753072727272726,
+            "distance_m": 0.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "finess-920045127",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.223886119851318,
+          48.869467612523366
+        ]
+      },
+      "properties": {
+        "id": "finess-920045127",
+        "retrieved_at": "2026-10-19",
+        "name": "MMG DE SURESNES",
+        "kind": "health",
+        "category": "Lieux de soins non programmés",
+        "category_code": "617",
+        "address": "14 AV DU GENERAL DE GAULLE 92150 SURESNES",
+        "source": "health",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "precision": "Numéro / parcelle (FINESS)",
+        "geocode_quality": "1",
+        "coordinate_date": "2026-05-04",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · source rafraîchie, sans corroboration indépendante",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "FINESS · stock 04/05/2026 · MMG DE SURESNES",
+              "url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements"
+            }
+          ],
+          "geocode_check": {
+            "label": "14 Avenue du Général de Gaulle 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.966060909090909,
+            "distance_m": 0.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "finess-920170149",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.232039069477084,
+          48.8767392833374
+        ]
+      },
+      "properties": {
+        "id": "finess-920170149",
+        "retrieved_at": "2026-10-19",
+        "name": "HDJ CMP 92 G 09 JEAN WIER",
+        "kind": "health",
+        "category": "Centre Hospitalier Spécialisé lutte Maladies Mentales",
+        "category_code": "292",
+        "address": "5 R MICHELET 92150 SURESNES",
+        "source": "health",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "precision": "Numéro / parcelle (FINESS)",
+        "geocode_quality": "1",
+        "coordinate_date": "2026-05-04",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · source rafraîchie, sans corroboration indépendante",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "FINESS · stock 04/05/2026 · HDJ CMP 92 G 09 JEAN WIER",
+              "url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements"
+            }
+          ],
+          "geocode_check": {
+            "label": "5 Rue Michelet 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9674345454545454,
+            "distance_m": 0.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "finess-920718277",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.223838805970737,
+          48.86651292419358
+        ]
+      },
+      "properties": {
+        "id": "finess-920718277",
+        "retrieved_at": "2026-10-19",
+        "name": "HDJ SURESNES",
+        "kind": "health",
+        "category": "Centre Hospitalier Spécialisé lutte Maladies Mentales",
+        "category_code": "292",
+        "address": "3 R CHEVREUIL 92150 SURESNES",
+        "source": "health",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "precision": "Numéro / parcelle (FINESS)",
+        "geocode_quality": "1",
+        "coordinate_date": "2026-05-04",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · doute documenté",
+          "doubts": [
+            "Adresse / géolocalisation : FINESS indique 3 rue Chevreuil ; BAN ne retrouve pas correctement cette adresse (propose 3 rue de Sèvres, environ 180 m plus loin). Point FINESS conservé, adresse et entrée à vérifier."
+          ],
+          "notes": [],
+          "sources": [
+            {
+              "label": "FINESS · stock 04/05/2026 · HDJ SURESNES",
+              "url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements"
+            }
+          ],
+          "geocode_check": {
+            "label": "3 Rue de Sèvres 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.5590727272727273,
+            "distance_m": 181.5,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "finess-920811635",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2026247818270788,
+          48.86569265470901
+        ]
+      },
+      "properties": {
+        "id": "finess-920811635",
+        "retrieved_at": "2026-10-19",
+        "name": "CAS POUR ADOLESCENTS DE SURESNES",
+        "kind": "health",
+        "category": "Centre Hospitalier Spécialisé lutte Maladies Mentales",
+        "category_code": "292",
+        "address": "47 AV JEAN JAURES 92150 SURESNES",
+        "source": "health",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "precision": "Numéro / parcelle (FINESS)",
+        "geocode_quality": "1",
+        "coordinate_date": "2026-05-04",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · source rafraîchie, sans corroboration indépendante",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "FINESS · stock 04/05/2026 · CAS POUR ADOLESCENTS DE SURESNES",
+              "url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements"
+            }
+          ],
+          "geocode_check": {
+            "label": "47 Avenue Jean Jaurès 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9718681818181818,
+            "distance_m": 0.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "finess-920811775",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2255319104673044,
+          48.868530353760946
+        ]
+      },
+      "properties": {
+        "id": "finess-920811775",
+        "retrieved_at": "2026-10-19",
+        "name": "UNITE D AUTODIALYSE DE SURESNES",
+        "kind": "health",
+        "category": "Structure d'Alternative à la dialyse en centre",
+        "category_code": "146",
+        "address": "12 PROM SAINT LEUFROY 92150 SURESNES",
+        "source": "health",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "precision": "Numéro / parcelle (FINESS)",
+        "geocode_quality": "1",
+        "coordinate_date": "2026-05-04",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · source rafraîchie, sans corroboration indépendante",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "FINESS · stock 04/05/2026 · UNITE D AUTODIALYSE DE SURESNES",
+              "url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements"
+            }
+          ],
+          "geocode_check": {
+            "label": "12 Promenade Saint-Leufroy 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9644772727272726,
+            "distance_m": 0.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "finess-920026762",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.211704,
+          48.863182
+        ]
+      },
+      "properties": {
+        "id": "finess-920026762",
+        "name": "Laboratoire Biogroup Suresnes Vaillant",
+        "kind": "health",
+        "category": "Laboratoire d’analyses médicales",
+        "address": "30 Avenue Édouard Vaillant 92150 Suresnes",
+        "source": "crosscheck",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "retrieved_at": "2026-10-22",
+        "precision": "Adresse BAN au numéro, entrée non vérifiée",
+        "audit": {
+          "added": true,
+          "date": "2026-10-22",
+          "status": "Ajout recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "OpenStreetMap · laboratoire Suresnes Vaillant",
+              "url": "https://www.openstreetmap.org/node/3089040568"
+            },
+            {
+              "label": "FINESS · stock 04/05/2026 · LBM BIOGROUP PARIS OUEST SITE VAILLANT",
+              "url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements"
+            },
+            {
+              "label": "Biogroup · fiche du laboratoire",
+              "url": "https://laboratoires.biogroup.fr/hauts-de-seine/suresnes/30-avenue-edouard-vaillant"
+            }
+          ],
+          "address_checked": "30 Avenue Édouard Vaillant 92150 Suresnes",
+          "geocode_type": "housenumber",
+          "geocode_score": 0.9702790909090908,
+          "coordinate_source": "BAN via Géoplateforme",
+          "geocode_query": "30 AV EDOUARD VAILLANT 92150 SURESNES",
+          "geocode_check": {
+            "label": "30 Avenue Édouard Vaillant 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9702790909090908,
+            "distance_m": 0.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "finess-920027653",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.224407,
+          48.869736
+        ]
+      },
+      "properties": {
+        "id": "finess-920027653",
+        "name": "Laboratoire Biogroup Suresnes Longchamp",
+        "kind": "health",
+        "category": "Laboratoire d’analyses médicales",
+        "address": "20 Avenue du Général de Gaulle 92150 Suresnes",
+        "source": "crosscheck",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "retrieved_at": "2026-10-22",
+        "precision": "Adresse BAN au numéro, entrée non vérifiée",
+        "audit": {
+          "added": true,
+          "date": "2026-10-22",
+          "status": "Ajout recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "OpenStreetMap · Laboratoire de Biologie Médicale Suresnes Longchamp",
+              "url": "https://www.openstreetmap.org/node/9379171034"
+            },
+            {
+              "label": "FINESS · stock 04/05/2026 · LBM BIOGROUP PARIS OUEST SITE DE GAULL",
+              "url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements"
+            },
+            {
+              "label": "Biogroup · fiche du laboratoire",
+              "url": "https://laboratoires.biogroup.fr/hauts-de-seine/suresnes/20-avenue-du-general-de-gaulle"
+            }
+          ],
+          "address_checked": "20 Avenue du Général de Gaulle 92150 Suresnes",
+          "geocode_type": "housenumber",
+          "geocode_score": 0.966060909090909,
+          "coordinate_source": "BAN via Géoplateforme",
+          "geocode_query": "20 AV DU GENERAL DE GAULLE 92150 SURESNES",
+          "geocode_check": {
+            "label": "20 Avenue du Général de Gaulle 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.966060909090909,
+            "distance_m": 0.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "finess-920040045",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.231436,
+          48.875465
+        ]
+      },
+      "properties": {
+        "id": "finess-920040045",
+        "name": "Laboratoire Cerballiance Suresnes",
+        "kind": "health",
+        "category": "Laboratoire d’analyses médicales",
+        "address": "97 Rue de Verdun 92150 Suresnes",
+        "source": "crosscheck",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "retrieved_at": "2026-10-22",
+        "precision": "Adresse BAN au numéro, entrée non vérifiée",
+        "audit": {
+          "added": true,
+          "date": "2026-10-22",
+          "status": "Ajout recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "OpenStreetMap · Cerballiance",
+              "url": "https://www.openstreetmap.org/node/11711768799"
+            },
+            {
+              "label": "FINESS · stock 04/05/2026 · LBM SELAS CERBALLIANCE IDF SUD SITE SU",
+              "url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements"
+            },
+            {
+              "label": "Cerballiance · fiche du laboratoire",
+              "url": "https://laboratoires.cerballiance.fr/%C3%AEle-de-france/suresnes/97-rue-de-verdun"
+            }
+          ],
+          "address_checked": "97 Rue de Verdun 92150 Suresnes",
+          "geocode_type": "housenumber",
+          "geocode_score": 0.9753072727272726,
+          "coordinate_source": "BAN via Géoplateforme",
+          "geocode_query": "97 R DE VERDUN 92150 SURESNES",
+          "geocode_check": {
+            "label": "97 Rue de Verdun 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9753072727272726,
+            "distance_m": 0.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "audit-cite-jardins",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.201266,
+          48.863334
+        ]
+      },
+      "properties": {
+        "id": "audit-cite-jardins",
+        "name": "Centre médical Cité-jardins",
+        "kind": "health",
+        "category": "Centre médical pluridisciplinaire",
+        "address": "11 Place de Stalingrad 92150 Suresnes",
+        "source": "crosscheck",
+        "source_url": "https://www.suresnes.fr/wp-content/uploads/2025/04/SuresnesMag-maquette-369-Web.pdf",
+        "retrieved_at": "2026-10-22",
+        "precision": "Adresse BAN au numéro, entrée non vérifiée",
+        "audit": {
+          "added": true,
+          "date": "2026-10-22",
+          "status": "Ajout recoupé",
+          "doubts": [],
+          "notes": [
+            "Ouverture attestée en février 2025 par la Ville et inauguration en juin 2025 par le bailleur ; pas de vérification téléphonique de l’activité du jour."
+          ],
+          "sources": [
+            {
+              "label": "Ville / opérateur · Centre médical Cité-jardins",
+              "url": "https://www.suresnes.fr/wp-content/uploads/2025/04/SuresnesMag-maquette-369-Web.pdf"
+            },
+            {
+              "label": "cite-jardins",
+              "url": "https://www.suresnes.fr/wp-content/uploads/2025/04/SuresnesMag-maquette-369-Web.pdf"
+            },
+            {
+              "label": "cite-jardins-habitat",
+              "url": "https://www.hautsdeseinehabitat.fr/index.php/notre-actualite/la-cite-jardins-un-projet-la-fois-urbain-et-profondement-humain"
+            }
+          ],
+          "address_checked": "11 Place de Stalingrad 92150 Suresnes",
+          "geocode_type": "housenumber",
+          "geocode_score": 0.9644772727272726,
+          "coordinate_source": "BAN via Géoplateforme",
+          "geocode_query": "11 place de Stalingrad 92150 Suresnes",
+          "geocode_check": {
+            "label": "11 Place de Stalingrad 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9644772727272726,
+            "distance_m": 0.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "audit-doccity",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2221465,
+          48.8722723
+        ]
+      },
+      "properties": {
+        "id": "audit-doccity",
+        "name": "DocCity Suresnes — centre de consultations",
+        "kind": "health",
+        "category": "Centre de consultations médicales",
+        "address": "5 rue Gardenat Lapostol 92150 Suresnes",
+        "source": "crosscheck",
+        "source_url": "https://www.doccity.fr/suresnes",
+        "retrieved_at": "2026-10-22",
+        "precision": "Centre du bâtiment DocCity dans OSM ; entrée non vérifiée",
+        "audit": {
+          "added": true,
+          "date": "2026-10-22",
+          "status": "Ajout recoupé · activité de laboratoire à préciser",
+          "doubts": [
+            "Activité à vérifier : point OSM de laboratoire sans nom, à moins de 10 m du centre du bâtiment DocCity. Regroupé dans ce site ; fonction d’analyses médicales pour les patients non confirmée, distincte des laboratoires de recherche décrits par DocCity."
+          ],
+          "notes": [
+            "BAN ne retrouve que le centre de la rue. La position affichée provient du bâtiment nommé DocCity dans OSM, recoupé avec l’adresse de l’opérateur ; elle ne reprend pas le centroïde de la rue.",
+            "Centre de consultations attesté par l’opérateur et la Ville. Les laboratoires de recherche biotech ne sont pas comptés comme laboratoires d’analyses patients."
+          ],
+          "sources": [
+            {
+              "label": "OpenStreetMap · Nom absent",
+              "url": "https://www.openstreetmap.org/node/11361522621"
+            },
+            {
+              "label": "Ville / opérateur · DocCity Suresnes — centre de consultations",
+              "url": "https://www.doccity.fr/suresnes"
+            },
+            {
+              "label": "OpenStreetMap · DocCity",
+              "url": "https://www.openstreetmap.org/way/70962445"
+            },
+            {
+              "label": "doccity",
+              "url": "https://www.doccity.fr/suresnes"
+            },
+            {
+              "label": "Ville de Suresnes · bilan été 2025, p.19",
+              "url": "https://www.suresnes.fr/wp-content/uploads/2025/07/WEB-BILAN-MANDAT-25.pdf"
+            }
+          ],
+          "address_checked": "5 rue Gardenat Lapostol 92150 Suresnes",
+          "geocode_type": "street",
+          "geocode_score": 0.8369512285012284,
+          "coordinate_source": "OSM way/70962445",
+          "geocode_query": "5 rue Gardenat Lapostol 92150 Suresnes",
+          "geocode_check": {
+            "label": "Rue Gardenat Lapostol 92150 Suresnes",
+            "type": "street",
+            "score": 0.8369512285012284,
+            "distance_m": 257.7,
+            "citycode": "92073"
+          }
+        }
+      }
+    }
+  ]
+}

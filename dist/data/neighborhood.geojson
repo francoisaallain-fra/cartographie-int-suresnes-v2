@@ -1,0 +1,1682 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "finess-920020807",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2026729995185454,
+          48.86307673643171
+        ]
+      },
+      "properties": {
+        "id": "finess-920020807",
+        "retrieved_at": "2026-10-19",
+        "name": "SELARL PHARMACIE DU THEATRE",
+        "kind": "pharmacy",
+        "category": "Pharmacie d'Officine",
+        "category_code": "620",
+        "address": "15 BD ARISTIDE BRIAND 92150 SURESNES",
+        "source": "health",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "precision": "Numéro / parcelle (FINESS)",
+        "geocode_quality": "1",
+        "coordinate_date": "2026-05-04",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "finess-920020823",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.231612844638252,
+          48.87596310945987
+        ]
+      },
+      "properties": {
+        "id": "finess-920020823",
+        "retrieved_at": "2026-10-19",
+        "name": "SELARL PHARMACIE ABTAN",
+        "kind": "pharmacy",
+        "category": "Pharmacie d'Officine",
+        "category_code": "620",
+        "address": "101 R DE VERDUN 92150 SURESNES",
+        "source": "health",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "precision": "Numéro / parcelle (FINESS)",
+        "geocode_quality": "1",
+        "coordinate_date": "2026-05-04",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "finess-920020856",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2278311521218472,
+          48.8692134292387
+        ]
+      },
+      "properties": {
+        "id": "finess-920020856",
+        "retrieved_at": "2026-10-19",
+        "name": "SELAS PHARMACIE DU MARCHE SURESNES",
+        "kind": "pharmacy",
+        "category": "Pharmacie d'Officine",
+        "category_code": "620",
+        "address": "28 R DES BOURETS 92150 SURESNES",
+        "source": "health",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "precision": "Numéro / parcelle (FINESS)",
+        "geocode_quality": "1",
+        "coordinate_date": "2026-05-04",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "finess-920020906",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2231016650042976,
+          48.8801998584135
+        ]
+      },
+      "properties": {
+        "id": "finess-920020906",
+        "retrieved_at": "2026-10-19",
+        "name": "PHARMACIE DES CHENES",
+        "kind": "pharmacy",
+        "category": "Pharmacie d'Officine",
+        "category_code": "620",
+        "address": "56 R des Chênes 92150 SURESNES",
+        "source": "health",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "precision": "Rue (FINESS) · localisation approximative",
+        "geocode_quality": "2",
+        "coordinate_date": "2026-05-04",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "finess-920020922",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2115742719858993,
+          48.86316179045087
+        ]
+      },
+      "properties": {
+        "id": "finess-920020922",
+        "retrieved_at": "2026-10-19",
+        "name": "SELAS PHARMACIE DES JARDINS",
+        "kind": "pharmacy",
+        "category": "Pharmacie d'Officine",
+        "category_code": "620",
+        "address": "28 AV EDOUARD VAILLANT 92150 SURESNES",
+        "source": "health",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "precision": "Numéro / parcelle (FINESS)",
+        "geocode_quality": "1",
+        "coordinate_date": "2026-05-04",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "finess-920020955",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2256721407636944,
+          48.868176015990834
+        ]
+      },
+      "properties": {
+        "id": "finess-920020955",
+        "retrieved_at": "2026-10-19",
+        "name": "GRANDE PHARMACIE DU PONT",
+        "kind": "pharmacy",
+        "category": "Pharmacie d'Officine",
+        "category_code": "620",
+        "address": "30 BD HENRI SELLIER 92150 SURESNES",
+        "source": "health",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "precision": "Numéro / parcelle (FINESS)",
+        "geocode_quality": "1",
+        "coordinate_date": "2026-05-04",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "finess-920020971",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2236607257014156,
+          48.86583905046179
+        ]
+      },
+      "properties": {
+        "id": "finess-920020971",
+        "retrieved_at": "2026-10-19",
+        "name": "DELPHARMACY",
+        "kind": "pharmacy",
+        "category": "Pharmacie d'Officine",
+        "category_code": "620",
+        "address": "52 R JEAN JACQUES ROUSSEAU 92150 SURESNES",
+        "source": "health",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "precision": "Numéro / parcelle (FINESS)",
+        "geocode_quality": "1",
+        "coordinate_date": "2026-05-04",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "finess-920021003",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2108094531627827,
+          48.86253888855278
+        ]
+      },
+      "properties": {
+        "id": "finess-920021003",
+        "retrieved_at": "2026-10-19",
+        "name": "PHARMACIE DE L'AVENUE",
+        "kind": "pharmacy",
+        "category": "Pharmacie d'Officine",
+        "category_code": "620",
+        "address": "20 AV JEAN JAURES 92150 SURESNES",
+        "source": "health",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "precision": "Numéro / parcelle (FINESS)",
+        "geocode_quality": "1",
+        "coordinate_date": "2026-05-04",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "finess-920021037",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2060080664457558,
+          48.864182639029686
+        ]
+      },
+      "properties": {
+        "id": "finess-920021037",
+        "retrieved_at": "2026-10-19",
+        "name": "PHARMACIE PAGET",
+        "kind": "pharmacy",
+        "category": "Pharmacie d'Officine",
+        "category_code": "620",
+        "address": "7 AV LEON BOURGEOIS 92150 SURESNES",
+        "source": "health",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "precision": "Numéro / parcelle (FINESS)",
+        "geocode_quality": "1",
+        "coordinate_date": "2026-05-04",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "finess-920021052",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.222629203506893,
+          48.87640784323327
+        ]
+      },
+      "properties": {
+        "id": "finess-920021052",
+        "retrieved_at": "2026-10-19",
+        "name": "SELARL DJIVA",
+        "kind": "pharmacy",
+        "category": "Pharmacie d'Officine",
+        "category_code": "620",
+        "address": "11 R DE LA LIBERTE 92150 SURESNES",
+        "source": "health",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "precision": "Numéro / parcelle (FINESS)",
+        "geocode_quality": "1",
+        "coordinate_date": "2026-05-04",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "finess-920021086",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.216540271046259,
+          48.8667783464266
+        ]
+      },
+      "properties": {
+        "id": "finess-920021086",
+        "retrieved_at": "2026-10-19",
+        "name": "SELARL PHARMACIE DES VIGNES",
+        "kind": "pharmacy",
+        "category": "Pharmacie d'Officine",
+        "category_code": "620",
+        "address": "116 BD DU MAL DE LATTRE DE TASSIGN 92150 SURESNES",
+        "source": "health",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "precision": "Numéro / parcelle (FINESS)",
+        "geocode_quality": "1",
+        "coordinate_date": "2026-05-04",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "finess-920021102",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2268279203694354,
+          48.87030596260923
+        ]
+      },
+      "properties": {
+        "id": "finess-920021102",
+        "retrieved_at": "2026-10-19",
+        "name": "PHARMACIE DU MANEGE",
+        "kind": "pharmacy",
+        "category": "Pharmacie d'Officine",
+        "category_code": "620",
+        "address": "2 R DU MONT VALERIEN 92150 SURESNES",
+        "source": "health",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "precision": "Numéro / parcelle (FINESS)",
+        "geocode_quality": "1",
+        "coordinate_date": "2026-05-04",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "finess-920021136",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2258620014260413,
+          48.870536249083244
+        ]
+      },
+      "properties": {
+        "id": "finess-920021136",
+        "retrieved_at": "2026-10-19",
+        "name": "SELARL PHARMACIE DE LA MAIRIE",
+        "kind": "pharmacy",
+        "category": "Pharmacie d'Officine",
+        "category_code": "620",
+        "address": "15 R DU MONT VALERIEN 92150 SURESNES",
+        "source": "health",
+        "source_url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+        "precision": "Numéro / parcelle (FINESS)",
+        "geocode_quality": "1",
+        "coordinate_date": "2026-05-04",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-1423517462",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2221176,
+          48.8801547
+        ]
+      },
+      "properties": {
+        "id": "osm-node-1423517462",
+        "retrieved_at": "2026-10-19",
+        "name": "La Boulangerie Magic",
+        "kind": "bakery",
+        "category": "Boulangerie",
+        "address": "Adresse non renseignée dans OSM",
+        "source": "osm",
+        "source_url": "https://www.openstreetmap.org/node/1423517462",
+        "precision": "Point OSM",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Sirene via Annuaire des entreprises · LA BOULANGERIE MAGIC",
+              "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/82206589200017"
+            },
+            {
+              "label": "Office de tourisme de Suresnes · Boulangerie Magic",
+              "url": "https://www.suresnes-tourisme.com/boulangeries-suresnes.html"
+            },
+            {
+              "label": "OpenStreetMap · La Boulangerie Magic",
+              "url": "https://www.openstreetmap.org/node/1423517462"
+            }
+          ],
+          "address_checked": "41 rue des Chênes 92150 Suresnes",
+          "geocode_check": {
+            "label": "41 Rue des Chênes 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9732681818181818,
+            "distance_m": 1.1,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-2153351994",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2332154,
+          48.8797545
+        ]
+      },
+      "properties": {
+        "id": "osm-node-2153351994",
+        "retrieved_at": "2026-10-19",
+        "name": "La Baguette Dorée",
+        "kind": "bakery",
+        "category": "Boulangerie",
+        "address": "23 Rue des Bas Rogers",
+        "source": "osm",
+        "source_url": "https://www.openstreetmap.org/node/2153351994",
+        "precision": "Point OSM",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Sirene via Annuaire des entreprises · LA BAGUETTE DOREE",
+              "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/84060734500013"
+            },
+            {
+              "label": "Office de tourisme de Suresnes · Boulangerie Baguette dorée",
+              "url": "https://www.suresnes-tourisme.com/boulangeries-suresnes.html"
+            },
+            {
+              "label": "OpenStreetMap · La Baguette Dorée",
+              "url": "https://www.openstreetmap.org/node/2153351994"
+            }
+          ],
+          "address_checked": "23 rue des Bas Rogers 92150 Suresnes",
+          "geocode_check": {
+            "label": "23 Rue des Bas Rogers 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9689354545454544,
+            "distance_m": 8.7,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-2297723877",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2272605,
+          48.8693555
+        ]
+      },
+      "properties": {
+        "id": "osm-node-2297723877",
+        "retrieved_at": "2026-10-19",
+        "name": "À deux mains",
+        "kind": "bakery",
+        "category": "Boulangerie",
+        "address": "8 Place du Général Leclerc",
+        "source": "osm",
+        "source_url": "https://www.openstreetmap.org/node/2297723877",
+        "precision": "Point OSM",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Sirene via Annuaire des entreprises · DEUX MAINS",
+              "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/95353753700011"
+            },
+            {
+              "label": "Office de tourisme de Suresnes · A Deux Mains by Elio & Franck",
+              "url": "https://www.suresnes-tourisme.com/boulangeries-suresnes.html"
+            },
+            {
+              "label": "OpenStreetMap · À deux mains",
+              "url": "https://www.openstreetmap.org/node/2297723877"
+            }
+          ],
+          "address_checked": "8 place du Général Leclerc 92150 Suresnes",
+          "geocode_check": {
+            "label": "8 Place du Général Leclerc 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9665663636363636,
+            "distance_m": 3.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-2297729192",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2267929,
+          48.8696753
+        ]
+      },
+      "properties": {
+        "id": "osm-node-2297729192",
+        "retrieved_at": "2026-10-19",
+        "name": "L'Atelier des Pains",
+        "kind": "bakery",
+        "category": "Boulangerie",
+        "address": "Adresse non renseignée dans OSM",
+        "source": "osm",
+        "source_url": "https://www.openstreetmap.org/node/2297729192",
+        "precision": "Point OSM",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Sirene via Annuaire des entreprises · LE MOULIN DE SURESNES (LE MOULIN DE SURESNES)",
+              "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/38831591300128"
+            },
+            {
+              "label": "Office de tourisme de Suresnes · L'Atelier des Pains & Co",
+              "url": "https://www.suresnes-tourisme.com/boulangeries-suresnes.html"
+            },
+            {
+              "label": "OpenStreetMap · L'Atelier des Pains",
+              "url": "https://www.openstreetmap.org/node/2297729192"
+            }
+          ],
+          "address_checked": "34 rue Emile Zola 92150 Suresnes",
+          "geocode_check": {
+            "label": "34 Rue Émile Zola 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.966060909090909,
+            "distance_m": 9.6,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-2297729440",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2274134,
+          48.8700286
+        ]
+      },
+      "properties": {
+        "id": "osm-node-2297729440",
+        "retrieved_at": "2026-10-19",
+        "name": "Le Fournil Henri IV",
+        "kind": "bakery",
+        "category": "Boulangerie",
+        "address": "Adresse non renseignée dans OSM",
+        "source": "osm",
+        "source_url": "https://www.openstreetmap.org/node/2297729440",
+        "precision": "Point OSM",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Sirene via Annuaire des entreprises · SYLVAIN LECARPENTIER",
+              "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/50794762000021"
+            },
+            {
+              "label": "Office de tourisme de Suresnes · Fournil Henri IV",
+              "url": "https://www.suresnes-tourisme.com/boulangeries-suresnes.html"
+            },
+            {
+              "label": "OpenStreetMap · Le Fournil Henri IV",
+              "url": "https://www.openstreetmap.org/node/2297729440"
+            }
+          ],
+          "address_checked": "9 place Henri IV 92150 Suresnes",
+          "geocode_check": {
+            "label": "9 Place Henri IV 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9654918181818181,
+            "distance_m": 4.4,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-2811403887",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2125068,
+          48.8622458
+        ]
+      },
+      "properties": {
+        "id": "osm-node-2811403887",
+        "retrieved_at": "2026-10-19",
+        "name": "Le cœur de Suresnes",
+        "kind": "bakery",
+        "category": "Boulangerie",
+        "address": "36 Rue du Docteur Marc Bombiger",
+        "source": "osm",
+        "source_url": "https://www.openstreetmap.org/node/2811403887",
+        "precision": "Point OSM",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Sirene via Annuaire des entreprises · LE COEUR DE SURESNES",
+              "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/89516374900016"
+            },
+            {
+              "label": "Office de tourisme de Suresnes · Le Coeur de Suresnes",
+              "url": "https://www.suresnes-tourisme.com/boulangeries-suresnes.html"
+            },
+            {
+              "label": "OpenStreetMap · Le cœur de Suresnes",
+              "url": "https://www.openstreetmap.org/node/2811403887"
+            }
+          ],
+          "address_checked": "36 rue du Dr Marc Bombiger 92150 Suresnes",
+          "geocode_check": {
+            "label": "36 Rue du Docteur Marc Bombiger 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9663199999999998,
+            "distance_m": 4.8,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-3037687385",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2240563,
+          48.87109
+        ]
+      },
+      "properties": {
+        "id": "osm-node-3037687385",
+        "retrieved_at": "2026-10-19",
+        "name": "Boulangerie de la Mairie",
+        "kind": "bakery",
+        "category": "Boulangerie",
+        "address": "Adresse non renseignée dans OSM",
+        "source": "osm",
+        "source_url": "https://www.openstreetmap.org/node/3037687385",
+        "precision": "Point OSM",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Sirene via Annuaire des entreprises · ELINES",
+              "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/81540225000014"
+            },
+            {
+              "label": "Office de tourisme de Suresnes · Boulangerie de la Mairie",
+              "url": "https://www.suresnes-tourisme.com/boulangeries-suresnes.html"
+            },
+            {
+              "label": "OpenStreetMap · Boulangerie de la Mairie",
+              "url": "https://www.openstreetmap.org/node/3037687385"
+            }
+          ],
+          "address_checked": "1 av. Franklin Roosevelt 92150 Suresnes",
+          "geocode_check": {
+            "label": "1 Avenue Franklin Roosevelt 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.7637677922077921,
+            "distance_m": 1.6,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-3075148137",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2108,
+          48.8630399
+        ]
+      },
+      "properties": {
+        "id": "osm-node-3075148137",
+        "retrieved_at": "2026-10-19",
+        "name": "L'atelier des pains",
+        "kind": "bakery",
+        "category": "Boulangerie",
+        "address": "Adresse non renseignée dans OSM",
+        "source": "osm",
+        "source_url": "https://www.openstreetmap.org/node/3075148137",
+        "precision": "Point OSM",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · doute documenté",
+          "doubts": [
+            "Rapprochement provisoire : même famille d’enseigne, adresse 22 bis Jean Jaurès à proximité du point Atelier des pains. Identité du point de vente à vérifier."
+          ],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Sirene via Annuaire des entreprises · LE MOULIN DE SURESNES (LE MOULIN DE SURESNES)",
+              "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/38831591300144"
+            },
+            {
+              "label": "Sirene via Annuaire des entreprises · ALPC SURESNES",
+              "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/10835078600019"
+            },
+            {
+              "label": "Sirene via Annuaire des entreprises · SCPP",
+              "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/50087512500022"
+            },
+            {
+              "label": "OpenStreetMap · L'atelier des pains",
+              "url": "https://www.openstreetmap.org/node/3075148137"
+            }
+          ],
+          "address_checked": "22 B AVENUE JEAN JAURES 92150 SURESNES",
+          "geocode_check": {
+            "label": "22bis Avenue Jean Jaurès 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.7703939803439803,
+            "distance_m": 43.7,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-3892536583",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2309451,
+          48.874679
+        ]
+      },
+      "properties": {
+        "id": "osm-node-3892536583",
+        "retrieved_at": "2026-10-19",
+        "name": "Au Pain de Verdun",
+        "kind": "bakery",
+        "category": "Boulangerie",
+        "address": "Adresse non renseignée dans OSM",
+        "source": "osm",
+        "source_url": "https://www.openstreetmap.org/node/3892536583",
+        "precision": "Point OSM",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · doute documenté",
+          "doubts": [
+            "Nom : Au Pain de Verdun et Le Fournil de Verdun sont recensés à la même adresse, 52 rue de Verdun. L’annuaire touristique contient les deux noms ; enseigne actuelle à confirmer, un seul point conservé."
+          ],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Sirene via Annuaire des entreprises · LE FOURNIL DE VERDUN",
+              "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/97777440500012"
+            },
+            {
+              "label": "Office de tourisme de Suresnes · Au Pain Verdun",
+              "url": "https://www.suresnes-tourisme.com/boulangeries-suresnes.html"
+            },
+            {
+              "label": "Office de tourisme de Suresnes · Le Fournil de Verdun",
+              "url": "https://www.suresnes-tourisme.com/boulangeries-suresnes.html"
+            },
+            {
+              "label": "OpenStreetMap · Au Pain de Verdun",
+              "url": "https://www.openstreetmap.org/node/3892536583"
+            }
+          ],
+          "address_checked": "52 rue de Verdun 92150 Suresnes",
+          "geocode_check": {
+            "label": "52 Rue de Verdun 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9753072727272726,
+            "distance_m": 6.5,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-4358603390",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2320831,
+          48.8761269
+        ]
+      },
+      "properties": {
+        "id": "osm-node-4358603390",
+        "retrieved_at": "2026-10-19",
+        "name": "Flaveur au Goût du Bon Pain",
+        "kind": "bakery",
+        "category": "Boulangerie",
+        "address": "Adresse non renseignée dans OSM",
+        "source": "osm",
+        "source_url": "https://www.openstreetmap.org/node/4358603390",
+        "precision": "Point OSM",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Sirene via Annuaire des entreprises · WAFA DELICE SURESNES",
+              "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/93359533200018"
+            },
+            {
+              "label": "Office de tourisme de Suresnes · Flaveur ou Le Goût du Pain",
+              "url": "https://www.suresnes-tourisme.com/boulangeries-suresnes.html"
+            },
+            {
+              "label": "OpenStreetMap · Flaveur au Goût du Bon Pain",
+              "url": "https://www.openstreetmap.org/node/4358603390"
+            }
+          ],
+          "address_checked": "103 rue de Verdun 92150 Suresnes",
+          "geocode_check": {
+            "label": "103 Rue de Verdun 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9753072727272726,
+            "distance_m": 11.4,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-4401704891",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2246689,
+          48.867985
+        ]
+      },
+      "properties": {
+        "id": "osm-node-4401704891",
+        "retrieved_at": "2026-10-19",
+        "name": "Le Moulin Fleuri",
+        "kind": "bakery",
+        "category": "Boulangerie",
+        "address": "Adresse non renseignée dans OSM",
+        "source": "osm",
+        "source_url": "https://www.openstreetmap.org/node/4401704891",
+        "precision": "Point OSM",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Sirene via Annuaire des entreprises · MOULIN 92",
+              "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/91372011600015"
+            },
+            {
+              "label": "Office de tourisme de Suresnes · Le Moulin Fleuri",
+              "url": "https://www.suresnes-tourisme.com/boulangeries-suresnes.html"
+            },
+            {
+              "label": "OpenStreetMap · Le Moulin Fleuri",
+              "url": "https://www.openstreetmap.org/node/4401704891"
+            }
+          ],
+          "address_checked": "31 Boulevard Henri Sellier 92150 Suresnes",
+          "geocode_check": {
+            "label": "31 Boulevard Henri Sellier 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9753427272727273,
+            "distance_m": 8.1,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-4448381561",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2232212,
+          48.8759984
+        ]
+      },
+      "properties": {
+        "id": "osm-node-4448381561",
+        "retrieved_at": "2026-10-19",
+        "name": "Boulangerie de la liberté",
+        "kind": "bakery",
+        "category": "Boulangerie",
+        "address": "Adresse non renseignée dans OSM",
+        "source": "osm",
+        "source_url": "https://www.openstreetmap.org/node/4448381561",
+        "precision": "Point OSM",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Sirene via Annuaire des entreprises · SARL DHAOUI",
+              "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/89238769700014"
+            },
+            {
+              "label": "Office de tourisme de Suresnes · Boulangerie de la Liberté",
+              "url": "https://www.suresnes-tourisme.com/boulangeries-suresnes.html"
+            },
+            {
+              "label": "OpenStreetMap · Boulangerie de la liberté",
+              "url": "https://www.openstreetmap.org/node/4448381561"
+            }
+          ],
+          "address_checked": "14 rue de la Liberté 92150 Suresnes",
+          "geocode_check": {
+            "label": "14 Rue de la Liberté 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9736363636363635,
+            "distance_m": 7.6,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-6202211231",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.206137,
+          48.8646188
+        ]
+      },
+      "properties": {
+        "id": "osm-node-6202211231",
+        "retrieved_at": "2026-10-19",
+        "name": "Les Gourmandises",
+        "kind": "bakery",
+        "category": "Boulangerie",
+        "address": "Place de la Paix",
+        "source": "osm",
+        "source_url": "https://www.openstreetmap.org/node/6202211231",
+        "precision": "Point OSM",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [
+            "Place de la Paix (tourisme) et 35 avenue Jean Jaurès (Sirene) décrivent probablement le même commerce en bordure de place. Le centre BAN de la place n’est pas une entrée de boutique."
+          ],
+          "sources": [
+            {
+              "label": "Sirene via Annuaire des entreprises · BABALKHER FRANCE",
+              "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/83284860000017"
+            },
+            {
+              "label": "Sirene via Annuaire des entreprises · LES GOURMANDISES",
+              "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/95327237400018"
+            },
+            {
+              "label": "Office de tourisme de Suresnes · Les Gourmandises",
+              "url": "https://www.suresnes-tourisme.com/boulangeries-suresnes.html"
+            },
+            {
+              "label": "OpenStreetMap · Les Gourmandises",
+              "url": "https://www.openstreetmap.org/node/6202211231"
+            }
+          ],
+          "address_checked": "place de la paix 92150 Suresnes",
+          "geocode_check": {
+            "label": "Place de la Paix 92150 Suresnes",
+            "type": "street",
+            "score": 0.9581763636363636,
+            "distance_m": 89.6,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-6250448542",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2102006,
+          48.8631955
+        ]
+      },
+      "properties": {
+        "id": "osm-node-6250448542",
+        "retrieved_at": "2026-10-19",
+        "name": "L'Atelier de Flo",
+        "kind": "bakery",
+        "category": "Boulangerie",
+        "address": "28 Avenue Édouard Vaillant",
+        "source": "osm",
+        "source_url": "https://www.openstreetmap.org/node/6250448542",
+        "precision": "Point OSM",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · doute documenté",
+          "doubts": [
+            "Rapprochement provisoire avec Atelier de Flo / secteur marché Caron. Adresse 28 Jean Jaurès non retrouvée au numéro dans BAN ; ancienne enseigne possible. Aucun second point créé sans preuve d’un site distinct.",
+            "Adresse / géolocalisation : le point original indique 28 Édouard Vaillant ; l’établissement Sirene Atelier de Flo indique 17–25 Édouard Vaillant. Les repères BAN diffèrent d’environ 100 m du point original pour le n°28 ; entrée et numéro exact à vérifier."
+          ],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Sirene via Annuaire des entreprises · L'ATELIER DE FLO",
+              "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/93123149200022"
+            },
+            {
+              "label": "Office de tourisme de Suresnes · L'Atelier du Marché",
+              "url": "https://www.suresnes-tourisme.com/boulangeries-suresnes.html"
+            },
+            {
+              "label": "OpenStreetMap · L'Atelier de Flo",
+              "url": "https://www.openstreetmap.org/node/6250448542"
+            }
+          ],
+          "address_checked": "28 av. Jean Jaurès 92150 Suresnes",
+          "geocode_check": {
+            "label": "28 Avenue Édouard Vaillant 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9702790909090908,
+            "distance_m": 100.8,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-6250448544",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2016993,
+          48.8630186
+        ]
+      },
+      "properties": {
+        "id": "osm-node-6250448544",
+        "retrieved_at": "2026-10-19",
+        "name": "Boulangerie Amal",
+        "kind": "bakery",
+        "category": "Boulangerie",
+        "address": "Adresse non renseignée dans OSM",
+        "source": "osm",
+        "source_url": "https://www.openstreetmap.org/node/6250448544",
+        "precision": "Point OSM",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Sirene via Annuaire des entreprises · BOULANGERIE AMAL",
+              "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/81055789200025"
+            },
+            {
+              "label": "Office de tourisme de Suresnes · Boulangerie Amal",
+              "url": "https://www.suresnes-tourisme.com/boulangeries-suresnes.html"
+            },
+            {
+              "label": "OpenStreetMap · Boulangerie Amal",
+              "url": "https://www.openstreetmap.org/node/6250448544"
+            }
+          ],
+          "address_checked": "1 place de Stalingrad 92150 Suresnes",
+          "geocode_check": {
+            "label": "1 Place de Stalingrad 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9644772727272726,
+            "distance_m": 6.9,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-7658156712",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2247542,
+          48.8687561
+        ]
+      },
+      "properties": {
+        "id": "osm-node-7658156712",
+        "retrieved_at": "2026-10-19",
+        "name": "La Suriesne",
+        "kind": "bakery",
+        "category": "Boulangerie",
+        "address": "Adresse non renseignée dans OSM",
+        "source": "osm",
+        "source_url": "https://www.openstreetmap.org/node/7658156712",
+        "precision": "Point OSM",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · doute documenté",
+          "doubts": [
+            "Nom : La Suriesne dans OSM et La Sainte Victoire dans l’annuaire touristique au 2 promenade Saint-Leufroy, à environ 10 m du point. Changement d’enseigne probable ; nom actuel à confirmer."
+          ],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Office de tourisme de Suresnes · La Sainte Victoire",
+              "url": "https://www.suresnes-tourisme.com/boulangeries-suresnes.html"
+            },
+            {
+              "label": "OpenStreetMap · La Suriesne",
+              "url": "https://www.openstreetmap.org/node/7658156712"
+            }
+          ],
+          "address_checked": "2 promenade Saint-Leufroy 92150 Suresnes",
+          "geocode_check": {
+            "label": "2 Promenade Saint-Leufroy 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9644772727272726,
+            "distance_m": 9.3,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-9244021967",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2219339,
+          48.8609934
+        ]
+      },
+      "properties": {
+        "id": "osm-node-9244021967",
+        "retrieved_at": "2026-10-19",
+        "name": "Suzanne et Jojo",
+        "kind": "bakery",
+        "category": "Boulangerie",
+        "address": "Adresse non renseignée dans OSM",
+        "source": "osm",
+        "source_url": "https://www.openstreetmap.org/node/9244021967",
+        "precision": "Point OSM",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Sirene via Annuaire des entreprises · SUZANNE & JOJO",
+              "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/89466648600028"
+            },
+            {
+              "label": "Office de tourisme de Suresnes · Suzanne & Jojo",
+              "url": "https://www.suresnes-tourisme.com/boulangeries-suresnes.html"
+            },
+            {
+              "label": "OpenStreetMap · Suzanne et Jojo",
+              "url": "https://www.openstreetmap.org/node/9244021967"
+            }
+          ],
+          "address_checked": "20 rue de la République 92150 Suresnes",
+          "geocode_check": {
+            "label": "20 Rue de la République 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9742936363636363,
+            "distance_m": 14.7,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-9458127198",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2272266,
+          48.8756052
+        ]
+      },
+      "properties": {
+        "id": "osm-node-9458127198",
+        "retrieved_at": "2026-10-19",
+        "name": "Boulangerie Belvédère",
+        "kind": "bakery",
+        "category": "Boulangerie",
+        "address": "Adresse non renseignée dans OSM",
+        "source": "osm",
+        "source_url": "https://www.openstreetmap.org/node/9458127198",
+        "precision": "Point OSM",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Sirene via Annuaire des entreprises · SAS BELVEDERE",
+              "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/82805829700015"
+            },
+            {
+              "label": "Office de tourisme de Suresnes · Boulangerie Belvédère",
+              "url": "https://www.suresnes-tourisme.com/boulangeries-suresnes.html"
+            },
+            {
+              "label": "OpenStreetMap · Boulangerie Belvédère",
+              "url": "https://www.openstreetmap.org/node/9458127198"
+            }
+          ],
+          "address_checked": "44 rue Gambetta 92150 Suresnes",
+          "geocode_check": {
+            "label": "44 Rue Gambetta 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9754109090909089,
+            "distance_m": 2.6,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "audit-miches",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.226424,
+          48.874993
+        ]
+      },
+      "properties": {
+        "id": "audit-miches",
+        "name": "Les Miches à Micha",
+        "kind": "bakery",
+        "category": "Micro-fournil artisanal · sur commande",
+        "address": "29 Rue Gambetta 92150 Suresnes",
+        "source": "crosscheck",
+        "source_url": "https://annuaire-entreprises.data.gouv.fr/etablissement/90464809400020",
+        "retrieved_at": "2026-10-22",
+        "precision": "Adresse BAN au numéro, entrée non vérifiée",
+        "audit": {
+          "added": true,
+          "date": "2026-10-22",
+          "status": "Ajout recoupé",
+          "doubts": [],
+          "notes": [
+            "Fournil avec retrait sur commande ; ne pas assimiler à une boutique accessible sans commande."
+          ],
+          "sources": [
+            {
+              "label": "Sirene via Annuaire des entreprises · MICHAEL ZNATY",
+              "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/90464809400020"
+            },
+            {
+              "label": "Office de tourisme de Suresnes · Les Miches à Micha : Micro fournil artisanal",
+              "url": "https://www.suresnes-tourisme.com/boulangeries-suresnes.html"
+            },
+            {
+              "label": "miches",
+              "url": "https://les-miches-a-micha.vercel.app/"
+            }
+          ],
+          "address_checked": "29 rue Gambetta 92150 Suresnes",
+          "geocode_type": "housenumber",
+          "geocode_score": 0.9754109090909089,
+          "coordinate_source": "BAN via Géoplateforme",
+          "geocode_query": "29 RUE GAMBETTA 92150 SURESNES",
+          "geocode_check": {
+            "label": "29 Rue Gambetta 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9754109090909089,
+            "distance_m": 0.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "audit-perlin",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.219618,
+          48.875268
+        ]
+      },
+      "properties": {
+        "id": "audit-perlin",
+        "name": "Perlin Tatin — implantation à vérifier",
+        "kind": "bakery",
+        "category": "Pâtisserie déclarée · accueil non confirmé",
+        "address": "70 Avenue Franklin Roosevelt 92150 Suresnes",
+        "source": "crosscheck",
+        "source_url": "https://annuaire-entreprises.data.gouv.fr/etablissement/85234905900018",
+        "retrieved_at": "2026-10-22",
+        "precision": "Adresse BAN au numéro, entrée non vérifiée",
+        "audit": {
+          "added": true,
+          "date": "2026-10-22",
+          "status": "Ajout à vérifier",
+          "doubts": [
+            "Existence / adresse : établissement Sirene actif au 70 avenue Franklin Roosevelt, mais la boutique annoncée par Perlin Tatin est à Rueil-Malmaison. Présence d’un commerce ouvert au public à Suresnes non confirmée."
+          ],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Sirene via Annuaire des entreprises · PERLIN TATIN",
+              "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/85234905900018"
+            },
+            {
+              "label": "perlin-tatin",
+              "url": "https://www.perlintatin.com/commander-perlin-tatin/"
+            }
+          ],
+          "address_checked": "70 Avenue Franklin Roosevelt 92150 Suresnes",
+          "geocode_type": "housenumber",
+          "geocode_score": 0.9715599999999999,
+          "coordinate_source": "BAN via Géoplateforme",
+          "geocode_query": "70 AVENUE FRANKLIN ROOSEVELT 92150 SURESNES",
+          "geocode_check": {
+            "label": "70 Avenue Franklin Roosevelt 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9715599999999999,
+            "distance_m": 0.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "audit-tea",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.223208,
+          48.87639
+        ]
+      },
+      "properties": {
+        "id": "audit-tea",
+        "name": "Tea O’Clock — activité à vérifier",
+        "kind": "bakery",
+        "category": "Pâtisserie déclarée · accueil non confirmé",
+        "address": "4 Rue Claude Burgod 92150 Suresnes",
+        "source": "crosscheck",
+        "source_url": "https://annuaire-entreprises.data.gouv.fr/etablissement/53812698800012",
+        "retrieved_at": "2026-10-22",
+        "precision": "Adresse BAN au numéro, entrée non vérifiée",
+        "audit": {
+          "added": true,
+          "date": "2026-10-22",
+          "status": "Ajout à vérifier",
+          "doubts": [
+            "Activité / existence : code Sirene pâtisserie, mais le catalogue de l’entreprise présente surtout des thés et boissons. Boutique de pâtisserie et accueil du public à cette adresse non confirmés."
+          ],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Sirene via Annuaire des entreprises · TEA O' CLOCK",
+              "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/53812698800012"
+            },
+            {
+              "label": "tea",
+              "url": "https://tea-o-clock.fr/wp-content/uploads/2024/03/catalogue-tea-o-clock-printemps-2024.pdf"
+            }
+          ],
+          "address_checked": "4 Rue Claude Burgod 92150 Suresnes",
+          "geocode_type": "housenumber",
+          "geocode_score": 0.9672327272727271,
+          "coordinate_source": "BAN via Géoplateforme",
+          "geocode_query": "4 RUE CLAUDE BURGOD 92150 SURESNES",
+          "geocode_check": {
+            "label": "4 Rue Claude Burgod 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9672327272727271,
+            "distance_m": 0.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "audit-lilou",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.222875,
+          48.870095
+        ]
+      },
+      "properties": {
+        "id": "audit-lilou",
+        "name": "Les Douceurs de Lilou — à vérifier",
+        "kind": "bakery",
+        "category": "Pâtisserie déclarée · accueil non confirmé",
+        "address": "Rue Desbassayns de Richemont 92150 Suresnes",
+        "source": "crosscheck",
+        "source_url": "https://annuaire-entreprises.data.gouv.fr/etablissement/88190450200039",
+        "retrieved_at": "2026-10-22",
+        "precision": "Repère de rue BAN : position approximative",
+        "audit": {
+          "added": true,
+          "date": "2026-10-22",
+          "status": "Ajout à vérifier",
+          "doubts": [
+            "Existence : activité de pâtisserie déclarée dans Sirene ; boutique et accueil du public non corroborés.",
+            "Adresse / géolocalisation : aucun numéro publié dans la source ; repère BAN au niveau de la rue, emplacement exact inconnu. Les distances calculées depuis ce point sont approximatives."
+          ],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Sirene via Annuaire des entreprises · ALINE BRUDEY (LES DOUCEURS DE LILOU)",
+              "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/88190450200039"
+            }
+          ],
+          "address_checked": "Rue Desbassayns de Richemont 92150 Suresnes",
+          "geocode_type": "street",
+          "geocode_score": 0.9681636363636363,
+          "coordinate_source": "BAN via Géoplateforme",
+          "geocode_query": "RUE DESBASSAYNS DE RICHEMONT 92150 SURESNES",
+          "geocode_check": {
+            "label": "Rue Desbassayns de Richemont 92150 Suresnes",
+            "type": "street",
+            "score": 0.9681636363636363,
+            "distance_m": 0.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "audit-marine",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.219089,
+          48.879587
+        ]
+      },
+      "properties": {
+        "id": "audit-marine",
+        "name": "Marine Lett — pâtisserie déclarée",
+        "kind": "bakery",
+        "category": "Pâtisserie déclarée · accueil non confirmé",
+        "address": "100 Rue de la Liberté 92150 Suresnes",
+        "source": "crosscheck",
+        "source_url": "https://annuaire-entreprises.data.gouv.fr/etablissement/93102083800013",
+        "retrieved_at": "2026-10-22",
+        "precision": "Adresse BAN au numéro, entrée non vérifiée",
+        "audit": {
+          "added": true,
+          "date": "2026-10-22",
+          "status": "Ajout à vérifier",
+          "doubts": [
+            "Nom / existence : raison professionnelle Sirene, enseigne commerciale non identifiée. L’adresse peut être administrative ; boutique et accueil du public non confirmés."
+          ],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Sirene via Annuaire des entreprises · MARINE LETT",
+              "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/93102083800013"
+            }
+          ],
+          "address_checked": "100 Rue de la Liberté 92150 Suresnes",
+          "geocode_type": "housenumber",
+          "geocode_score": 0.9736363636363635,
+          "coordinate_source": "BAN via Géoplateforme",
+          "geocode_query": "100 RUE DE LA LIBERTE 92150 SURESNES",
+          "geocode_check": {
+            "label": "100 Rue de la Liberté 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9736363636363635,
+            "distance_m": 0.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "audit-djebbi",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.229128,
+          48.876079
+        ]
+      },
+      "properties": {
+        "id": "audit-djebbi",
+        "name": "Zouhaier Djebbi — boulangerie déclarée",
+        "kind": "bakery",
+        "category": "Boulangerie déclarée · accueil non confirmé",
+        "address": "108 Rue Carnot 92150 Suresnes",
+        "source": "crosscheck",
+        "source_url": "https://annuaire-entreprises.data.gouv.fr/etablissement/99289047500013",
+        "retrieved_at": "2026-10-22",
+        "precision": "Adresse BAN au numéro, entrée non vérifiée",
+        "audit": {
+          "added": true,
+          "date": "2026-10-22",
+          "status": "Ajout à vérifier",
+          "doubts": [
+            "Nom / existence : activité de boulangerie déclarée dans Sirene, enseigne et boutique ouverte au public non corroborées. L’adresse peut être administrative."
+          ],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Sirene via Annuaire des entreprises · ZOUHAIER DJEBBI",
+              "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/99289047500013"
+            }
+          ],
+          "address_checked": "108 Rue Carnot 92150 Suresnes",
+          "geocode_type": "housenumber",
+          "geocode_score": 0.9747499999999999,
+          "coordinate_source": "BAN via Géoplateforme",
+          "geocode_query": "108 RUE CARNOT 92150 SURESNES",
+          "geocode_check": {
+            "label": "108 Rue Carnot 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9747499999999999,
+            "distance_m": 0.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    }
+  ]
+}

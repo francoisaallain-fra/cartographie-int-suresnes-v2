@@ -1,0 +1,1474 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "0921644M",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2259419846171973,
+          48.879098611620954
+        ]
+      },
+      "properties": {
+        "id": "0921644M",
+        "retrieved_at": "2026-10-19",
+        "name": "Ecole primaire publique Robert Pontillon",
+        "kind": "school",
+        "category": "Ecole",
+        "address": "6 rue du Capitaine Ferber, 92150 Suresnes",
+        "status": "Public",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Ecole primaire publique Robert Pontillon",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            },
+            {
+              "label": "OpenStreetMap · École primaire Robert Pontillon",
+              "url": "https://www.openstreetmap.org/way/227095027"
+            }
+          ],
+          "geocode_check": {
+            "label": "6 Rue du Capitaine Ferber 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9692109090909091,
+            "distance_m": 14.8,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0922281E",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.22470122092992,
+          48.862974185242045
+        ]
+      },
+      "properties": {
+        "id": "0922281E",
+        "retrieved_at": "2026-10-19",
+        "name": "Ecole élémentaire publique Le Parc",
+        "kind": "school",
+        "category": "Ecole",
+        "address": "36 rue du Docteur Magnan, 92150 Suresnes",
+        "status": "Public",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Ecole élémentaire publique Le Parc",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            },
+            {
+              "label": "OpenStreetMap · École primaire Publique du Parc",
+              "url": "https://www.openstreetmap.org/node/10264910909"
+            },
+            {
+              "label": "OpenStreetMap · École élémentaire Le Parc",
+              "url": "https://www.openstreetmap.org/way/245121306"
+            }
+          ],
+          "geocode_check": {
+            "label": "36 Rue du Docteur Magnan 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9644772727272726,
+            "distance_m": 15.1,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0922685U",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.226602745256547,
+          48.873443284890776
+        ]
+      },
+      "properties": {
+        "id": "0922685U",
+        "retrieved_at": "2026-10-19",
+        "name": "Ecole primaire publique d'Estienne d'Orves",
+        "kind": "school",
+        "category": "Ecole",
+        "address": "47 rue Carnot, 92150 Suresnes",
+        "status": "Public",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Ecole primaire publique d'Estienne d'Orves",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            },
+            {
+              "label": "OpenStreetMap · École primaire publique d'Estienne d'Orves",
+              "url": "https://www.openstreetmap.org/way/242648698"
+            }
+          ],
+          "geocode_check": {
+            "label": "47 Rue Carnot 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9747499999999999,
+            "distance_m": 6.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0922740D",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.229548,
+          48.872222
+        ]
+      },
+      "properties": {
+        "id": "0922740D",
+        "retrieved_at": "2026-10-19",
+        "name": "Ecole privée Marianne Picard",
+        "kind": "school",
+        "category": "Ecole",
+        "address": "28 rue Pagès, 92150 Suresnes",
+        "status": "Privé",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Adresse BAN au numéro · correction du point source",
+        "correction": {
+          "original_coordinates": [
+            2.263512365249157,
+            48.8850158662345
+          ],
+          "method": "BAN via Géoplateforme",
+          "address": "28 Rue Pagès 92150 Suresnes",
+          "score": 0.9672327272727271,
+          "ban_id": "92073_7110_00028"
+        },
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · source rafraîchie, sans corroboration indépendante",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Ecole privée Marianne Picard",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            }
+          ],
+          "geocode_check": {
+            "label": "28 Rue Pagès 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9672327272727271,
+            "distance_m": 0.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0920332L",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2085433357855715,
+          48.862490686734645
+        ]
+      },
+      "properties": {
+        "id": "0920332L",
+        "retrieved_at": "2026-10-19",
+        "name": "Ecole élémentaire publique Vaillant-Jaurès",
+        "kind": "school",
+        "category": "Ecole",
+        "address": "6 avenue Edouard Vaillant, 92150 Suresnes",
+        "status": "Public",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Ecole élémentaire publique Vaillant-Jaurès",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            },
+            {
+              "label": "OpenStreetMap · École élémentaire Vaillant-Jaurès",
+              "url": "https://www.openstreetmap.org/node/4407226106"
+            }
+          ],
+          "geocode_check": {
+            "label": "6 Avenue Édouard Vaillant 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9702790909090908,
+            "distance_m": 4.4,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0920437A",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2250898164851765,
+          48.86929018450848
+        ]
+      },
+      "properties": {
+        "id": "0920437A",
+        "retrieved_at": "2026-10-19",
+        "name": "Ecole élémentaire publique Jules Ferry",
+        "kind": "school",
+        "category": "Ecole",
+        "address": "12 rue Jules Ferry, 92150 Suresnes",
+        "status": "Public",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Ecole élémentaire publique Jules Ferry",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            },
+            {
+              "label": "OpenStreetMap · École primaire Jules Ferry",
+              "url": "https://www.openstreetmap.org/way/399536232"
+            }
+          ],
+          "geocode_check": {
+            "label": "12 Rue Jules Ferry 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9604981818181818,
+            "distance_m": 16.9,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0921654Y",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.218081098983817,
+          48.86593497274133
+        ]
+      },
+      "properties": {
+        "id": "0921654Y",
+        "retrieved_at": "2026-10-19",
+        "name": "Ecole élémentaire publique Les Raguidelles",
+        "kind": "school",
+        "category": "Ecole",
+        "address": "5 rue du Docteur Emile Roux, 92150 Suresnes",
+        "status": "Public",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Ecole élémentaire publique Les Raguidelles",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            },
+            {
+              "label": "OpenStreetMap · École élémentaire publique Les Raguidelles",
+              "url": "https://www.openstreetmap.org/node/11494611977"
+            },
+            {
+              "label": "OpenStreetMap · École primaire Les Raguidelles",
+              "url": "https://www.openstreetmap.org/way/41853672"
+            }
+          ],
+          "geocode_check": {
+            "label": "5 Rue du Docteur Emile Roux 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9681636363636363,
+            "distance_m": 0.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0922142D",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2230236146192004,
+          48.864136069301395
+        ]
+      },
+      "properties": {
+        "id": "0922142D",
+        "retrieved_at": "2026-10-19",
+        "name": "Ecole primaire privée Saint Leufroy",
+        "kind": "school",
+        "category": "Ecole",
+        "address": "92 rue de la République, 92150 Suresnes",
+        "status": "Privé",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Ecole primaire privée Saint Leufroy",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            },
+            {
+              "label": "OpenStreetMap · École primaire privée Saint-Leufroy",
+              "url": "https://www.openstreetmap.org/way/446918533"
+            }
+          ],
+          "geocode_check": {
+            "label": "92 Rue de la République 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9742936363636363,
+            "distance_m": 24.7,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0921247F",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2047537371116865,
+          48.86267961266174
+        ]
+      },
+      "properties": {
+        "id": "0921247F",
+        "retrieved_at": "2026-10-19",
+        "name": "Section d'enseignement général et professionnel adapté du Collège Henri Sellier",
+        "kind": "school",
+        "category": "Collège",
+        "address": "7 boulevard Aristide Briand, 92150 Suresnes",
+        "status": "Public",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · source rafraîchie, sans corroboration indépendante",
+          "doubts": [],
+          "notes": [
+            "UAI distinct pour la SEGPA du collège Henri Sellier, même site physique que le collège ; point original conservé."
+          ],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Section d'enseignement général et professionnel adapté du Collège Henri Sellier",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            },
+            {
+              "label": "OSM · collège Henri Sellier (site partagé)",
+              "url": "https://www.openstreetmap.org/relation/1110873"
+            }
+          ],
+          "geocode_check": {
+            "label": "7 Boulevard Aristide Briand 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.966060909090909,
+            "distance_m": 4.7,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0920147K",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.22266982663959,
+          48.87743160482891
+        ]
+      },
+      "properties": {
+        "id": "0920147K",
+        "retrieved_at": "2026-10-19",
+        "name": "Lycée Paul Langevin",
+        "kind": "school",
+        "category": "Lycée",
+        "address": "2 rue Maurice Payret-Dortail, 92150 Suresnes",
+        "status": "Public",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Lycée Paul Langevin",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            },
+            {
+              "label": "OpenStreetMap · Lycée Paul Langevin",
+              "url": "https://www.openstreetmap.org/node/3765693115"
+            },
+            {
+              "label": "OpenStreetMap · Lycée Paul Langevin",
+              "url": "https://www.openstreetmap.org/way/392343993"
+            }
+          ],
+          "geocode_check": {
+            "label": "2 Rue Maurice Payret Dortail 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.964840909090909,
+            "distance_m": 55.5,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0922792K",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2250746216958244,
+          48.87443527787211
+        ]
+      },
+      "properties": {
+        "id": "0922792K",
+        "retrieved_at": "2026-10-19",
+        "name": "Ecole primaire privée Pardess Haya",
+        "kind": "school",
+        "category": "Ecole",
+        "address": "54 rue Gardenat Lapostol, 92150 Suresnes",
+        "status": "Privé",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · source rafraîchie, sans corroboration indépendante",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Ecole primaire privée Pardess Haya",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            }
+          ],
+          "geocode_check": {
+            "label": "54 Rue Gardenat Lapostol 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9720863636363635,
+            "distance_m": 2.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0923019G",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.230627778170843,
+          48.872776723576806
+        ]
+      },
+      "properties": {
+        "id": "0923019G",
+        "retrieved_at": "2026-10-19",
+        "name": "Ecole maternelle privée montessori internationale les colibris de suresnes",
+        "kind": "school",
+        "category": "Ecole",
+        "address": "16 rue Edouard Nieuport, 92150 Suresnes",
+        "status": "Privé",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · source rafraîchie, sans corroboration indépendante",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Ecole maternelle privée montessori internationale les colibris de suresnes",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            }
+          ],
+          "geocode_check": {
+            "label": "16 Rue Édouard Nieuport 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9690754545454544,
+            "distance_m": 4.1,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0920171L",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2303926832131507,
+          48.874293314835064
+        ]
+      },
+      "properties": {
+        "id": "0920171L",
+        "retrieved_at": "2026-10-19",
+        "name": "Lycée des métiers, des énergies et du bois Louis Blériot",
+        "kind": "school",
+        "category": "Lycée",
+        "address": "67 rue de Verdun, 92150 Suresnes",
+        "status": "Public",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · doute documenté",
+          "doubts": [
+            "Géolocalisation de la source de contrôle : deux objets OSM Louis Blériot sont situés à des positions différentes. Le point original de l’annuaire est conservé ; le contour OSM secondaire ne prouve pas un second lycée."
+          ],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Lycée des métiers, des énergies et du bois Louis Blériot",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            },
+            {
+              "label": "OpenStreetMap · Lycée professionnel Louis Blériot, lycée des métiers de l'énergie",
+              "url": "https://www.openstreetmap.org/node/2102923751"
+            },
+            {
+              "label": "OpenStreetMap · lycée technique Louis Blériot",
+              "url": "https://www.openstreetmap.org/way/43453105"
+            }
+          ],
+          "geocode_check": {
+            "label": "67 Rue de Verdun 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9753072727272726,
+            "distance_m": 5.1,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0920885M",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2047537371116865,
+          48.86267961266174
+        ]
+      },
+      "properties": {
+        "id": "0920885M",
+        "retrieved_at": "2026-10-19",
+        "name": "Collège Henri Sellier",
+        "kind": "school",
+        "category": "Collège",
+        "address": "7-9 boulevard Aristide Briand, 92150 Suresnes",
+        "status": "Public",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Collège Henri Sellier",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            },
+            {
+              "label": "OpenStreetMap · Collège Henri Sellier",
+              "url": "https://www.openstreetmap.org/relation/1110873"
+            }
+          ],
+          "geocode_check": {
+            "label": "9 Boulevard Aristide Briand 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.8370968498942918,
+            "distance_m": 29.6,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0920953L",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2283205532650605,
+          48.87528814488106
+        ]
+      },
+      "properties": {
+        "id": "0920953L",
+        "retrieved_at": "2026-10-19",
+        "name": "Ecole primaire publique Bertie Albrecht",
+        "kind": "school",
+        "category": "Ecole",
+        "address": "86 rue Carnot, 92150 Suresnes",
+        "status": "Public",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · doute documenté",
+          "doubts": [
+            "Nom : le fichier national écrit Bertie Albrecht ; OSM et la Ville écrivent Berty Albrecht. Adresse concordante, variante orthographique à harmoniser."
+          ],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Ecole primaire publique Bertie Albrecht",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            },
+            {
+              "label": "OpenStreetMap · École élémentaire Berty Albrecht",
+              "url": "https://www.openstreetmap.org/node/1952633205"
+            },
+            {
+              "label": "Ville · école Berty Albrecht, 86 rue Carnot",
+              "url": "https://www.suresnes.fr/wp-content/uploads/2024/02/Dec2024-014-panneaux-solaires-Berty-Albrecht.pdf"
+            }
+          ],
+          "geocode_check": {
+            "label": "86 Rue Carnot 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9747499999999999,
+            "distance_m": 26.7,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0922124J",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2319136810181113,
+          48.87488676149944
+        ]
+      },
+      "properties": {
+        "id": "0922124J",
+        "retrieved_at": "2026-10-19",
+        "name": "Ecole maternelle publique Henri Dunant",
+        "kind": "school",
+        "category": "Ecole",
+        "address": "19 bis rue du Commandant Rivière, 92150 Suresnes",
+        "status": "Public",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Ecole maternelle publique Henri Dunant",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            },
+            {
+              "label": "OpenStreetMap · École maternelle Henri Dunant",
+              "url": "https://www.openstreetmap.org/way/385915703"
+            }
+          ],
+          "geocode_check": {
+            "label": "19bis Rue du Commandant Rivière 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.8209483558994197,
+            "distance_m": 0.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0922568S",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2213945691267245,
+          48.866148137616975
+        ]
+      },
+      "properties": {
+        "id": "0922568S",
+        "retrieved_at": "2026-10-19",
+        "name": "Ecole primaire publique Marcel Mouloudji",
+        "kind": "school",
+        "category": "Ecole",
+        "address": "10 rue de Sèvres, 92150 Suresnes",
+        "status": "Public",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Ecole primaire publique Marcel Mouloudji",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            },
+            {
+              "label": "OpenStreetMap · École primaire publique Marcel Mouloudji",
+              "url": "https://www.openstreetmap.org/node/3929100896"
+            }
+          ],
+          "geocode_check": {
+            "label": "10 Rue de Sèvres 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9681636363636363,
+            "distance_m": 0.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0921178F",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.221543997171164,
+          48.873389808003346
+        ]
+      },
+      "properties": {
+        "id": "0921178F",
+        "retrieved_at": "2026-10-19",
+        "name": "Collège Émile Zola",
+        "kind": "school",
+        "category": "Collège",
+        "address": "46 avenue Franklin Roosevelt, 92150 Suresnes",
+        "status": "Public",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Collège Émile Zola",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            },
+            {
+              "label": "OpenStreetMap · Collège Émile Zola",
+              "url": "https://www.openstreetmap.org/way/181330714"
+            }
+          ],
+          "geocode_check": {
+            "label": "46 Avenue Franklin Roosevelt 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9715599999999999,
+            "distance_m": 23.4,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0922477T",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.221980221227294,
+          48.864722867271084
+        ]
+      },
+      "properties": {
+        "id": "0922477T",
+        "retrieved_at": "2026-10-19",
+        "name": "Ecole maternelle publique République",
+        "kind": "school",
+        "category": "Ecole",
+        "address": "7 rue du Chemin Vert, 92150 Suresnes",
+        "status": "Public",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Ecole maternelle publique République",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            },
+            {
+              "label": "OpenStreetMap · École maternelle publique République",
+              "url": "https://www.openstreetmap.org/node/3929023244"
+            }
+          ],
+          "geocode_check": {
+            "label": "7 Rue du Chemin Vert 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9657854545454545,
+            "distance_m": 39.7,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0922868T",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.222545236854015,
+          48.87892730907788
+        ]
+      },
+      "properties": {
+        "id": "0922868T",
+        "retrieved_at": "2026-10-19",
+        "name": "Ecole primaire privée  - l'Ecole de l'Optimisme",
+        "kind": "school",
+        "category": "Ecole",
+        "address": "2 rue Emilien Colin, 92150 Suresnes",
+        "status": "Privé",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Ecole primaire privée  - l'Ecole de l'Optimisme",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            },
+            {
+              "label": "OpenStreetMap · L'École de l'Optimisme",
+              "url": "https://www.openstreetmap.org/node/10212995417"
+            }
+          ],
+          "geocode_check": {
+            "label": "2 Rue Émilien Colin 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9676281818181818,
+            "distance_m": 20.8,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0923036A",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2305808647079917,
+          48.873645194231614
+        ]
+      },
+      "properties": {
+        "id": "0923036A",
+        "retrieved_at": "2026-10-19",
+        "name": "Ecole primaire publique Joséphine Baker",
+        "kind": "school",
+        "category": "Ecole",
+        "address": "12 rue Benoit Malon, 92150 Suresnes",
+        "status": "Public",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Ecole primaire publique Joséphine Baker",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            },
+            {
+              "label": "OpenStreetMap · Groupe scolaire Joséphine Baker",
+              "url": "https://www.openstreetmap.org/node/12982107997"
+            }
+          ],
+          "geocode_check": {
+            "label": "12 Rue Benoît Malon 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.96995,
+            "distance_m": 10.8,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0920519P",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2183436440732733,
+          48.866062597753064
+        ]
+      },
+      "properties": {
+        "id": "0920519P",
+        "retrieved_at": "2026-10-19",
+        "name": "Ecole maternelle publique Les Raguidelles",
+        "kind": "school",
+        "category": "Ecole",
+        "address": "2 rue du Docteur Emile Roux, 92150 Suresnes",
+        "status": "Public",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · source rafraîchie, sans corroboration indépendante",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Ecole maternelle publique Les Raguidelles",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            }
+          ],
+          "geocode_check": {
+            "label": "2 Rue du Docteur Emile Roux 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9681636363636363,
+            "distance_m": 0.1,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0920532D",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2188959706606366,
+          48.87759320518454
+        ]
+      },
+      "properties": {
+        "id": "0920532D",
+        "retrieved_at": "2026-10-19",
+        "name": "Ecole maternelle publique Les Cottages",
+        "kind": "school",
+        "category": "Ecole",
+        "address": "32 rue des Cottages, 92150 Suresnes",
+        "status": "Public",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · source rafraîchie, sans corroboration indépendante",
+          "doubts": [],
+          "notes": [
+            "Le point OSM du groupe des Cottages regroupe maternelle et élémentaire ; deux UAI originaux conservés."
+          ],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Ecole maternelle publique Les Cottages",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            },
+            {
+              "label": "OSM · groupe des Cottages",
+              "url": "https://www.openstreetmap.org/node/4212377829"
+            }
+          ],
+          "geocode_check": {
+            "label": "32 Rue des Cottages 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9684881818181817,
+            "distance_m": 0.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0920555D",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.203279016898896,
+          48.862133784253096
+        ]
+      },
+      "properties": {
+        "id": "0920555D",
+        "retrieved_at": "2026-10-19",
+        "name": "Ecole maternelle publique Wilson",
+        "kind": "school",
+        "category": "Ecole",
+        "address": "6 avenue du Président Wilson, 92150 Suresnes",
+        "status": "Public",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · source rafraîchie, sans corroboration indépendante",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Ecole maternelle publique Wilson",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            }
+          ],
+          "geocode_check": {
+            "label": "6 Avenue du Président Wilson 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9604981818181818,
+            "distance_m": 0.6,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0920482Z",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.209106606981388,
+          48.86265000003058
+        ]
+      },
+      "properties": {
+        "id": "0920482Z",
+        "retrieved_at": "2026-10-19",
+        "name": "Ecole maternelle publique Edouard Vaillant",
+        "kind": "school",
+        "category": "Ecole",
+        "address": "10 avenue Edouard Vaillant, 92150 Suresnes",
+        "status": "Public",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Ecole maternelle publique Edouard Vaillant",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            },
+            {
+              "label": "OpenStreetMap · École maternelle Edouard Vaillant",
+              "url": "https://www.openstreetmap.org/node/4407226105"
+            }
+          ],
+          "geocode_check": {
+            "label": "10 Avenue Édouard Vaillant 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9702790909090908,
+            "distance_m": 39.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0920584K",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.226617722125923,
+          48.87114913651342
+        ]
+      },
+      "properties": {
+        "id": "0920584K",
+        "retrieved_at": "2026-10-19",
+        "name": "Ecole maternelle publique Simone Veil",
+        "kind": "school",
+        "category": "Ecole",
+        "address": "3 rue Darracq, 92150 Suresnes",
+        "status": "Public",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [
+            "Cité de l’enfance est l’ancien nom de Simone Veil (délibération municipale du 6 mars 2018). Aucun nouvel établissement créé."
+          ],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Ecole maternelle publique Simone Veil",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            },
+            {
+              "label": "OpenStreetMap · École maternelle Cité de l'enfance",
+              "url": "https://www.openstreetmap.org/node/3062780744"
+            },
+            {
+              "label": "simone-veil",
+              "url": "https://www.suresnes.fr/wp-content/uploads/2019/08/PV_-CM_06mars2018.pdf"
+            }
+          ],
+          "geocode_check": {
+            "label": "3 Rue Alexandre Darracq 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.6492870515970516,
+            "distance_m": 15.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0921653X",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2187016312820576,
+          48.87773223523755
+        ]
+      },
+      "properties": {
+        "id": "0921653X",
+        "retrieved_at": "2026-10-19",
+        "name": "Ecole élémentaire publique Les Cottages",
+        "kind": "school",
+        "category": "Ecole",
+        "address": "32 rue des Cottages, 92150 Suresnes",
+        "status": "Public",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Ecole élémentaire publique Les Cottages",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            },
+            {
+              "label": "OpenStreetMap · École maternelle et élémentaire des Cottages",
+              "url": "https://www.openstreetmap.org/node/4212377829"
+            }
+          ],
+          "geocode_check": {
+            "label": "32 Rue des Cottages 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9684881818181817,
+            "distance_m": 21.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0922720G",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2318535376418716,
+          48.873972637019534
+        ]
+      },
+      "properties": {
+        "id": "0922720G",
+        "retrieved_at": "2026-10-19",
+        "name": "Ecole primaire publique Noor Inayat Khan dite Madeleine",
+        "kind": "school",
+        "category": "Ecole",
+        "address": "10 avenue Sisley, 92150 Suresnes",
+        "status": "Public",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · recoupé",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Ecole primaire publique Noor Inayat Khan dite Madeleine",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            },
+            {
+              "label": "OpenStreetMap · École Noor Inayat Khan, dite Madeleine",
+              "url": "https://www.openstreetmap.org/node/2112602760"
+            }
+          ],
+          "geocode_check": {
+            "label": "10 Avenue Sisley 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.966060909090909,
+            "distance_m": 57.9,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0920884L",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2280108005039487,
+          48.87493720031635
+        ]
+      },
+      "properties": {
+        "id": "0920884L",
+        "retrieved_at": "2026-10-19",
+        "name": "Collège Jean Macé",
+        "kind": "school",
+        "category": "Collège",
+        "address": "78 rue Carnot, 92150 Suresnes",
+        "status": "Public",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · doute documenté",
+          "doubts": [
+            "Nom : le fichier national conserve Jean Macé, alors que l’annuaire académique et le site du collège indiquent Hubert Germain (même UAI 0920884L, 78 rue Carnot). Le nom original est conservé pour traçabilité ; ce n’est pas un établissement supplémentaire."
+          ],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Collège Jean Macé",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            },
+            {
+              "label": "OpenStreetMap · Collège Hubert Germain",
+              "url": "https://www.openstreetmap.org/node/3921975998"
+            },
+            {
+              "label": "hubert-germain",
+              "url": "https://bv.ac-versailles.fr/rechetab/0920884L-college-hubert-germain-suresnes.html"
+            },
+            {
+              "label": "Site officiel du collège Hubert Germain",
+              "url": "https://clg-germain-suresnes.ac-versailles.fr/"
+            }
+          ],
+          "geocode_check": {
+            "label": "78 Rue Carnot 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.9747499999999999,
+            "distance_m": 18.8,
+            "citycode": "92073"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0923494Y",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2250625929532797,
+          48.87441901170589
+        ]
+      },
+      "properties": {
+        "id": "0923494Y",
+        "retrieved_at": "2026-10-19",
+        "name": "Ecole secondaire privé Les Génies de Demain",
+        "kind": "school",
+        "category": "Collège",
+        "address": "54 rue Gardenat Lapostole, 92150 Suresnes",
+        "status": "Privé",
+        "source": "education",
+        "source_url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+        "precision": "Numéro de rue",
+        "correction": null,
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · source rafraîchie, sans corroboration indépendante",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Annuaire Éducation nationale · Ecole secondaire privé Les Génies de Demain",
+              "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+            }
+          ],
+          "geocode_check": {
+            "label": "54 Rue Gardenat Lapostol 92150 Suresnes",
+            "type": "housenumber",
+            "score": 0.8198136363636364,
+            "distance_m": 0.0,
+            "citycode": "92073"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,997 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "eaje92-794f550d0462",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.220679000174912,
+          48.86980000044647
+        ]
+      },
+      "properties": {
+        "id": "eaje92-794f550d0462",
+        "name": "Les P'tits Boss Mont Valérien",
+        "kind": "nursery",
+        "category": "Micro crèche",
+        "address": "45 BIS RUE WORTH, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-04fe6b67846d",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.22277800040825,
+          48.86565399999886
+        ]
+      },
+      "properties": {
+        "id": "eaje92-04fe6b67846d",
+        "name": "La Reine Alezane",
+        "kind": "nursery",
+        "category": "Micro crèche",
+        "address": "65 RUE JEAN JACQUES ROUSSEAU, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-a7ead0848d2a",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2232640005757776,
+          48.88094999981905
+        ]
+      },
+      "properties": {
+        "id": "eaje92-a7ead0848d2a",
+        "name": "Les Lutins",
+        "kind": "nursery",
+        "category": "Multi-accueil",
+        "address": "12 BIS ALLEE DES BOCHOUX, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-c05f723fda04",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2237410006175957,
+          48.86612300017756
+        ]
+      },
+      "properties": {
+        "id": "eaje92-c05f723fda04",
+        "name": "Les Petits Chaperons Rouges Suresnes Jean-Jacques Rousseau",
+        "kind": "nursery",
+        "category": "Multi-accueil",
+        "address": "79 RUE JEAN-JACQUES ROUSSEAU, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-342719230707",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.23437899965865,
+          48.87942300040644
+        ]
+      },
+      "properties": {
+        "id": "eaje92-342719230707",
+        "name": "Les Aventuriers de Suresnes-Curie",
+        "kind": "nursery",
+        "category": "Micro crèche",
+        "address": "8 RUE CURIE, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-54cf9c0041ca",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.214074999620936,
+          48.86178600039049
+        ]
+      },
+      "properties": {
+        "id": "eaje92-54cf9c0041ca",
+        "name": "Les Goelands",
+        "kind": "nursery",
+        "category": "Multi-accueil",
+        "address": "20 RUE RAYMOND COSSON, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-b526333e1152",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.223015999387385,
+          48.86577100043037
+        ]
+      },
+      "properties": {
+        "id": "eaje92-b526333e1152",
+        "name": "Mirettes et Gambettes",
+        "kind": "nursery",
+        "category": "Micro crèche",
+        "address": "67 RUE JEAN JACQUES ROUSSEAU, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-efda878e1738",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2337460002983285,
+          48.879667999902885
+        ]
+      },
+      "properties": {
+        "id": "eaje92-efda878e1738",
+        "name": "Suresnes Curie (MC)",
+        "kind": "nursery",
+        "category": "Micro crèche",
+        "address": "1 RUE CURIE, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-fd9d88a126a3",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.215017000034822,
+          48.86265600001551
+        ]
+      },
+      "properties": {
+        "id": "eaje92-fd9d88a126a3",
+        "name": "Aladin",
+        "kind": "nursery",
+        "category": "Multi-accueil",
+        "address": "20 RUE DE LA TUILERIE, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-35a3e08de223",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2252020004017394,
+          48.86866500004769
+        ]
+      },
+      "properties": {
+        "id": "eaje92-35a3e08de223",
+        "name": "Les P'tits Boss Leufroy",
+        "kind": "nursery",
+        "category": "Micro crèche",
+        "address": "5 PROMENADE SAINT LEUFROY, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-4743bac67a19",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2189130005414524,
+          48.87050500027996
+        ]
+      },
+      "properties": {
+        "id": "eaje92-4743bac67a19",
+        "name": "La Colline",
+        "kind": "nursery",
+        "category": "Multi-accueil",
+        "address": "8 RUE DU CALVAIRE, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-e42a41c2b0a0",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.22252599976378,
+          48.86802000009987
+        ]
+      },
+      "properties": {
+        "id": "eaje92-e42a41c2b0a0",
+        "name": "Le Chat Botté",
+        "kind": "nursery",
+        "category": "Multi-accueil",
+        "address": "43 47 BOULEVARD HENRI SELLIER, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-1592a7ba33d5",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.22252599976378,
+          48.86802000009987
+        ]
+      },
+      "properties": {
+        "id": "eaje92-1592a7ba33d5",
+        "name": "Ma Mère L'Oye",
+        "kind": "nursery",
+        "category": "Multi-accueil",
+        "address": "43 47 BOULEVARD HENRI SELLIER, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-5ed16493ff5c",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2205140003216965,
+          48.866877999791384
+        ]
+      },
+      "properties": {
+        "id": "eaje92-5ed16493ff5c",
+        "name": "Peter Pan",
+        "kind": "nursery",
+        "category": "Multi-accueil",
+        "address": "22 RUE DES CARRIERES, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-2bf8f7f7067e",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2327799996738094,
+          48.87181600020819
+        ]
+      },
+      "properties": {
+        "id": "eaje92-2bf8f7f7067e",
+        "name": "Babilou Suresnes Gallieni",
+        "kind": "nursery",
+        "category": "Multi-accueil",
+        "address": "28 QUAI GALLIENI, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-f33d154be5bf",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.212901000621252,
+          48.86245399980531
+        ]
+      },
+      "properties": {
+        "id": "eaje92-f33d154be5bf",
+        "name": "Baby Montessori Suresnes",
+        "kind": "nursery",
+        "category": "Micro crèche",
+        "address": "18 21 RUE DE LA POTERIE, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-594b008085a0",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2322589997329607,
+          48.87449399993509
+        ]
+      },
+      "properties": {
+        "id": "eaje92-594b008085a0",
+        "name": "Blanche Neige",
+        "kind": "nursery",
+        "category": "Multi-accueil",
+        "address": "8 AVENUE JUSTIN GODART, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-74d76a7e03a8",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2232640005757776,
+          48.88094999981905
+        ]
+      },
+      "properties": {
+        "id": "eaje92-74d76a7e03a8",
+        "name": "Bois Joly",
+        "kind": "nursery",
+        "category": "Multi-accueil",
+        "address": "12 BIS ALLEE DES BOCHOUX, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-2b64f74d7c8b",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2205140003216965,
+          48.866877999791384
+        ]
+      },
+      "properties": {
+        "id": "eaje92-2b64f74d7c8b",
+        "name": "Fée Clochette",
+        "kind": "nursery",
+        "category": "Multi-accueil",
+        "address": "22 RUE DES CARRIERES, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-d688a33027f0",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2339729997697257,
+          48.87446100026795
+        ]
+      },
+      "properties": {
+        "id": "eaje92-d688a33027f0",
+        "name": "La Micro Chouette de Rothschild",
+        "kind": "nursery",
+        "category": "Micro crèche",
+        "address": "11/13 RUE SALOMON DE ROTHSCHILD, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-eb41fdea10cb",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2352880006070044,
+          48.87877100008438
+        ]
+      },
+      "properties": {
+        "id": "eaje92-eb41fdea10cb",
+        "name": "Les Bleuets",
+        "kind": "nursery",
+        "category": "Micro crèche",
+        "address": "177 RUE DE VERDUN, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-4ebbbd076cf4",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2311859994610406,
+          48.872467000243375
+        ]
+      },
+      "properties": {
+        "id": "eaje92-4ebbbd076cf4",
+        "name": "micro-crèche Les Colibris",
+        "kind": "nursery",
+        "category": "Micro crèche",
+        "address": "16 BIS RUE EDOUARD NIEUPORT, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-8f2f17e125d7",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.227559000076479,
+          48.8743580002183
+        ]
+      },
+      "properties": {
+        "id": "eaje92-8f2f17e125d7",
+        "name": "Babilou Suresnes Carnot",
+        "kind": "nursery",
+        "category": "Multi-accueil",
+        "address": "68 RUE CARNOT, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-a2ebefb846dd",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.219989999794815,
+          48.86270300016644
+        ]
+      },
+      "properties": {
+        "id": "eaje92-a2ebefb846dd",
+        "name": "Babilou Suresnes Forest",
+        "kind": "nursery",
+        "category": "Multi-accueil",
+        "address": "31 RUE FERNAND FOREST, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-b4ec8d7cc877",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.23136400002235,
+          48.87315600005512
+        ]
+      },
+      "properties": {
+        "id": "eaje92-b4ec8d7cc877",
+        "name": "Babilou Suresnes Malon",
+        "kind": "nursery",
+        "category": "Multi-accueil",
+        "address": "23 RUE BENOIT MALON, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-2f6e423ea10a",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2242419995054163,
+          48.869704000309085
+        ]
+      },
+      "properties": {
+        "id": "eaje92-2f6e423ea10a",
+        "name": "Crèche Abricot",
+        "kind": "nursery",
+        "category": "Multi-accueil",
+        "address": "24 BIS AVENUE DU Général de Gaulle, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-a2a44d37ae51",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2280869997685673,
+          48.877557000073885
+        ]
+      },
+      "properties": {
+        "id": "eaje92-a2a44d37ae51",
+        "name": "Le Petit Poucet",
+        "kind": "nursery",
+        "category": "Multi-accueil",
+        "address": "1 PLACE DU RATRAIT, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-1e6907df515d",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2241509997590785,
+          48.87870500010522
+        ]
+      },
+      "properties": {
+        "id": "eaje92-1e6907df515d",
+        "name": "Micro crèche Spica",
+        "kind": "nursery",
+        "category": "Micro crèche",
+        "address": "6 RUE DANTON, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-4305dff84ff9",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2266050006294718,
+          48.87150399980676
+        ]
+      },
+      "properties": {
+        "id": "eaje92-4305dff84ff9",
+        "name": "Pinocchio",
+        "kind": "nursery",
+        "category": "Multi-accueil",
+        "address": "5 RUE ALEXANDRE DARRACQ, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-d466c24e0942",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2280869997685673,
+          48.877557000073885
+        ]
+      },
+      "properties": {
+        "id": "eaje92-d466c24e0942",
+        "name": "P'Tits Cailloux",
+        "kind": "nursery",
+        "category": "Multi-accueil",
+        "address": "1 PLACE DU RATRAIT, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-f5d63edfa0ab",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2030829997303285,
+          48.86228500020744
+        ]
+      },
+      "properties": {
+        "id": "eaje92-f5d63edfa0ab",
+        "name": "Roi Grenouille",
+        "kind": "nursery",
+        "category": "Multi-accueil",
+        "address": "1 AVENUE D ESTOURNELLES DE CONSTANT, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaje92-e2aa784b222a",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.226189000306338,
+          48.868742999922986
+        ]
+      },
+      "properties": {
+        "id": "eaje92-e2aa784b222a",
+        "name": "Valériane",
+        "kind": "nursery",
+        "category": "Micro crèche",
+        "address": "9 RUE ETIENNE DOLET, 92150 Suresnes",
+        "source": "childcare",
+        "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+        "precision": "Point géographique du Département · emprise non vérifiée",
+        "source_vintage": "2025-04-30",
+        "retrieved_at": "2026-10-19",
+        "audit": {
+          "added": false,
+          "date": "2026-10-22",
+          "status": "Conservé · hors croisement ciblé",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    }
+  ]
+}

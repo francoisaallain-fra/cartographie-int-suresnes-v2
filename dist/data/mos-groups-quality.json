@@ -1,0 +1,59 @@
+{
+  "checked_at": "2026-10-29",
+  "territory": "Suresnes (INSEE 92073)",
+  "mos_year": 2025,
+  "classification": "Mos 2025, 12 postes; codes 6=28-30, 7=31-35, 8=36-45 dans la nomenclature en 79 postes",
+  "source_url": "https://data.iledefrance.fr/explore/dataset/mos-occupation-du-sol-2025-and-2021-en-79-postes-de-la-region-ile-de-france/",
+  "source_query": "insee=92073 and mos2025>=28 and mos2025<=45",
+  "source_count": 513,
+  "mapped_count": 512,
+  "missing_geometry": [
+    {
+      "record_index": 180,
+      "class_code": 29,
+      "class_name": "Ensembles d'habitat individuel identique",
+      "source_area_m2": 13503.6759982,
+      "point": {
+        "lon": 2.2070123382095224,
+        "lat": 48.86105636144803
+      }
+    }
+  ],
+  "raw_sha256": "dea883fe7df002e2fedbb3213e790f43674193288aeed205c3ad20972bf853e2",
+  "groups": {
+    "6": {
+      "name": "Habitat pavillonnaire",
+      "features": 134,
+      "area_m2_clipped": 620299,
+      "class_counts": {
+        "28": 129,
+        "29": 5
+      }
+    },
+    "7": {
+      "name": "Habitat collectif",
+      "features": 314,
+      "area_m2_clipped": 974149,
+      "class_counts": {
+        "31": 139,
+        "32": 34,
+        "33": 135,
+        "35": 6
+      }
+    },
+    "8": {
+      "name": "Activités",
+      "features": 64,
+      "area_m2_clipped": 229895,
+      "class_counts": {
+        "36": 32,
+        "45": 25,
+        "37": 3,
+        "39": 1,
+        "42": 1,
+        "43": 2
+      }
+    }
+  },
+  "limitations": "Occupation du sol en 2025; unités cartographiques, pas bâtiments ni usages certifiés au local. Le groupe 8 inclut le poste 45 Bureaux déjà montré séparément."
+}

@@ -1,0 +1,396 @@
+{
+  "date": "2026-10-28",
+  "city": "Suresnes",
+  "insee": "92073",
+  "counts": {
+    "plu_polygons": 55,
+    "plu_labels": 21,
+    "transport_source_rows_in_city": 4,
+    "stations": 6,
+    "schools_source_rows": 33,
+    "schools": 30,
+    "schools_corrected": 1,
+    "finess_source_establishments": 81,
+    "health_selected": 13,
+    "pharmacies_finess": 13,
+    "bakeries_osm": 18,
+    "pharmacies_osm_not_added": 13,
+    "childcare_source_rows": 32,
+    "childcare_establishments": 32,
+    "childcare_multiaccueil": 20,
+    "childcare_microcreches": 12,
+    "rail_lines": 3,
+    "office_target_addresses": 4
+  },
+  "invalid_plu_geometries": [],
+  "school_corrections": [
+    {
+      "id": "0922740D",
+      "name": "Ecole privée Marianne Picard",
+      "coordinates": [
+        2.263512365249157,
+        48.8850158662345
+      ],
+      "reason": "Point source hors commune"
+    }
+  ],
+  "point_warnings": [
+    {
+      "id": "920020906",
+      "name": "PHARMACIE DES CHENES",
+      "issue": "Coordonnée FINESS à la rue ; distance de proximité indicative"
+    }
+  ],
+  "health_categories": {
+    "Etablissement de Soins Pluridisciplinaire": 1,
+    "Centre de Santé": 5,
+    "Maison de santé (L.6223-3)": 1,
+    "Etablissement de santé privé autorisé en SSR": 1,
+    "Lieux de soins non programmés": 1,
+    "Centre Hospitalier Spécialisé lutte Maladies Mentales": 3,
+    "Structure d'Alternative à la dialyse en centre": 1
+  },
+  "nearby_counts": {
+    "ban-92073_4121_00025": 26,
+    "ban-92073_4730_00079": 33,
+    "ban-92073_8131_00002": 5,
+    "ban-92073_7160_00030": 11
+  },
+  "limits": [
+    "Les aménités sont limitées à Suresnes : un rayon de 500 m traversant la limite communale ne couvre pas les équipements des communes voisines.",
+    "Le rayon est une distance géodésique à vol d’oiseau, pas un trajet piéton ; il dépend de la précision des points sources.",
+    "Les données constituent un instantané, sans synchronisation automatique.",
+    "Les quatre adresses ciblées ne prouvent ni la présence de bureaux vacants, ni une disponibilité commerciale.",
+    "Les quatre adresses ciblées ne prouvent ni la présence de bureaux vacants, ni une disponibilité commerciale."
+  ],
+  "plu_geometry_checks": {
+    "commune_area_km2": 3.799189,
+    "coverage_pct": 99.5368,
+    "overlap_m2": 64.86,
+    "note": "Géométries sources conservées : légers écarts entre le contour communal et le zonage, et petites superpositions ; pas de correction automatique ni de certification parcellaire."
+  },
+  "childcare_checks": {
+    "source_url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+    "source_modified": "2025-04-30T12:28:00+00:00",
+    "source_data_processed": "2026-10-18T22:03:33+00:00",
+    "source_query": "https://opendata.hauts-de-seine.fr/api/explore/v2.1/catalog/datasets/etablissements-daccueil-de-la-petite-enfance-pe/records?where=code_insee%3D%2792073%27&limit=100",
+    "all_inside_commune": true,
+    "excluded": [],
+    "distinct_point_locations": 28,
+    "shared_point_locations": 4,
+    "note": "Effectifs d’établissements, pas de bâtiments distincts. Date de traitement technique distincte du millésime déclaré par la source."
+  },
+  "roads": {
+    "extracted_at": "2026-10-22",
+    "axes": [
+      {
+        "axis": "Quais de Seine",
+        "osm_way_count": 76,
+        "length_m": 5722,
+        "parts": 77,
+        "outside_city_length_m": 2720
+      },
+      {
+        "axis": "Boulevard Henri-Sellier",
+        "osm_way_count": 95,
+        "length_m": 5925,
+        "parts": 98,
+        "outside_city_length_m": 1986
+      },
+      {
+        "axis": "Boulevard Washington",
+        "osm_way_count": 33,
+        "length_m": 2258,
+        "parts": 33,
+        "outside_city_length_m": 458
+      },
+      {
+        "axis": "Avenue Franklin-Roosevelt",
+        "osm_way_count": 22,
+        "length_m": 1259,
+        "parts": 22,
+        "outside_city_length_m": 0
+      }
+    ],
+    "invalid_geometries": 0,
+    "outside_500m_extent": 0,
+    "method": "Exact OSM names including connected continuations, union and intersection with commune + 500m in Lambert-93; precomputed intersection with existing geodesic 500m polygons. Length in Lambert-93 includes separate carriageways. No traffic ranking."
+  },
+  "rail_extension": {
+    "date": "2026-10-22",
+    "station_source_rows": 9,
+    "physical_stations": 6,
+    "inside": 3,
+    "outside": [
+      {
+        "name": "Le Val d'Or",
+        "distance_m": 409,
+        "lines": [
+          "TRAIN L"
+        ]
+      },
+      {
+        "name": "Les Coteaux",
+        "distance_m": 276,
+        "lines": [
+          "TRAM 2"
+        ]
+      },
+      {
+        "name": "Puteaux",
+        "distance_m": 396,
+        "lines": [
+          "TRAIN L",
+          "TRAIN U",
+          "TRAM 2"
+        ]
+      }
+    ],
+    "lines": [
+      {
+        "id": "C01740",
+        "name": "TRAIN L",
+        "label": "L",
+        "mode": "TRAIN",
+        "color": "#c4a4cc"
+      },
+      {
+        "id": "C01741",
+        "name": "TRAIN U",
+        "label": "U",
+        "mode": "TRAIN",
+        "color": "#b6134c"
+      },
+      {
+        "id": "C01390",
+        "name": "TRAM 2",
+        "label": "T2",
+        "mode": "TRAMWAY",
+        "color": "#a0006e"
+      }
+    ],
+    "no_rer_or_metro": true,
+    "radius_counts": {
+      "OLBUR2119259": 35,
+      "OLBUR2311931": 36,
+      "OLBUR2001515": 5,
+      "OLBUR2100123": 10,
+      "OLBUR2640542": 16
+    }
+  },
+  "adjustable_radius": {
+    "min_m": 300,
+    "max_m": 1000,
+    "step_m": 50,
+    "default_m": 500,
+    "method": "WGS84 geodesic distances and circles sampled every 2 degrees; Shapely clipping of existing roads/rail. No extension of source coverage."
+  },
+  "amenities_crosscheck": {
+    "date": "2026-10-22",
+    "scope": "Suresnes uniquement (INSEE 92073)",
+    "original_preserved": 106,
+    "original_targeted": 61,
+    "outside_targeted_preserved": 45,
+    "candidates": 146,
+    "excluded": 3,
+    "added": 11,
+    "added_corroborated": 6,
+    "added_uncertain": 5,
+    "added_with_any_doubt": 6,
+    "existing_with_doubt": 8,
+    "total_amenities": 117,
+    "new_inside_city": true,
+    "counts": {
+      "school": 30,
+      "health": 18,
+      "pharmacy": 13,
+      "bakery": 24,
+      "nursery": 32
+    },
+    "limits": "Exhaustivité non certifiée. 5 activités commerciales non confirmées ; activité du laboratoire non nommé de DocCity à préciser ; 8 points originaux avec réserves. Crèches et pharmacies hors nouveau croisement ciblé."
+  },
+  "original_collection_date": "2026-10-19",
+  "historical_broker_sample_2026_10_19": {
+    "counts": {
+      "broker_cards": 10,
+      "broker_without_address": 3,
+      "broker_sample": 5
+    },
+    "geocoding": [
+      {
+        "id": "OLBUR2119259",
+        "source_address": "13 Bd Henri Sellier, 92150 Suresnes",
+        "ban_address": "13 Boulevard Henri Sellier 92150 Suresnes",
+        "score": 0.7048327494456762,
+        "broker_ban_distance_m": 94.2,
+        "citycode": "92073",
+        "type": "housenumber"
+      },
+      {
+        "id": "OLBUR2311931",
+        "source_address": "40 BOULEVARD HENRI SELLIER, 92150 Suresnes",
+        "ban_address": "40 Boulevard Henri Sellier 92150 Suresnes",
+        "score": 0.9753427272727273,
+        "broker_ban_distance_m": 7.6,
+        "citycode": "92073",
+        "type": "housenumber"
+      },
+      {
+        "id": "OLBUR2001515",
+        "source_address": "1 Quai Marcel Dassault, 92150 Suresnes",
+        "ban_address": "1 Quai Marcel Dassault 92150 Suresnes",
+        "score": 0.964840909090909,
+        "broker_ban_distance_m": 24.6,
+        "citycode": "92073",
+        "type": "housenumber"
+      },
+      {
+        "id": "OLBUR2100123",
+        "source_address": "9 Quai Marcel Dassault, 92150 Suresnes",
+        "ban_address": "9 Quai Marcel Dassault 92150 Suresnes",
+        "score": 0.964840909090909,
+        "broker_ban_distance_m": 23.2,
+        "citycode": "92073",
+        "type": "housenumber"
+      },
+      {
+        "id": "OLBUR2640542",
+        "source_address": "72-74 RUE ROUGET DE LISLE, 92150 Suresnes",
+        "ban_address": "74 Rue Rouget de Lisle 92150 Suresnes",
+        "score": 0.819021118881119,
+        "broker_ban_distance_m": 14.7,
+        "citycode": "92073",
+        "type": "housenumber"
+      }
+    ],
+    "status": "Remplacé sur la carte le 28 octobre 2026 ; conservé dans l’historique Git et la recherche initiale."
+  },
+  "office_address_replacement": {
+    "date": "2026-10-28",
+    "source": "Liste communiquée par l’utilisateur ; géocodeur Géoplateforme/BAN",
+    "checks": [
+      {
+        "id": "ban-92073_4121_00025",
+        "supplied_address": "25 Quai Gallieni, 92150 Suresnes",
+        "ban_address": "25 Quai Gallieni 92150 Suresnes",
+        "ban_id": "92073_4121_00025",
+        "score": 0.9654918181818181,
+        "coordinates": [
+          2.231631,
+          48.870774
+        ],
+        "postcode_corrected": false,
+        "inside_suresnes": true
+      },
+      {
+        "id": "ban-92073_4730_00079",
+        "supplied_address": "79 Rue Jean Jacques Rousseau, 92150 Suresnes",
+        "ban_address": "79 Rue Jean-Jacques Rousseau 92150 Suresnes",
+        "ban_id": "92073_4730_00079",
+        "score": 0.9713145454545454,
+        "coordinates": [
+          2.223741,
+          48.866123
+        ],
+        "postcode_corrected": false,
+        "inside_suresnes": true
+      },
+      {
+        "id": "ban-92073_8131_00002",
+        "supplied_address": "2 Rue de la République, 92210 Suresnes",
+        "ban_address": "2 Rue de la République 92150 Suresnes",
+        "ban_id": "92073_8131_00002",
+        "score": 0.7972601435406699,
+        "coordinates": [
+          2.221629,
+          48.860101
+        ],
+        "postcode_corrected": true,
+        "inside_suresnes": true
+      },
+      {
+        "id": "ban-92073_7160_00030",
+        "supplied_address": "30 Rue Pasteur, 92150 Suresnes",
+        "ban_address": "30 Rue Pasteur 92150 Suresnes",
+        "ban_id": "92073_7160_00030",
+        "score": 0.9720863636363635,
+        "coordinates": [
+          2.223298,
+          48.862077
+        ],
+        "postcode_corrected": false,
+        "inside_suresnes": true
+      }
+    ],
+    "vacancy_verified": false
+  },
+  "mos_2025": {
+    "checked_at": "2026-10-29",
+    "territory": "Suresnes (INSEE 92073)",
+    "mos_year": 2025,
+    "mos_office_class": 45,
+    "mos_office_polygons": 25,
+    "mos_office_area_m2_clipped": 143652,
+    "bpe_year": 2025,
+    "bpe_commerces_considered": 203,
+    "bdnb_release": "2026-02.b / schema v0.7.12",
+    "bdnb_building_groups_suresnes": 4194,
+    "candidate_mixed_buildings": 3,
+    "criteria": "BDNB usage principal Tertiaire, emprise >= 1000 m², >= 90 % dans un polygone MOS 2025 code 45, commerce BPE 2025 géolocalisé à <= 2 m de l'emprise, SIRET et qualité XY B ; bornes communales contrôlées.",
+    "status": "Candidats spatiaux, pas bâtiments mixtes certifiés",
+    "candidates": [
+      {
+        "bdnb_id": "bdnb-bg-JXUV-43E5-6YRE",
+        "mos_office_id": "mos-2025-92073-45-04",
+        "shops": [
+          {
+            "name": "BOTANIC",
+            "type": "Fleuriste-jardinerie-animalerie",
+            "address": "2 RUE PAGES",
+            "siret": "31291055700155"
+          }
+        ]
+      },
+      {
+        "bdnb_id": "bdnb-bg-JKZP-V2MT-JZUZ",
+        "mos_office_id": "mos-2025-92073-45-18",
+        "shops": [
+          {
+            "name": "DM SERVICES",
+            "type": "Magasin de matériel médical et orthopédique",
+            "address": "46 RUE CARNOT",
+            "siret": "83134897400039"
+          }
+        ]
+      },
+      {
+        "bdnb_id": "bdnb-bg-1KAF-YUT6-1FCD",
+        "mos_office_id": "mos-2025-92073-45-14",
+        "shops": [
+          {
+            "name": "VP AUTO",
+            "type": "Commerce de biens d’occasion",
+            "address": "5 RUE FREDERIC CLAVEL",
+            "siret": "44249617000097"
+          }
+        ]
+      }
+    ],
+    "source_files_sha256": {
+      "mos-bureaux-2025.json": "86d807e56f8f2cc5c39147e91eb46543def0ca876fc9dca80c9b82f80af84c88",
+      "bpe-commerces-suresnes-2025.json": "cb49f8db937c8ce3aa69c118247abe79749e29d4c792768342d7446a43b00de0",
+      "bdnb-groupes-suresnes.json": "b9c8a808d20ef1918eda5a723382ff5a90109ab5bbe5b1a2eefd83ed59cbfadb",
+      "bdnb-usages-suresnes.json": "a74cdf219b14ae793477f7c665eebe17271bf3edbafe95faac135b4339f98371"
+    }
+  },
+  "plu_office_retention_2024": {
+    "checked_at": "2026-10-29",
+    "document": "92073_PLU_20240626",
+    "gpu_status": "En vigueur, version 4, publié le 15/01/2025",
+    "perimeter_count": 5,
+    "total_area_m2_lambert93": 365770,
+    "geometry_valid_and_in_commune": true,
+    "rule": "Dispositions générales, article 14 : transformation des surfaces de bureaux existantes encadrée, avec usages permis et exception en dessous de 100 m²",
+    "detailed_quality_file": "plu-maintien-quality.json"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "checked_at": "2026-10-29",
+  "territory": "Suresnes (INSEE 92073)",
+  "mos_year": 2025,
+  "mos_office_class": 45,
+  "mos_office_polygons": 25,
+  "mos_office_area_m2_clipped": 143652,
+  "bpe_year": 2025,
+  "bpe_commerces_considered": 203,
+  "bdnb_release": "2026-02.b / schema v0.7.12",
+  "bdnb_building_groups_suresnes": 4194,
+  "candidate_mixed_buildings": 3,
+  "criteria": "BDNB usage principal Tertiaire, emprise >= 1000 m², >= 90 % dans un polygone MOS 2025 code 45, commerce BPE 2025 géolocalisé à <= 2 m de l'emprise, SIRET et qualité XY B ; bornes communales contrôlées.",
+  "status": "Candidats spatiaux, pas bâtiments mixtes certifiés",
+  "candidates": [
+    {
+      "bdnb_id": "bdnb-bg-JXUV-43E5-6YRE",
+      "mos_office_id": "mos-2025-92073-45-04",
+      "shops": [
+        {
+          "name": "BOTANIC",
+          "type": "Fleuriste-jardinerie-animalerie",
+          "address": "2 RUE PAGES",
+          "siret": "31291055700155"
+        }
+      ]
+    },
+    {
+      "bdnb_id": "bdnb-bg-JKZP-V2MT-JZUZ",
+      "mos_office_id": "mos-2025-92073-45-18",
+      "shops": [
+        {
+          "name": "DM SERVICES",
+          "type": "Magasin de matériel médical et orthopédique",
+          "address": "46 RUE CARNOT",
+          "siret": "83134897400039"
+        }
+      ]
+    },
+    {
+      "bdnb_id": "bdnb-bg-1KAF-YUT6-1FCD",
+      "mos_office_id": "mos-2025-92073-45-14",
+      "shops": [
+        {
+          "name": "VP AUTO",
+          "type": "Commerce de biens d’occasion",
+          "address": "5 RUE FREDERIC CLAVEL",
+          "siret": "44249617000097"
+        }
+      ]
+    }
+  ],
+  "source_files_sha256": {
+    "mos-bureaux-2025.json": "86d807e56f8f2cc5c39147e91eb46543def0ca876fc9dca80c9b82f80af84c88",
+    "bpe-commerces-suresnes-2025.json": "cb49f8db937c8ce3aa69c118247abe79749e29d4c792768342d7446a43b00de0",
+    "bdnb-groupes-suresnes.json": "b9c8a808d20ef1918eda5a723382ff5a90109ab5bbe5b1a2eefd83ed59cbfadb",
+    "bdnb-usages-suresnes.json": "a74cdf219b14ae793477f7c665eebe17271bf3edbafe95faac135b4339f98371"
+  }
+}

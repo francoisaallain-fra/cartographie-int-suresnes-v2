@@ -1,0 +1,121 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ban-92073_4121_00025",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.231631,
+          48.870774
+        ]
+      },
+      "properties": {
+        "id": "ban-92073_4121_00025",
+        "number": 1,
+        "kind": "office",
+        "origin": "provided_address",
+        "name": "25 Quai Gallieni",
+        "address": "25 Quai Gallieni 92150 Suresnes",
+        "input_address": "25 Quai Gallieni, 92150 Suresnes",
+        "address_note": null,
+        "vacancy_status": "Non vérifiée",
+        "source": "provided_addresses",
+        "source_url": "https://data.geopf.fr/geocodage/search?q=25+Quai+Gallieni+92150+Suresnes&limit=5",
+        "retrieved_at": "2026-10-28",
+        "ban_label": "25 Quai Gallieni 92150 Suresnes",
+        "ban_id": "92073_4121_00025",
+        "geocode_score": 0.9654918181818181,
+        "precision": "Point BAN au numéro ; emprise du bâtiment non vérifiée"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ban-92073_4730_00079",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.223741,
+          48.866123
+        ]
+      },
+      "properties": {
+        "id": "ban-92073_4730_00079",
+        "number": 2,
+        "kind": "office",
+        "origin": "provided_address",
+        "name": "79 Rue Jean-Jacques Rousseau",
+        "address": "79 Rue Jean-Jacques Rousseau 92150 Suresnes",
+        "input_address": "79 Rue Jean Jacques Rousseau, 92150 Suresnes",
+        "address_note": null,
+        "vacancy_status": "Non vérifiée",
+        "source": "provided_addresses",
+        "source_url": "https://data.geopf.fr/geocodage/search?q=79+Rue+Jean+Jacques+Rousseau+92150+Suresnes&limit=5",
+        "retrieved_at": "2026-10-28",
+        "ban_label": "79 Rue Jean-Jacques Rousseau 92150 Suresnes",
+        "ban_id": "92073_4730_00079",
+        "geocode_score": 0.9713145454545454,
+        "precision": "Point BAN au numéro ; emprise du bâtiment non vérifiée"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ban-92073_8131_00002",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.221629,
+          48.860101
+        ]
+      },
+      "properties": {
+        "id": "ban-92073_8131_00002",
+        "number": 3,
+        "kind": "office",
+        "origin": "provided_address",
+        "name": "2 Rue de la République",
+        "address": "2 Rue de la République 92150 Suresnes",
+        "input_address": "2 Rue de la République, 92210 Suresnes",
+        "address_note": "La liste fournie indique 92210 Suresnes ; la Base Adresse Nationale référence ce numéro au 92150 Suresnes.",
+        "vacancy_status": "Non vérifiée",
+        "source": "provided_addresses",
+        "source_url": "https://data.geopf.fr/geocodage/search?q=2+Rue+de+la+R%C3%A9publique+92210+Suresnes&limit=5",
+        "retrieved_at": "2026-10-28",
+        "ban_label": "2 Rue de la République 92150 Suresnes",
+        "ban_id": "92073_8131_00002",
+        "geocode_score": 0.7972601435406699,
+        "precision": "Point BAN au numéro ; emprise du bâtiment non vérifiée"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ban-92073_7160_00030",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.223298,
+          48.862077
+        ]
+      },
+      "properties": {
+        "id": "ban-92073_7160_00030",
+        "number": 4,
+        "kind": "office",
+        "origin": "provided_address",
+        "name": "30 Rue Pasteur",
+        "address": "30 Rue Pasteur 92150 Suresnes",
+        "input_address": "30 Rue Pasteur, 92150 Suresnes",
+        "address_note": null,
+        "vacancy_status": "Non vérifiée",
+        "source": "provided_addresses",
+        "source_url": "https://data.geopf.fr/geocodage/search?q=30+Rue+Pasteur+92150+Suresnes&limit=5",
+        "retrieved_at": "2026-10-28",
+        "ban_label": "30 Rue Pasteur 92150 Suresnes",
+        "ban_id": "92073_7160_00030",
+        "geocode_score": 0.9720863636363635,
+        "precision": "Point BAN au numéro ; emprise du bâtiment non vérifiée"
+      }
+    }
+  ]
+}

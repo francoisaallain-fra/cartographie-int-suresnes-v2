@@ -1,0 +1,35 @@
+{
+  "extracted_on": "2026-10-29",
+  "document_id": "64ef58d064a2d45604223108ff089d2d",
+  "document_url": "https://www.geoportail-urbanisme.gouv.fr/document/by-id/64ef58d064a2d45604223108ff089d2d",
+  "document_version": "92073_PLU_20240626",
+  "gpu_status_checked": "En vigueur, version 4, publié le 15/01/2025",
+  "source_endpoint": "https://apicarto.ign.fr/api/gpu/prescription-surf?partition=DU_92073",
+  "source_feature_count": 603,
+  "selection": "txt=SUR_BUREAU; libelle=Maintien des surfaces de bureau; gpu_doc_id et idurba égaux au document en vigueur",
+  "selected_feature_count": 5,
+  "source_gids": [
+    8153581,
+    8153582,
+    8153583,
+    8153584,
+    8153585
+  ],
+  "areas_m2_lambert93": [
+    5306,
+    37185,
+    50617,
+    12927,
+    259735
+  ],
+  "total_area_m2_lambert93": 365770,
+  "geometry_valid_and_in_commune": true,
+  "geometry_handling": "Coordonnées officielles conservées, sans simplification ni généralisation",
+  "graphic_plan_url": "https://data.geopf.fr/annexes/gpu/documents/DU_92073/64ef58d064a2d45604223108ff089d2d/92073_reglement_graphique_20240626.pdf",
+  "rule_url": "https://data.geopf.fr/annexes/gpu/documents/DU_92073/64ef58d064a2d45604223108ff089d2d/92073_reglement_20240626.pdf#page=9",
+  "rule_scope": "Transformation de surfaces existantes de bureaux dans les secteurs rouges; autres destinations listées admises; exception des surfaces existantes inférieures à 100 m²",
+  "source_sha256": "d85bd668bb0154e020699691b5c74c34fba740639900ff9b3ca2b2def5993dda",
+  "rule_pdf_sha256": "abc99aa742294bd8f0a0d7c8bbdde2c350ba8a43df51ddf5798af52aebc5058a",
+  "plan_pdf_sha256": "d5fcf74aa5f526ed7b29b5714cca981250160d72e34c881abfa04a64890b6519",
+  "output_sha256": "0608b51a5a672b313c611422c33c23eab1cd00fbfd75f006831aee82fc84a579"
+}

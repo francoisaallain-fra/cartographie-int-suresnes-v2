@@ -1,0 +1,163 @@
+{
+  "ign": {
+    "name": "IGN · BD ORTHO",
+    "url": "https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-ORTHO",
+    "format": "WMTS JPEG",
+    "license": "Licence Ouverte 2.0",
+    "vintage": "Prises de vues 2024 · résolution native 20 cm (Hauts-de-Seine)",
+    "note": "Photographie aérienne orthorectifiée ; équivalent visuel d’un fond satellite.",
+    "date_url": "https://data.geopf.fr/annexes/ressources/fiches/photographies-aeriennes-RVB/geoportail_dates_des_prises_de_vues_aeriennes-RVB.pdf"
+  },
+  "plu": {
+    "name": "Géoportail de l’urbanisme · API Carto IGN",
+    "url": "https://www.geoportail-urbanisme.gouv.fr/document/by-id/64ef58d064a2d45604223108ff089d2d",
+    "format": "GeoJSON · API Carto",
+    "license": "Données publiques GPU · accès libre",
+    "vintage": "PLU du 26/06/2024 · publié le 15/01/2025",
+    "note": "Zonage du document indiqué en vigueur par le GPU. Lire aussi le règlement, les OAP et les servitudes avant toute conclusion de faisabilité."
+  },
+  "pluOfficeRetention": {
+    "name": "PLU de Suresnes · maintien des surfaces de bureau",
+    "url": "https://www.geoportail-urbanisme.gouv.fr/document/by-id/64ef58d064a2d45604223108ff089d2d",
+    "format": "API Carto IGN · prescriptions surfaciques GeoJSON ; règlement et plan PDF",
+    "license": "Données publiques GPU · accès libre",
+    "vintage": "PLU modifié le 26/06/2024 · publié le 15/01/2025 · extrait le 29/10/2026",
+    "note": "Cinq périmètres SUR_BUREAU du document 92073_PLU_20240626. Les dispositions générales, article 14 (page imprimée 8), encadrent le changement de destination de surfaces de bureaux existantes. Les usages énumérés restent possibles ; les surfaces existantes inférieures à 100 m² sont exclues de cette disposition. La géométrie ne prouve pas la présence de bureaux à chaque parcelle.",
+    "geometry_url": "https://apicarto.ign.fr/api/gpu/prescription-surf?partition=DU_92073",
+    "rule_url": "https://data.geopf.fr/annexes/gpu/documents/DU_92073/64ef58d064a2d45604223108ff089d2d/92073_reglement_20240626.pdf#page=9",
+    "graphic_url": "https://data.geopf.fr/annexes/gpu/documents/DU_92073/64ef58d064a2d45604223108ff089d2d/92073_reglement_graphique_20240626.pdf"
+  },
+  "transport": {
+    "name": "Île-de-France Mobilités",
+    "url": "https://data.iledefrance-mobilites.fr/explore/dataset/emplacement-des-gares-idf/",
+    "format": "API JSON / GeoJSON",
+    "license": "Licence Ouverte 2.0",
+    "vintage": "Jeu mis à jour le 21/10/2026 · extrait le 22/10/2026",
+    "note": "9 points par ligne regroupés en 6 gares : 3 à Suresnes et 3 dans la bande de 500 m autour de la commune (distance à vol d’oiseau, calcul Lambert-93). Puteaux regroupe T2, L et U. Aucun arrêt RER ou métro dans le périmètre."
+  },
+  "education": {
+    "name": "Éducation nationale · Annuaire de l’éducation",
+    "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/",
+    "format": "API JSON",
+    "license": "Licence Ouverte 2.0",
+    "vintage": "Extrait et recoupé le 22/10/2026",
+    "note": "Écoles, collèges et lycées ouverts, publics et privés. Une coordonnée hors commune corrigée à partir de l’adresse BAN ; voir journal qualité."
+  },
+  "health": {
+    "name": "Ministère de la Santé · FINESS",
+    "url": "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements",
+    "format": "CSV national géolocalisé",
+    "license": "Licence Ouverte 2.0",
+    "vintage": "Stock au 04/05/2026 · publication 12/05/2026",
+    "note": "Sélection des structures de soins : hôpital, SSR, psychiatrie, centres et maison de santé, soins non programmés, dialyse. Les identifiants FINESS représentent des établissements, pas nécessairement des bâtiments distincts. Trois laboratoires FINESS recoupés avec leurs opérateurs et OSM, puis deux centres médicaux attestés par la Ville et leurs opérateurs, ajoutés le 22/10/2026."
+  },
+  "osm": {
+    "name": "OpenStreetMap · Overpass",
+    "url": "https://www.openstreetmap.org/copyright",
+    "format": "API Overpass JSON → GeoJSON",
+    "license": "ODbL · © les contributeurs OpenStreetMap",
+    "vintage": "2026-10-19T10:48:50Z",
+    "note": "Boulangeries shop=bakery. Base contributive, couverture non certifiée. Les pharmacies sont affichées depuis FINESS, sans additionner les 13 pharmacies OSM. Croisement du 22/10/2026 élargi à shop=pastry, aux écoles et aux structures de soins."
+  },
+  "broker": {
+    "name": "BNP Paribas Real Estate",
+    "url": "https://www.bnppre.fr/a-louer/bureau/hauts-de-seine-92/suresnes-92150/",
+    "format": "Pages HTML publiques · extraction ponctuelle",
+    "license": "Source commerciale ; pas de licence ouverte identifiée",
+    "vintage": "2026-10-19",
+    "note": "Échantillon de cinq offres avec adresse, parmi dix cartes d’annonces observées. Les cinq fiches déclarent une disponibilité immédiate. Vacance physique, état locatif et surface réellement libre non confirmés. Pas de synchronisation automatique."
+  },
+  "ban": {
+    "name": "Base Adresse Nationale · Géoplateforme IGN",
+    "url": "https://cartes.gouv.fr/aide/fr/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/geocodage/",
+    "format": "API GeoJSON",
+    "license": "Licence Ouverte 2.0",
+    "vintage": "2026-10-19",
+    "note": "Géocodage au numéro d’adresse ; ne délimite pas l’emprise du bâtiment."
+  },
+  "boundary": {
+    "name": "API Découpage administratif",
+    "url": "https://geo.api.gouv.fr/decoupage-administratif/communes",
+    "format": "GeoJSON",
+    "license": "Données ouvertes",
+    "vintage": "2026-10-19",
+    "note": "Périmètre communal Suresnes, code INSEE 92073."
+  },
+  "childcare": {
+    "name": "Département des Hauts-de-Seine · Petite enfance",
+    "url": "https://opendata.hauts-de-seine.fr/explore/dataset/etablissements-daccueil-de-la-petite-enfance-pe/",
+    "format": "API JSON → GeoJSON",
+    "license": "Licence Ouverte (Etalab)",
+    "vintage": "Jeu daté du 30/04/2025 · extrait le 19/10/2026",
+    "note": "32 établissements : 20 multi-accueils et 12 micro-crèches. Points fournis par le Département, contrôlés dans Suresnes. Plusieurs établissements peuvent partager une adresse ; ouverture actuelle non vérifiée individuellement."
+  },
+  "roads": {
+    "name": "OpenStreetMap · sélection recoupée avec le Département des Hauts-de-Seine",
+    "url": "https://www.openstreetmap.org/copyright",
+    "format": "GeoJSON / Overpass API",
+    "license": "ODbL 1.0 · © contributeurs OpenStreetMap",
+    "vintage": "Extraction du 22 octobre 2026",
+    "note": "4 axes choisis : quais de Seine, Henri-Sellier et pont, Washington, Franklin-Roosevelt. Géométries OSM découpées à la commune et à une bande de 500 m autour de ses limites ; les prolongements suivent les quais de Dion Bouton, le boulevard de la République, la route de Suresnes et la route/rue des Fusillés de la Résistance. Franklin-Roosevelt reste un axe intérieur à la commune ; sélection qualitative, sans classement par trafic. Au clic sur un bureau, seuls les tronçons dans le rayon sélectionné (300 m à 1 km) sont affichés.",
+    "official_sources": [
+      "https://www.hauts-de-seine.fr/toutes-les-actualites/detail/a-suresnes-le-boulevard-washington-fait-place-au-velo",
+      "https://www.hauts-de-seine.fr/rd7-1"
+    ],
+    "osm_base_timestamp": "2026-10-22T10:53:48Z"
+  },
+  "rail": {
+    "name": "Île-de-France Mobilités · Tracés du réseau ferré",
+    "url": "https://data.iledefrance-mobilites.fr/explore/dataset/traces-du-reseau-ferre-idf/",
+    "format": "GeoJSON · tracés et champ colourweb_hexa",
+    "license": "Licence Ouverte v2.0 (Etalab)",
+    "vintage": "Jeu mis à jour le 21/10/2026 · extrait le 22/10/2026",
+    "note": "Tram T2 et Transilien L/U, découpés à Suresnes + 500 m. Couleurs officielles IDFM : T2 #a0006e, L #c4a4cc, U #b6134c. Aucun tracé RER ou métro dans cette bande. Les lignes L/U sont légèrement décalées visuellement pour distinguer les voies communes ; données géographiques conservées."
+  },
+  "crosscheck": {
+    "name": "Croisement · sources publiques et opérateurs",
+    "url": "https://www.suresnes-tourisme.com/boulangeries-suresnes.html",
+    "format": "API JSON / pages publiques / géocodage BAN",
+    "license": "Sirene : Licence Ouverte ; OSM : ODbL ; pages opérateurs sans licence de réutilisation identifiée",
+    "vintage": "Consultation du 22/10/2026 ; FINESS au 04/05/2026",
+    "note": "11 ajouts (5 santé, 6 commerce), dont 5 activités commerciales non confirmées comme boutiques. 106 points originaux conservés. Noms, adresses et positions recoupés ; incertitudes détaillées au clic. Aucune exhaustivité certifiée."
+  },
+  "provided_addresses": {
+    "name": "Adresses fournies · géocodage BAN",
+    "url": "https://adresse.data.gouv.fr/outils/api-doc/adresse",
+    "format": "Quatre adresses communiquées ; coordonnées du géocodeur Géoplateforme/BAN",
+    "license": "Liste fournie pour ce test ; BAN, Licence Ouverte",
+    "vintage": "28 octobre 2026",
+    "note": "Quatre adresses au numéro dans Suresnes. Le 2 rue de la République est au 92150 selon la BAN, et non au 92210 indiqué dans la liste. Aucun bureau vacant ou disponible n’est établi par cette liste."
+  },
+  "mos": {
+    "name": "L’Institut Paris Region · Mos 2025",
+    "url": "https://data.iledefrance.fr/explore/dataset/mos-occupation-du-sol-2025-and-2021-en-79-postes-de-la-region-ile-de-france/",
+    "format": "API Opendatasoft · 25 polygones GeoJSON (code 45, INSEE 92073)",
+    "license": "Licence Ouverte v2.0",
+    "vintage": "Occupation 2025 · extrait le 29/10/2026",
+    "note": "Classe 45 « Bureaux » : surfaces de bureaux de plus de 5 000 m². Ce sont des emprises d’occupation du sol, pas des contours certifiés d’immeubles ni un inventaire exhaustif des petits bureaux. Les polygones ont été découpés à Suresnes."
+  },
+  "mosGroups": {
+    "name": "L’Institut Paris Region · Mos 2025 · nomenclature en 12 postes",
+    "url": "https://data.iledefrance.fr/explore/dataset/mos-occupation-du-sol-2025-and-2021-en-79-postes-de-la-region-ile-de-france/",
+    "format": "API Opendatasoft · polygones 2025 en 79 postes, regroupés en catégories 6, 7 et 8",
+    "license": "Licence Ouverte v2.0",
+    "vintage": "Occupation 2025 · extrait le 29/10/2026",
+    "note": "Suresnes uniquement. Catégorie 6 : postes 28 à 30 ; catégorie 7 : 31 à 35 ; catégorie 8 : 36 à 45, bureaux compris. 512 polygones cartographiés sur 513 enregistrements ; un poste 29 n’a pas de géométrie dans la réponse source. Emprises d’occupation du sol, pas bâtiments individuels."
+  },
+  "bdnb": {
+    "name": "CSTB · Base de données nationale des bâtiments",
+    "url": "https://bdnb.io/archives_data/bdnb_millesime_2026_02_b/",
+    "format": "Extrait départemental 92 CSV · contours de groupes bâtis",
+    "license": "Licence Ouverte v2.0",
+    "vintage": "Millésime 2026-02.b · extrait le 29/10/2026",
+    "note": "4194 groupes bâtis de Suresnes examinés. Pour la mixité potentielle, usage principal « Tertiaire », emprise ≥ 1 000 m² et au moins 90 % de recouvrement par une emprise Mos Bureaux. L’usage tertiaire ne prouve pas à lui seul un bureau."
+  },
+  "bpe": {
+    "name": "Insee · Base permanente des équipements 2025",
+    "url": "https://data.iledefrance.fr/explore/dataset/bpe23-nettoye/",
+    "format": "API Opendatasoft · points de commerces géolocalisés",
+    "license": "Licence Ouverte v2.0",
+    "vintage": "Référence 2025 · extrait le 29/10/2026",
+    "note": "203 enregistrements de domaine Commerce examinés à Suresnes ; seuls les points de qualité B à diffusion ouverte sont retenus. Les stations de recharge et points sans SIRET sont exclus du croisement. Un commerce à 2 m d’un contour BDNB demeure un indice spatial, pas une preuve d’occupation du même bâtiment."
+  }
+}
