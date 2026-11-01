@@ -1,7 +1,7 @@
 import { layerOpacity, runtime, state } from "./state.js";
 import { hiddenCategories } from "./legend.js";
 import { radiusText, selectedRadius } from "./radius.js";
-import { handleMapClick } from "./selection.js";
+import { handleMapClick } from "./map-events.js";
 import { escapeHTML } from "./presentation.js";
 import { row } from "./popups.js";
 import { serviceBadges } from "./markers.js";

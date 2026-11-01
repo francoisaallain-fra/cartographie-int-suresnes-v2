@@ -1,3 +1,4 @@
+import { configureMapClickHandler } from "./map-events.js";
 import { loadDatasets } from "./data.js";
 import { groupFor, runtime, state } from "./state.js";
 import { setupMapRotation } from "./rotation.js";
@@ -16,6 +17,7 @@ import { buildControls } from "./controls.js";
 import { buildSources } from "./sources.js";
 import { updateLayers, updateZoneLabels } from "./layers.js";
 export async function start() {
+  configureMapClickHandler(handleMapClick);
   try {
     runtime.data = await loadDatasets();
     runtime.sources = runtime.data.sources;
