@@ -12,6 +12,11 @@ const offices = [
 const rentalOffices = JSON.parse(
   fs.readFileSync("public/data/rental-offices.geojson"),
 ).features;
+const excludedAmenityIds = new Set(
+  JSON.parse(fs.readFileSync("public/data/amenity-review.json"))
+    .entries.filter((entry) => entry.decision === "exclude")
+    .map((entry) => entry.id),
+);
 test.beforeEach(async ({ page }) => {
   await page.goto("/");
   await expect(page.locator("#loading")).toBeHidden();
@@ -65,7 +70,9 @@ test("all 75 radius scenarios preserve the visible points", async ({
       expect(state.radiusMeters).toBe(distance);
       expect([...state.pointIds].sort()).toEqual(
         [
-          ...radii.offices[office.id][distance].nearby.map((x) => x.id),
+          ...radii.offices[office.id][distance].nearby
+            .filter((x) => !excludedAmenityIds.has(x.id))
+            .map((x) => x.id),
           ...offices.map((x) => x.id),
           ...rentalOffices.map((x) => x.id),
         ].sort(),

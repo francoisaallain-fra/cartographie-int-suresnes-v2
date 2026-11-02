@@ -29,6 +29,7 @@ export const symbols = {
   pharmacy: '<path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6Z"/>',
   bakery:
     '<path d="M7 21 20 5a3 3 0 0 0-4-4L3 17a3 3 0 0 0 4 4ZM5 14l4 3m0-8 4 3m0-8 4 3"/>',
+  tea: '<path d="M3 8h15v7a6 6 0 0 1-6 6H9a6 6 0 0 1-6-6V8Zm15 1h2a3 3 0 0 1 0 6h-2M2 22h19M8 2v3m5-3v3"/>',
   office:
     '<path d="M5 21V3h14v18M3 21h18M9 7h1m4 0h1M9 11h1m4 0h1M9 15h1m4 0h1M10 21v-3h4v3"/>',
   mixed:
@@ -46,6 +47,7 @@ export const colors = {
   health: "#00c86a",
   pharmacy: "#0fff7b",
   bakery: "#f6ad35",
+  tea: "#ca9343",
   office: "#d72e83",
   rentalOffice: "#2376b7",
 };
@@ -56,6 +58,7 @@ export const typeLabels = {
   health: "Structure de soins",
   pharmacy: "Pharmacie",
   bakery: "Boulangerie / pâtisserie",
+  tea: "Magasin de thé",
   office: "Adresse d’immeuble ciblé",
   rentalOffice: "Bureaux annoncés à la location",
 };

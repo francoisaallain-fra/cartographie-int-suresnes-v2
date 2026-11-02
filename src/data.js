@@ -48,8 +48,48 @@ export function validateCollection(value, name) {
   }
   return value;
 }
+/** Apply a dated review without changing the reference GeoJSON snapshots. */
+export function applyAmenityReview(data, review) {
+  const seen = new Set();
+  for (const entry of review.entries) {
+    const key = `${entry.dataset}/${entry.id}`;
+    if (seen.has(key)) throw new Error(`Duplicate amenity review: ${key}`);
+    seen.add(key);
+    const collection = data[entry.dataset];
+    const feature = collection?.features.find((item) => item.id === entry.id);
+    if (!feature) throw new Error(`Unknown amenity review: ${key}`);
+    if (entry.decision === "exclude") {
+      collection.features = collection.features.filter(
+        (item) => item.id !== entry.id,
+      );
+      continue;
+    }
+    if (entry.decision !== "keep")
+      throw new Error(`Invalid amenity decision: ${key}`);
+    Object.assign(feature.properties, entry.properties || {});
+    feature.properties.audit = {
+      ...feature.properties.audit,
+      date: review.checked_on,
+      status: entry.status,
+      doubts: entry.remaining_doubts || [],
+      notes: [entry.reason],
+      sources: [
+        ...(feature.properties.audit?.sources || []),
+        { label: "Google Maps · contrôle du 02/11/2026", url: entry.maps_url },
+        ...(entry.sources || []),
+      ],
+    };
+  }
+  return data;
+}
 export async function loadDatasets(fetcher = fetch) {
-  const names = [...datasetNames, "sources", "radii", "radii-extra"];
+  const names = [
+    ...datasetNames,
+    "sources",
+    "radii",
+    "radii-extra",
+    "amenity-review",
+  ];
   const values = await Promise.all(
     names.map(async (name) => {
       const extension = datasetNames.includes(name) ? "geojson" : "json";
@@ -63,6 +103,12 @@ export async function loadDatasets(fetcher = fetch) {
   const data = Object.fromEntries(
     names.map((name, index) => [name, values[index]]),
   );
+  applyAmenityReview(data, data["amenity-review"]);
+  data.sources.crosscheck = {
+    ...data.sources.crosscheck,
+    vintage: "Revue Google Maps et sources officielles du 02/11/2026",
+    note: "19 commerces / activités et 13 pharmacies affichés. Cinq points commerciaux sans boutique suffisamment recoupée sont exclus de l’affichage ; leurs décisions restent dans le fichier de revue. Google Maps ne démontre pas à lui seul l’existence ou l’absence d’une activité.",
+  };
   data.offices.features.push(...data["offices-extra"].features);
   Object.assign(data.radii.offices, data["radii-extra"].offices);
   data.sources.provided_addresses = {

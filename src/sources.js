@@ -57,7 +57,7 @@ export function buildSources() {
     [
       "Quartier",
       "crosscheck",
-      "24 commerces / activités : 18 initiaux, 1 fournil recoupé et 5 activités déclarées à vérifier",
+      "19 commerces / activités affichés après contrôle Google Maps du 02/11/2026 ; 5 points sans boutique recoupée retirés",
     ],
     [
       "Immeubles ciblés",

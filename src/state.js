@@ -42,7 +42,7 @@ export function groupFor(f) {
       ? "transport"
       : ["school", "nursery", "health"].includes(f.properties.kind)
         ? "equipment"
-        : ["bakery", "pharmacy"].includes(f.properties.kind)
+        : ["bakery", "tea", "pharmacy"].includes(f.properties.kind)
           ? "neighborhood"
           : "offices";
 }

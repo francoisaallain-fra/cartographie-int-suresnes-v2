@@ -63,3 +63,9 @@ Le clic sur une gare ajoute un cercle blanc pointillé de 500 m sans remplissage
 ## Repli des couches du 2 novembre 2026
 
 Les douze cartes de la colonne de gauche sont repliées à l'ouverture d'une nouvelle session. Les choix de dépliage sont conservés pendant la session, y compris après rechargement de l'onglet, puis réinitialisés à la session suivante.
+
+## Revue des aménités du 2 novembre 2026
+
+Quatorze points incertains ont été recherchés par nom et adresse dans Google Maps et rapprochés des sources conservées. Le collège est affiché sous le nom Hubert Germain ; Berty Albrecht et Le Fournil de Verdun sont harmonisés. Tea o’clock est présenté comme magasin de thé. Cinq points commerciaux sans boutique suffisamment corroborée sont retirés de l'affichage, tout en restant dans les données de référence et le [journal de revue](AMENITES_REVIEW.md). La divergence d'adresse de L'Atelier de Flo et la position de l'hôpital de jour restent signalées.
+
+Contrôles locaux : ESLint, Prettier, 11 tests Node, build Vite et 11 tests Playwright avec Chrome réussis. Le test des 75 scénarios de rayon compare les points affichés après l'exclusion documentée, sans modifier les scénarios historiques.
