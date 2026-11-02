@@ -1,6 +1,8 @@
 import { $ } from "./presentation.js";
 import { runtime } from "./state.js";
 import { layerSpecs } from "./catalog.js";
+// The revised key applies the new opening layout once to returning browsers.
+export const layerOrderKey = "suresnes-v2-layer-order-v2";
 export function syncLayerOrder() {
   const cards = [...$("layer-controls").children];
   cards.forEach((card, i) => {
@@ -14,7 +16,7 @@ export function syncLayerOrder() {
     Number(runtime.map.getPane("data-transport").style.zIndex) - 1;
   try {
     localStorage.setItem(
-      "suresnes-v2-layer-order",
+      layerOrderKey,
       JSON.stringify(cards.map((c) => c.dataset.layerId)),
     );
   } catch {}
@@ -22,7 +24,7 @@ export function syncLayerOrder() {
 export function setupLayerReordering() {
   const list = $("layer-controls");
   try {
-    const saved = JSON.parse(localStorage.getItem("suresnes-v2-layer-order"));
+    const saved = JSON.parse(localStorage.getItem(layerOrderKey));
     if (
       Array.isArray(saved) &&
       new Set(saved).size === saved.length &&

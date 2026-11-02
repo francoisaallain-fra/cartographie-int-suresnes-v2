@@ -22,6 +22,68 @@ test.beforeEach(async ({ page }) => {
   await expect(page.locator("#loading")).toBeHidden();
   await expect(page.locator(".layer-card")).toHaveCount(12);
 });
+test("opening layer layout matches the supplied MOS view", async ({ page }) => {
+  const expectedOrder = [
+    "mosPavilion",
+    "mosCollective",
+    "mosActivities",
+    "mixedBuildings",
+    "mosOffices",
+    "transport",
+    "offices",
+    "rentalOffices",
+    "pluOfficeRetention",
+    "plu",
+    "equipment",
+    "neighborhood",
+  ];
+  const order = () =>
+    page
+      .locator(".layer-card")
+      .evaluateAll((cards) => cards.map((card) => card.dataset.layerId));
+  expect(await order()).toEqual(expectedOrder);
+  for (const id of [
+    "mosPavilion",
+    "mosCollective",
+    "mosActivities",
+    "transport",
+    "offices",
+    "rentalOffices",
+    "pluOfficeRetention",
+  ])
+    await expect(page.locator(`#layer-${id}`)).toBeChecked();
+  for (const id of [
+    "mixedBuildings",
+    "mosOffices",
+    "plu",
+    "equipment",
+    "neighborhood",
+  ])
+    await expect(page.locator(`#layer-${id}`)).not.toBeChecked();
+  for (const [id, opacity] of [
+    ["mosPavilion", "55"],
+    ["mosCollective", "55"],
+    ["mosActivities", "50"],
+    ["mosOffices", "100"],
+  ])
+    await expect(page.locator(`#layerOpacity-${id}`)).toHaveValue(opacity);
+  await expect(
+    page.locator(".leaflet-data-mosActivities-pane path").first(),
+  ).toHaveAttribute("fill", "#1f6fb2");
+  await expect(
+    page.locator(".leaflet-data-mosActivities-pane path").first(),
+  ).toHaveAttribute("fill-opacity", "0.5");
+  await page.evaluate(() => {
+    localStorage.setItem(
+      "suresnes-v2-layer-order",
+      JSON.stringify(["plu", "mosOffices"]),
+    );
+    localStorage.removeItem("suresnes-v2-layer-order-v2");
+  });
+  await page.reload();
+  await expect(page.locator("#loading")).toBeHidden();
+  expect(await order()).toEqual(expectedOrder);
+});
 test("all layer toggles and disclosure controls remain independent", async ({
   page,
 }) => {
