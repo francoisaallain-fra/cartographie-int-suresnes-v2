@@ -1222,6 +1222,15 @@ button.legend-item[aria-pressed="false"] {
   color: var(--muted);
   line-height: 1.5;
 }
+.office-screening-swatch {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  margin-right: 5px;
+  border: 1px solid #5c5420;
+  border-radius: 3px;
+  vertical-align: -2px;
+}
 .station-dot {
   position: absolute;
   inset: 2px;
