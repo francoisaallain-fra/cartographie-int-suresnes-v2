@@ -231,6 +231,15 @@ test("rental listings have their own layer and linked popup", async ({
   await expect(toggle).toBeChecked();
   const marker = page.locator(".map-pin.rentalOffice");
   await expect(marker).toHaveCount(16);
+  await expect(marker.locator(".rental-pin-shape")).toHaveCount(16);
+  await expect(marker.first()).toHaveCSS("margin-left", "-1px");
+  await expect(marker.first()).toHaveCSS("margin-top", "-39px");
+  await expect(
+    marker.first().locator(".rental-pin-shape path"),
+  ).toHaveAttribute("d", /L1 39V9/);
+  await expect(page.locator(".map-pin.office .rental-pin-shape")).toHaveCount(
+    0,
+  );
   await toggle.uncheck();
   await expect(marker).toHaveCount(0);
   await toggle.check();

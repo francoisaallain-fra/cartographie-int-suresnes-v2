@@ -104,3 +104,7 @@ Le vert de repérage passe de `#00c853` à `#00a846`, légèrement plus sombre. 
 ## Second ajustement du vert · 3 novembre 2026
 
 Le vert de repérage passe de `#00a846` à `#007f3f`, plus sombre et accompagné de chiffres blancs pour préserver leur lisibilité. Les critères spatiaux, les six points concernés et les autres couches ne changent pas.
+
+## Pointe des bureaux à louer · 3 novembre 2026
+
+Les 16 pastilles de la couche « Bureaux proposés à la location » possèdent une pointe en bas à gauche. L’ancrage Leaflet coïncide avec l’extrémité de cette pointe et donc avec le point d’adresse géocodé. Les immeubles ciblés conservent leur symbole. La position géocodée ne garantit pas la localisation de l’entrée réelle.
