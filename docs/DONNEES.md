@@ -10,6 +10,10 @@ Le cinquième point ciblé, ajouté le 2 novembre 2026, est le **39 rue Rouget d
 
 Une adresse n'est pas une preuve de vacance. Une emprise Mos n'est pas un bâtiment certifié. Les trois bâtiments mixtes restent des candidats. Les limites territoriales, incertitudes et liens réglementaires de l'interface sont conservés. Les droits sur les données et logos restent ceux des producteurs ; aucune nouvelle licence globale n'est attribuée au dépôt.
 
+## Revue des aménités · 2 novembre 2026
+
+Les [14 décisions détaillées](AMENITES_REVIEW.md) sont enregistrées dans `public/data/amenity-review.json`. Le chargement applique les corrections de nom, d'adresse et de catégorie aux trois GeoJSON de référence sans modifier leurs empreintes. Cinq points commerciaux dont la boutique ou la position n'est pas suffisamment corroborée sont exclus de l'affichage ; Tea o’clock est affiché comme magasin de thé. Les scénarios de rayon initiaux sont conservés ; les compteurs et marqueurs visibles utilisent seulement les points retenus. La recherche Google Maps n'est pas une preuve d'absence, et les deux localisations encore divergentes restent signalées.
+
 ## Annonces de bureaux à louer · relevé du 2 novembre 2026
 
 La couche « Bureaux proposés à la location » provient de la [recherche BureauxLocaux à Suresnes](https://www.bureauxlocaux.com/immobilier-d-entreprise/annonces/suresnes-92150/location-bureaux), avec les paramètres cartographiques fournis par François conservés dans `public/data/rental-offices-quality.json`. Le relevé de 53 cartes est conservé dans `data-source/bureauxlocaux-2026-11-02.tsv` avec identifiant, type, surface, loyer et adresse tels qu'affichés, et lien. Il ne reprend ni photos ni descriptions commerciales. Le loyer affiché n'est pas recalculé et son régime de charges ou de TVA n'est pas déduit.

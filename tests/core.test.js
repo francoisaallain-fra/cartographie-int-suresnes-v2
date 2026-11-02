@@ -4,7 +4,12 @@ import fs from "node:fs";
 import { createHash } from "node:crypto";
 import { pointInRing } from "../src/geometry.js";
 import { escapeHTML } from "../src/presentation.js";
-import { validateCollection, loadDatasets, datasetNames } from "../src/data.js";
+import {
+  validateCollection,
+  loadDatasets,
+  datasetNames,
+  applyAmenityReview,
+} from "../src/data.js";
 const read = (name) =>
   JSON.parse(fs.readFileSync(`public/data/${name}`, "utf8"));
 test("all original data, assets and vendor files retain their exact bytes", () => {
@@ -21,6 +26,30 @@ test("all original data, assets and vendor files retain their exact bytes", () =
 test("all geographic collections satisfy their data contract", () => {
   for (const name of datasetNames)
     validateCollection(read(name + ".geojson"), name);
+});
+test("the amenity review corrects names and omits unsupported shop pins", () => {
+  const review = read("amenity-review.json");
+  assert.equal(review.entries.length, 14);
+  const data = Object.fromEntries(
+    ["schools", "health", "neighborhood"].map((name) => [
+      name,
+      read(`${name}.geojson`),
+    ]),
+  );
+  applyAmenityReview(data, review);
+  assert.equal(
+    data.schools.features.find((f) => f.id === "0920884L").properties.name,
+    "Collège Hubert Germain",
+  );
+  assert.equal(
+    data.neighborhood.features.find((f) => f.id === "audit-tea").properties
+      .kind,
+    "tea",
+  );
+  assert.equal(data.neighborhood.features.length, 32);
+  assert.ok(!data.neighborhood.features.some((f) => f.id === "audit-perlin"));
+  for (const name of ["schools", "health", "neighborhood"])
+    validateCollection(data[name], name);
 });
 test("point containment handles inside, outside and either ring orientation", () => {
   const ring = [

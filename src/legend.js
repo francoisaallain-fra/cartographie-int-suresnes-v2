@@ -111,6 +111,12 @@ export function layerLegend(id) {
                 },
                 "Pharmacies",
               ],
+              [
+                {
+                  kind: "tea",
+                },
+                "Magasin de thé",
+              ],
             ]
           : [];
   return entries.length

@@ -1,0 +1,178 @@
+{
+  "checked_on": "2026-11-02",
+  "method": "Recherches nominatives et par adresse dans Google Maps ; rapprochement avec identifiants, adresses et sources officielles déjà conservées dans les données. Absence de fiche Google Maps ≠ preuve d’absence physique. Échelle : 1 doute faible, 2 doute résiduel, 3 affichage non justifié.",
+  "entries": [
+    {
+      "dataset": "schools",
+      "id": "0920171L",
+      "maps_url": "https://www.google.com/maps/search/Lyc%C3%A9e%20Louis%20Bl%C3%A9riot%2067%20rue%20de%20Verdun%20Suresnes",
+      "decision": "keep",
+      "uncertainty_1_to_3": 1,
+      "reason": "Google Maps affiche Lycée Louis Blériot au 67 rue de Verdun. Le nom officiel détaillé reste conservé.",
+      "status": "Confirmé · adresse et établissement",
+      "remaining_doubts": []
+    },
+    {
+      "dataset": "schools",
+      "id": "0920953L",
+      "maps_url": "https://www.google.com/maps/search/Ecole%20Berty%20Albrecht%2086%20rue%20Carnot%20Suresnes",
+      "decision": "keep",
+      "uncertainty_1_to_3": 1,
+      "reason": "Google Maps et la Ville écrivent Berty Albrecht au 86 rue Carnot ; la variante Bertie du fichier national est écartée pour l’affichage.",
+      "properties": {
+        "name": "École primaire publique Berty Albrecht"
+      },
+      "status": "Confirmé · nom harmonisé",
+      "remaining_doubts": []
+    },
+    {
+      "dataset": "schools",
+      "id": "0920884L",
+      "maps_url": "https://www.google.com/maps/search/Coll%C3%A8ge%20Hubert%20Germain%2078%20rue%20Carnot%20Suresnes",
+      "decision": "keep",
+      "uncertainty_1_to_3": 1,
+      "reason": "Google Maps et l’académie affichent Collège Hubert Germain au 78 rue Carnot pour le même établissement UAI 0920884L.",
+      "properties": {
+        "name": "Collège Hubert Germain"
+      },
+      "status": "Confirmé · nom actuel",
+      "remaining_doubts": []
+    },
+    {
+      "dataset": "health",
+      "id": "finess-920718277",
+      "maps_url": "https://www.google.com/maps/search/H%C3%B4pital%20de%20jour%20La%20Cabane%203%20bis%20rue%20Chevreul%20Suresnes",
+      "decision": "keep",
+      "uncertainty_1_to_3": 2,
+      "reason": "La recherche Google Maps ne fournit pas de fiche d’établissement concordante. L’opérateur et la HAS rattachent le FINESS 920718277 à l’Hôpital de jour « La Cabane », 3 bis rue Chevreul.",
+      "properties": {
+        "name": "Hôpital de jour « La Cabane »",
+        "address": "3 bis rue Chevreul, 92150 Suresnes"
+      },
+      "status": "Nom et adresse officiels · point à confirmer",
+      "remaining_doubts": [
+        "Google Maps ne confirme pas la fiche du service ; la position du point FINESS et l’entrée exacte restent à contrôler."
+      ],
+      "sources": [
+        {
+          "label": "Centre hospitalier Théophile Roussel · annuaire",
+          "url": "https://www.th-roussel.fr/l-etablissement/annuaires-des-structures/"
+        },
+        {
+          "label": "HAS · rapport FINESS 920718277",
+          "url": "https://www.has-sante.fr/jcms/p_3522700/fr/rapport-de-certification-cqss-30284"
+        }
+      ]
+    },
+    {
+      "dataset": "health",
+      "id": "audit-doccity",
+      "maps_url": "https://www.google.com/maps/search/DocCity%20Suresnes%205%20rue%20Gardenat%20Lapostol",
+      "decision": "keep",
+      "uncertainty_1_to_3": 1,
+      "reason": "Google Maps affiche DocCity Suresnes comme centre médical au 5 rue Gardenat Lapostol ; l’opérateur confirme cette adresse. Aucun laboratoire d’analyses patients n’est ajouté.",
+      "properties": {
+        "name": "DocCity Suresnes — centre médical"
+      },
+      "status": "Confirmé · centre médical",
+      "remaining_doubts": []
+    },
+    {
+      "dataset": "neighborhood",
+      "id": "osm-node-3075148137",
+      "maps_url": "https://www.google.com/maps/search/L%20atelier%20des%20pains%2022%20bis%20avenue%20Jean%20Jaur%C3%A8s%20Suresnes",
+      "decision": "exclude",
+      "uncertainty_1_to_3": 3,
+      "reason": "Google Maps situe L’Atelier des Pains & Co au 34 rue Émile Zola, pas au point OSM ni au 22 bis avenue Jean Jaurès. Le rapprochement local n’est pas démontré."
+    },
+    {
+      "dataset": "neighborhood",
+      "id": "osm-node-3892536583",
+      "maps_url": "https://www.google.com/maps/search/Au%20Pain%20de%20Verdun%2052%20rue%20de%20Verdun%20Suresnes",
+      "decision": "keep",
+      "uncertainty_1_to_3": 1,
+      "reason": "Google Maps affiche Le Fournil de Verdun, boulangerie au 52 rue de Verdun. L’ancien libellé Au Pain de Verdun est remplacé pour l’affichage.",
+      "properties": {
+        "name": "Le Fournil de Verdun",
+        "address": "52 rue de Verdun, 92150 Suresnes"
+      },
+      "status": "Confirmé · enseigne actuelle",
+      "remaining_doubts": []
+    },
+    {
+      "dataset": "neighborhood",
+      "id": "osm-node-6250448542",
+      "maps_url": "https://www.google.com/maps/search/L%20Atelier%20de%20Flo%2028%20avenue%20Edouard%20Vaillant%20Suresnes",
+      "decision": "keep",
+      "uncertainty_1_to_3": 2,
+      "reason": "Google Maps affiche L’Atelier de Flo comme boulangerie au 28 avenue Jean Jaurès, près du point OSM. La source OSM et un annuaire commercial indiquent Édouard Vaillant : le numéro et l’entrée restent à confirmer sur place.",
+      "properties": {
+        "address": "28 avenue Jean Jaurès, 92150 Suresnes"
+      },
+      "status": "Activité confirmée · adresse divergente",
+      "remaining_doubts": [
+        "Google Maps indique 28 avenue Jean Jaurès, tandis qu’OSM et un annuaire indiquent 28 avenue Édouard Vaillant ; accès exact à confirmer."
+      ]
+    },
+    {
+      "dataset": "neighborhood",
+      "id": "osm-node-7658156712",
+      "maps_url": "https://www.google.com/maps/search/La%20Suriesne%202%20promenade%20Saint%20Leufroy%20Suresnes",
+      "decision": "keep",
+      "uncertainty_1_to_3": 1,
+      "reason": "Google Maps affiche La Suriesne au 2 promenade Saint-Leufroy, au point OSM. L’annuaire touristique qui mentionne La Sainte Victoire semble désynchronisé.",
+      "properties": {
+        "address": "2 promenade Saint-Leufroy, 92150 Suresnes"
+      },
+      "status": "Confirmé · nom et adresse",
+      "remaining_doubts": []
+    },
+    {
+      "dataset": "neighborhood",
+      "id": "audit-perlin",
+      "maps_url": "https://www.google.com/maps/search/Perlin%20Tatin%2070%20avenue%20Franklin%20Roosevelt%20Suresnes",
+      "decision": "exclude",
+      "uncertainty_1_to_3": 3,
+      "reason": "Aucune fiche Google Maps concordante au 70 avenue Franklin Roosevelt ; l’opérateur publie sa boutique à Rueil-Malmaison. Adresse Sirene insuffisante pour afficher une boutique."
+    },
+    {
+      "dataset": "neighborhood",
+      "id": "audit-tea",
+      "maps_url": "https://www.google.com/maps/search/Tea%20O%20Clock%204%20rue%20Claude%20Burgod%20Suresnes",
+      "decision": "keep",
+      "uncertainty_1_to_3": 1,
+      "reason": "Google Maps affiche Tea o’clock, magasin de thé au 4 rue Claude Burgod. La catégorie pâtisserie issue du code Sirene est remplacée par magasin de thé.",
+      "properties": {
+        "name": "Tea o’clock",
+        "kind": "tea",
+        "category": "Magasin de thé"
+      },
+      "status": "Confirmé · magasin de thé",
+      "remaining_doubts": []
+    },
+    {
+      "dataset": "neighborhood",
+      "id": "audit-lilou",
+      "maps_url": "https://www.google.com/maps/search/Les%20Douceurs%20de%20Lilou%20rue%20Desbassayns%20de%20Richemont%20Suresnes",
+      "decision": "exclude",
+      "uncertainty_1_to_3": 3,
+      "reason": "Aucune fiche Google Maps concordante et aucun numéro de rue public ; la déclaration Sirene ne prouve pas une boutique ouverte à cette position."
+    },
+    {
+      "dataset": "neighborhood",
+      "id": "audit-marine",
+      "maps_url": "https://www.google.com/maps/search/Marine%20Lett%20100%20rue%20de%20la%20Libert%C3%A9%20Suresnes",
+      "decision": "exclude",
+      "uncertainty_1_to_3": 3,
+      "reason": "Aucune fiche Google Maps concordante au 100 rue de la Liberté ; l’adresse Sirene peut être administrative et aucune boutique n’est corroborée."
+    },
+    {
+      "dataset": "neighborhood",
+      "id": "audit-djebbi",
+      "maps_url": "https://www.google.com/maps/search/Zouhaier%20Djebbi%20108%20rue%20Carnot%20Suresnes",
+      "decision": "exclude",
+      "uncertainty_1_to_3": 3,
+      "reason": "Aucune fiche Google Maps concordante au 108 rue Carnot ; la raison professionnelle Sirene ne prouve pas une boulangerie ouverte au public."
+    }
+  ]
+}

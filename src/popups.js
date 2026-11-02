@@ -63,7 +63,7 @@ export function popup(f) {
         .map((n) => `<p class="audit-note">${escapeHTML(n)}</p>`)
         .join("");
     if (a.sources.length)
-      body += `<details class="audit-evidence"><summary>Sources du croisement · 22/10/2026</summary>${a.sources.map((s) => `<a class="popup-link" href="${escapeHTML(s.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(s.label)} ↗</a>`).join("")}</details>`;
+      body += `<details class="audit-evidence"><summary>Sources du croisement · ${escapeHTML(a.date)}</summary>${a.sources.map((s) => `<a class="popup-link" href="${escapeHTML(s.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(s.label)} ↗</a>`).join("")}</details>`;
     body += "</div>";
   }
   body += `<small>${escapeHTML(p.precision)}</small><br><a class="popup-link" href="${escapeHTML(p.source_url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(runtime.sources[p.source].name)} ↗</a>`;

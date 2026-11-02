@@ -90,7 +90,7 @@ export const layerSpecs = [
   {
     id: "neighborhood",
     label: "Aménités de quartier",
-    sub: "24 commerces / activités · 13 pharmacies",
+    sub: "19 commerces / activités vérifiés · 13 pharmacies",
     icon: "bakery",
     color: colors.bakery,
   },
