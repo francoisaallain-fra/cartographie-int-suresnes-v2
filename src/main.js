@@ -3,7 +3,7 @@ import { loadDatasets } from "./data.js";
 import { groupFor, runtime, state } from "./state.js";
 import { setupMapRotation } from "./rotation.js";
 import { $, escapeHTML } from "./presentation.js";
-import { layerSpecs, mosColors, officeRetentionColor } from "./catalog.js";
+import { layerSpecs, mosColors, officeRetentionColors } from "./catalog.js";
 import { handleMapClick, selectOffice, selectStation } from "./selection.js";
 import {
   mixedBuildingPopup,
@@ -127,14 +127,31 @@ export async function start() {
         });
       },
     });
-    runtime.groups.pluOfficeRetention = L.geoJSON(
+    const officeRetentionOutline = L.geoJSON(
+      runtime.data["plu-maintien-bureaux"],
+      {
+        pane: "data-pluOfficeRetention",
+        interactive: false,
+        style: {
+          className: "office-retention-outline",
+          color: officeRetentionColors.outline,
+          weight: 6,
+          dashArray: "1 8",
+          lineCap: "round",
+          opacity: 1,
+          fill: false,
+        },
+      },
+    );
+    const officeRetentionCenter = L.geoJSON(
       runtime.data["plu-maintien-bureaux"],
       {
         pane: "data-pluOfficeRetention",
         style: {
-          color: officeRetentionColor,
-          weight: 2.5,
-          dashArray: "1 6",
+          className: "office-retention-center",
+          color: officeRetentionColors.center,
+          weight: 4,
+          dashArray: "1 8",
           lineCap: "round",
           opacity: 1,
           fill: false,
@@ -148,6 +165,10 @@ export async function start() {
         },
       },
     );
+    runtime.groups.pluOfficeRetention = L.layerGroup([
+      officeRetentionOutline,
+      officeRetentionCenter,
+    ]);
     runtime.groups.mosOffices = L.geoJSON(runtime.data["mos-offices"], {
       pane: "data-mosOffices",
       style: {

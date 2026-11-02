@@ -1,5 +1,8 @@
 import { colors } from "./presentation.js";
-export const officeRetentionColor = "#53bfe9";
+export const officeRetentionColors = {
+  outline: "#d62828",
+  center: "#ffeb00",
+};
 export const mosColors = {
   offices: "#2878c6",
   pavilion: "#edc448",
@@ -12,7 +15,7 @@ export const layerSpecs = [
     label: "Maintien des surfaces de bureau · PLU",
     sub: "5 périmètres réglementaires · bureaux existants",
     icon: "plu",
-    color: officeRetentionColor,
+    color: officeRetentionColors.center,
   },
   {
     id: "mixedBuildings",

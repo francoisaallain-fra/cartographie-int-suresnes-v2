@@ -120,18 +120,36 @@ test("rental listings have their own layer and linked popup", async ({
     ),
   ).toHaveCount(1);
 });
-test("office retention is a dotted boundary and rental offices are blue", async ({
+test("office retention has a yellow dotted center ringed in red", async ({
   page,
 }) => {
-  const boundary = page
-    .locator(".leaflet-data-pluOfficeRetention-pane path")
+  const outline = page
+    .locator(
+      ".leaflet-data-pluOfficeRetention-pane path.office-retention-outline",
+    )
     .first();
-  await expect(boundary).toHaveAttribute("fill", "none");
-  await expect(boundary).toHaveAttribute("stroke", "#53bfe9");
-  await expect(boundary).toHaveAttribute("stroke-dasharray", /1[ ,]6/);
+  const center = page
+    .locator(
+      ".leaflet-data-pluOfficeRetention-pane path.office-retention-center",
+    )
+    .first();
+  await expect(outline).toHaveAttribute("fill", "none");
+  await expect(center).toHaveAttribute("fill", "none");
+  await expect(outline).toHaveAttribute("stroke", "#d62828");
+  await expect(center).toHaveAttribute("stroke", "#ffeb00");
+  await expect(outline).toHaveAttribute("stroke-width", "6");
+  await expect(center).toHaveAttribute("stroke-width", "4");
+  await expect(outline).toHaveAttribute("stroke-dasharray", /1[ ,]8/);
+  await expect(center).toHaveAttribute("stroke-dasharray", /1[ ,]8/);
+  await expect(outline).not.toHaveClass(/leaflet-interactive/);
+  await expect(center).toHaveClass(/leaflet-interactive/);
   await page.locator("#layerOpacity-pluOfficeRetention").fill("50");
-  await expect(boundary).toHaveAttribute("stroke-opacity", "0.5");
-  await expect(boundary).toHaveAttribute("fill", "none");
+  await expect(outline).toHaveAttribute("stroke-opacity", "0.5");
+  await expect(center).toHaveAttribute("stroke-opacity", "0.5");
+  await page.locator("#layer-pluOfficeRetention").uncheck();
+  await expect(outline).toHaveCount(0);
+  await expect(center).toHaveCount(0);
+  await page.locator("#layer-pluOfficeRetention").check();
 
   await expect(
     page.locator(".map-pin.office .pin-disc").first(),
