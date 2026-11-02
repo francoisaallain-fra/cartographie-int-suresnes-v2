@@ -55,3 +55,7 @@ Le liseré a ensuite été affiné : trait rouge de 4 px et trait jaune de 2,5 p
 ## Cercle des gares du 2 novembre 2026
 
 Le clic sur une gare ajoute un cercle blanc pointillé de 500 m sans remplissage. Il conserve le centre et le zoom de la carte, y compris à l'ouverture de la fiche. Le cercle précédent est remplacé au clic sur une autre gare. Le contrôle navigateur vérifie ces propriétés pour les six gares.
+
+## Fiches des bureaux du 2 novembre 2026
+
+À l'ouverture d'un bureau ciblé ou d'un bureau à louer, la carte se décale si nécessaire pour afficher toute la fenêtre. Sur un écran bas, la fiche peut défiler à l'intérieur de sa fenêtre. Sur mobile, une sélection depuis la liste ramène aussi la carte à l'écran. Le cadrage des cinq bureaux ciblés et d'une annonce regroupant quatre lots est vérifié sur ordinateur et mobile.

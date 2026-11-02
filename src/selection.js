@@ -71,6 +71,9 @@ export function selectOffice(f) {
     animate: false,
   });
   runtime.markers.get(f.id).openPopup();
+  scrollMapIntoViewOnMobile();
+}
+export function scrollMapIntoViewOnMobile() {
   if (window.innerWidth <= 720)
     $("map").scrollIntoView({
       block: "start",
@@ -78,6 +81,32 @@ export function selectOffice(f) {
         ? "instant"
         : "smooth",
     });
+}
+export function frameOfficePopup(marker) {
+  const popup = marker.getPopup();
+  window.requestAnimationFrame(() => {
+    if (!runtime.map.hasLayer(popup)) return;
+    const mapBounds = runtime.map.getContainer().getBoundingClientRect();
+    const content = popup.getElement().querySelector(".leaflet-popup-content");
+    const padding = 16;
+    const topPadding = window.innerWidth <= 720 ? 108 : padding;
+    content.style.maxHeight = `${Math.max(120, Math.min(window.innerHeight * 0.55, mapBounds.height - topPadding - padding - 42))}px`;
+    popup.update();
+    const bounds = popup.getElement().getBoundingClientRect();
+    const dx =
+      bounds.left < mapBounds.left + padding
+        ? bounds.left - mapBounds.left - padding
+        : bounds.right > mapBounds.right - padding
+          ? bounds.right - mapBounds.right + padding
+          : 0;
+    const dy =
+      bounds.top < mapBounds.top + topPadding
+        ? bounds.top - mapBounds.top - topPadding
+        : bounds.bottom > mapBounds.bottom - padding
+          ? bounds.bottom - mapBounds.bottom + padding
+          : 0;
+    if (dx || dy) runtime.map.panBy([dx, dy], { animate: false });
+  });
 }
 export function clearSelection(restore = true) {
   if (runtime.radiusLayer) {

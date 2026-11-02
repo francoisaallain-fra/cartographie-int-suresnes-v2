@@ -131,6 +131,67 @@ test("rental listings have their own layer and linked popup", async ({
     ),
   ).toHaveCount(1);
 });
+for (const viewport of [
+  { width: 1440, height: 900 },
+  { width: 390, height: 844 },
+]) {
+  test(`office popups fit inside the map at ${viewport.width}px`, async ({
+    page,
+  }) => {
+    await page.setViewportSize(viewport);
+    await page.reload();
+    await expect(page.locator("#loading")).toBeHidden();
+    const expectPopupInsideMap = async () => {
+      await expect
+        .poll(() =>
+          page.evaluate((isMobile) => {
+            const map = document.querySelector("#map").getBoundingClientRect();
+            const popup = document
+              .querySelector(".leaflet-popup")
+              ?.getBoundingClientRect();
+            return (
+              popup &&
+              popup.left >= map.left + 12 &&
+              popup.right <= map.right - 12 &&
+              popup.top >= map.top + (isMobile ? 104 : 12) &&
+              popup.bottom <= map.bottom - 12
+            );
+          }, viewport.width <= 720),
+        )
+        .toBe(true);
+    };
+    for (let i = 0; i < offices.length; i++) {
+      await page.locator(".office-item").nth(i).click();
+      await expectPopupInsideMap();
+    }
+    await page.locator("#clear-radius").click();
+    await page
+      .locator(".map-pin.office")
+      .first()
+      .evaluate((el) => el.click());
+    await expectPopupInsideMap();
+    await page.locator("#clear-radius").click();
+    await page
+      .locator(".map-pin.rentalOffice")
+      .first()
+      .evaluate((el) => el.click());
+    await expectPopupInsideMap();
+    await page.locator(".rental-address-list summary").click();
+    await page.locator('[data-rental-id="rental-92073_4121_00022"]').click();
+    await expectPopupInsideMap();
+    if (viewport.width <= 720)
+      await expect
+        .poll(() =>
+          page.evaluate(() => {
+            const popup = document
+              .querySelector(".leaflet-popup")
+              .getBoundingClientRect();
+            return popup.top >= 0 && popup.bottom <= window.innerHeight;
+          }),
+        )
+        .toBe(true);
+  });
+}
 test("office retention has a yellow dotted center ringed in red", async ({
   page,
 }) => {

@@ -4,7 +4,12 @@ import { groupFor, runtime, state } from "./state.js";
 import { setupMapRotation } from "./rotation.js";
 import { $, escapeHTML } from "./presentation.js";
 import { layerSpecs, mosColors, officeRetentionColors } from "./catalog.js";
-import { handleMapClick, selectOffice, selectStation } from "./selection.js";
+import {
+  frameOfficePopup,
+  handleMapClick,
+  selectOffice,
+  selectStation,
+} from "./selection.js";
 import {
   mixedBuildingPopup,
   mosGroupPopup,
@@ -264,8 +269,12 @@ export async function start() {
               className: "station-card-popup",
               autoPan: false,
             }
-          : {},
+          : ["office", "rentalOffice"].includes(f.properties.kind)
+            ? { autoPan: false }
+            : {},
       );
+      if (["office", "rentalOffice"].includes(f.properties.kind))
+        marker.on("popupopen", () => frameOfficePopup(marker));
       if (f.properties.kind === "office")
         marker.on("click", () => selectOffice(f));
       if (f.properties.kind === "transport")
