@@ -96,3 +96,7 @@ Contrôles locaux réussis : ESLint, Prettier, 13 tests Node, build Vite et 13 p
 ## Correction des couleurs · 2 novembre 2026
 
 Sur demande de François, les six pastilles de repérage précédemment jaunes sont maintenant vertes (`#00c853`). Les couleurs choisies individuellement restent prioritaires et « Couleur initiale » revient au vert pour les points éligibles. Le liseré de maintien est entièrement rouge vif (`#ff0000`), toujours pointillé et sans remplissage ; son trait extérieur passe de 4 à 3 px. Les deux traits gardent le même réglage d’opacité. Les critères spatiaux et les données sont inchangés.
+
+## Ajustement du vert · 3 novembre 2026
+
+Le vert de repérage passe de `#00c853` à `#00a846`, légèrement plus sombre. Les six points éligibles, le liseré rouge et la priorité des couleurs choisies individuellement restent inchangés.
