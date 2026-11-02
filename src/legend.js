@@ -7,7 +7,7 @@ import {
   svg,
 } from "./presentation.js";
 export const hiddenCategories = new Set();
-const officeScreeningLegend = `<p class="transport-scope"><span class="office-screening-swatch" style="background:${officeScreeningColor}" aria-hidden="true"></span>Pastille jaune : point d’adresse à 500 m ou moins d’une gare, hors du périmètre cartographié de maintien des surfaces de bureau. Une couleur personnalisée reste prioritaire.</p>`;
+const officeScreeningLegend = `<p class="transport-scope"><span class="office-screening-swatch" style="background:${officeScreeningColor}" aria-hidden="true"></span>Pastille verte : point d’adresse à 500 m ou moins d’une gare, hors du périmètre cartographié de maintien des surfaces de bureau. Une couleur personnalisée reste prioritaire.</p>`;
 export function categoryKey(p) {
   const a = markerAppearance(p);
   return p.kind === "transport" ? a.icon : a.variant;

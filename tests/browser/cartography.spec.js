@@ -312,7 +312,7 @@ for (const viewport of [
         .toBe(true);
   });
 }
-test("office retention has a yellow dotted center ringed in red", async ({
+test("office retention has a thin bright red dotted boundary", async ({
   page,
 }) => {
   const outline = page
@@ -327,10 +327,10 @@ test("office retention has a yellow dotted center ringed in red", async ({
     .first();
   await expect(outline).toHaveAttribute("fill", "none");
   await expect(center).toHaveAttribute("fill", "none");
-  await expect(outline).toHaveAttribute("stroke", "#d62828");
-  await expect(center).toHaveAttribute("stroke", "#ffeb00");
-  await expect(outline).toHaveAttribute("stroke-width", "4");
-  await expect(center).toHaveAttribute("stroke-width", "2.5");
+  await expect(outline).toHaveAttribute("stroke", "#ff0000");
+  await expect(center).toHaveAttribute("stroke", "#ff0000");
+  await expect(outline).toHaveAttribute("stroke-width", "3");
+  await expect(center).toHaveAttribute("stroke-width", "2");
   await expect(outline).toHaveAttribute("stroke-dasharray", /1[ ,]8/);
   await expect(center).toHaveAttribute("stroke-dasharray", /1[ ,]8/);
   await expect(outline).not.toHaveClass(/leaflet-interactive/);
@@ -422,29 +422,29 @@ test("PLU starts hidden and each office marker keeps its own chosen color", asyn
     page.locator('.map-pin.rentalOffice .pin-disc[style*="#9933ff"]'),
   ).toHaveCount(1);
 });
-test("yellow office markers meet both spatial criteria and can be recolored", async ({
+test("green office markers meet both spatial criteria and can be recolored", async ({
   page,
 }) => {
   await expect(
-    page.locator('.map-pin.office .pin-disc[style*="#ffdf00"]'),
+    page.locator('.map-pin.office .pin-disc[style*="#00c853"]'),
   ).toHaveCount(2);
   await expect(
-    page.locator('.map-pin.rentalOffice .pin-disc[style*="#ffdf00"]'),
+    page.locator('.map-pin.rentalOffice .pin-disc[style*="#00c853"]'),
   ).toHaveCount(4);
   await page.locator(".office-item").nth(2).click();
   const popup = page.locator(".leaflet-popup:visible");
   await expect(popup).toContainText("Les Coteaux");
   await expect(popup).toContainText("hors du périmètre cartographié");
   await expect(popup.locator("input[data-marker-color]")).toHaveValue(
-    "#ffdf00",
+    "#00c853",
   );
   await popup.locator("input[data-marker-color]").fill("#88cc33");
   await expect(
-    page.locator('.map-pin.office .pin-disc[style*="#ffdf00"]'),
+    page.locator('.map-pin.office .pin-disc[style*="#00c853"]'),
   ).toHaveCount(1);
   await popup.locator("button[data-marker-color-reset]").click();
   await expect(
-    page.locator('.map-pin.office .pin-disc[style*="#ffdf00"]'),
+    page.locator('.map-pin.office .pin-disc[style*="#00c853"]'),
   ).toHaveCount(2);
 });
 test("rename, reorder and collapse survive reload", async ({ page }) => {

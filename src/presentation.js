@@ -51,7 +51,7 @@ export const colors = {
   office: "#d72e83",
   rentalOffice: "#2376b7",
 };
-export const officeScreeningColor = "#ffdf00";
+export const officeScreeningColor = "#00c853";
 export const typeLabels = {
   transport: "Gare / station",
   nursery: "Crèche / multi-accueil",
