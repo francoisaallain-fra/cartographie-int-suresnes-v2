@@ -7,30 +7,9 @@ export const mosColors = {
   offices: "#2878c6",
   pavilion: "#edc448",
   collective: "#ed8652",
-  activities: "#ac7954",
+  activities: "#1f6fb2",
 };
 export const layerSpecs = [
-  {
-    id: "pluOfficeRetention",
-    label: "Maintien des surfaces de bureau · PLU",
-    sub: "5 périmètres réglementaires · bureaux existants",
-    icon: "plu",
-    color: officeRetentionColors.center,
-  },
-  {
-    id: "mixedBuildings",
-    label: "Bâtiments mixtes potentiels",
-    sub: "3 candidats · commerce + bureaux à confirmer",
-    icon: "mixed",
-    color: "#f18b3d",
-  },
-  {
-    id: "mosOffices",
-    label: "Bureaux · Mos 2025",
-    sub: "25 emprises de bureaux · hors vacance",
-    icon: "office",
-    color: mosColors.offices,
-  },
   {
     id: "mosPavilion",
     label: "6 · Habitat pavillonnaire · Mos",
@@ -53,11 +32,18 @@ export const layerSpecs = [
     color: mosColors.activities,
   },
   {
-    id: "plu",
-    label: "Zonage PLU",
-    sub: "55 secteurs · 21 libellés",
-    icon: "plu",
-    color: "#be9d22",
+    id: "mixedBuildings",
+    label: "Bâtiments mixtes potentiels",
+    sub: "3 candidats · commerce + bureaux à confirmer",
+    icon: "mixed",
+    color: "#f18b3d",
+  },
+  {
+    id: "mosOffices",
+    label: "Bureaux · Mos 2025",
+    sub: "25 emprises de bureaux · hors vacance",
+    icon: "office",
+    color: mosColors.offices,
   },
   {
     id: "transport",
@@ -65,13 +51,6 @@ export const layerSpecs = [
     sub: "6 gares · T2, L, U · 4 grands axes",
     icon: "transport",
     color: colors.transport,
-  },
-  {
-    id: "equipment",
-    label: "Santé, crèches & établissements scolaires",
-    sub: "18 structures de soins · 32 crèches · 30 établissements scolaires",
-    icon: "health",
-    color: colors.health,
   },
   {
     id: "offices",
@@ -86,6 +65,27 @@ export const layerSpecs = [
     sub: "23 annonces · 16 adresses géocodées · 02/11/2026",
     icon: "office",
     color: colors.rentalOffice,
+  },
+  {
+    id: "pluOfficeRetention",
+    label: "Maintien des surfaces de bureau · PLU",
+    sub: "5 périmètres réglementaires · bureaux existants",
+    icon: "plu",
+    color: officeRetentionColors.center,
+  },
+  {
+    id: "plu",
+    label: "Zonage PLU",
+    sub: "55 secteurs · 21 libellés",
+    icon: "plu",
+    color: "#be9d22",
+  },
+  {
+    id: "equipment",
+    label: "Santé, crèches & établissements scolaires",
+    sub: "18 structures de soins · 32 crèches · 30 établissements scolaires",
+    icon: "health",
+    color: colors.health,
   },
   {
     id: "neighborhood",

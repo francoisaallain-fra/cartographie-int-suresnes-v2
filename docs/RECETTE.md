@@ -69,3 +69,9 @@ Les douze cartes de la colonne de gauche sont repliées à l'ouverture d'une nou
 Quatorze points incertains ont été recherchés par nom et adresse dans Google Maps et rapprochés des sources conservées. Le collège est affiché sous le nom Hubert Germain ; Berty Albrecht et Le Fournil de Verdun sont harmonisés. Tea o’clock est présenté comme magasin de thé. Cinq points commerciaux sans boutique suffisamment corroborée sont retirés de l'affichage, tout en restant dans les données de référence et le [journal de revue](AMENITES_REVIEW.md). La divergence d'adresse de L'Atelier de Flo et la position de l'hôpital de jour restent signalées.
 
 Contrôles locaux : ESLint, Prettier, 11 tests Node, build Vite et 11 tests Playwright avec Chrome réussis. Le test des 75 scénarios de rayon compare les points affichés après l'exclusion documentée, sans modifier les scénarios historiques.
+
+## Configuration d'ouverture des couches · 2 novembre 2026
+
+Les couches Mos 6, 7 et 8 ouvrent la liste, actives à 55 %, 55 % et 50 % d'opacité. Le Mos 8 Activités est bleu. Suivent les bâtiments mixtes et les bureaux Mos, désactivés ; puis transports, immeubles ciblés, bureaux proposés à la location et maintien des surfaces de bureau, activés. Le zonage PLU, les équipements et les aménités de quartier restent désactivés à l'ouverture. Les douze réglages restent repliés pour une nouvelle session. L'ancienne clé d'ordre local est remplacée une fois, afin que ce nouvel ordre soit visible aussi dans les navigateurs déjà utilisés.
+
+Contrôles locaux réussis : ESLint, Prettier, 11 tests Node, build Vite et 12 parcours Playwright avec Chrome. Le nouveau parcours vérifie l'ordre complet, les neuf interrupteurs montrés, les quatre valeurs d'opacité visibles et le bleu du Mos 8, y compris après migration de l'ancienne clé d'ordre.

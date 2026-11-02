@@ -22,6 +22,8 @@ Les tests unitaires s'exécutent sans serveur. Les tests navigateur démarrent l
 
 Le zonage PLU est masqué à l'ouverture et reste activable. Les pastilles des bureaux ciblés et des bureaux à louer disposent d'un choix de couleur individuel dans leur fiche ; ce choix est enregistré uniquement dans le navigateur utilisé.
 
+À l'ouverture, les couches Mos 6, 7 et 8 sont activées avec des opacités de 55 %, 55 % et 50 % ; les activités Mos sont bleues. Les bâtiments mixtes et les bureaux Mos sont masqués, tandis que les transports, les deux couches de bureaux et le maintien des surfaces de bureau sont actifs. Le nouvel ordre initial des couches s'applique aussi aux navigateurs ayant conservé l'ancien ordre ; les réorganisations faites ensuite restent enregistrées.
+
 ## Parcours de lecture
 
 1. `docs/ARCHITECTURE.md` : responsabilités, état et dépendances.
