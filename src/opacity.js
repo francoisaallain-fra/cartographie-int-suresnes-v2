@@ -80,7 +80,6 @@ export function applyOpacity(id) {
   if (id === "transport" && runtime.stationRadiusLayer)
     runtime.stationRadiusLayer.setStyle({
       opacity,
-      fillOpacity: opacity * 0.12,
     });
   const control = $("layerOpacity-" + id);
   control.value = layerOpacity[id];

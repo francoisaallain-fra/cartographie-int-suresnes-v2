@@ -42,20 +42,14 @@ export function selectStation(feature) {
     radius: 500,
     pane: "data-transport",
     className: "station-radius",
-    color: "#6b5caa",
+    color: "#ffffff",
     weight: 2,
     dashArray: "6 5",
-    fillColor: "#8272c7",
+    fill: false,
     opacity: layerOpacity.transport / 100,
-    fillOpacity: (layerOpacity.transport / 100) * 0.12,
     interactive: false,
   }).addTo(runtime.map);
   $("map-context").textContent = `${feature.properties.name} · rayon de 500 m`;
-  runtime.map.fitBounds(runtime.stationRadiusLayer.getBounds(), {
-    padding: [55, 55],
-    maxZoom: 16,
-    animate: false,
-  });
   runtime.markers.get(feature.id).openPopup();
 }
 export function selectOffice(f) {

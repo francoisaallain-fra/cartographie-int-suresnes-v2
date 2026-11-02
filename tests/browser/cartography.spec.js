@@ -63,6 +63,7 @@ test("every station opens a 500 m circle, replaced on the next selection", async
     fs.readFileSync("public/data/transport.geojson"),
   ).features;
   for (let i = 0; i < stations.length; i++) {
+    const before = await page.evaluate(() => window.suresnesDiagnostics());
     if (i === 0) await page.locator(".map-pin.transport").first().click();
     else
       await page
@@ -70,9 +71,19 @@ test("every station opens a 500 m circle, replaced on the next selection", async
         .nth(i)
         .evaluate((el) => el.click());
     const snapshot = await page.evaluate(() => window.suresnesDiagnostics());
+    expect(snapshot.center).toEqual(before.center);
+    expect(snapshot.zoom).toBe(before.zoom);
     expect(snapshot.selectedStation).toBe(stations[i].id);
     expect(snapshot.stationRadiusMeters).toBe(500);
     await expect(page.locator(".station-radius")).toHaveCount(1);
+    await expect(page.locator(".station-radius")).toHaveAttribute(
+      "stroke",
+      "#ffffff",
+    );
+    await expect(page.locator(".station-radius")).toHaveAttribute(
+      "fill",
+      "none",
+    );
     await expect(page.locator("#map-context")).toContainText(
       stations[i].properties.name,
     );

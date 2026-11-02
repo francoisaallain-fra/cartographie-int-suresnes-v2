@@ -262,6 +262,7 @@ export async function start() {
         f.properties.kind === "transport"
           ? {
               className: "station-card-popup",
+              autoPan: false,
             }
           : {},
       );
@@ -285,6 +286,8 @@ export async function start() {
     // A read-only diagnostic snapshot used by the browser acceptance checks.
     window.suresnesDiagnostics = () => ({
       bearing: runtime.map.getBearing(),
+      center: [runtime.map.getCenter().lat, runtime.map.getCenter().lng],
+      zoom: runtime.map.getZoom(),
       railIds: state.enabled.transport
         ? runtime.railLayers.map((r) => r.id)
         : [],
