@@ -11,6 +11,34 @@ export const mosColors = {
 };
 export const layerSpecs = [
   {
+    id: "transport",
+    label: "Transports structurants",
+    sub: "6 gares · T2, L, U · 4 grands axes",
+    icon: "transport",
+    color: colors.transport,
+  },
+  {
+    id: "offices",
+    label: "Immeubles ciblés",
+    sub: "5 adresses · vacance non vérifiée",
+    icon: "office",
+    color: colors.office,
+  },
+  {
+    id: "rentalOffices",
+    label: "Bureaux proposés à la location",
+    sub: "23 annonces · 16 adresses géocodées · 02/11/2026",
+    icon: "office",
+    color: colors.rentalOffice,
+  },
+  {
+    id: "pluOfficeRetention",
+    label: "Maintien des surfaces de bureau · PLU",
+    sub: "5 périmètres réglementaires · bureaux existants",
+    icon: "plu",
+    color: officeRetentionColors.center,
+  },
+  {
     id: "mosPavilion",
     label: "6 · Habitat pavillonnaire · Mos",
     sub: "134 emprises · catégorie 6",
@@ -44,34 +72,6 @@ export const layerSpecs = [
     sub: "25 emprises de bureaux · hors vacance",
     icon: "office",
     color: mosColors.offices,
-  },
-  {
-    id: "transport",
-    label: "Transports structurants",
-    sub: "6 gares · T2, L, U · 4 grands axes",
-    icon: "transport",
-    color: colors.transport,
-  },
-  {
-    id: "offices",
-    label: "Immeubles ciblés",
-    sub: "5 adresses · vacance non vérifiée",
-    icon: "office",
-    color: colors.office,
-  },
-  {
-    id: "rentalOffices",
-    label: "Bureaux proposés à la location",
-    sub: "23 annonces · 16 adresses géocodées · 02/11/2026",
-    icon: "office",
-    color: colors.rentalOffice,
-  },
-  {
-    id: "pluOfficeRetention",
-    label: "Maintien des surfaces de bureau · PLU",
-    sub: "5 périmètres réglementaires · bureaux existants",
-    icon: "plu",
-    color: officeRetentionColors.center,
   },
   {
     id: "plu",
