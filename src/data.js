@@ -1,4 +1,6 @@
 /** Geographic datasets bundled with the application. */
+import { screenOfficePoint } from "./office-screening.js";
+
 export const datasetNames = [
   "commune",
   "plu",
@@ -111,6 +113,15 @@ export async function loadDatasets(fetcher = fetch) {
   };
   data.offices.features.push(...data["offices-extra"].features);
   Object.assign(data.radii.offices, data["radii-extra"].offices);
+  for (const office of [
+    ...data.offices.features,
+    ...data["rental-offices"].features,
+  ])
+    office.properties.officeScreening = screenOfficePoint(
+      office,
+      data.transport.features,
+      data["plu-maintien-bureaux"].features,
+    );
   data.sources.provided_addresses = {
     ...data.sources.provided_addresses,
     format:

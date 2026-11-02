@@ -2,7 +2,12 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import { createHash } from "node:crypto";
-import { pointInRing } from "../src/geometry.js";
+import {
+  distanceMeters,
+  pointInPolygonGeometry,
+  pointInRing,
+} from "../src/geometry.js";
+import { screenOfficePoint } from "../src/office-screening.js";
 import { escapeHTML } from "../src/presentation.js";
 import {
   validateCollection,
@@ -62,6 +67,98 @@ test("point containment handles inside, outside and either ring orientation", ()
   assert.equal(pointInRing([1, 1], ring), true);
   assert.equal(pointInRing([3, 1], ring), false);
   assert.equal(pointInRing([1, 1], [...ring].reverse()), true);
+});
+test("office screening respects 500 m and polygon holes and boundaries", () => {
+  const zone = {
+    type: "MultiPolygon",
+    coordinates: [
+      [
+        [
+          [0, 0],
+          [2, 0],
+          [2, 2],
+          [0, 2],
+          [0, 0],
+        ],
+        [
+          [0.5, 0.5],
+          [1.5, 0.5],
+          [1.5, 1.5],
+          [0.5, 1.5],
+          [0.5, 0.5],
+        ],
+      ],
+    ],
+  };
+  assert.equal(pointInPolygonGeometry([0, 1], zone), true);
+  assert.equal(pointInPolygonGeometry([1, 1], zone), false);
+  assert.equal(pointInPolygonGeometry([0.5, 1], zone), true);
+  assert.equal(pointInPolygonGeometry([3, 1], zone), false);
+  const station = {
+    id: "station",
+    geometry: { coordinates: [0, 0] },
+    properties: { name: "Gare" },
+  };
+  const officeAt = (metres) => ({
+    geometry: {
+      coordinates: [0, (metres / 6371000) * (180 / Math.PI)],
+    },
+  });
+  assert.ok(
+    Math.abs(distanceMeters([0, 0], officeAt(500).geometry.coordinates) - 500) <
+      1e-8,
+  );
+  assert.equal(
+    screenOfficePoint(officeAt(500), [station], []).highlighted,
+    true,
+  );
+  assert.equal(
+    screenOfficePoint(officeAt(501), [station], []).highlighted,
+    false,
+  );
+  assert.equal(
+    screenOfficePoint(
+      officeAt(500),
+      [station],
+      [
+        {
+          geometry: {
+            type: "Polygon",
+            coordinates: [
+              [
+                [0, 0],
+                [1, 0],
+                [1, 1],
+                [0, 1],
+                [0, 0],
+              ],
+            ],
+          },
+        },
+      ],
+    ).highlighted,
+    false,
+  );
+});
+test("six mapped office addresses meet both screening criteria", () => {
+  const stations = read("transport.geojson").features;
+  const zones = read("plu-maintien-bureaux.geojson").features;
+  const offices = [
+    ...read("offices.geojson").features,
+    ...read("offices-extra.geojson").features,
+    ...read("rental-offices.geojson").features,
+  ];
+  const highlighted = offices
+    .filter((office) => screenOfficePoint(office, stations, zones).highlighted)
+    .map((office) => office.id);
+  assert.deepEqual(highlighted, [
+    "ban-92073_8131_00002",
+    "ban-92073_3o60ni_00039",
+    "rental-92073_4440_00013",
+    "rental-92073_6110_00162",
+    "rental-92073_4152_00031",
+    "rental-92073_4440_00006",
+  ]);
 });
 test("all 60 address/radius scenarios contain their origin and monotonic nearby sets", () => {
   const radii = read("radii.json");

@@ -10,8 +10,9 @@ Référence des contrôles : jeux de données et ressources identifiés dans `te
 | Opacité          | 0 à 100 %, surfaces réellement opaques à 100 %, objets invisibles non interactifs                                                                        |
 | Zonage PLU       | Couche désactivée à chaque ouverture ; réactivation possible par son interrupteur                                                                        |
 | Maintien bureaux | Liseré jaune bordé de rouge, pointillé et sans remplissage ; curseur agissant sur les deux traits                                                        |
-| Bureaux à louer  | Pastilles bleues ; couleur modifiable séparément pour chaque adresse dans sa fiche                                                                       |
+| Bureaux à louer  | Pastilles bleues hors repérage jaune ; couleur modifiable séparément pour chaque adresse dans sa fiche                                                   |
 | Bureaux ciblés   | Couleur modifiable séparément dans chaque fiche, restaurable et conservée dans ce navigateur                                                             |
+| Repérage jaune   | Deux couches de points : gare à 500 m ou moins et point hors maintien PLU ; 2 adresses ciblées et 4 à louer, avec couleur manuelle prioritaire           |
 | Sous-catégories  | Gares indépendantes des lignes L/U/T2 ; axes routiers, santé, crèches, niveaux scolaires, commerces et pharmacies                                        |
 | Cinq adresses    | Sélection par liste et marqueur, changement d'adresse sans ancien cadrage résiduel                                                                       |
 | 75 rayons        | 300 à 1 000 m par pas de 50 ; listes et géométries pré-calculées préservées                                                                              |
@@ -85,3 +86,9 @@ Contrôles locaux réussis : ESLint, Prettier, 11 tests Node, build Vite et 12 p
 ## Ordre de la colonne de gauche · 2 novembre 2026
 
 À l'ouverture, les quatre premières couches sont, dans cet ordre : Transports structurants, Immeubles ciblés, Bureaux proposés à la location, Maintien des surfaces de bureau · PLU. Les couches Mos 6, 7 et 8 puis les autres couches suivent dans leur ordre relatif précédent. La clé d'ordre local passe à sa troisième version pour appliquer cette disposition aux navigateurs déjà utilisés ; les déplacements effectués ensuite restent persistants.
+
+## Repérage jaune des bureaux · 2 novembre 2026
+
+Les pastilles des deux couches de points deviennent jaunes lorsque l’adresse est à 500 m ou moins d’une des six gares et hors des cinq périmètres de maintien des surfaces de bureau. Le calcul est indépendant de la visibilité des couches Transports et Maintien. Sur cet instantané, 2 adresses ciblées et 4 adresses de location sont jaunes. Les autres gardent leur couleur d’origine ; une couleur personnalisée reste prioritaire et le bouton « Couleur initiale » restaure le jaune pour les adresses éligibles. La légende et la fiche expliquent que ce repérage au point ne valide pas le bâtiment ni sa faisabilité.
+
+Contrôles locaux réussis : ESLint, Prettier, 13 tests Node, build Vite et 13 parcours Playwright avec Chrome. Les nouveaux tests vérifient le seuil de 500 m, les limites et trous des polygones, les six identifiants retenus, le nombre de pastilles jaunes et la restauration après changement individuel de couleur. Les ressources de référence n’ont pas été modifiées.

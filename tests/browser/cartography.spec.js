@@ -375,7 +375,7 @@ test("PLU starts hidden and each office marker keeps its own chosen color", asyn
   ).toHaveCount(1);
   await expect(
     page.locator('.map-pin.office .pin-disc[style*="#d72e83"]'),
-  ).toHaveCount(4);
+  ).toHaveCount(2);
   await page.reload();
   await expect(page.locator("#loading")).toBeHidden();
   await expect(
@@ -412,7 +412,7 @@ test("PLU starts hidden and each office marker keeps its own chosen color", asyn
   ).toHaveCount(1);
   await expect(
     page.locator('.map-pin.rentalOffice .pin-disc[style*="#2376b7"]'),
-  ).toHaveCount(14);
+  ).toHaveCount(10);
   await page.reload();
   await expect(page.locator("#loading")).toBeHidden();
   await expect(
@@ -421,6 +421,31 @@ test("PLU starts hidden and each office marker keeps its own chosen color", asyn
   await expect(
     page.locator('.map-pin.rentalOffice .pin-disc[style*="#9933ff"]'),
   ).toHaveCount(1);
+});
+test("yellow office markers meet both spatial criteria and can be recolored", async ({
+  page,
+}) => {
+  await expect(
+    page.locator('.map-pin.office .pin-disc[style*="#ffdf00"]'),
+  ).toHaveCount(2);
+  await expect(
+    page.locator('.map-pin.rentalOffice .pin-disc[style*="#ffdf00"]'),
+  ).toHaveCount(4);
+  await page.locator(".office-item").nth(2).click();
+  const popup = page.locator(".leaflet-popup:visible");
+  await expect(popup).toContainText("Les Coteaux");
+  await expect(popup).toContainText("hors du périmètre cartographié");
+  await expect(popup.locator("input[data-marker-color]")).toHaveValue(
+    "#ffdf00",
+  );
+  await popup.locator("input[data-marker-color]").fill("#88cc33");
+  await expect(
+    page.locator('.map-pin.office .pin-disc[style*="#ffdf00"]'),
+  ).toHaveCount(1);
+  await popup.locator("button[data-marker-color-reset]").click();
+  await expect(
+    page.locator('.map-pin.office .pin-disc[style*="#ffdf00"]'),
+  ).toHaveCount(2);
 });
 test("rename, reorder and collapse survive reload", async ({ page }) => {
   const card = page.locator('[data-layer-id="plu"]');
