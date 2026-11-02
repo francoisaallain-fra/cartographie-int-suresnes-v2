@@ -77,10 +77,9 @@ export function applyOpacity(id) {
         if (el && part.options.interactive)
           el.style.pointerEvents = opacity === 0 ? "none" : "";
       }
-  if (id === "transport" && runtime.stationRadiusLayer)
-    runtime.stationRadiusLayer.setStyle({
-      opacity,
-    });
+  if (id === "transport")
+    for (const layer of runtime.stationRadiusLayers.values())
+      layer.setStyle({ opacity });
   const control = $("layerOpacity-" + id);
   control.value = layerOpacity[id];
   control.setAttribute("aria-valuetext", layerOpacity[id] + " % d’opacité");

@@ -22,23 +22,43 @@ export function redrawRadius() {
   $("map-context").textContent =
     `Adresse ${office.properties.number} · rayon de ${radiusText()}`;
 }
-export function clearStationRadius() {
-  if (runtime.stationRadiusLayer) {
-    runtime.map.removeLayer(runtime.stationRadiusLayer);
-    runtime.stationRadiusLayer = null;
-  }
-  state.selectedStation = null;
-  if (!state.selected)
+function updateStationContext() {
+  if (state.selected) return;
+  const ids = [...state.selectedStations];
+  if (!ids.length) {
     $("map-context").textContent = "Suresnes · vue communale";
+  } else if (ids.length === 1) {
+    const station = runtime.data.transport.features.find(
+      (f) => f.id === ids[0],
+    );
+    $("map-context").textContent =
+      `${station.properties.name} · rayon de 500 m`;
+  } else {
+    $("map-context").textContent = `${ids.length} gares · rayons de 500 m`;
+  }
+}
+export function clearStationRadii() {
+  for (const layer of runtime.stationRadiusLayers.values())
+    runtime.map.removeLayer(layer);
+  runtime.stationRadiusLayers.clear();
+  state.selectedStations.clear();
+  updateStationContext();
 }
 export function selectStation(feature) {
   if (state.selected) clearSelection();
-  clearStationRadius();
-  state.selectedStation = feature.id;
+  const current = runtime.stationRadiusLayers.get(feature.id);
+  if (current) {
+    runtime.map.removeLayer(current);
+    runtime.stationRadiusLayers.delete(feature.id);
+    state.selectedStations.delete(feature.id);
+    updateStationContext();
+    runtime.markers.get(feature.id).closePopup();
+    return;
+  }
   state.enabled.transport = true;
   updateLayers();
   const [lng, lat] = feature.geometry.coordinates;
-  runtime.stationRadiusLayer = L.circle([lat, lng], {
+  const layer = L.circle([lat, lng], {
     radius: 500,
     pane: "data-transport",
     className: "station-radius",
@@ -49,11 +69,12 @@ export function selectStation(feature) {
     opacity: layerOpacity.transport / 100,
     interactive: false,
   }).addTo(runtime.map);
-  $("map-context").textContent = `${feature.properties.name} · rayon de 500 m`;
+  runtime.stationRadiusLayers.set(feature.id, layer);
+  state.selectedStations.add(feature.id);
+  updateStationContext();
   runtime.markers.get(feature.id).openPopup();
 }
 export function selectOffice(f) {
-  clearStationRadius();
   if (!state.selected)
     state.beforeSelection = {
       ...state.enabled,
@@ -120,13 +141,12 @@ export function clearSelection(restore = true) {
     };
   state.beforeSelection = null;
   $("radius-panel").hidden = true;
-  $("map-context").textContent = "Suresnes · vue communale";
+  updateStationContext();
   runtime.map.closePopup();
   updateLayers();
 }
 export function showCityView() {
   if (state.selected) clearSelection();
-  clearStationRadius();
   runtime.map.closePopup();
   runtime.map.stop();
   runtime.map.fitBounds(runtime.bounds, {
@@ -135,18 +155,7 @@ export function showCityView() {
   });
 }
 export function handleMapClick(event) {
-  if (!state.selected) {
-    if (
-      state.selectedStation &&
-      runtime.stationRadiusLayer &&
-      runtime.map.distance(
-        event.latlng,
-        runtime.stationRadiusLayer.getLatLng(),
-      ) > 500
-    )
-      showCityView();
-    return;
-  }
+  if (!state.selected) return;
   // Hit-test the same geodesic polygon that draws the selected perimeter.
   const ring = selectedRadius().geometry.coordinates[0];
   const { lng: x, lat: y } = event.latlng;

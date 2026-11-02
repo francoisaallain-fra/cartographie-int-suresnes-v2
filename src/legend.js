@@ -29,7 +29,7 @@ export function layerLegend(id) {
         kind: "road",
       },
       "Grands axes",
-    )}</div><p class="transport-scope">Cliquez sur une gare pour afficher son rayon de 500 m à vol d’oiseau. 6 gares et stations, dont 3 SNCF, dans Suresnes et à 500 m de ses limites. Affichage indépendant des lignes.<br>Aucun RER ni métro dans ce périmètre.</p>`;
+    )}</div><p class="transport-scope">Cliquez sur plusieurs gares pour cumuler leurs rayons de 500 m à vol d’oiseau ; recliquez sur une gare pour retirer son rayon. 6 gares et stations, dont 3 SNCF, dans Suresnes et à 500 m de ses limites. Affichage indépendant des lignes.<br>Aucun RER ni métro dans ce périmètre.</p>`;
   const entries =
     id === "transport"
       ? [

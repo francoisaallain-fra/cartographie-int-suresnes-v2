@@ -3,7 +3,7 @@ import { layerOpacity, runtime, state } from "./state.js";
 import { radiusText } from "./radius.js";
 import {
   clearSelection,
-  clearStationRadius,
+  clearStationRadii,
   redrawRadius,
   scrollMapIntoViewOnMobile,
   selectOffice,
@@ -89,7 +89,7 @@ export function buildControls() {
   for (const s of layerSpecs)
     $(`layer-${s.id}`).addEventListener("change", (e) => {
       state.enabled[s.id] = e.target.checked;
-      if (s.id === "transport" && !e.target.checked) clearStationRadius();
+      if (s.id === "transport" && !e.target.checked) clearStationRadii();
       if (s.id === "offices" && !e.target.checked && state.selected) {
         clearSelection(false);
         runtime.map.fitBounds(runtime.bounds, {
@@ -143,7 +143,7 @@ export function buildControls() {
   $("clear-radius").addEventListener("click", showCityView);
   $("hide-all").addEventListener("click", () => {
     if (state.selected) clearSelection(false);
-    clearStationRadius();
+    clearStationRadii();
     for (const key in state.enabled) state.enabled[key] = false;
     updateLayers();
   });
