@@ -51,3 +51,7 @@ Le périmètre conserve ses pointillés et l'absence de remplissage. Un trait ro
 Contrôles locaux réussis : ESLint, Prettier, 10 tests Node, build Vite et 8 tests Playwright avec Chrome. Le contrôle du liseré a été relancé après l'ajustement visuel des couleurs et de l'épaisseur.
 
 Le liseré a ensuite été affiné : trait rouge de 4 px et trait jaune de 2,5 px, contre 6 et 4 px auparavant. Les géométries, couleurs, pointillés et l'absence de remplissage sont conservés.
+
+## Cercle des gares du 2 novembre 2026
+
+Le clic sur une gare ajoute un cercle blanc pointillé de 500 m sans remplissage. Il conserve le centre et le zoom de la carte, y compris à l'ouverture de la fiche. Le cercle précédent est remplacé au clic sur une autre gare. Le contrôle navigateur vérifie ces propriétés pour les six gares.
