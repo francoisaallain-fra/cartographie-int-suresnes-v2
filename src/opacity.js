@@ -20,8 +20,7 @@ export function applyOpacity(id) {
       marker.setOpacity(polygonOutlineOpacity(id));
   } else if (id === "pluOfficeRetention") {
     runtime.groups[id].setStyle({
-      opacity: polygonOutlineOpacity(id),
-      fillOpacity: opacity,
+      opacity,
     });
     runtime.groups[id].eachLayer((layer) => {
       if (layer.getElement())

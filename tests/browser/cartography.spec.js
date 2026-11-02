@@ -120,6 +120,29 @@ test("rental listings have their own layer and linked popup", async ({
     ),
   ).toHaveCount(1);
 });
+test("office retention is a dotted boundary and rental offices use a lighter pink", async ({
+  page,
+}) => {
+  const boundary = page
+    .locator(".leaflet-data-pluOfficeRetention-pane path")
+    .first();
+  await expect(boundary).toHaveAttribute("fill", "none");
+  await expect(boundary).toHaveAttribute("stroke", "#53bfe9");
+  await expect(boundary).toHaveAttribute("stroke-dasharray", /1[ ,]6/);
+  await page.locator("#layerOpacity-pluOfficeRetention").fill("50");
+  await expect(boundary).toHaveAttribute("stroke-opacity", "0.5");
+  await expect(boundary).toHaveAttribute("fill", "none");
+
+  await expect(
+    page.locator(".map-pin.office .pin-disc").first(),
+  ).toHaveAttribute("style", /--color:#d72e83/);
+  await expect(
+    page.locator(".map-pin.rentalOffice .pin-disc").first(),
+  ).toHaveAttribute("style", /--color:#eb7fb4;color:#4e1736/);
+  await expect(
+    page.locator('[data-layer-id="rentalOffices"] .layer-icon'),
+  ).toHaveAttribute("style", /--color:#eb7fb4/);
+});
 test("rename, reorder and collapse survive reload", async ({ page }) => {
   const card = page.locator('[data-layer-id="plu"]');
   await card.locator(".layer-rename").click();

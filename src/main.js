@@ -3,7 +3,7 @@ import { loadDatasets } from "./data.js";
 import { groupFor, runtime, state } from "./state.js";
 import { setupMapRotation } from "./rotation.js";
 import { $, escapeHTML } from "./presentation.js";
-import { layerSpecs, mosColors } from "./catalog.js";
+import { layerSpecs, mosColors, officeRetentionColor } from "./catalog.js";
 import { handleMapClick, selectOffice, selectStation } from "./selection.js";
 import {
   mixedBuildingPopup,
@@ -131,12 +131,12 @@ export async function start() {
       {
         pane: "data-pluOfficeRetention",
         style: {
-          color: "#ad5cff",
-          weight: 1,
-          dashArray: "7 5",
+          color: officeRetentionColor,
+          weight: 2.5,
+          dashArray: "1 6",
+          lineCap: "round",
           opacity: 1,
-          fillColor: "#ad5cff",
-          fillOpacity: 0.1,
+          fill: false,
         },
         onEachFeature: (f, l) => {
           l.bindPopup(pluOfficeRetentionPopup(f));

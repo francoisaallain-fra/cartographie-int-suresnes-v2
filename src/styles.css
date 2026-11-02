@@ -510,7 +510,7 @@ input:focus-visible {
   border-radius: 7px;
   font-size: 13px;
   font-weight: 750;
-  border-color: #fff7eb;
+  border-color: #fce9f2;
 }
 .rental-listing {
   border-top: 1px solid #d9e2e5;
@@ -526,7 +526,7 @@ input:focus-visible {
 }
 .rental-address-list summary {
   cursor: pointer;
-  color: #984418;
+  color: #9b3064;
   font-weight: 650;
 }
 .rental-address-list > div {
@@ -1565,7 +1565,7 @@ button.legend-item[aria-pressed="false"] {
   color: #c66a21;
 }
 
-/* Office-retention prescription: bright violet dashed outline for contrast with other layers. */
+/* Office-retention prescription: sky-blue dotted boundary without a fill. */
 .plu-office-retention-key {
   display: inline-block;
   vertical-align: middle;
@@ -1573,8 +1573,8 @@ button.legend-item[aria-pressed="false"] {
   height: 10px;
   margin-left: 10px;
   margin-right: 4px;
-  border: 2px dashed #ad5cff;
-  background: #ad5cff26;
+  border: 2px dotted #53bfe9;
+  background: transparent;
   border-radius: 2px;
 }
 
