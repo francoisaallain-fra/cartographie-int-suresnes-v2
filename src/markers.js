@@ -20,6 +20,7 @@ export function markerAppearance(p) {
           : colors.school;
     if (variant === "primary") ink = "#173b61";
   } else if (p.kind === "nursery") ink = "#334155";
+  else if (p.kind === "rentalOffice") ink = "#4e1736";
   else if (["health", "pharmacy"].includes(p.kind)) ink = "#06462c";
   else if (p.kind === "bakery") ink = "#663508";
   else if (p.kind === "transport") {

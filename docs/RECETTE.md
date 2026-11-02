@@ -8,6 +8,8 @@ Référence des contrôles : jeux de données et ressources identifiés dans `te
 | Repli Notion     | Triangle visible ; nom, icône, interrupteur et poignée conservés ; corps masqué ; état persistant                 |
 | Personnalisation | Renommer, annuler, nom d'origine ; ordre au clavier et par glisser ; persistance après rechargement               |
 | Opacité          | 0 à 100 %, surfaces réellement opaques à 100 %, objets invisibles non interactifs                                 |
+| Maintien bureaux | Liseré bleu ciel pointillé sans remplissage ; curseur agissant sur le contour uniquement                          |
+| Bureaux à louer  | Même teinte rose que les bureaux ciblés, en plus clair ; chiffres des marqueurs lisibles                          |
 | Sous-catégories  | Gares indépendantes des lignes L/U/T2 ; axes routiers, santé, crèches, niveaux scolaires, commerces et pharmacies |
 | Cinq adresses    | Sélection par liste et marqueur, changement d'adresse sans ancien cadrage résiduel                                |
 | 75 rayons        | 300 à 1 000 m par pas de 50 ; listes et géométries pré-calculées préservées                                       |
@@ -28,4 +30,8 @@ Les scripts historiques de collecte n'ont pas été relancés : il s'agit d'une 
 
 ## Exécution locale du 2 novembre 2026
 
-Sur la copie de travail incluant les nouvelles annonces, les couleurs MOS, les cercles de gare et la cinquième adresse : `pnpm lint`, `pnpm format:check`, `pnpm test` (10 réussites), `pnpm build` et `pnpm test:e2e` (6 réussites avec Chrome) ont réussi. Il s'agit de contrôles locaux ; les modifications de cette copie n'ont pas été soumises à GitHub Actions.
+Sur la copie de travail incluant les nouvelles annonces, les couleurs MOS, les cercles de gare et la cinquième adresse : `pnpm lint`, `pnpm format:check`, `pnpm test` (10 réussites), `pnpm build` et `pnpm test:e2e` (6 réussites avec Chrome) ont réussi. Ces modifications ont ensuite passé [GitHub Actions](https://github.com/francoisaallain-fra/cartographie-int-suresnes-v2/actions/runs/41418105437) et été publiées sur Sites en version 3.
+
+## Révision du rendu du 2 novembre 2026
+
+Le périmètre « maintien des surfaces de bureau » est affiché en liseré bleu ciel pointillé sans remplissage. Le curseur règle l'opacité du contour ; à 0 %, ce contour ne reçoit plus de clic. Les marqueurs des bureaux à louer reprennent la teinte rose des immeubles ciblés, avec une luminosité plus élevée et des chiffres foncés. Contrôles locaux réussis : ESLint, Prettier, 10 tests Node, build Vite et 7 tests Playwright avec Chrome, dont un contrôle des attributs du contour et des couleurs des marqueurs.

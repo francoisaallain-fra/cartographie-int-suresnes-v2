@@ -19,10 +19,9 @@ export const state = {
   },
   beforeSelection: null,
 };
-export // Polygon defaults preserve the aerial-photo view while making the slider truthful:
-// its percentage is the actual fill opacity, including fully opaque at 100%.
-const polygonDefaultOpacity = {
-  pluOfficeRetention: 10,
+// Filled polygons preserve the aerial-photo view while the slider controls
+// their fill opacity. The office-retention boundary uses stroke opacity only.
+export const polygonDefaultOpacity = {
   mixedBuildings: 25,
   mosOffices: 20,
   mosPavilion: 20,
