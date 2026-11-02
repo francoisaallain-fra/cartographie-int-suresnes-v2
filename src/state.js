@@ -2,7 +2,7 @@ import { layerSpecs } from "./catalog.js";
 export const state = {
   radiusMeters: 500,
   selected: null,
-  selectedStation: null,
+  selectedStations: new Set(),
   enabled: {
     mosPavilion: true,
     mosCollective: true,
@@ -55,7 +55,7 @@ export const runtime = {
   groups: {},
   markers: new Map(),
   radiusLayer: null,
-  stationRadiusLayer: null,
+  stationRadiusLayers: new Map(),
   zoneLabels: [],
   allPoints: [],
   roadLayers: [],

@@ -305,8 +305,13 @@ export async function start() {
         : [],
       radiusMeters: state.radiusMeters,
       selected: state.selected,
-      selectedStation: state.selectedStation,
-      stationRadiusMeters: runtime.stationRadiusLayer?.getRadius() ?? null,
+      selectedStations: [...state.selectedStations],
+      stationRadiusMeters: Object.fromEntries(
+        [...runtime.stationRadiusLayers].map(([id, layer]) => [
+          id,
+          layer.getRadius(),
+        ]),
+      ),
       enabled: {
         ...state.enabled,
       },

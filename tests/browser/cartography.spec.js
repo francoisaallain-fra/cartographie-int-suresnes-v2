@@ -150,7 +150,7 @@ test("all 75 radius scenarios preserve the visible points", async ({
     await expect(page.locator("#radius-panel")).toBeHidden();
   }
 });
-test("every station opens a 500 m circle, replaced on the next selection", async ({
+test("station circles accumulate and toggle off individually", async ({
   page,
 }) => {
   const stations = JSON.parse(
@@ -167,39 +167,62 @@ test("every station opens a 500 m circle, replaced on the next selection", async
     const snapshot = await page.evaluate(() => window.suresnesDiagnostics());
     expect(snapshot.center).toEqual(before.center);
     expect(snapshot.zoom).toBe(before.zoom);
-    expect(snapshot.selectedStation).toBe(stations[i].id);
-    expect(snapshot.stationRadiusMeters).toBe(500);
-    await expect(page.locator(".station-radius")).toHaveCount(1);
-    await expect(page.locator(".station-radius")).toHaveAttribute(
+    expect(snapshot.selectedStations).toEqual(
+      stations.slice(0, i + 1).map((station) => station.id),
+    );
+    expect(Object.values(snapshot.stationRadiusMeters)).toEqual(
+      Array(i + 1).fill(500),
+    );
+    await expect(page.locator(".station-radius")).toHaveCount(i + 1);
+    await expect(page.locator(".station-radius").last()).toHaveAttribute(
       "stroke",
       "#ffffff",
     );
-    await expect(page.locator(".station-radius")).toHaveAttribute(
+    await expect(page.locator(".station-radius").last()).toHaveAttribute(
       "fill",
       "none",
     );
-    await expect(page.locator("#map-context")).toContainText(
-      stations[i].properties.name,
-    );
   }
+  await expect(page.locator("#map-context")).toContainText("6 gares");
+  await page
+    .locator(".map-pin.transport")
+    .nth(1)
+    .evaluate((el) => el.click());
+  let snapshot = await page.evaluate(() => window.suresnesDiagnostics());
+  expect(snapshot.selectedStations).not.toContain(stations[1].id);
+  expect(snapshot.selectedStations).toHaveLength(5);
+  await expect(page.locator(".station-radius")).toHaveCount(5);
+  await page
+    .locator(".map-pin.transport")
+    .nth(1)
+    .evaluate((el) => el.click());
+  await expect(page.locator(".station-radius")).toHaveCount(6);
+  await page.locator("#map").click({ position: { x: 300, y: 300 } });
+  await expect(page.locator(".station-radius")).toHaveCount(6);
   await page.locator('[data-layer-id="transport"] .layer-expand').click();
   await page.locator("#layerOpacity-transport").fill("50");
-  await expect(page.locator(".station-radius")).toHaveAttribute(
+  await expect(page.locator(".station-radius").first()).toHaveAttribute(
     "stroke-opacity",
     "0.5",
   );
+  await expect(page.locator(".station-radius").last()).toHaveAttribute(
+    "stroke-opacity",
+    "0.5",
+  );
+  await page.locator(".office-item").last().click();
+  snapshot = await page.evaluate(() => window.suresnesDiagnostics());
+  expect(snapshot.selected).toBe(offices.at(-1).id);
+  expect(snapshot.selectedStations).toHaveLength(6);
+  await page.locator("#clear-radius").click();
+  expect(
+    (await page.evaluate(() => window.suresnesDiagnostics())).selectedStations,
+  ).toHaveLength(6);
   await page.locator("#layer-transport").uncheck();
   await expect(page.locator(".station-radius")).toHaveCount(0);
   await page.locator("#layer-transport").check();
-  await page
-    .locator(".map-pin.transport")
-    .first()
-    .evaluate((el) => el.click());
-  await page.locator(".office-item").last().click();
-  const snapshot = await page.evaluate(() => window.suresnesDiagnostics());
-  expect(snapshot.selectedStation).toBeNull();
-  expect(snapshot.selected).toBe(offices.at(-1).id);
-  await expect(page.locator(".station-radius")).toHaveCount(0);
+  snapshot = await page.evaluate(() => window.suresnesDiagnostics());
+  expect(snapshot.selectedStations).toEqual([]);
+  expect(snapshot.stationRadiusMeters).toEqual({});
 });
 test("rental listings have their own layer and linked popup", async ({
   page,
