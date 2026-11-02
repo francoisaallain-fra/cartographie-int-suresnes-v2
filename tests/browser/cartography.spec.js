@@ -120,7 +120,7 @@ test("rental listings have their own layer and linked popup", async ({
     ),
   ).toHaveCount(1);
 });
-test("office retention is a dotted boundary and rental offices use a lighter pink", async ({
+test("office retention is a dotted boundary and rental offices are blue", async ({
   page,
 }) => {
   const boundary = page
@@ -138,10 +138,75 @@ test("office retention is a dotted boundary and rental offices use a lighter pin
   ).toHaveAttribute("style", /--color:#d72e83/);
   await expect(
     page.locator(".map-pin.rentalOffice .pin-disc").first(),
-  ).toHaveAttribute("style", /--color:#eb7fb4;color:#4e1736/);
+  ).toHaveAttribute("style", /--color:#2376b7;color:#ffffff/);
   await expect(
     page.locator('[data-layer-id="rentalOffices"] .layer-icon'),
-  ).toHaveAttribute("style", /--color:#eb7fb4/);
+  ).toHaveAttribute("style", /--color:#2376b7/);
+});
+test("PLU starts hidden and each office marker keeps its own chosen color", async ({
+  page,
+}) => {
+  const plu = page.locator("#layer-plu");
+  await expect(plu).not.toBeChecked();
+  await plu.check();
+  await page.reload();
+  await expect(page.locator("#loading")).toBeHidden();
+  await expect(plu).not.toBeChecked();
+
+  await page.locator(".office-item").first().click();
+  await page
+    .locator(".leaflet-popup:visible input[data-marker-color]")
+    .fill("#88cc33");
+  await expect(
+    page.locator('.map-pin.office .pin-disc[style*="#88cc33"]'),
+  ).toHaveCount(1);
+  await expect(
+    page.locator('.map-pin.office .pin-disc[style*="#d72e83"]'),
+  ).toHaveCount(4);
+  await page.reload();
+  await expect(page.locator("#loading")).toBeHidden();
+  await expect(
+    page.locator('.map-pin.office .pin-disc[style*="#88cc33"]'),
+  ).toHaveCount(1);
+  await page.locator(".office-item").first().click();
+  await expect(
+    page.locator(".leaflet-popup:visible input[data-marker-color]"),
+  ).toHaveValue("#88cc33");
+  await page
+    .locator(".leaflet-popup:visible button[data-marker-color-reset]")
+    .click();
+  await expect(
+    page.locator('.map-pin.office .pin-disc[style*="#88cc33"]'),
+  ).toHaveCount(0);
+
+  await page.locator(".rental-address-list summary").click();
+  await page.locator("[data-rental-id]").first().click();
+  await expect(page.locator(".leaflet-popup:visible")).toHaveCount(1);
+  await page
+    .locator(".leaflet-popup:visible input[data-marker-color]")
+    .fill("#ffcc00");
+  await page.locator("[data-rental-id]").nth(1).click();
+  await expect(page.locator(".leaflet-popup:visible")).toHaveCount(1);
+  await page
+    .locator(".leaflet-popup:visible input[data-marker-color]")
+    .fill("#9933ff");
+  await expect(
+    page.locator('.map-pin.rentalOffice .pin-disc[style*="#ffcc00"]'),
+  ).toHaveCount(1);
+  await expect(
+    page.locator('.map-pin.rentalOffice .pin-disc[style*="#9933ff"]'),
+  ).toHaveCount(1);
+  await expect(
+    page.locator('.map-pin.rentalOffice .pin-disc[style*="#2376b7"]'),
+  ).toHaveCount(14);
+  await page.reload();
+  await expect(page.locator("#loading")).toBeHidden();
+  await expect(
+    page.locator('.map-pin.rentalOffice .pin-disc[style*="#ffcc00"]'),
+  ).toHaveCount(1);
+  await expect(
+    page.locator('.map-pin.rentalOffice .pin-disc[style*="#9933ff"]'),
+  ).toHaveCount(1);
 });
 test("rename, reorder and collapse survive reload", async ({ page }) => {
   const card = page.locator('[data-layer-id="plu"]');

@@ -14,6 +14,7 @@ import {
 } from "./popups.js";
 import { featureIcon } from "./markers.js";
 import { buildControls } from "./controls.js";
+import { bindMarkerColorControls } from "./marker-colors.js";
 import { buildSources } from "./sources.js";
 import { updateLayers, updateZoneLabels } from "./layers.js";
 export async function start() {
@@ -254,6 +255,7 @@ export async function start() {
       runtime.markers.set(f.id, marker);
     }
     buildControls();
+    bindMarkerColorControls();
     buildSources();
     updateLayers();
     runtime.map.on("zoomend", updateZoneLabels);

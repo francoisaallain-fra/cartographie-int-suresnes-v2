@@ -510,7 +510,7 @@ input:focus-visible {
   border-radius: 7px;
   font-size: 13px;
   font-weight: 750;
-  border-color: #fce9f2;
+  border-color: #e8f4ff;
 }
 .rental-listing {
   border-top: 1px solid #d9e2e5;
@@ -526,7 +526,7 @@ input:focus-visible {
 }
 .rental-address-list summary {
   cursor: pointer;
-  color: #9b3064;
+  color: #235f91;
   font-weight: 650;
 }
 .rental-address-list > div {
@@ -545,7 +545,7 @@ input:focus-visible {
   cursor: pointer;
 }
 .rental-address-list button:hover {
-  background: #fff0e8;
+  background: #eaf5fc;
 }
 .map-pin.selected .pin-disc {
   outline: 3px solid #ffe381;
@@ -596,6 +596,48 @@ input:focus-visible {
   font-size: 10px;
   color: var(--muted);
   margin-bottom: 10px;
+}
+.marker-color-control {
+  border-top: 1px solid #e5ebe7;
+  border-bottom: 1px solid #e5ebe7;
+  padding: 8px 0;
+  margin: 8px 0;
+}
+.marker-color-control label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 10px;
+  font-weight: 600;
+}
+.marker-color-control input[type="color"] {
+  width: 42px;
+  height: 30px;
+  padding: 2px;
+  border: 1px solid #c8d9df;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+}
+.marker-color-control button {
+  border: 0;
+  background: transparent;
+  color: #235f91;
+  padding: 5px 0 0;
+  font-size: 10px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.marker-color-control button:disabled {
+  color: var(--muted);
+  cursor: default;
+  text-decoration: none;
+}
+.marker-color-control small {
+  display: block;
+  color: var(--muted);
+  font-size: 9px;
 }
 .popup-row {
   display: flex;

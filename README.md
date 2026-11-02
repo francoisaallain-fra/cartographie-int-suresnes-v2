@@ -20,6 +20,8 @@ pnpm test:e2e
 
 Les tests unitaires s'exécutent sans serveur. Les tests navigateur démarrent l'aperçu du build et contrôlent notamment les 75 scénarios de rayon et les cercles de 500 m des six gares. Le fond IGN et le logo SNCF utilisent des services externes ; la disponibilité de ces services n'est pas garantie par le dépôt.
 
+Le zonage PLU est masqué à l'ouverture et reste activable. Les pastilles des bureaux ciblés et des bureaux à louer disposent d'un choix de couleur individuel dans leur fiche ; ce choix est enregistré uniquement dans le navigateur utilisé.
+
 ## Parcours de lecture
 
 1. `docs/ARCHITECTURE.md` : responsabilités, état et dépendances.

@@ -10,7 +10,7 @@ export const state = {
     mosPavilion: false,
     mosCollective: false,
     mosActivities: false,
-    plu: true,
+    plu: false,
     transport: true,
     equipment: false,
     offices: true,
