@@ -1,7 +1,7 @@
 import { colors } from "./presentation.js";
 export const officeRetentionColors = {
-  outline: "#d62828",
-  center: "#ffeb00",
+  outline: "#ff0000",
+  center: "#ff0000",
 };
 export const mosColors = {
   offices: "#2878c6",

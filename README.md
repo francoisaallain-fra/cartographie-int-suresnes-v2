@@ -22,7 +22,7 @@ Les tests unitaires s'exécutent sans serveur. Les tests navigateur démarrent l
 
 Le zonage PLU est masqué à l'ouverture et reste activable. Les pastilles des bureaux ciblés et des bureaux à louer disposent d'un choix de couleur individuel dans leur fiche ; ce choix est enregistré uniquement dans le navigateur utilisé.
 
-Par défaut, une pastille de bureau est jaune si son point d’adresse est à 500 m ou moins d’une des six gares et hors des cinq périmètres cartographiés de maintien des surfaces de bureau. Sur les données du 2 novembre 2026, cela concerne 2 adresses ciblées et 4 adresses de bureaux à louer. Une couleur choisie manuellement pour une adresse reste prioritaire ; « Couleur initiale » rétablit le jaune si les deux critères sont remplis. Ce repérage au point d’adresse ne vérifie pas l’emprise du bâtiment ni sa faisabilité.
+Par défaut, une pastille de bureau est verte si son point d’adresse est à 500 m ou moins d’une des six gares et hors des cinq périmètres cartographiés de maintien des surfaces de bureau. Sur les données du 2 novembre 2026, cela concerne 2 adresses ciblées et 4 adresses de bureaux à louer. Une couleur choisie manuellement pour une adresse reste prioritaire ; « Couleur initiale » rétablit le vert si les deux critères sont remplis. Ce repérage au point d’adresse ne vérifie pas l’emprise du bâtiment ni sa faisabilité. Le maintien des surfaces de bureau apparaît en liseré rouge vif pointillé, sans remplissage.
 
 Les rayons blancs de 500 m des gares se cumulent : un clic ajoute le cercle de la gare, un second clic sur la même gare retire seulement ce cercle. Masquer la couche Transports retire tous les rayons de gare.
 

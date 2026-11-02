@@ -9,10 +9,10 @@ Référence des contrôles : jeux de données et ressources identifiés dans `te
 | Personnalisation | Renommer, annuler, nom d'origine ; ordre au clavier et par glisser ; persistance après rechargement                                                      |
 | Opacité          | 0 à 100 %, surfaces réellement opaques à 100 %, objets invisibles non interactifs                                                                        |
 | Zonage PLU       | Couche désactivée à chaque ouverture ; réactivation possible par son interrupteur                                                                        |
-| Maintien bureaux | Liseré jaune bordé de rouge, pointillé et sans remplissage ; curseur agissant sur les deux traits                                                        |
-| Bureaux à louer  | Pastilles bleues hors repérage jaune ; couleur modifiable séparément pour chaque adresse dans sa fiche                                                   |
+| Maintien bureaux | Liseré rouge vif, fin, pointillé et sans remplissage ; curseur agissant sur les deux traits                                                              |
+| Bureaux à louer  | Pastilles bleues hors repérage vert ; couleur modifiable séparément pour chaque adresse dans sa fiche                                                    |
 | Bureaux ciblés   | Couleur modifiable séparément dans chaque fiche, restaurable et conservée dans ce navigateur                                                             |
-| Repérage jaune   | Deux couches de points : gare à 500 m ou moins et point hors maintien PLU ; 2 adresses ciblées et 4 à louer, avec couleur manuelle prioritaire           |
+| Repérage vert    | Deux couches de points : gare à 500 m ou moins et point hors maintien PLU ; 2 adresses ciblées et 4 à louer, avec couleur manuelle prioritaire           |
 | Sous-catégories  | Gares indépendantes des lignes L/U/T2 ; axes routiers, santé, crèches, niveaux scolaires, commerces et pharmacies                                        |
 | Cinq adresses    | Sélection par liste et marqueur, changement d'adresse sans ancien cadrage résiduel                                                                       |
 | 75 rayons        | 300 à 1 000 m par pas de 50 ; listes et géométries pré-calculées préservées                                                                              |
@@ -92,3 +92,7 @@ Contrôles locaux réussis : ESLint, Prettier, 11 tests Node, build Vite et 12 p
 Les pastilles des deux couches de points deviennent jaunes lorsque l’adresse est à 500 m ou moins d’une des six gares et hors des cinq périmètres de maintien des surfaces de bureau. Le calcul est indépendant de la visibilité des couches Transports et Maintien. Sur cet instantané, 2 adresses ciblées et 4 adresses de location sont jaunes. Les autres gardent leur couleur d’origine ; une couleur personnalisée reste prioritaire et le bouton « Couleur initiale » restaure le jaune pour les adresses éligibles. La légende et la fiche expliquent que ce repérage au point ne valide pas le bâtiment ni sa faisabilité.
 
 Contrôles locaux réussis : ESLint, Prettier, 13 tests Node, build Vite et 13 parcours Playwright avec Chrome. Les nouveaux tests vérifient le seuil de 500 m, les limites et trous des polygones, les six identifiants retenus, le nombre de pastilles jaunes et la restauration après changement individuel de couleur. Les ressources de référence n’ont pas été modifiées.
+
+## Correction des couleurs · 2 novembre 2026
+
+Sur demande de François, les six pastilles de repérage précédemment jaunes sont maintenant vertes (`#00c853`). Les couleurs choisies individuellement restent prioritaires et « Couleur initiale » revient au vert pour les points éligibles. Le liseré de maintien est entièrement rouge vif (`#ff0000`), toujours pointillé et sans remplissage ; son trait extérieur passe de 4 à 3 px. Les deux traits gardent le même réglage d’opacité. Les critères spatiaux et les données sont inchangés.
