@@ -1,8 +1,8 @@
 import { layerSpecs } from "./catalog.js";
 export const collapsedLayersKey = "suresnes-v2-collapsed-layers";
-export let collapsedLayers = new Set();
+export let collapsedLayers = new Set(layerSpecs.map((s) => s.id));
 try {
-  const saved = JSON.parse(localStorage.getItem(collapsedLayersKey));
+  const saved = JSON.parse(window.sessionStorage.getItem(collapsedLayersKey));
   if (Array.isArray(saved))
     collapsedLayers = new Set(
       saved.filter((id) => layerSpecs.some((s) => s.id === id)),
@@ -27,7 +27,7 @@ export function setLayerCollapsed(card, collapsed) {
     collapsedLayers.add(card.dataset.layerId);
   } else collapsedLayers.delete(card.dataset.layerId);
   try {
-    localStorage.setItem(
+    window.sessionStorage.setItem(
       collapsedLayersKey,
       JSON.stringify([...collapsedLayers]),
     );

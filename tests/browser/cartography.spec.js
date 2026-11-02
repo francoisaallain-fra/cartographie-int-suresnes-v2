@@ -26,12 +26,33 @@ test("all layer toggles and disclosure controls remain independent", async ({
     await checkbox.setChecked(!initial);
     await expect(checkbox).toBeChecked({ checked: !initial });
     await card.locator(".layer-expand").click();
-    await expect(card.locator(".layer-body")).toBeHidden();
+    await expect(card.locator(".layer-body")).toBeVisible();
     await expect(checkbox).toBeVisible();
     await expect(card.locator(".layer-drag")).toBeVisible();
     await card.locator(".layer-expand").click();
+    await expect(card.locator(".layer-body")).toBeHidden();
     await checkbox.setChecked(initial);
   }
+});
+test("a new session starts with every layer collapsed", async ({
+  page,
+  context,
+}) => {
+  await expect(
+    page.locator('.layer-expand[aria-expanded="false"]'),
+  ).toHaveCount(12);
+  await expect(page.locator(".layer-body:not([hidden])")).toHaveCount(0);
+  await page.locator('[data-layer-id="plu"] .layer-expand').click();
+  await page.reload();
+  await expect(page.locator('[data-layer-id="plu"] .layer-body')).toBeVisible();
+  const newSession = await context.newPage();
+  await newSession.goto("/");
+  await expect(newSession.locator("#loading")).toBeHidden();
+  await expect(
+    newSession.locator('.layer-expand[aria-expanded="false"]'),
+  ).toHaveCount(12);
+  await expect(newSession.locator(".layer-body:not([hidden])")).toHaveCount(0);
+  await newSession.close();
 });
 test("all 75 radius scenarios preserve the visible points", async ({
   page,
@@ -88,6 +109,7 @@ test("every station opens a 500 m circle, replaced on the next selection", async
       stations[i].properties.name,
     );
   }
+  await page.locator('[data-layer-id="transport"] .layer-expand').click();
   await page.locator("#layerOpacity-transport").fill("50");
   await expect(page.locator(".station-radius")).toHaveAttribute(
     "stroke-opacity",
@@ -117,6 +139,7 @@ test("rental listings have their own layer and linked popup", async ({
   await expect(marker).toHaveCount(0);
   await toggle.check();
   await expect(marker).toHaveCount(16);
+  await page.locator('[data-layer-id="rentalOffices"] .layer-expand').click();
   await page.locator(".rental-address-list summary").click();
   await page.locator("[data-rental-id]").first().click();
   await expect(page.locator(".leaflet-popup-content")).toContainText(
@@ -176,6 +199,7 @@ for (const viewport of [
       .first()
       .evaluate((el) => el.click());
     await expectPopupInsideMap();
+    await page.locator('[data-layer-id="rentalOffices"] .layer-expand').click();
     await page.locator(".rental-address-list summary").click();
     await page.locator('[data-rental-id="rental-92073_4121_00022"]').click();
     await expectPopupInsideMap();
@@ -215,6 +239,9 @@ test("office retention has a yellow dotted center ringed in red", async ({
   await expect(center).toHaveAttribute("stroke-dasharray", /1[ ,]8/);
   await expect(outline).not.toHaveClass(/leaflet-interactive/);
   await expect(center).toHaveClass(/leaflet-interactive/);
+  await page
+    .locator('[data-layer-id="pluOfficeRetention"] .layer-expand')
+    .click();
   await page.locator("#layerOpacity-pluOfficeRetention").fill("50");
   await expect(outline).toHaveAttribute("stroke-opacity", "0.5");
   await expect(center).toHaveAttribute("stroke-opacity", "0.5");
@@ -269,6 +296,7 @@ test("PLU starts hidden and each office marker keeps its own chosen color", asyn
     page.locator('.map-pin.office .pin-disc[style*="#88cc33"]'),
   ).toHaveCount(0);
 
+  await page.locator('[data-layer-id="rentalOffices"] .layer-expand').click();
   await page.locator(".rental-address-list summary").click();
   await page.locator("[data-rental-id]").first().click();
   await expect(page.locator(".leaflet-popup:visible")).toHaveCount(1);
@@ -300,6 +328,7 @@ test("PLU starts hidden and each office marker keeps its own chosen color", asyn
 });
 test("rename, reorder and collapse survive reload", async ({ page }) => {
   const card = page.locator('[data-layer-id="plu"]');
+  await card.locator(".layer-expand").click();
   await card.locator(".layer-rename").click();
   await card.locator("input[type=text]").fill("PLU personnalisé");
   await card.getByRole("button", { name: "Enregistrer", exact: true }).click();
@@ -307,11 +336,10 @@ test("rename, reorder and collapse survive reload", async ({ page }) => {
   const order = await page
     .locator(".layer-card")
     .evaluateAll((cards) => cards.map((x) => x.dataset.layerId));
-  await card.locator(".layer-expand").click();
   await page.reload();
   await expect(page.locator("#loading")).toBeHidden();
   await expect(card.locator(".layer-name")).toHaveText("PLU personnalisé");
-  await expect(card.locator(".layer-body")).toBeHidden();
+  await expect(card.locator(".layer-body")).toBeVisible();
   expect(
     await page
       .locator(".layer-card")
