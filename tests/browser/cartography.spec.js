@@ -24,15 +24,15 @@ test.beforeEach(async ({ page }) => {
 });
 test("opening layer layout matches the supplied MOS view", async ({ page }) => {
   const expectedOrder = [
+    "transport",
+    "offices",
+    "rentalOffices",
+    "pluOfficeRetention",
     "mosPavilion",
     "mosCollective",
     "mosActivities",
     "mixedBuildings",
     "mosOffices",
-    "transport",
-    "offices",
-    "rentalOffices",
-    "pluOfficeRetention",
     "plu",
     "equipment",
     "neighborhood",
@@ -78,7 +78,11 @@ test("opening layer layout matches the supplied MOS view", async ({ page }) => {
       "suresnes-v2-layer-order",
       JSON.stringify(["plu", "mosOffices"]),
     );
-    localStorage.removeItem("suresnes-v2-layer-order-v2");
+    localStorage.setItem(
+      "suresnes-v2-layer-order-v2",
+      JSON.stringify(["mosPavilion", "mosCollective", "mosActivities"]),
+    );
+    localStorage.removeItem("suresnes-v2-layer-order-v3");
   });
   await page.reload();
   await expect(page.locator("#loading")).toBeHidden();

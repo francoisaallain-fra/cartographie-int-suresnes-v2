@@ -2,7 +2,7 @@ import { $ } from "./presentation.js";
 import { runtime } from "./state.js";
 import { layerSpecs } from "./catalog.js";
 // The revised key applies the new opening layout once to returning browsers.
-export const layerOrderKey = "suresnes-v2-layer-order-v2";
+export const layerOrderKey = "suresnes-v2-layer-order-v3";
 export function syncLayerOrder() {
   const cards = [...$("layer-controls").children];
   cards.forEach((card, i) => {

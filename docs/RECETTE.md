@@ -75,3 +75,7 @@ Contrôles locaux : ESLint, Prettier, 11 tests Node, build Vite et 11 tests Play
 Les couches Mos 6, 7 et 8 ouvrent la liste, actives à 55 %, 55 % et 50 % d'opacité. Le Mos 8 Activités est bleu. Suivent les bâtiments mixtes et les bureaux Mos, désactivés ; puis transports, immeubles ciblés, bureaux proposés à la location et maintien des surfaces de bureau, activés. Le zonage PLU, les équipements et les aménités de quartier restent désactivés à l'ouverture. Les douze réglages restent repliés pour une nouvelle session. L'ancienne clé d'ordre local est remplacée une fois, afin que ce nouvel ordre soit visible aussi dans les navigateurs déjà utilisés.
 
 Contrôles locaux réussis : ESLint, Prettier, 11 tests Node, build Vite et 12 parcours Playwright avec Chrome. Le nouveau parcours vérifie l'ordre complet, les neuf interrupteurs montrés, les quatre valeurs d'opacité visibles et le bleu du Mos 8, y compris après migration de l'ancienne clé d'ordre.
+
+## Ordre de la colonne de gauche · 2 novembre 2026
+
+À l'ouverture, les quatre premières couches sont, dans cet ordre : Transports structurants, Immeubles ciblés, Bureaux proposés à la location, Maintien des surfaces de bureau · PLU. Les couches Mos 6, 7 et 8 puis les autres couches suivent dans leur ordre relatif précédent. La clé d'ordre local passe à sa troisième version pour appliquer cette disposition aux navigateurs déjà utilisés ; les déplacements effectués ensuite restent persistants.
