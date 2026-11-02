@@ -5,6 +5,7 @@ import {
   clearSelection,
   clearStationRadius,
   redrawRadius,
+  scrollMapIntoViewOnMobile,
   selectOffice,
   showCityView,
 } from "./selection.js";
@@ -111,6 +112,7 @@ export function buildControls() {
       const [lng, lat] = feature.geometry.coordinates;
       runtime.map.setView([lat, lng], 18, { animate: false });
       runtime.markers.get(feature.id).openPopup();
+      scrollMapIntoViewOnMobile();
     }),
   );
   document.querySelectorAll("[data-category]").forEach((el) =>
