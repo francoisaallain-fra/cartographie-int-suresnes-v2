@@ -59,3 +59,7 @@ Le clic sur une gare ajoute un cercle blanc pointillé de 500 m sans remplissage
 ## Fiches des bureaux du 2 novembre 2026
 
 À l'ouverture d'un bureau ciblé ou d'un bureau à louer, la carte se décale si nécessaire pour afficher toute la fenêtre. Sur un écran bas, la fiche peut défiler à l'intérieur de sa fenêtre. Sur mobile, une sélection depuis la liste ramène aussi la carte à l'écran. Le cadrage des cinq bureaux ciblés et d'une annonce regroupant quatre lots est vérifié sur ordinateur et mobile.
+
+## Repli des couches du 2 novembre 2026
+
+Les douze cartes de la colonne de gauche sont repliées à l'ouverture d'une nouvelle session. Les choix de dépliage sont conservés pendant la session, y compris après rechargement de l'onglet, puis réinitialisés à la session suivante.
