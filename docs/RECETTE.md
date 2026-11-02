@@ -100,3 +100,7 @@ Sur demande de François, les six pastilles de repérage précédemment jaunes s
 ## Ajustement du vert · 3 novembre 2026
 
 Le vert de repérage passe de `#00c853` à `#00a846`, légèrement plus sombre. Les six points éligibles, le liseré rouge et la priorité des couleurs choisies individuellement restent inchangés.
+
+## Second ajustement du vert · 3 novembre 2026
+
+Le vert de repérage passe de `#00a846` à `#007f3f`, plus sombre et accompagné de chiffres blancs pour préserver leur lisibilité. Les critères spatiaux, les six points concernés et les autres couches ne changent pas.
