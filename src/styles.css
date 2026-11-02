@@ -1607,7 +1607,7 @@ button.legend-item[aria-pressed="false"] {
   color: #c66a21;
 }
 
-/* Office-retention prescription: sky-blue dotted boundary without a fill. */
+/* The yellow dotted boundary is ringed in red, with no polygon fill. */
 .plu-office-retention-key {
   display: inline-block;
   vertical-align: middle;
@@ -1615,9 +1615,22 @@ button.legend-item[aria-pressed="false"] {
   height: 10px;
   margin-left: 10px;
   margin-right: 4px;
-  border: 2px dotted #53bfe9;
+  position: relative;
+  border: 2px dotted #d62828;
   background: transparent;
   border-radius: 2px;
+}
+.plu-office-retention-key::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border: 1px dotted #ffeb00;
+  border-radius: 1px;
+}
+.layer-card[data-layer-id="pluOfficeRetention"] .layer-icon {
+  background: #ffeb00;
+  color: #b51d1d;
+  box-shadow: inset 0 0 0 1px #d62828;
 }
 
 /* Collapsible layer settings: the compact row keeps only identity, visibility and ordering. */

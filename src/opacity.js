@@ -19,12 +19,13 @@ export function applyOpacity(id) {
     for (const { marker } of runtime.zoneLabels)
       marker.setOpacity(polygonOutlineOpacity(id));
   } else if (id === "pluOfficeRetention") {
-    runtime.groups[id].setStyle({
-      opacity,
-    });
-    runtime.groups[id].eachLayer((layer) => {
-      if (layer.getElement())
-        layer.getElement().style.pointerEvents = opacity === 0 ? "none" : "";
+    runtime.groups[id].eachLayer((group) => {
+      group.setStyle({ opacity });
+      group.eachLayer((layer) => {
+        if (layer.getElement())
+          layer.getElement().style.pointerEvents =
+            opacity === 0 || !layer.options.interactive ? "none" : "";
+      });
     });
   } else if (
     id === "mosOffices" ||

@@ -9,7 +9,7 @@ Référence des contrôles : jeux de données et ressources identifiés dans `te
 | Personnalisation | Renommer, annuler, nom d'origine ; ordre au clavier et par glisser ; persistance après rechargement               |
 | Opacité          | 0 à 100 %, surfaces réellement opaques à 100 %, objets invisibles non interactifs                                 |
 | Zonage PLU       | Couche désactivée à chaque ouverture ; réactivation possible par son interrupteur                                 |
-| Maintien bureaux | Liseré bleu ciel pointillé sans remplissage ; curseur agissant sur le contour uniquement                          |
+| Maintien bureaux | Liseré jaune bordé de rouge, pointillé et sans remplissage ; curseur agissant sur les deux traits                 |
 | Bureaux à louer  | Pastilles bleues ; couleur modifiable séparément pour chaque adresse dans sa fiche                                |
 | Bureaux ciblés   | Couleur modifiable séparément dans chaque fiche, restaurable et conservée dans ce navigateur                      |
 | Sous-catégories  | Gares indépendantes des lignes L/U/T2 ; axes routiers, santé, crèches, niveaux scolaires, commerces et pharmacies |
@@ -43,3 +43,9 @@ Le périmètre « maintien des surfaces de bureau » est affiché en liseré ble
 Le zonage PLU est masqué à chaque chargement. Les bureaux proposés à la location sont bleus par défaut. Chaque fiche de bureau ciblé ou proposé à la location permet de choisir la couleur de sa propre pastille ou de restaurer la couleur initiale. Les choix sont conservés uniquement dans le navigateur courant, indépendamment des autres pastilles.
 
 Contrôles locaux réussis : ESLint, Prettier, 10 tests Node, build Vite et 8 tests Playwright avec Chrome. Le parcours navigateur vérifie le PLU désactivé après rechargement, les deux familles de pastilles, plusieurs couleurs indépendantes et la restauration de la couleur initiale.
+
+## Liseré de maintien des bureaux du 2 novembre 2026
+
+Le périmètre conserve ses pointillés et l'absence de remplissage. Un trait rouge plus large entoure le trait jaune ; les deux suivent exactement les cinq géométries de la prescription. Le curseur d'opacité et l'interrupteur de couche agissent sur les deux traits ensemble.
+
+Contrôles locaux réussis : ESLint, Prettier, 10 tests Node, build Vite et 8 tests Playwright avec Chrome. Le contrôle du liseré a été relancé après l'ajustement visuel des couleurs et de l'épaisseur.
