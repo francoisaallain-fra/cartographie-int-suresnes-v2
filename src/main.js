@@ -135,7 +135,7 @@ export async function start() {
         style: {
           className: "office-retention-outline",
           color: officeRetentionColors.outline,
-          weight: 6,
+          weight: 4,
           dashArray: "1 8",
           lineCap: "round",
           opacity: 1,
@@ -150,7 +150,7 @@ export async function start() {
         style: {
           className: "office-retention-center",
           color: officeRetentionColors.center,
-          weight: 4,
+          weight: 2.5,
           dashArray: "1 8",
           lineCap: "round",
           opacity: 1,

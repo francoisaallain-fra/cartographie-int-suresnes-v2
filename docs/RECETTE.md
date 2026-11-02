@@ -49,3 +49,5 @@ Contrôles locaux réussis : ESLint, Prettier, 10 tests Node, build Vite et 8 te
 Le périmètre conserve ses pointillés et l'absence de remplissage. Un trait rouge plus large entoure le trait jaune ; les deux suivent exactement les cinq géométries de la prescription. Le curseur d'opacité et l'interrupteur de couche agissent sur les deux traits ensemble.
 
 Contrôles locaux réussis : ESLint, Prettier, 10 tests Node, build Vite et 8 tests Playwright avec Chrome. Le contrôle du liseré a été relancé après l'ajustement visuel des couleurs et de l'épaisseur.
+
+Le liseré a ensuite été affiné : trait rouge de 4 px et trait jaune de 2,5 px, contre 6 et 4 px auparavant. Les géométries, couleurs, pointillés et l'absence de remplissage sont conservés.
