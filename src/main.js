@@ -3,8 +3,8 @@ import { loadDatasets } from "./data.js";
 import { groupFor, runtime, state } from "./state.js";
 import { setupMapRotation } from "./rotation.js";
 import { $, escapeHTML } from "./presentation.js";
-import { layerSpecs } from "./catalog.js";
-import { handleMapClick, selectOffice } from "./selection.js";
+import { layerSpecs, mosColors } from "./catalog.js";
+import { handleMapClick, selectOffice, selectStation } from "./selection.js";
 import {
   mixedBuildingPopup,
   mosGroupPopup,
@@ -53,7 +53,7 @@ export async function start() {
       "https://data.geopf.fr/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=ORTHOIMAGERY.ORTHOPHOTOS&STYLE=normal&FORMAT=image/jpeg&TILEMATRIXSET=PM&TILEROW={y}&TILECOL={x}&TILEMATRIX={z}",
       {
         attribution:
-          'Photo © <a href="https://www.ign.fr/">IGN</a> · 2024 | Données : Mos © <a href="https://www.institutparisregion.fr/">L’Institut Paris Region</a>, CSTB/BDNB, Insee/BPE, GPU, IDFM, Éducation, FINESS, Dépt. 92, © <a href="https://www.openstreetmap.org/copyright">OSM</a>',
+          'Photo © <a href="https://www.ign.fr/">IGN</a> · 2024 | Données : Mos © <a href="https://www.institutparisregion.fr/">L’Institut Paris Region</a>, CSTB/BDNB, Insee/BPE, GPU, IDFM, Éducation, FINESS, Dépt. 92, <a href="https://www.bureauxlocaux.com/">BureauxLocaux</a>, © <a href="https://www.openstreetmap.org/copyright">OSM</a>',
         maxNativeZoom: 19,
         maxZoom: 20,
       },
@@ -150,10 +150,10 @@ export async function start() {
     runtime.groups.mosOffices = L.geoJSON(runtime.data["mos-offices"], {
       pane: "data-mosOffices",
       style: {
-        color: "#37e3cd",
+        color: mosColors.offices,
         weight: 1,
         opacity: 1,
-        fillColor: "#37e3cd",
+        fillColor: mosColors.offices,
         fillOpacity: 0.2,
       },
       onEachFeature: (f, l) => {
@@ -182,9 +182,9 @@ export async function start() {
       },
     });
     for (const [id, filename, color] of [
-      ["mosPavilion", "mos-pavillonnaire", "#c6d967"],
-      ["mosCollective", "mos-collectif", "#5c91e6"],
-      ["mosActivities", "mos-activites", "#e2a45c"],
+      ["mosPavilion", "mos-pavillonnaire", mosColors.pavilion],
+      ["mosCollective", "mos-collectif", mosColors.collective],
+      ["mosActivities", "mos-activites", mosColors.activities],
     ]) {
       runtime.groups[id] = L.geoJSON(runtime.data[filename], {
         pane: "data-" + id,
@@ -204,7 +204,13 @@ export async function start() {
         },
       });
     }
-    for (const id of ["transport", "equipment", "neighborhood", "offices"])
+    for (const id of [
+      "transport",
+      "equipment",
+      "neighborhood",
+      "offices",
+      "rentalOffices",
+    ])
       runtime.groups[id] = L.layerGroup();
     runtime.allPoints = [
       ...runtime.data.transport.features,
@@ -213,6 +219,7 @@ export async function start() {
       ...runtime.data.health.features,
       ...runtime.data.neighborhood.features,
       ...runtime.data.offices.features,
+      ...runtime.data["rental-offices"].features,
     ];
     for (const f of runtime.allPoints) {
       const [x, y] = f.geometry.coordinates;
@@ -239,6 +246,8 @@ export async function start() {
       if (f.properties.kind === "office")
         marker.on("click", () => selectOffice(f));
       if (f.properties.kind === "transport")
+        marker.on("click", () => selectStation(f));
+      if (f.properties.kind === "transport")
         marker.on("add", () =>
           marker.getElement()?.setAttribute("aria-label", f.properties.name),
         );
@@ -261,6 +270,8 @@ export async function start() {
         : [],
       radiusMeters: state.radiusMeters,
       selected: state.selected,
+      selectedStation: state.selectedStation,
+      stationRadiusMeters: runtime.stationRadiusLayer?.getRadius() ?? null,
       enabled: {
         ...state.enabled,
       },

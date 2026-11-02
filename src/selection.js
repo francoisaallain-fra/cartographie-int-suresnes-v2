@@ -1,6 +1,6 @@
 import { pointInRing } from "./geometry.js";
 import { radiusText, selectedRadius } from "./radius.js";
-import { amenityGroups, runtime, state } from "./state.js";
+import { amenityGroups, layerOpacity, runtime, state } from "./state.js";
 import { $ } from "./presentation.js";
 import { updateLayers } from "./layers.js";
 export function redrawRadius() {
@@ -22,7 +22,44 @@ export function redrawRadius() {
   $("map-context").textContent =
     `Adresse ${office.properties.number} · rayon de ${radiusText()}`;
 }
+export function clearStationRadius() {
+  if (runtime.stationRadiusLayer) {
+    runtime.map.removeLayer(runtime.stationRadiusLayer);
+    runtime.stationRadiusLayer = null;
+  }
+  state.selectedStation = null;
+  if (!state.selected)
+    $("map-context").textContent = "Suresnes · vue communale";
+}
+export function selectStation(feature) {
+  if (state.selected) clearSelection();
+  clearStationRadius();
+  state.selectedStation = feature.id;
+  state.enabled.transport = true;
+  updateLayers();
+  const [lng, lat] = feature.geometry.coordinates;
+  runtime.stationRadiusLayer = L.circle([lat, lng], {
+    radius: 500,
+    pane: "data-transport",
+    className: "station-radius",
+    color: "#6b5caa",
+    weight: 2,
+    dashArray: "6 5",
+    fillColor: "#8272c7",
+    opacity: layerOpacity.transport / 100,
+    fillOpacity: (layerOpacity.transport / 100) * 0.12,
+    interactive: false,
+  }).addTo(runtime.map);
+  $("map-context").textContent = `${feature.properties.name} · rayon de 500 m`;
+  runtime.map.fitBounds(runtime.stationRadiusLayer.getBounds(), {
+    padding: [55, 55],
+    maxZoom: 16,
+    animate: false,
+  });
+  runtime.markers.get(feature.id).openPopup();
+}
 export function selectOffice(f) {
+  clearStationRadius();
   if (!state.selected)
     state.beforeSelection = {
       ...state.enabled,
@@ -66,6 +103,8 @@ export function clearSelection(restore = true) {
 }
 export function showCityView() {
   if (state.selected) clearSelection();
+  clearStationRadius();
+  runtime.map.closePopup();
   runtime.map.stop();
   runtime.map.fitBounds(runtime.bounds, {
     padding: [24, 24],
@@ -73,7 +112,18 @@ export function showCityView() {
   });
 }
 export function handleMapClick(event) {
-  if (!state.selected) return;
+  if (!state.selected) {
+    if (
+      state.selectedStation &&
+      runtime.stationRadiusLayer &&
+      runtime.map.distance(
+        event.latlng,
+        runtime.stationRadiusLayer.getLatLng(),
+      ) > 500
+    )
+      showCityView();
+    return;
+  }
   // Hit-test the same geodesic polygon that draws the selected perimeter.
   const ring = selectedRadius().geometry.coordinates[0];
   const { lng: x, lat: y } = event.latlng;

@@ -39,7 +39,9 @@ export function updateLayers() {
           (f.properties.kind === "transport"
             ? !hiddenCategories.has("stations")
             : !hiddenCategories.has(categoryKey(f.properties))) &&
-          (spec.id === "offices" || !allowed || allowed.has(f.id))
+          (["offices", "rentalOffices"].includes(spec.id) ||
+            !allowed ||
+            allowed.has(f.id))
         ) {
           group.addLayer(marker);
           if (state.enabled[spec.id]) visible++;

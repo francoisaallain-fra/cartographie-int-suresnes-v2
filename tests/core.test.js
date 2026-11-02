@@ -18,7 +18,7 @@ test("all original data, assets and vendor files retain their exact bytes", () =
       path,
     );
 });
-test("all 17 geographic collections satisfy their data contract", () => {
+test("all geographic collections satisfy their data contract", () => {
   for (const name of datasetNames)
     validateCollection(read(name + ".geojson"), name);
 });
@@ -59,10 +59,57 @@ test("all 60 address/radius scenarios contain their origin and monotonic nearby 
   }
   assert.equal(count, 60);
 });
+test("new targeted address has 15 complete geodesic scenarios", () => {
+  const office = read("offices-extra.geojson").features[0];
+  const radii = read("radii-extra.json").offices[office.id];
+  assert.equal(office.properties.ban_id, "92073_3o60ni_00039");
+  assert.equal(Object.keys(radii).length, 15);
+  let previous = new Set();
+  for (let distance = 300; distance <= 1000; distance += 50) {
+    const scenario = radii[distance];
+    assert.ok(
+      pointInRing(
+        office.geometry.coordinates,
+        scenario.geometry.coordinates[0],
+      ),
+    );
+    const ids = new Set(scenario.nearby.map((x) => x.id));
+    for (const id of previous) assert.ok(ids.has(id));
+    previous = ids;
+    assert.deepEqual(Object.keys(scenario.roads), [
+      "road-quais",
+      "road-henri-sellier",
+      "road-washington",
+      "road-franklin-roosevelt",
+    ]);
+    assert.equal(Object.keys(scenario.rail).length, 3);
+  }
+});
 test("HTML metacharacters are escaped", () =>
   assert.equal(escapeHTML('<img a="x">&'), "&lt;img a=&quot;x&quot;&gt;&amp;"));
 test("malformed data fails with an actionable dataset name", () =>
   assert.throws(() => validateCollection({}, "schools"), /schools/));
+test("rental-office snapshot maps numbered addresses without hiding exclusions", () => {
+  const data = read("rental-offices.geojson");
+  const quality = read("rental-offices-quality.json");
+  assert.equal(data.features.length, 16);
+  assert.equal(
+    data.features.reduce((n, f) => n + f.properties.listings.length, 0),
+    23,
+  );
+  assert.equal(quality.cards_seen, 53);
+  assert.equal(quality.excluded.length, 30);
+  assert.equal(new Set(data.features.map((f) => f.properties.ban_id)).size, 16);
+  assert.ok(
+    data.features.every((f) =>
+      f.properties.listings.every(
+        (listing) =>
+          listing.url.startsWith("https://www.bureauxlocaux.com/annonce/") &&
+          listing.rent_display,
+      ),
+    ),
+  );
+});
 test("HTTP failures identify the failed resource", async () => {
   await assert.rejects(
     loadDatasets(async () => ({ ok: false, status: 503 })),

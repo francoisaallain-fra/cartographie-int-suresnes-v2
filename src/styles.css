@@ -504,6 +504,49 @@ input:focus-visible {
   font-weight: 650;
   transform: rotate(-7deg);
 }
+.map-pin.rentalOffice .pin-disc {
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 750;
+  border-color: #fff7eb;
+}
+.rental-listing {
+  border-top: 1px solid #d9e2e5;
+  padding: 7px 0;
+}
+.rental-listing .popup-link {
+  display: inline-block;
+  margin-top: 4px;
+}
+.rental-address-list {
+  margin: 0 11px 10px;
+  font-size: 10px;
+}
+.rental-address-list summary {
+  cursor: pointer;
+  color: #984418;
+  font-weight: 650;
+}
+.rental-address-list > div {
+  display: grid;
+  max-height: 210px;
+  overflow: auto;
+  margin-top: 5px;
+}
+.rental-address-list button {
+  border: 0;
+  border-bottom: 1px solid #e1e8e3;
+  padding: 5px 2px;
+  background: transparent;
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+}
+.rental-address-list button:hover {
+  background: #fff0e8;
+}
 .map-pin.selected .pin-disc {
   outline: 3px solid #ffe381;
   outline-offset: 2px;
@@ -1510,8 +1553,8 @@ button.legend-item[aria-pressed="false"] {
   height: 10px;
   margin-left: 10px;
   margin-right: 4px;
-  border: 2px solid #37e3cd;
-  background: #37e3cd55;
+  border: 2px solid #2878c6;
+  background: #2878c655;
   border-radius: 2px;
 }
 .mixed-key {

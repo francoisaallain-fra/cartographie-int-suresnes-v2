@@ -3,6 +3,7 @@ export default defineConfig({
   testDir: "tests/browser",
   use: {
     baseURL: "http://127.0.0.1:4173",
+    channel: process.env.PLAYWRIGHT_CHANNEL || undefined,
     viewport: { width: 1440, height: 1000 },
     trace: "retain-on-failure",
   },

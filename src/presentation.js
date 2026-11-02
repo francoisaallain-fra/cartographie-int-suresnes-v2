@@ -47,6 +47,7 @@ export const colors = {
   pharmacy: "#0fff7b",
   bakery: "#f6ad35",
   office: "#d72e83",
+  rentalOffice: "#f06a32",
 };
 export const typeLabels = {
   transport: "Gare / station",
@@ -56,4 +57,5 @@ export const typeLabels = {
   pharmacy: "Pharmacie",
   bakery: "Boulangerie / pâtisserie",
   office: "Adresse d’immeuble ciblé",
+  rentalOffice: "Bureaux annoncés à la location",
 };

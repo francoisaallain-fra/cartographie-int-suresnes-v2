@@ -62,7 +62,12 @@ export function buildSources() {
     [
       "Immeubles ciblés",
       "provided_addresses",
-      "4 adresses communiquées et géocodées au numéro dans Suresnes",
+      "5 adresses communiquées et géocodées au numéro dans Suresnes",
+    ],
+    [
+      "Bureaux proposés à la location",
+      "rental_offices",
+      "53 cartes relevées ; 23 annonces à 16 points BAN au numéro ; 29 sans numéro et 1 commerce non cartographiés",
     ],
   ];
   lines.splice(
@@ -80,7 +85,18 @@ export function buildSources() {
     "<table><thead><tr><th>Couche</th><th>Source & accès</th><th>Test & millésime</th></tr></thead><tbody>" +
     lines
       .map(([label, id, result]) => {
-        const s = runtime.sources[id];
+        const s =
+          id === "rental_offices"
+            ? {
+                name: "BureauxLocaux · recherche de bureaux à louer à Suresnes",
+                url: "https://www.bureauxlocaux.com/immobilier-d-entreprise/annonces/suresnes-92150/location-bureaux",
+                format: "Annonces HTML publiques · relevé ponctuel",
+                license:
+                  "Source commerciale ; droit de réutilisation non vérifié",
+                vintage: "Consultation du 02/11/2026",
+                note: "Données déclaratives. Adresses numérotées rapprochées de la BAN/IGN ; aucune preuve de vacance physique ou de lots distincts. Voir le journal de qualité.",
+              }
+            : runtime.sources[id];
         return `<tr><td>${label}</td><td><a href="${escapeHTML(s.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(s.name)} ↗</a><small>${escapeHTML(s.format)} · ${escapeHTML(s.license)}</small></td><td>${escapeHTML(result)}<small>${escapeHTML(s.vintage)}</small><small>${escapeHTML(s.note)}</small></td></tr>`;
       })
       .join("") +

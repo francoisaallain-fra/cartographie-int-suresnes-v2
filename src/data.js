@@ -9,6 +9,8 @@ export const datasetNames = [
   "health",
   "neighborhood",
   "offices",
+  "offices-extra",
+  "rental-offices",
   "roads",
   "rail",
   "transport-extent",
@@ -47,7 +49,7 @@ export function validateCollection(value, name) {
   return value;
 }
 export async function loadDatasets(fetcher = fetch) {
-  const names = [...datasetNames, "sources", "radii"];
+  const names = [...datasetNames, "sources", "radii", "radii-extra"];
   const values = await Promise.all(
     names.map(async (name) => {
       const extension = datasetNames.includes(name) ? "geojson" : "json";
@@ -58,5 +60,17 @@ export async function loadDatasets(fetcher = fetch) {
       return extension === "geojson" ? validateCollection(value, name) : value;
     }),
   );
-  return Object.fromEntries(names.map((name, index) => [name, values[index]]));
+  const data = Object.fromEntries(
+    names.map((name, index) => [name, values[index]]),
+  );
+  data.offices.features.push(...data["offices-extra"].features);
+  Object.assign(data.radii.offices, data["radii-extra"].offices);
+  data.sources.provided_addresses = {
+    ...data.sources.provided_addresses,
+    format:
+      "Cinq adresses communiquées ; coordonnées du géocodeur Géoplateforme/BAN",
+    vintage: "28 octobre et 2 novembre 2026",
+    note: "Cinq points au numéro dans Suresnes. Le 39 rue Rouget de Lisle corrige le libellé fourni « Roger de l’isle ». Ces adresses ne prouvent pas la vacance ou la disponibilité de bureaux.",
+  };
+  return data;
 }

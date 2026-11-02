@@ -3,6 +3,7 @@ import { layerOpacity, runtime, state } from "./state.js";
 import { radiusText } from "./radius.js";
 import {
   clearSelection,
+  clearStationRadius,
   redrawRadius,
   selectOffice,
   showCityView,
@@ -87,6 +88,7 @@ export function buildControls() {
   for (const s of layerSpecs)
     $(`layer-${s.id}`).addEventListener("change", (e) => {
       state.enabled[s.id] = e.target.checked;
+      if (s.id === "transport" && !e.target.checked) clearStationRadius();
       if (s.id === "offices" && !e.target.checked && state.selected) {
         clearSelection(false);
         runtime.map.fitBounds(runtime.bounds, {
@@ -99,6 +101,18 @@ export function buildControls() {
       layerOpacity[s.id] = Number(e.target.value);
       applyOpacity(s.id);
     });
+  document.querySelectorAll("[data-rental-id]").forEach((button) =>
+    button.addEventListener("click", () => {
+      const feature = runtime.data["rental-offices"].features.find(
+        (f) => f.id === button.dataset.rentalId,
+      );
+      state.enabled.rentalOffices = true;
+      updateLayers();
+      const [lng, lat] = feature.geometry.coordinates;
+      runtime.map.setView([lat, lng], 18, { animate: false });
+      runtime.markers.get(feature.id).openPopup();
+    }),
+  );
   document.querySelectorAll("[data-category]").forEach((el) =>
     el.addEventListener("click", () => {
       const key = el.dataset.category,
@@ -127,6 +141,7 @@ export function buildControls() {
   $("clear-radius").addEventListener("click", showCityView);
   $("hide-all").addEventListener("click", () => {
     if (state.selected) clearSelection(false);
+    clearStationRadius();
     for (const key in state.enabled) state.enabled[key] = false;
     updateLayers();
   });

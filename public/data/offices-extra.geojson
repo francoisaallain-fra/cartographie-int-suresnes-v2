@@ -1,0 +1,31 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ban-92073_3o60ni_00039",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.231346, 48.877756]
+      },
+      "properties": {
+        "id": "ban-92073_3o60ni_00039",
+        "number": 5,
+        "kind": "office",
+        "origin": "provided_address",
+        "name": "39 Rue Rouget de Lisle",
+        "address": "39 Rue Rouget de Lisle 92150 Suresnes",
+        "input_address": "39 rue Roger de l’isle, Suresnes",
+        "address_note": "Le libellé fourni « Roger de l’isle » est rapproché du 39 rue Rouget de Lisle dans la BAN ; ne pas confondre avec la rue Roger-Salengro.",
+        "vacancy_status": "Non vérifiée",
+        "source": "provided_addresses",
+        "source_url": "https://data.geopf.fr/geocodage/search/?q=39+rue+Rouget+de+Lisle+92150+Suresnes&limit=5",
+        "retrieved_at": "2026-11-02",
+        "ban_label": "39 Rue Rouget de Lisle 92150 Suresnes",
+        "ban_id": "92073_3o60ni_00039",
+        "geocode_score": 0.9728672727272727,
+        "precision": "Point BAN au numéro ; emprise du bâtiment non vérifiée"
+      }
+    }
+  ]
+}

@@ -7,11 +7,11 @@
 | main                                           | Chargement, création de Leaflet, construction des couches et démarrage               |
 | data                                           | Chargement HTTP et validation des géométries avant affichage                         |
 | state                                          | État partagé de la session et références Leaflet, sans variables globales implicites |
-| catalog                                        | Définition des onze couches                                                          |
+| catalog                                        | Définition des douze couches                                                         |
 | layers, opacity                                | Synchronisation de visibilité, transparence et libellés                              |
 | transport                                      | Routes, halo et décalage graphique des voies L/U                                     |
 | radius, geometry                               | Accès aux scénarios et calcul d'appartenance au cercle affiché                       |
-| selection                                      | Sélection d'une adresse, cadrage et restauration de la vue ville                     |
+| selection                                      | Sélection d'une adresse ou d'une gare, cercles et restauration de la vue ville       |
 | controls                                       | Assemblage des contrôles et événements de l'interface                                |
 | ordering, collapse, preferences                | Ordre, repli et noms personnalisés, persistés séparément                             |
 | markers, legend, popups, sources, presentation | Symboles, fiches, légendes et textes                                                 |

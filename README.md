@@ -18,13 +18,13 @@ pnpm exec playwright install chromium
 pnpm test:e2e
 ```
 
-Les tests unitaires s'exécutent sans serveur. Les tests navigateur démarrent l'aperçu du build et contrôlent notamment les 60 scénarios de rayon. Le fond IGN et le logo SNCF utilisent des services externes ; la disponibilité de ces services n'est pas garantie par le dépôt.
+Les tests unitaires s'exécutent sans serveur. Les tests navigateur démarrent l'aperçu du build et contrôlent notamment les 75 scénarios de rayon et les cercles de 500 m des six gares. Le fond IGN et le logo SNCF utilisent des services externes ; la disponibilité de ces services n'est pas garantie par le dépôt.
 
 ## Parcours de lecture
 
 1. `docs/ARCHITECTURE.md` : responsabilités, état et dépendances.
 2. `src/main.js` : initialisation et assemblage de la carte.
-3. `src/catalog.js` : onze couches et libellés.
+3. `src/catalog.js` : douze couches et libellés.
 4. `src/controls.js`, `src/layers.js`, `src/selection.js` : interactions et rendu.
 5. `tests/` et `docs/RECETTE.md` : contrat fonctionnel et contrôles.
 6. `docs/DONNEES.md` : sources, scripts historiques et limites.

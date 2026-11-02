@@ -1,13 +1,21 @@
 import { test, expect } from "@playwright/test";
 import fs from "node:fs";
 const radii = JSON.parse(fs.readFileSync("public/data/radii.json"));
-const offices = JSON.parse(
-  fs.readFileSync("public/data/offices.geojson"),
+Object.assign(
+  radii.offices,
+  JSON.parse(fs.readFileSync("public/data/radii-extra.json")).offices,
+);
+const offices = [
+  ...JSON.parse(fs.readFileSync("public/data/offices.geojson")).features,
+  ...JSON.parse(fs.readFileSync("public/data/offices-extra.geojson")).features,
+];
+const rentalOffices = JSON.parse(
+  fs.readFileSync("public/data/rental-offices.geojson"),
 ).features;
 test.beforeEach(async ({ page }) => {
   await page.goto("/");
   await expect(page.locator("#loading")).toBeHidden();
-  await expect(page.locator(".layer-card")).toHaveCount(11);
+  await expect(page.locator(".layer-card")).toHaveCount(12);
 });
 test("all layer toggles and disclosure controls remain independent", async ({
   page,
@@ -25,7 +33,7 @@ test("all layer toggles and disclosure controls remain independent", async ({
     await checkbox.setChecked(initial);
   }
 });
-test("all 60 radius scenarios preserve the original visible points", async ({
+test("all 75 radius scenarios preserve the visible points", async ({
   page,
 }) => {
   for (const office of offices) {
@@ -38,6 +46,7 @@ test("all 60 radius scenarios preserve the original visible points", async ({
         [
           ...radii.offices[office.id][distance].nearby.map((x) => x.id),
           ...offices.map((x) => x.id),
+          ...rentalOffices.map((x) => x.id),
         ].sort(),
       );
       if (distance < 1000)
@@ -46,6 +55,70 @@ test("all 60 radius scenarios preserve the original visible points", async ({
     await page.locator("#clear-radius").click();
     await expect(page.locator("#radius-panel")).toBeHidden();
   }
+});
+test("every station opens a 500 m circle, replaced on the next selection", async ({
+  page,
+}) => {
+  const stations = JSON.parse(
+    fs.readFileSync("public/data/transport.geojson"),
+  ).features;
+  for (let i = 0; i < stations.length; i++) {
+    if (i === 0) await page.locator(".map-pin.transport").first().click();
+    else
+      await page
+        .locator(".map-pin.transport")
+        .nth(i)
+        .evaluate((el) => el.click());
+    const snapshot = await page.evaluate(() => window.suresnesDiagnostics());
+    expect(snapshot.selectedStation).toBe(stations[i].id);
+    expect(snapshot.stationRadiusMeters).toBe(500);
+    await expect(page.locator(".station-radius")).toHaveCount(1);
+    await expect(page.locator("#map-context")).toContainText(
+      stations[i].properties.name,
+    );
+  }
+  await page.locator("#layerOpacity-transport").fill("50");
+  await expect(page.locator(".station-radius")).toHaveAttribute(
+    "stroke-opacity",
+    "0.5",
+  );
+  await page.locator("#layer-transport").uncheck();
+  await expect(page.locator(".station-radius")).toHaveCount(0);
+  await page.locator("#layer-transport").check();
+  await page
+    .locator(".map-pin.transport")
+    .first()
+    .evaluate((el) => el.click());
+  await page.locator(".office-item").last().click();
+  const snapshot = await page.evaluate(() => window.suresnesDiagnostics());
+  expect(snapshot.selectedStation).toBeNull();
+  expect(snapshot.selected).toBe(offices.at(-1).id);
+  await expect(page.locator(".station-radius")).toHaveCount(0);
+});
+test("rental listings have their own layer and linked popup", async ({
+  page,
+}) => {
+  const toggle = page.locator("#layer-rentalOffices");
+  await expect(toggle).toBeChecked();
+  const marker = page.locator(".map-pin.rentalOffice");
+  await expect(marker).toHaveCount(16);
+  await toggle.uncheck();
+  await expect(marker).toHaveCount(0);
+  await toggle.check();
+  await expect(marker).toHaveCount(16);
+  await page.locator(".rental-address-list summary").click();
+  await page.locator("[data-rental-id]").first().click();
+  await expect(page.locator(".leaflet-popup-content")).toContainText(
+    /BUREAUXLOCAUX/i,
+  );
+  await expect(page.locator(".leaflet-popup-content")).toContainText(
+    "Loyer affiché",
+  );
+  await expect(
+    page.locator(
+      ".leaflet-popup-content a[href*='bureauxlocaux.com/annonce/']",
+    ),
+  ).toHaveCount(1);
 });
 test("rename, reorder and collapse survive reload", async ({ page }) => {
   const card = page.locator('[data-layer-id="plu"]');
