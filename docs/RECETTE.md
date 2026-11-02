@@ -8,8 +8,10 @@ Référence des contrôles : jeux de données et ressources identifiés dans `te
 | Repli Notion     | Triangle visible ; nom, icône, interrupteur et poignée conservés ; corps masqué ; état persistant                 |
 | Personnalisation | Renommer, annuler, nom d'origine ; ordre au clavier et par glisser ; persistance après rechargement               |
 | Opacité          | 0 à 100 %, surfaces réellement opaques à 100 %, objets invisibles non interactifs                                 |
+| Zonage PLU       | Couche désactivée à chaque ouverture ; réactivation possible par son interrupteur                                 |
 | Maintien bureaux | Liseré bleu ciel pointillé sans remplissage ; curseur agissant sur le contour uniquement                          |
-| Bureaux à louer  | Même teinte rose que les bureaux ciblés, en plus clair ; chiffres des marqueurs lisibles                          |
+| Bureaux à louer  | Pastilles bleues ; couleur modifiable séparément pour chaque adresse dans sa fiche                                |
+| Bureaux ciblés   | Couleur modifiable séparément dans chaque fiche, restaurable et conservée dans ce navigateur                      |
 | Sous-catégories  | Gares indépendantes des lignes L/U/T2 ; axes routiers, santé, crèches, niveaux scolaires, commerces et pharmacies |
 | Cinq adresses    | Sélection par liste et marqueur, changement d'adresse sans ancien cadrage résiduel                                |
 | 75 rayons        | 300 à 1 000 m par pas de 50 ; listes et géométries pré-calculées préservées                                       |
@@ -35,3 +37,9 @@ Sur la copie de travail incluant les nouvelles annonces, les couleurs MOS, les c
 ## Révision du rendu du 2 novembre 2026
 
 Le périmètre « maintien des surfaces de bureau » est affiché en liseré bleu ciel pointillé sans remplissage. Le curseur règle l'opacité du contour ; à 0 %, ce contour ne reçoit plus de clic. Les marqueurs des bureaux à louer reprennent la teinte rose des immeubles ciblés, avec une luminosité plus élevée et des chiffres foncés. Contrôles locaux réussis : ESLint, Prettier, 10 tests Node, build Vite et 7 tests Playwright avec Chrome, dont un contrôle des attributs du contour et des couleurs des marqueurs.
+
+## Couleurs personnelles des pastilles du 2 novembre 2026
+
+Le zonage PLU est masqué à chaque chargement. Les bureaux proposés à la location sont bleus par défaut. Chaque fiche de bureau ciblé ou proposé à la location permet de choisir la couleur de sa propre pastille ou de restaurer la couleur initiale. Les choix sont conservés uniquement dans le navigateur courant, indépendamment des autres pastilles.
+
+Contrôles locaux réussis : ESLint, Prettier, 10 tests Node, build Vite et 8 tests Playwright avec Chrome. Le parcours navigateur vérifie le PLU désactivé après rechargement, les deux familles de pastilles, plusieurs couleurs indépendantes et la restauration de la couleur initiale.

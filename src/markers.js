@@ -1,5 +1,6 @@
 import { colors, escapeHTML, svg } from "./presentation.js";
 import { state } from "./state.js";
+import { markerColor, markerInk } from "./marker-colors.js";
 export function markerAppearance(p) {
   let color = colors[p.kind],
     ink = "#ffffff",
@@ -20,7 +21,6 @@ export function markerAppearance(p) {
           : colors.school;
     if (variant === "primary") ink = "#173b61";
   } else if (p.kind === "nursery") ink = "#334155";
-  else if (p.kind === "rentalOffice") ink = "#4e1736";
   else if (["health", "pharmacy"].includes(p.kind)) ink = "#06462c";
   else if (p.kind === "bakery") ink = "#663508";
   else if (p.kind === "transport") {
@@ -73,6 +73,10 @@ export function featureIcon(f) {
     });
   }
   const a = markerAppearance(p);
+  if (["office", "rentalOffice"].includes(p.kind)) {
+    a.color = markerColor(f);
+    a.ink = markerInk(a.color);
+  }
   return L.divIcon({
     className: `map-pin ${p.kind} ${a.variant}${p.audit?.added ? " audit-added" : ""}${p.audit?.doubts?.length ? " audit-doubt" : ""}${state.selected === f.id ? " selected" : ""}`,
     html: `<div class="pin-disc" style="--color:${a.color};color:${a.ink}">${p.kind === "office" ? p.number : p.kind === "rentalOffice" ? p.listings.length : svg(a.icon)}</div>${p.audit?.doubts?.length ? '<span class="audit-question" aria-hidden="true">?</span>' : ""}`,

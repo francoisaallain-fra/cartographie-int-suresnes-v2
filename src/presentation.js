@@ -47,7 +47,7 @@ export const colors = {
   pharmacy: "#0fff7b",
   bakery: "#f6ad35",
   office: "#d72e83",
-  rentalOffice: "#eb7fb4",
+  rentalOffice: "#2376b7",
 };
 export const typeLabels = {
   transport: "Gare / station",
