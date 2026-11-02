@@ -1,0 +1,580 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "rental-92073_9622_00001",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.226088,
+          48.868129
+        ]
+      },
+      "properties": {
+        "kind": "rentalOffice",
+        "name": "1 Allée de la Venelle",
+        "address": "1 Allée de la Venelle 92150 Suresnes",
+        "ban_id": "92073_9622_00001",
+        "geocode_score": 0.9563327272727271,
+        "geocode_url": "https://data.geopf.fr/geocodage/search/?q=1+All%C3%A9e+De+La+Venelle+92150+Suresnes&limit=5",
+        "retrieved_at": "2026-11-02",
+        "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
+        "listings": [
+          {
+            "id": "42985605",
+            "type": "bureau",
+            "surface_display": "350 m²",
+            "rent_display": "3 938 €/mois",
+            "address_display": "1 Allée De La Venelle, 92150 Suresnes",
+            "url": "https://www.bureauxlocaux.com/annonce/bureaux-renoves-avec-terrasse-privative-en-plein-c--42985605",
+            "address_note": null
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rental-92073_1495_00010",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.222938,
+          48.867021
+        ]
+      },
+      "properties": {
+        "kind": "rentalOffice",
+        "name": "10 Rue Chevreul",
+        "address": "10 Rue Chevreul 92150 Suresnes",
+        "ban_id": "92073_1495_00010",
+        "geocode_score": 0.9657854545454545,
+        "geocode_url": "https://data.geopf.fr/geocodage/search/?q=10+Rue+Chevreul+92150+Suresnes&limit=5",
+        "retrieved_at": "2026-11-02",
+        "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
+        "listings": [
+          {
+            "id": "42985425",
+            "type": "bureau",
+            "surface_display": "324 à 1 456 m²",
+            "rent_display": "À partir de 5 400 €/mois",
+            "address_display": "6-10 Rue Chevreul, 92150 Suresnes",
+            "url": "https://www.bureauxlocaux.com/annonce/bureaux_-a-louer_-suresnes--42985425",
+            "address_note": "Plage de numéros : point représentatif au numéro 10"
+          },
+          {
+            "id": "40977826",
+            "type": "bureau",
+            "surface_display": "324 à 1 456 m²",
+            "rent_display": "À partir de 5 400 €/mois",
+            "address_display": "10 Rue Chevreul, 92150 Suresnes",
+            "url": "https://www.bureauxlocaux.com/annonce/bureaux-a-louer-etat-dusage--40977826",
+            "address_note": null
+          },
+          {
+            "id": "38634778",
+            "type": "bureau",
+            "surface_display": "324 à 1 456 m²",
+            "rent_display": "À partir de 5 400 €/mois",
+            "address_display": "10 Rue Chevreul, 92150 Suresnes",
+            "url": "https://www.bureauxlocaux.com/annonce/a-louer-surfaces-en-bon-etat--38634778",
+            "address_note": null
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rental-92073_4440_00013",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.226097,
+          48.867234
+        ]
+      },
+      "properties": {
+        "kind": "rentalOffice",
+        "name": "13 Boulevard Henri Sellier",
+        "address": "13 Boulevard Henri Sellier 92150 Suresnes",
+        "ban_id": "92073_4440_00013",
+        "geocode_score": 0.9753427272727273,
+        "geocode_url": "https://data.geopf.fr/geocodage/search/?q=13+Boulevard+Henri+Sellier+92150+Suresnes&limit=5",
+        "retrieved_at": "2026-11-02",
+        "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
+        "listings": [
+          {
+            "id": "38664331",
+            "type": "bureau",
+            "surface_display": "1 116 à 4 695 m²",
+            "rent_display": "À partir de 23 480 €/mois",
+            "address_display": "Boma, 13 Boulevard Henri Sellier, 92150 Suresnes",
+            "url": "https://www.bureauxlocaux.com/annonce/location-bureau-suresnes-92150--38664331",
+            "address_note": null
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rental-92073_6110_00162",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.217609,
+          48.86958
+        ]
+      },
+      "properties": {
+        "kind": "rentalOffice",
+        "name": "162 Boulevard du Maréchal de Lattre de Tassigny",
+        "address": "162 Boulevard du Maréchal de Lattre de Tassigny 92150 Suresnes",
+        "ban_id": "92073_6110_00162",
+        "geocode_score": 0.9740690909090909,
+        "geocode_url": "https://data.geopf.fr/geocodage/search/?q=162+Boulevard+Du+Mar%C3%A9chal+De+Lattre+De+Tassigny+92150+Suresnes&limit=5",
+        "retrieved_at": "2026-11-02",
+        "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
+        "listings": [
+          {
+            "id": "40277957",
+            "type": "bureau",
+            "surface_display": "401 m²",
+            "rent_display": "10 025 €/mois",
+            "address_display": "162 Boulevard Du Maréchal De Lattre De Tassigny, 92150 Suresnes",
+            "url": "https://www.bureauxlocaux.com/annonce/location-bureau-suresnes-92150--40277957",
+            "address_note": null
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rental-92073_5166_00002",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.226629,
+          48.866562
+        ]
+      },
+      "properties": {
+        "kind": "rentalOffice",
+        "name": "2 Allée de Longchamp",
+        "address": "2 Allée de Longchamp 92150 Suresnes",
+        "ban_id": "92073_5166_00002",
+        "geocode_score": 0.9620272727272726,
+        "geocode_url": "https://data.geopf.fr/geocodage/search/?q=2+All%C3%A9e+De+Longchamp+92150+Suresnes&limit=5",
+        "retrieved_at": "2026-11-02",
+        "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
+        "listings": [
+          {
+            "id": "36749266",
+            "type": "bureau",
+            "surface_display": "1 090 à 4 670 m²",
+            "rent_display": "À partir de 30 018 €/mois",
+            "address_display": "Boma, 2 Allée De Longchamp, 92150 Suresnes",
+            "url": "https://www.bureauxlocaux.com/annonce/boma-suresnes-bureaux-contemporains-avec-vue-seine--36749266",
+            "address_note": null
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rental-92073_4121_00022",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.230358,
+          48.869597
+        ]
+      },
+      "properties": {
+        "kind": "rentalOffice",
+        "name": "22 Quai Gallieni",
+        "address": "22 Quai Gallieni 92150 Suresnes",
+        "ban_id": "92073_4121_00022",
+        "geocode_score": 0.9654918181818181,
+        "geocode_url": "https://data.geopf.fr/geocodage/search/?q=22+Quai+Gallieni+92150+Suresnes&limit=5",
+        "retrieved_at": "2026-11-02",
+        "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
+        "listings": [
+          {
+            "id": "39899769",
+            "type": "bureau",
+            "surface_display": "67 à 1 099 m²",
+            "rent_display": "À partir de 1 424 €/mois",
+            "address_display": "Le 22 QG, 22 Quai Gallieni, 92150 Suresnes",
+            "url": "https://www.bureauxlocaux.com/annonce/bureaux-a-louer--39899769",
+            "address_note": null
+          },
+          {
+            "id": "37799885",
+            "type": "bureau",
+            "surface_display": "67 à 1 099 m²",
+            "rent_display": "À partir de 1 424 €/mois",
+            "address_display": "Le 22 QG, 22 Quai Gallieni, 92150 Suresnes",
+            "url": "https://www.bureauxlocaux.com/annonce/bureaux-a-louer-a-suresnes-vue-seine-dans-immeuble--37799885",
+            "address_note": null
+          },
+          {
+            "id": "36964619",
+            "type": "bureau",
+            "surface_display": "242 m²",
+            "rent_display": "5 142 €/mois",
+            "address_display": "Le 22 QG, 22 Quai Gallieni, 92150 Suresnes",
+            "url": "https://www.bureauxlocaux.com/annonce/bureaux-a-louer-renove--36964619",
+            "address_note": null
+          },
+          {
+            "id": "38664366",
+            "type": "bureau",
+            "surface_display": "790 m²",
+            "rent_display": "4 994 €/mois",
+            "address_display": "Le 22 QG, 22 Quai Gallieni, 92150 Suresnes",
+            "url": "https://www.bureauxlocaux.com/annonce/location-bureau-suresnes-92150--38664366",
+            "address_note": null
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rental-92073_3125_00023",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.230536,
+          48.8727
+        ]
+      },
+      "properties": {
+        "kind": "rentalOffice",
+        "name": "23 Rue Édouard Nieuport",
+        "address": "23 Rue Édouard Nieuport 92150 Suresnes",
+        "ban_id": "92073_3125_00023",
+        "geocode_score": 0.9690754545454544,
+        "geocode_url": "https://data.geopf.fr/geocodage/search/?q=23+Rue+%C3%89douard+Nieuport+92150+Suresnes&limit=5",
+        "retrieved_at": "2026-11-02",
+        "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
+        "listings": [
+          {
+            "id": "40411658",
+            "type": "bureau",
+            "surface_display": "50 m²",
+            "rent_display": "1 417 €/mois",
+            "address_display": "23 Rue Édouard Nieuport, 92150 Suresnes",
+            "url": "https://www.bureauxlocaux.com/annonce/bureaux-avec-cachet--40411658",
+            "address_note": null
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rental-92073_4121_00024",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.231143,
+          48.870306
+        ]
+      },
+      "properties": {
+        "kind": "rentalOffice",
+        "name": "24 Quai Gallieni",
+        "address": "24 Quai Gallieni 92150 Suresnes",
+        "ban_id": "92073_4121_00024",
+        "geocode_score": 0.9654918181818181,
+        "geocode_url": "https://data.geopf.fr/geocodage/search/?q=24+Quai+Gallieni+92150+Suresnes&limit=5",
+        "retrieved_at": "2026-11-02",
+        "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
+        "listings": [
+          {
+            "id": "36773177",
+            "type": "bureau",
+            "surface_display": "269 à 6 507 m²",
+            "rent_display": "À partir de 5 044 €/mois",
+            "address_display": "24QG, 24 Quai Gallieni, 92150 Suresnes",
+            "url": "https://www.bureauxlocaux.com/annonce/agreables-bureaux--36773177",
+            "address_note": null
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rental-92073_4121_00025",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.231631,
+          48.870774
+        ]
+      },
+      "properties": {
+        "kind": "rentalOffice",
+        "name": "25 Quai Gallieni",
+        "address": "25 Quai Gallieni 92150 Suresnes",
+        "ban_id": "92073_4121_00025",
+        "geocode_score": 0.9654918181818181,
+        "geocode_url": "https://data.geopf.fr/geocodage/search/?q=25+Quai+Gallieni+92150+Suresnes&limit=5",
+        "retrieved_at": "2026-11-02",
+        "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
+        "listings": [
+          {
+            "id": "42445381",
+            "type": "coworking",
+            "surface_display": "15 à 105 m²",
+            "rent_display": "Loyer Nous consulter",
+            "address_display": "25 Quai Gallieni, 92150 Suresnes",
+            "url": "https://www.bureauxlocaux.com/annonce/multiples-surfaces-de-bureaux-a-louer--42445381",
+            "address_note": null
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rental-92073_4121_00027",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.23268,
+          48.871667
+        ]
+      },
+      "properties": {
+        "kind": "rentalOffice",
+        "name": "27 Quai Gallieni",
+        "address": "27 Quai Gallieni 92150 Suresnes",
+        "ban_id": "92073_4121_00027",
+        "geocode_score": 0.9654918181818181,
+        "geocode_url": "https://data.geopf.fr/geocodage/search/?q=27+Quai+Gallieni+92150+Suresnes&limit=5",
+        "retrieved_at": "2026-11-02",
+        "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
+        "listings": [
+          {
+            "id": "41971513",
+            "type": "bureau",
+            "surface_display": "575 à 1 150 m²",
+            "rent_display": "À partir de 11 980 €/mois",
+            "address_display": "27-29 Quai Gallieni, 92150 Suresnes",
+            "url": "https://www.bureauxlocaux.com/annonce/botany-bureaux-traversants-et-lumineux-sur-les-qua--41971513",
+            "address_note": "Plage de numéros : point représentatif au numéro 27"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rental-92073_4152_00031",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.224096,
+          48.870348
+        ]
+      },
+      "properties": {
+        "kind": "rentalOffice",
+        "name": "31 Avenue du Général de Gaulle",
+        "address": "31 Avenue du Général de Gaulle 92150 Suresnes",
+        "ban_id": "92073_4152_00031",
+        "geocode_score": 0.966060909090909,
+        "geocode_url": "https://data.geopf.fr/geocodage/search/?q=31+Avenue+Du+G%C3%A9n%C3%A9ral+De+Gaulle+92150+Suresnes&limit=5",
+        "retrieved_at": "2026-11-02",
+        "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
+        "listings": [
+          {
+            "id": "39973055",
+            "type": "bureau",
+            "surface_display": "220 m²",
+            "rent_display": "5 000 €/mois",
+            "address_display": "31 Avenue Du Général De Gaulle, 92150 Suresnes",
+            "url": "https://www.bureauxlocaux.com/annonce/bureaux-a-louer--39973055",
+            "address_note": null
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rental-92073_4440_00040",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.224295,
+          48.86867
+        ]
+      },
+      "properties": {
+        "kind": "rentalOffice",
+        "name": "40 Boulevard Henri Sellier",
+        "address": "40 Boulevard Henri Sellier 92150 Suresnes",
+        "ban_id": "92073_4440_00040",
+        "geocode_score": 0.9753427272727273,
+        "geocode_url": "https://data.geopf.fr/geocodage/search/?q=40+Boulevard+Henri+Sellier+92150+Suresnes&limit=5",
+        "retrieved_at": "2026-11-02",
+        "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
+        "listings": [
+          {
+            "id": "39568004",
+            "type": "bureau",
+            "surface_display": "20 à 522 m²",
+            "rent_display": "À partir de 408 €/mois",
+            "address_display": "40 Boulevard Henri Sellier, 92150 Suresnes",
+            "url": "https://www.bureauxlocaux.com/annonce/location-bureau-suresnes-92150--39568004",
+            "address_note": null
+          },
+          {
+            "id": "35288598",
+            "type": "bureau",
+            "surface_display": "122 à 532 m²",
+            "rent_display": "À partir de 2 436 €/mois",
+            "address_display": "40 Boulevard Henri Sellier, 92150 Suresnes",
+            "url": "https://www.bureauxlocaux.com/annonce/bureaux-lumineux-a-louer-au-centre-de-suresnes--35288598",
+            "address_note": null
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rental-92073_1425_00048",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.226938,
+          48.873579
+        ]
+      },
+      "properties": {
+        "kind": "rentalOffice",
+        "name": "48 Rue Carnot",
+        "address": "48 Rue Carnot 92150 Suresnes",
+        "ban_id": "92073_1425_00048",
+        "geocode_score": 0.9747499999999999,
+        "geocode_url": "https://data.geopf.fr/geocodage/search/?q=48+Rue+carnot+92150+Suresnes&limit=5",
+        "retrieved_at": "2026-11-02",
+        "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
+        "listings": [
+          {
+            "id": "39359882",
+            "type": "bureau",
+            "surface_display": "541 à 5 649 m²",
+            "rent_display": "À partir de 11 947 €/mois",
+            "address_display": "Greenwalk, 48 Rue carnot, 92150 Suresnes",
+            "url": "https://www.bureauxlocaux.com/annonce/immeuble-de-bureaux-beneficiant-de-belles-prestati--39359882",
+            "address_note": null
+          },
+          {
+            "id": "38664824",
+            "type": "bureau",
+            "surface_display": "541 à 5 674 m²",
+            "rent_display": "À partir de 16 232 €/mois",
+            "address_display": "Greenwalk, 48 Rue carnot, 92150 Suresnes",
+            "url": "https://www.bureauxlocaux.com/annonce/location-bureau-suresnes-92150--38664824",
+            "address_note": null
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rental-92073_4440_00006",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.226639,
+          48.86788
+        ]
+      },
+      "properties": {
+        "kind": "rentalOffice",
+        "name": "6 Boulevard Henri Sellier",
+        "address": "6 Boulevard Henri Sellier 92150 Suresnes",
+        "ban_id": "92073_4440_00006",
+        "geocode_score": 0.9753427272727273,
+        "geocode_url": "https://data.geopf.fr/geocodage/search/?q=6+Boulevard+Henri+Sellier+92150+Suresnes&limit=5",
+        "retrieved_at": "2026-11-02",
+        "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
+        "listings": [
+          {
+            "id": "43013592",
+            "type": "bureau",
+            "surface_display": "230 à 545 m²",
+            "rent_display": "À partir de 5 366 €/mois",
+            "address_display": "6 Boulevard Henri Sellier, 92150 Suresnes",
+            "url": "https://www.bureauxlocaux.com/annonce/bureaux-a-louer-restructure--43013592",
+            "address_note": null
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rental-92073_4730_00065",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.222778,
+          48.865654
+        ]
+      },
+      "properties": {
+        "kind": "rentalOffice",
+        "name": "65 Rue Jean-Jacques Rousseau",
+        "address": "65 Rue Jean-Jacques Rousseau 92150 Suresnes",
+        "ban_id": "92073_4730_00065",
+        "geocode_score": 0.9713145454545454,
+        "geocode_url": "https://data.geopf.fr/geocodage/search/?q=65+Rue+Jean+Jacques+Rousseau+92150+Suresnes&limit=5",
+        "retrieved_at": "2026-11-02",
+        "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
+        "listings": [
+          {
+            "id": "34492005",
+            "type": "bureau",
+            "surface_display": "105 m²",
+            "rent_display": "1 925 €/mois",
+            "address_display": "Le Pygmalion, 65 Rue Jean Jacques Rousseau, 92150 Suresnes",
+            "url": "https://www.bureauxlocaux.com/annonce/bureaux-renoves-et-lumineux-a-louer-suresnes--34492005",
+            "address_note": null
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rental-92073_4730_00079",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.223741,
+          48.866123
+        ]
+      },
+      "properties": {
+        "kind": "rentalOffice",
+        "name": "79 Rue Jean-Jacques Rousseau",
+        "address": "79 Rue Jean-Jacques Rousseau 92150 Suresnes",
+        "ban_id": "92073_4730_00079",
+        "geocode_score": 0.9713145454545454,
+        "geocode_url": "https://data.geopf.fr/geocodage/search/?q=79+Rue+Jean+Jacques+Rousseau+92150+Suresnes&limit=5",
+        "retrieved_at": "2026-11-02",
+        "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
+        "listings": [
+          {
+            "id": "38689963",
+            "type": "bureau",
+            "surface_display": "252 à 1 419 m²",
+            "rent_display": "À partir de 5 251 €/mois",
+            "address_display": "Immeuble Gabriel Voisin, 79 Rue Jean Jacques Rousseau, 92150 Suresnes",
+            "url": "https://www.bureauxlocaux.com/annonce/location-bureau-suresnes-92150--38689963",
+            "address_note": null
+          }
+        ]
+      }
+    }
+  ]
+}

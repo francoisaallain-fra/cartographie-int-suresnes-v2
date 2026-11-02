@@ -74,7 +74,7 @@ export function featureIcon(f) {
   const a = markerAppearance(p);
   return L.divIcon({
     className: `map-pin ${p.kind} ${a.variant}${p.audit?.added ? " audit-added" : ""}${p.audit?.doubts?.length ? " audit-doubt" : ""}${state.selected === f.id ? " selected" : ""}`,
-    html: `<div class="pin-disc" style="--color:${a.color};color:${a.ink}">${p.kind === "office" ? p.number : svg(a.icon)}</div>${p.audit?.doubts?.length ? '<span class="audit-question" aria-hidden="true">?</span>' : ""}`,
+    html: `<div class="pin-disc" style="--color:${a.color};color:${a.ink}">${p.kind === "office" ? p.number : p.kind === "rentalOffice" ? p.listings.length : svg(a.icon)}</div>${p.audit?.doubts?.length ? '<span class="audit-question" aria-hidden="true">?</span>' : ""}`,
     iconSize: p.kind === "office" ? [34, 36] : [28, 28],
     iconAnchor: p.kind === "office" ? [17, 34] : [14, 14],
     popupAnchor: [0, -15],

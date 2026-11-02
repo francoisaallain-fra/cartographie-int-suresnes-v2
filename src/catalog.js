@@ -1,4 +1,10 @@
 import { colors } from "./presentation.js";
+export const mosColors = {
+  offices: "#2878c6",
+  pavilion: "#edc448",
+  collective: "#ed8652",
+  activities: "#ac7954",
+};
 export const layerSpecs = [
   {
     id: "pluOfficeRetention",
@@ -19,28 +25,28 @@ export const layerSpecs = [
     label: "Bureaux · Mos 2025",
     sub: "25 emprises de bureaux · hors vacance",
     icon: "office",
-    color: "#0da99a",
+    color: mosColors.offices,
   },
   {
     id: "mosPavilion",
     label: "6 · Habitat pavillonnaire · Mos",
     sub: "134 emprises · catégorie 6",
     icon: "plu",
-    color: "#a3bc43",
+    color: mosColors.pavilion,
   },
   {
     id: "mosCollective",
     label: "7 · Habitat collectif · Mos",
     sub: "314 emprises · catégorie 7",
     icon: "plu",
-    color: "#4f80e4",
+    color: mosColors.collective,
   },
   {
     id: "mosActivities",
     label: "8 · Activités · Mos",
     sub: "64 emprises · catégorie 8, bureaux inclus",
     icon: "plu",
-    color: "#c47b34",
+    color: mosColors.activities,
   },
   {
     id: "plu",
@@ -66,9 +72,16 @@ export const layerSpecs = [
   {
     id: "offices",
     label: "Immeubles ciblés",
-    sub: "4 adresses · vacance non vérifiée",
+    sub: "5 adresses · vacance non vérifiée",
     icon: "office",
     color: colors.office,
+  },
+  {
+    id: "rentalOffices",
+    label: "Bureaux proposés à la location",
+    sub: "23 annonces · 16 adresses géocodées · 02/11/2026",
+    icon: "office",
+    color: colors.rentalOffice,
   },
   {
     id: "neighborhood",

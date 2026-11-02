@@ -1,6 +1,6 @@
 import { markerAppearance, serviceBadges } from "./markers.js";
 import { groupFor, runtime } from "./state.js";
-import { colors, svg } from "./presentation.js";
+import { colors, escapeHTML, svg } from "./presentation.js";
 export const hiddenCategories = new Set();
 export function categoryKey(p) {
   const a = markerAppearance(p);
@@ -16,6 +16,8 @@ export function legendItem(p, label) {
   )}" aria-pressed="false" aria-label="Afficher ou masquer : ${label}" title="Afficher ou masquer : ${label}"><span class="legend-symbol" style="background:${a.color};color:${a.ink}">${svg(a.icon)}</span>${label}</button>`;
 }
 export function layerLegend(id) {
+  if (id === "rentalOffices")
+    return `<details class="rental-address-list"><summary>Voir les 16 adresses</summary><div>${runtime.data["rental-offices"].features.map((f) => `<button type="button" data-rental-id="${escapeHTML(f.id)}">${escapeHTML(f.properties.name)} <small>· ${f.properties.listings.length} annonce${f.properties.listings.length > 1 ? "s" : ""}</small></button>`).join("")}</div></details><p class="transport-scope">Annonces déclaratives, relevées le 02/11/2026. Les 29 fiches sans numéro de rue ne sont pas placées sur la carte.</p>`;
   if (id === "transport")
     return `<div class="layer-legend"><button type="button" class="legend-item" data-category="stations" data-group="transport" aria-pressed="true" aria-label="Afficher ou masquer les gares et stations"><span class="legend-symbol" style="background:${colors.transport};color:white">${svg("train")}</span>Gares et stations</button>${runtime.data.rail.features
       .map((f) => {
@@ -27,7 +29,7 @@ export function layerLegend(id) {
         kind: "road",
       },
       "Grands axes",
-    )}</div><p class="transport-scope">6 gares et stations, dont 3 SNCF, dans Suresnes et à 500 m de ses limites. Affichage indépendant des lignes.<br>Aucun RER ni métro dans ce périmètre.</p>`;
+    )}</div><p class="transport-scope">Cliquez sur une gare pour afficher son rayon de 500 m à vol d’oiseau. 6 gares et stations, dont 3 SNCF, dans Suresnes et à 500 m de ses limites. Affichage indépendant des lignes.<br>Aucun RER ni métro dans ce périmètre.</p>`;
   const entries =
     id === "transport"
       ? [

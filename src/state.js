@@ -2,6 +2,7 @@ import { layerSpecs } from "./catalog.js";
 export const state = {
   radiusMeters: 500,
   selected: null,
+  selectedStation: null,
   enabled: {
     pluOfficeRetention: true,
     mixedBuildings: true,
@@ -13,6 +14,7 @@ export const state = {
     transport: true,
     equipment: false,
     offices: true,
+    rentalOffices: true,
     neighborhood: false,
   },
   beforeSelection: null,
@@ -35,13 +37,15 @@ export const polygonOutlineOpacity = (id, base = 1) =>
   Math.min(1, (layerOpacity[id] / polygonDefaultOpacity[id]) * base);
 export const amenityGroups = ["transport", "equipment", "neighborhood"];
 export function groupFor(f) {
-  return ["transport", "road"].includes(f.properties.kind)
-    ? "transport"
-    : ["school", "nursery", "health"].includes(f.properties.kind)
-      ? "equipment"
-      : ["bakery", "pharmacy"].includes(f.properties.kind)
-        ? "neighborhood"
-        : "offices";
+  return f.properties.kind === "rentalOffice"
+    ? "rentalOffices"
+    : ["transport", "road"].includes(f.properties.kind)
+      ? "transport"
+      : ["school", "nursery", "health"].includes(f.properties.kind)
+        ? "equipment"
+        : ["bakery", "pharmacy"].includes(f.properties.kind)
+          ? "neighborhood"
+          : "offices";
 }
 export const runtime = {
   map: null,
@@ -52,6 +56,7 @@ export const runtime = {
   groups: {},
   markers: new Map(),
   radiusLayer: null,
+  stationRadiusLayer: null,
   zoneLabels: [],
   allPoints: [],
   roadLayers: [],
