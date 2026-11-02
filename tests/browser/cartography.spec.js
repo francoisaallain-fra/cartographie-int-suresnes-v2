@@ -137,8 +137,8 @@ test("office retention has a yellow dotted center ringed in red", async ({
   await expect(center).toHaveAttribute("fill", "none");
   await expect(outline).toHaveAttribute("stroke", "#d62828");
   await expect(center).toHaveAttribute("stroke", "#ffeb00");
-  await expect(outline).toHaveAttribute("stroke-width", "6");
-  await expect(center).toHaveAttribute("stroke-width", "4");
+  await expect(outline).toHaveAttribute("stroke-width", "4");
+  await expect(center).toHaveAttribute("stroke-width", "2.5");
   await expect(outline).toHaveAttribute("stroke-dasharray", /1[ ,]8/);
   await expect(center).toHaveAttribute("stroke-dasharray", /1[ ,]8/);
   await expect(outline).not.toHaveClass(/leaflet-interactive/);

@@ -1616,7 +1616,7 @@ button.legend-item[aria-pressed="false"] {
   margin-left: 10px;
   margin-right: 4px;
   position: relative;
-  border: 2px dotted #d62828;
+  border: 1.5px dotted #d62828;
   background: transparent;
   border-radius: 2px;
 }
