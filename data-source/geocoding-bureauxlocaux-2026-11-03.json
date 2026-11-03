@@ -1,0 +1,695 @@
+{
+  "6 Boulevard Henri Sellier 92150 Suresnes": {
+    "url": "https://data.geopf.fr/geocodage/search/?q=6+Boulevard+Henri+Sellier+92150+Suresnes&limit=5",
+    "retrieved_at": "2026-11-03",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            2.226639,
+            48.86788
+          ]
+        },
+        "properties": {
+          "label": "6 Boulevard Henri Sellier 92150 Suresnes",
+          "score": 0.9753427272727273,
+          "housenumber": "6",
+          "id": "92073_4440_00006",
+          "banId": "072e5cf5-6206-4b4b-8fed-39b37301bedd",
+          "name": "6 Boulevard Henri Sellier",
+          "postcode": "92150",
+          "citycode": "92073",
+          "x": 643268.8,
+          "y": 6863372.39,
+          "city": "Suresnes",
+          "context": "92, Hauts-de-Seine, Île-de-France",
+          "type": "housenumber",
+          "importance": 0.72877,
+          "depcode": "92",
+          "street": "Boulevard Henri Sellier",
+          "_type": "address"
+        }
+      }
+    ]
+  },
+  "1 Allée De La Venelle 92150 Suresnes": {
+    "url": "https://data.geopf.fr/geocodage/search/?q=1+All%C3%A9e+De+La+Venelle+92150+Suresnes&limit=5",
+    "retrieved_at": "2026-11-03",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            2.226088,
+            48.868129
+          ]
+        },
+        "properties": {
+          "label": "1 Allée de la Venelle 92150 Suresnes",
+          "score": 0.9563327272727271,
+          "housenumber": "1",
+          "id": "92073_9622_00001",
+          "banId": "f4ea506a-4e96-4577-b984-d037facc0533",
+          "name": "1 Allée de la Venelle",
+          "postcode": "92150",
+          "citycode": "92073",
+          "x": 643228.65,
+          "y": 6863400.47,
+          "city": "Suresnes",
+          "context": "92, Hauts-de-Seine, Île-de-France",
+          "type": "housenumber",
+          "importance": 0.51966,
+          "depcode": "92",
+          "street": "Allée de la Venelle",
+          "_type": "address"
+        }
+      }
+    ]
+  },
+  "10 Rue Chevreul 92150 Suresnes": {
+    "url": "https://data.geopf.fr/geocodage/search/?q=10+Rue+Chevreul+92150+Suresnes&limit=5",
+    "retrieved_at": "2026-11-03",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            2.222938,
+            48.867021
+          ]
+        },
+        "properties": {
+          "label": "10 Rue Chevreul 92150 Suresnes",
+          "score": 0.9657854545454545,
+          "housenumber": "10",
+          "id": "92073_1495_00010",
+          "banId": "10eb38b5-e2a0-4cf8-9f6d-08105b8aa3d9",
+          "name": "10 Rue Chevreul",
+          "postcode": "92150",
+          "citycode": "92073",
+          "x": 642996.38,
+          "y": 6863279.54,
+          "city": "Suresnes",
+          "context": "92, Hauts-de-Seine, Île-de-France",
+          "type": "housenumber",
+          "importance": 0.62364,
+          "depcode": "92",
+          "street": "Rue Chevreul",
+          "_type": "address"
+        }
+      }
+    ]
+  },
+  "30 Rue Pasteur 92150 Suresnes": {
+    "url": "https://data.geopf.fr/geocodage/search/?q=30+Rue+Pasteur+92150+Suresnes&limit=5",
+    "retrieved_at": "2026-11-03",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            2.223298,
+            48.862077
+          ]
+        },
+        "properties": {
+          "label": "30 Rue Pasteur 92150 Suresnes",
+          "score": 0.9720863636363635,
+          "housenumber": "30",
+          "id": "92073_7160_00030",
+          "banId": "f85771aa-b62a-432c-91bb-793dc60c06f3",
+          "name": "30 Rue Pasteur",
+          "postcode": "92150",
+          "citycode": "92073",
+          "x": 643017.38,
+          "y": 6862729.56,
+          "city": "Suresnes",
+          "context": "92, Hauts-de-Seine, Île-de-France",
+          "type": "housenumber",
+          "importance": 0.69295,
+          "depcode": "92",
+          "street": "Rue Pasteur",
+          "_type": "address"
+        }
+      }
+    ]
+  },
+  "25 Quai Gallieni 92150 Suresnes": {
+    "url": "https://data.geopf.fr/geocodage/search/?q=25+Quai+Gallieni+92150+Suresnes&limit=5",
+    "retrieved_at": "2026-11-03",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            2.231631,
+            48.870774
+          ]
+        },
+        "properties": {
+          "label": "25 Quai Gallieni 92150 Suresnes",
+          "score": 0.9654918181818181,
+          "housenumber": "25",
+          "id": "92073_4121_00025",
+          "banId": "d4366057-6bd3-431d-bcc9-03579a4872d1",
+          "name": "25 Quai Gallieni",
+          "postcode": "92150",
+          "citycode": "92073",
+          "x": 643638.12,
+          "y": 6863690.6,
+          "city": "Suresnes",
+          "context": "92, Hauts-de-Seine, Île-de-France",
+          "type": "housenumber",
+          "importance": 0.62041,
+          "depcode": "92",
+          "street": "Quai Gallieni",
+          "_type": "address"
+        }
+      }
+    ]
+  },
+  "27 Quai Gallieni 92150 Suresnes": {
+    "url": "https://data.geopf.fr/geocodage/search/?q=27+Quai+Gallieni+92150+Suresnes&limit=5",
+    "retrieved_at": "2026-11-03",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            2.23268,
+            48.871667
+          ]
+        },
+        "properties": {
+          "label": "27 Quai Gallieni 92150 Suresnes",
+          "score": 0.9654918181818181,
+          "housenumber": "27",
+          "id": "92073_4121_00027",
+          "banId": "b924dc40-d824-4e1d-ab5e-c67a2d773db3",
+          "name": "27 Quai Gallieni",
+          "postcode": "92150",
+          "citycode": "92073",
+          "x": 643716.03,
+          "y": 6863789.15,
+          "city": "Suresnes",
+          "context": "92, Hauts-de-Seine, Île-de-France",
+          "type": "housenumber",
+          "importance": 0.62041,
+          "depcode": "92",
+          "street": "Quai Gallieni",
+          "_type": "address"
+        }
+      }
+    ]
+  },
+  "23 Rue Édouard Nieuport 92150 Suresnes": {
+    "url": "https://data.geopf.fr/geocodage/search/?q=23+Rue+%C3%89douard+Nieuport+92150+Suresnes&limit=5",
+    "retrieved_at": "2026-11-03",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            2.230536,
+            48.8727
+          ]
+        },
+        "properties": {
+          "label": "23 Rue Édouard Nieuport 92150 Suresnes",
+          "score": 0.9690754545454544,
+          "housenumber": "23",
+          "id": "92073_3125_00023",
+          "banId": "53adb402-52dc-439e-96bb-f2636977a7db",
+          "name": "23 Rue Édouard Nieuport",
+          "postcode": "92150",
+          "citycode": "92073",
+          "x": 643559.89,
+          "y": 6863905.54,
+          "city": "Suresnes",
+          "context": "92, Hauts-de-Seine, Île-de-France",
+          "type": "housenumber",
+          "importance": 0.65983,
+          "depcode": "92",
+          "street": "Rue Édouard Nieuport",
+          "_type": "address"
+        }
+      }
+    ]
+  },
+  "162 Boulevard Du Maréchal De Lattre De Tassigny 92150 Suresnes": {
+    "url": "https://data.geopf.fr/geocodage/search/?q=162+Boulevard+Du+Mar%C3%A9chal+De+Lattre+De+Tassigny+92150+Suresnes&limit=5",
+    "retrieved_at": "2026-11-03",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            2.217609,
+            48.86958
+          ]
+        },
+        "properties": {
+          "label": "162 Boulevard du Maréchal de Lattre de Tassigny 92150 Suresnes",
+          "score": 0.9740690909090909,
+          "housenumber": "162",
+          "id": "92073_6110_00162",
+          "banId": "ccd89d96-d99a-41da-bc01-0c6ac3eb1156",
+          "name": "162 Boulevard du Maréchal de Lattre de Tassigny",
+          "postcode": "92150",
+          "citycode": "92073",
+          "x": 642608.28,
+          "y": 6863567.94,
+          "city": "Suresnes",
+          "context": "92, Hauts-de-Seine, Île-de-France",
+          "type": "housenumber",
+          "importance": 0.71476,
+          "depcode": "92",
+          "street": "Boulevard du Maréchal de Lattre de Tassigny",
+          "_type": "address"
+        }
+      }
+    ]
+  },
+  "31 Avenue Du Général De Gaulle 92150 Suresnes": {
+    "url": "https://data.geopf.fr/geocodage/search/?q=31+Avenue+Du+G%C3%A9n%C3%A9ral+De+Gaulle+92150+Suresnes&limit=5",
+    "retrieved_at": "2026-11-03",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            2.224096,
+            48.870348
+          ]
+        },
+        "properties": {
+          "label": "31 Avenue du Général de Gaulle 92150 Suresnes",
+          "score": 0.966060909090909,
+          "housenumber": "31",
+          "id": "92073_4152_00031",
+          "banId": "5b527b44-3b6a-473f-bcce-5961a6c6a105",
+          "name": "31 Avenue du Général de Gaulle",
+          "postcode": "92150",
+          "citycode": "92073",
+          "x": 643084.96,
+          "y": 6863648.64,
+          "city": "Suresnes",
+          "context": "92, Hauts-de-Seine, Île-de-France",
+          "type": "housenumber",
+          "importance": 0.62667,
+          "depcode": "92",
+          "street": "Avenue du Général de Gaulle",
+          "_type": "address"
+        }
+      }
+    ]
+  },
+  "40 Boulevard Henri Sellier 92150 Suresnes": {
+    "url": "https://data.geopf.fr/geocodage/search/?q=40+Boulevard+Henri+Sellier+92150+Suresnes&limit=5",
+    "retrieved_at": "2026-11-03",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            2.224295,
+            48.86867
+          ]
+        },
+        "properties": {
+          "label": "40 Boulevard Henri Sellier 92150 Suresnes",
+          "score": 0.9753427272727273,
+          "housenumber": "40",
+          "id": "92073_4440_00040",
+          "banId": "525a9c44-b9f9-492a-ae8c-2d594d942c43",
+          "name": "40 Boulevard Henri Sellier",
+          "postcode": "92150",
+          "citycode": "92073",
+          "x": 643097.72,
+          "y": 6863461.92,
+          "city": "Suresnes",
+          "context": "92, Hauts-de-Seine, Île-de-France",
+          "type": "housenumber",
+          "importance": 0.72877,
+          "depcode": "92",
+          "street": "Boulevard Henri Sellier",
+          "_type": "address"
+        }
+      }
+    ]
+  },
+  "22 Quai Gallieni 92150 Suresnes": {
+    "url": "https://data.geopf.fr/geocodage/search/?q=22+Quai+Gallieni+92150+Suresnes&limit=5",
+    "retrieved_at": "2026-11-03",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            2.230358,
+            48.869597
+          ]
+        },
+        "properties": {
+          "label": "22 Quai Gallieni 92150 Suresnes",
+          "score": 0.9654918181818181,
+          "housenumber": "22",
+          "id": "92073_4121_00022",
+          "banId": "b350b794-ab29-43bf-91c0-7cd7ecc88a78",
+          "name": "22 Quai Gallieni",
+          "postcode": "92150",
+          "citycode": "92073",
+          "x": 643543.47,
+          "y": 6863560.64,
+          "city": "Suresnes",
+          "context": "92, Hauts-de-Seine, Île-de-France",
+          "type": "housenumber",
+          "importance": 0.62041,
+          "depcode": "92",
+          "street": "Quai Gallieni",
+          "_type": "address"
+        }
+      }
+    ]
+  },
+  "48 Rue carnot 92150 Suresnes": {
+    "url": "https://data.geopf.fr/geocodage/search/?q=48+Rue+carnot+92150+Suresnes&limit=5",
+    "retrieved_at": "2026-11-03",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            2.226938,
+            48.873579
+          ]
+        },
+        "properties": {
+          "label": "48 Rue Carnot 92150 Suresnes",
+          "score": 0.9747499999999999,
+          "housenumber": "48",
+          "id": "92073_1425_00048",
+          "banId": "a7b59e55-4327-4e74-9e19-aedef0d18ad5",
+          "name": "48 Rue Carnot",
+          "postcode": "92150",
+          "citycode": "92073",
+          "x": 643296.94,
+          "y": 6864005.85,
+          "city": "Suresnes",
+          "context": "92, Hauts-de-Seine, Île-de-France",
+          "type": "housenumber",
+          "importance": 0.72225,
+          "depcode": "92",
+          "street": "Rue Carnot",
+          "_type": "address"
+        }
+      }
+    ]
+  },
+  "79 Rue Jean Jacques Rousseau 92150 Suresnes": {
+    "url": "https://data.geopf.fr/geocodage/search/?q=79+Rue+Jean+Jacques+Rousseau+92150+Suresnes&limit=5",
+    "retrieved_at": "2026-11-03",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            2.223741,
+            48.866123
+          ]
+        },
+        "properties": {
+          "label": "79 Rue Jean-Jacques Rousseau 92150 Suresnes",
+          "score": 0.9713145454545454,
+          "housenumber": "79",
+          "id": "92073_4730_00079",
+          "banId": "778a9749-3233-4035-a613-f909b6bbc11b",
+          "name": "79 Rue Jean-Jacques Rousseau",
+          "postcode": "92150",
+          "citycode": "92073",
+          "x": 643054.3,
+          "y": 6863179.11,
+          "city": "Suresnes",
+          "context": "92, Hauts-de-Seine, Île-de-France",
+          "type": "housenumber",
+          "importance": 0.68446,
+          "depcode": "92",
+          "street": "Rue Jean-Jacques Rousseau",
+          "_type": "address"
+        }
+      }
+    ]
+  },
+  "24 Rue Des Moulineaux 92150 Suresnes": {
+    "url": "https://data.geopf.fr/geocodage/search/?q=24+Rue+Des+Moulineaux+92150+Suresnes&limit=5",
+    "retrieved_at": "2026-11-03",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            2.220567,
+            48.862455
+          ]
+        },
+        "properties": {
+          "label": "24 Rue des Moulineaux 92150 Suresnes",
+          "score": 0.9713145454545454,
+          "housenumber": "24",
+          "id": "92073_6175_00024",
+          "banId": "fef9d455-c43c-44ec-9348-fa450a9af22e",
+          "name": "24 Rue des Moulineaux",
+          "postcode": "92150",
+          "citycode": "92073",
+          "x": 642817.44,
+          "y": 6862773.56,
+          "city": "Suresnes",
+          "context": "92, Hauts-de-Seine, Île-de-France",
+          "type": "housenumber",
+          "importance": 0.68446,
+          "depcode": "92",
+          "street": "Rue des Moulineaux",
+          "_type": "address"
+        }
+      }
+    ]
+  },
+  "13 Boulevard Henri Sellier 92150 Suresnes": {
+    "url": "https://data.geopf.fr/geocodage/search/?q=13+Boulevard+Henri+Sellier+92150+Suresnes&limit=5",
+    "retrieved_at": "2026-11-03",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            2.226097,
+            48.867234
+          ]
+        },
+        "properties": {
+          "label": "13 Boulevard Henri Sellier 92150 Suresnes",
+          "score": 0.9753427272727273,
+          "housenumber": "13",
+          "id": "92073_4440_00013",
+          "banId": "ae8296cb-f566-4b4b-8459-541faed1d87d",
+          "name": "13 Boulevard Henri Sellier",
+          "postcode": "92150",
+          "citycode": "92073",
+          "x": 643228.34,
+          "y": 6863300.95,
+          "city": "Suresnes",
+          "context": "92, Hauts-de-Seine, Île-de-France",
+          "type": "housenumber",
+          "importance": 0.72877,
+          "depcode": "92",
+          "street": "Boulevard Henri Sellier",
+          "_type": "address"
+        }
+      }
+    ]
+  },
+  "7 rue Frédéric Clavel 92150 Suresnes": {
+    "url": "https://data.geopf.fr/geocodage/search/?q=7+rue+Fr%C3%A9d%C3%A9ric+Clavel+92150+Suresnes&limit=5",
+    "retrieved_at": "2026-11-03",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            2.22436,
+            48.862242
+          ]
+        },
+        "properties": {
+          "label": "7 Rue Frédéric Clavel 92150 Suresnes",
+          "score": 0.9686427272727272,
+          "housenumber": "7",
+          "id": "92073_3580_00007",
+          "banId": "1f0752f2-9e87-4bbe-9af8-ba657896ebda",
+          "name": "7 Rue Frédéric Clavel",
+          "postcode": "92150",
+          "citycode": "92073",
+          "x": 643095.47,
+          "y": 6862747.14,
+          "city": "Suresnes",
+          "context": "92, Hauts-de-Seine, Île-de-France",
+          "type": "housenumber",
+          "importance": 0.65507,
+          "depcode": "92",
+          "street": "Rue Frédéric Clavel",
+          "_type": "address"
+        }
+      }
+    ]
+  },
+  "24 Quai Gallieni 92150 Suresnes": {
+    "url": "https://data.geopf.fr/geocodage/search/?q=24+Quai+Gallieni+92150+Suresnes&limit=5",
+    "retrieved_at": "2026-11-03",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            2.231143,
+            48.870306
+          ]
+        },
+        "properties": {
+          "label": "24 Quai Gallieni 92150 Suresnes",
+          "score": 0.9654918181818181,
+          "housenumber": "24",
+          "id": "92073_4121_00024",
+          "banId": "85d81b94-d9b7-4656-8c5d-22bb656d273d",
+          "name": "24 Quai Gallieni",
+          "postcode": "92150",
+          "citycode": "92073",
+          "x": 643601.82,
+          "y": 6863638.91,
+          "city": "Suresnes",
+          "context": "92, Hauts-de-Seine, Île-de-France",
+          "type": "housenumber",
+          "importance": 0.62041,
+          "depcode": "92",
+          "street": "Quai Gallieni",
+          "_type": "address"
+        }
+      }
+    ]
+  },
+  "2 Allée De Longchamp 92150 Suresnes": {
+    "url": "https://data.geopf.fr/geocodage/search/?q=2+All%C3%A9e+De+Longchamp+92150+Suresnes&limit=5",
+    "retrieved_at": "2026-11-03",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            2.226629,
+            48.866562
+          ]
+        },
+        "properties": {
+          "label": "2 Allée de Longchamp 92150 Suresnes",
+          "score": 0.9620272727272726,
+          "housenumber": "2",
+          "id": "92073_5166_00002",
+          "banId": "6ccc083f-e633-427d-a311-2f76f3875b83",
+          "name": "2 Allée de Longchamp",
+          "postcode": "92150",
+          "citycode": "92073",
+          "x": 643266.63,
+          "y": 6863225.85,
+          "city": "Suresnes",
+          "context": "92, Hauts-de-Seine, Île-de-France",
+          "type": "housenumber",
+          "importance": 0.5823,
+          "depcode": "92",
+          "street": "Allée de Longchamp",
+          "_type": "address"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            2.221492,
+            48.868744
+          ]
+        },
+        "properties": {
+          "label": "Passage de la Gare de Suresnes Longchamp 92150 Suresnes",
+          "score": 0.4752179020979021,
+          "id": "92073_4140",
+          "banId": "66b52719-34d0-4f3e-bbfa-101807517599",
+          "name": "Passage de la Gare de Suresnes Longchamp",
+          "postcode": "92150",
+          "citycode": "92073",
+          "x": 642892.19,
+          "y": 6863472.17,
+          "city": "Suresnes",
+          "context": "92, Hauts-de-Seine, Île-de-France",
+          "type": "street",
+          "importance": 0.55432,
+          "depcode": "92",
+          "street": "Passage de la Gare de Suresnes Longchamp",
+          "_type": "address"
+        }
+      }
+    ]
+  },
+  "65 Rue Jean Jacques Rousseau 92150 Suresnes": {
+    "url": "https://data.geopf.fr/geocodage/search/?q=65+Rue+Jean+Jacques+Rousseau+92150+Suresnes&limit=5",
+    "retrieved_at": "2026-11-03",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            2.222778,
+            48.865654
+          ]
+        },
+        "properties": {
+          "label": "65 Rue Jean-Jacques Rousseau 92150 Suresnes",
+          "score": 0.9713145454545454,
+          "housenumber": "65",
+          "id": "92073_4730_00065",
+          "banId": "ff9f303c-ee0a-49c6-aa42-b04af198228f",
+          "name": "65 Rue Jean-Jacques Rousseau",
+          "postcode": "92150",
+          "citycode": "92073",
+          "x": 642983.14,
+          "y": 6863127.66,
+          "city": "Suresnes",
+          "context": "92, Hauts-de-Seine, Île-de-France",
+          "type": "housenumber",
+          "importance": 0.68446,
+          "depcode": "92",
+          "street": "Rue Jean-Jacques Rousseau",
+          "_type": "address"
+        }
+      }
+    ]
+  }
+}

@@ -18,7 +18,7 @@
         "ban_id": "92073_9622_00001",
         "geocode_score": 0.9563327272727271,
         "geocode_url": "https://data.geopf.fr/geocodage/search/?q=1+All%C3%A9e+De+La+Venelle+92150+Suresnes&limit=5",
-        "retrieved_at": "2026-11-02",
+        "retrieved_at": "2026-11-03",
         "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
         "listings": [
           {
@@ -50,7 +50,7 @@
         "ban_id": "92073_1495_00010",
         "geocode_score": 0.9657854545454545,
         "geocode_url": "https://data.geopf.fr/geocodage/search/?q=10+Rue+Chevreul+92150+Suresnes&limit=5",
-        "retrieved_at": "2026-11-02",
+        "retrieved_at": "2026-11-03",
         "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
         "listings": [
           {
@@ -100,7 +100,7 @@
         "ban_id": "92073_4440_00013",
         "geocode_score": 0.9753427272727273,
         "geocode_url": "https://data.geopf.fr/geocodage/search/?q=13+Boulevard+Henri+Sellier+92150+Suresnes&limit=5",
-        "retrieved_at": "2026-11-02",
+        "retrieved_at": "2026-11-03",
         "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
         "listings": [
           {
@@ -132,7 +132,7 @@
         "ban_id": "92073_6110_00162",
         "geocode_score": 0.9740690909090909,
         "geocode_url": "https://data.geopf.fr/geocodage/search/?q=162+Boulevard+Du+Mar%C3%A9chal+De+Lattre+De+Tassigny+92150+Suresnes&limit=5",
-        "retrieved_at": "2026-11-02",
+        "retrieved_at": "2026-11-03",
         "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
         "listings": [
           {
@@ -164,7 +164,7 @@
         "ban_id": "92073_5166_00002",
         "geocode_score": 0.9620272727272726,
         "geocode_url": "https://data.geopf.fr/geocodage/search/?q=2+All%C3%A9e+De+Longchamp+92150+Suresnes&limit=5",
-        "retrieved_at": "2026-11-02",
+        "retrieved_at": "2026-11-03",
         "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
         "listings": [
           {
@@ -196,7 +196,7 @@
         "ban_id": "92073_4121_00022",
         "geocode_score": 0.9654918181818181,
         "geocode_url": "https://data.geopf.fr/geocodage/search/?q=22+Quai+Gallieni+92150+Suresnes&limit=5",
-        "retrieved_at": "2026-11-02",
+        "retrieved_at": "2026-11-03",
         "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
         "listings": [
           {
@@ -255,7 +255,7 @@
         "ban_id": "92073_3125_00023",
         "geocode_score": 0.9690754545454544,
         "geocode_url": "https://data.geopf.fr/geocodage/search/?q=23+Rue+%C3%89douard+Nieuport+92150+Suresnes&limit=5",
-        "retrieved_at": "2026-11-02",
+        "retrieved_at": "2026-11-03",
         "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
         "listings": [
           {
@@ -287,7 +287,7 @@
         "ban_id": "92073_4121_00024",
         "geocode_score": 0.9654918181818181,
         "geocode_url": "https://data.geopf.fr/geocodage/search/?q=24+Quai+Gallieni+92150+Suresnes&limit=5",
-        "retrieved_at": "2026-11-02",
+        "retrieved_at": "2026-11-03",
         "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
         "listings": [
           {
@@ -297,6 +297,38 @@
             "rent_display": "À partir de 5 044 €/mois",
             "address_display": "24QG, 24 Quai Gallieni, 92150 Suresnes",
             "url": "https://www.bureauxlocaux.com/annonce/agreables-bureaux--36773177",
+            "address_note": null
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rental-92073_6175_00024",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.220567,
+          48.862455
+        ]
+      },
+      "properties": {
+        "kind": "rentalOffice",
+        "name": "24 Rue des Moulineaux",
+        "address": "24 Rue des Moulineaux 92150 Suresnes",
+        "ban_id": "92073_6175_00024",
+        "geocode_score": 0.9713145454545454,
+        "geocode_url": "https://data.geopf.fr/geocodage/search/?q=24+Rue+Des+Moulineaux+92150+Suresnes&limit=5",
+        "retrieved_at": "2026-11-03",
+        "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
+        "listings": [
+          {
+            "id": "38689730",
+            "type": "bureau",
+            "surface_display": "60 m²",
+            "rent_display": "1 400 €/mois",
+            "address_display": "24 Rue Des Moulineaux, 92150 Suresnes",
+            "url": "https://www.bureauxlocaux.com/annonce/a-louer-bureaux-renoves--38689730",
             "address_note": null
           }
         ]
@@ -319,7 +351,7 @@
         "ban_id": "92073_4121_00025",
         "geocode_score": 0.9654918181818181,
         "geocode_url": "https://data.geopf.fr/geocodage/search/?q=25+Quai+Gallieni+92150+Suresnes&limit=5",
-        "retrieved_at": "2026-11-02",
+        "retrieved_at": "2026-11-03",
         "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
         "listings": [
           {
@@ -351,7 +383,7 @@
         "ban_id": "92073_4121_00027",
         "geocode_score": 0.9654918181818181,
         "geocode_url": "https://data.geopf.fr/geocodage/search/?q=27+Quai+Gallieni+92150+Suresnes&limit=5",
-        "retrieved_at": "2026-11-02",
+        "retrieved_at": "2026-11-03",
         "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
         "listings": [
           {
@@ -362,6 +394,47 @@
             "address_display": "27-29 Quai Gallieni, 92150 Suresnes",
             "url": "https://www.bureauxlocaux.com/annonce/botany-bureaux-traversants-et-lumineux-sur-les-qua--41971513",
             "address_note": "Plage de numéros : point représentatif au numéro 27"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rental-92073_7160_00030",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.223298,
+          48.862077
+        ]
+      },
+      "properties": {
+        "kind": "rentalOffice",
+        "name": "30 Rue Pasteur",
+        "address": "30 Rue Pasteur 92150 Suresnes",
+        "ban_id": "92073_7160_00030",
+        "geocode_score": 0.9720863636363635,
+        "geocode_url": "https://data.geopf.fr/geocodage/search/?q=30+Rue+Pasteur+92150+Suresnes&limit=5",
+        "retrieved_at": "2026-11-03",
+        "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
+        "listings": [
+          {
+            "id": "43005791",
+            "type": "bureau",
+            "surface_display": "136 à 565 m²",
+            "rent_display": "À partir de 2 494 €/mois",
+            "address_display": "30 Rue Pasteur, 92150 Suresnes",
+            "url": "https://www.bureauxlocaux.com/annonce/bureaux-a-louer-renove--43005791",
+            "address_note": null
+          },
+          {
+            "id": "36749298",
+            "type": "bureau",
+            "surface_display": "410 à 822 m²",
+            "rent_display": "À partir de 8 028 €/mois",
+            "address_display": "30 Rue Pasteur, 92150 Suresnes",
+            "url": "https://www.bureauxlocaux.com/annonce/bureaux-lumineux-dans-un-quartier-dynamique-et-bie--36749298",
+            "address_note": null
           }
         ]
       }
@@ -383,7 +456,7 @@
         "ban_id": "92073_4152_00031",
         "geocode_score": 0.966060909090909,
         "geocode_url": "https://data.geopf.fr/geocodage/search/?q=31+Avenue+Du+G%C3%A9n%C3%A9ral+De+Gaulle+92150+Suresnes&limit=5",
-        "retrieved_at": "2026-11-02",
+        "retrieved_at": "2026-11-03",
         "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
         "listings": [
           {
@@ -415,7 +488,7 @@
         "ban_id": "92073_4440_00040",
         "geocode_score": 0.9753427272727273,
         "geocode_url": "https://data.geopf.fr/geocodage/search/?q=40+Boulevard+Henri+Sellier+92150+Suresnes&limit=5",
-        "retrieved_at": "2026-11-02",
+        "retrieved_at": "2026-11-03",
         "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
         "listings": [
           {
@@ -456,7 +529,7 @@
         "ban_id": "92073_1425_00048",
         "geocode_score": 0.9747499999999999,
         "geocode_url": "https://data.geopf.fr/geocodage/search/?q=48+Rue+carnot+92150+Suresnes&limit=5",
-        "retrieved_at": "2026-11-02",
+        "retrieved_at": "2026-11-03",
         "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
         "listings": [
           {
@@ -497,7 +570,7 @@
         "ban_id": "92073_4440_00006",
         "geocode_score": 0.9753427272727273,
         "geocode_url": "https://data.geopf.fr/geocodage/search/?q=6+Boulevard+Henri+Sellier+92150+Suresnes&limit=5",
-        "retrieved_at": "2026-11-02",
+        "retrieved_at": "2026-11-03",
         "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
         "listings": [
           {
@@ -529,7 +602,7 @@
         "ban_id": "92073_4730_00065",
         "geocode_score": 0.9713145454545454,
         "geocode_url": "https://data.geopf.fr/geocodage/search/?q=65+Rue+Jean+Jacques+Rousseau+92150+Suresnes&limit=5",
-        "retrieved_at": "2026-11-02",
+        "retrieved_at": "2026-11-03",
         "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
         "listings": [
           {
@@ -540,6 +613,38 @@
             "address_display": "Le Pygmalion, 65 Rue Jean Jacques Rousseau, 92150 Suresnes",
             "url": "https://www.bureauxlocaux.com/annonce/bureaux-renoves-et-lumineux-a-louer-suresnes--34492005",
             "address_note": null
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rental-92073_3580_00007",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.22436,
+          48.862242
+        ]
+      },
+      "properties": {
+        "kind": "rentalOffice",
+        "name": "7 Rue Frédéric Clavel",
+        "address": "7 Rue Frédéric Clavel 92150 Suresnes",
+        "ban_id": "92073_3580_00007",
+        "geocode_score": 0.9686427272727272,
+        "geocode_url": "https://data.geopf.fr/geocodage/search/?q=7+rue+Fr%C3%A9d%C3%A9ric+Clavel+92150+Suresnes&limit=5",
+        "retrieved_at": "2026-11-03",
+        "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
+        "listings": [
+          {
+            "id": "38262835",
+            "type": "bureau",
+            "surface_display": "834 à 7 582 m²",
+            "rent_display": "À partir de 19 114 €/mois",
+            "address_display": "Seine-Étoile, 5-7 rue Frédéric Clavel, 92150 Suresnes",
+            "url": "https://www.bureauxlocaux.com/annonce/location-bureau-suresnes-92150--38262835",
+            "address_note": "Plage de numéros : point représentatif au numéro 7"
           }
         ]
       }
@@ -561,7 +666,7 @@
         "ban_id": "92073_4730_00079",
         "geocode_score": 0.9713145454545454,
         "geocode_url": "https://data.geopf.fr/geocodage/search/?q=79+Rue+Jean+Jacques+Rousseau+92150+Suresnes&limit=5",
-        "retrieved_at": "2026-11-02",
+        "retrieved_at": "2026-11-03",
         "precision": "Point BAN au numéro ; entrée et emprise de l'immeuble non vérifiées",
         "listings": [
           {

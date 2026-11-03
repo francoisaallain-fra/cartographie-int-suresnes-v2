@@ -27,7 +27,7 @@ export const layerSpecs = [
   {
     id: "rentalOffices",
     label: "Bureaux proposés à la location",
-    sub: "23 annonces · 16 adresses géocodées · 02/11/2026",
+    sub: "27 annonces · 19 adresses géocodées · 03/11/2026",
     icon: "office",
     color: colors.rentalOffice,
   },

@@ -1,0 +1,16 @@
+{
+  "source_page": "https://www.bureauxlocaux.com/recherche/?transaction_type=rental&realty_type=office&location=Suresnes&location_type=city&location_dept=D92&location_zip_code=92150&location_label=Suresnes&ne_lat=48.882764&ne_lng=2.236834&sw_lat=48.859288&sw_lng=2.199785&lat=48.8704428&lng=2.21815&is_fallback_result=false",
+  "retrieved_at": "2026-11-03",
+  "heading_count": 57,
+  "cards_seen": 57,
+  "source_file": "bureauxlocaux-2026-11-03.tsv",
+  "source_sha256": "31ab1d4a4e4948e70eca7dd882b967b1a9b114a88d368f946752368d4681776e",
+  "capture_method": "Extraction du DOM des 57 cartes publiques a.listing__card__informations dans le navigateur ; champs titre, adresse affichée, prix et lien.",
+  "address_policy": "Numéro et voie publiés dans le champ adresse ; pas de numéro déduit des commerces voisins, transports, descriptions d’autres offres ou de la carte approximative.",
+  "review_notes": [
+    "Les 57 identifiants uniques correspondent au compteur affiché.",
+    "Les seules adresses numérotées trouvées dans les descriptions des cartes sans adresse précise concernent une borne de recharge au 52 rue Carnot (40798269 et 40762320), pas les locaux proposés.",
+    "Le commerce 39776861 est exclu avant le contrôle de précision de son adresse.",
+    "Les bureaux privatifs classés Coworking restent éligibles si une adresse précise est publiée."
+  ]
+}

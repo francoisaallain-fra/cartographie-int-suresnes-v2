@@ -77,7 +77,7 @@ export function buildSources() {
     [
       "Bureaux proposés à la location",
       "rental_offices",
-      "53 cartes relevées ; 23 annonces à 16 points BAN au numéro ; 29 sans numéro et 1 commerce non cartographiés",
+      "57 annonces relevées ; 27 annonces à 19 points BAN au numéro ; 29 sans adresse précise et 1 commerce exclus",
     ],
   ];
   lines.splice(
@@ -99,11 +99,11 @@ export function buildSources() {
           id === "rental_offices"
             ? {
                 name: "BureauxLocaux · recherche de bureaux à louer à Suresnes",
-                url: "https://www.bureauxlocaux.com/immobilier-d-entreprise/annonces/suresnes-92150/location-bureaux",
+                url: "https://www.bureauxlocaux.com/recherche/?transaction_type=rental&realty_type=office&location=Suresnes&location_type=city&location_dept=D92&location_zip_code=92150&location_label=Suresnes&ne_lat=48.882764&ne_lng=2.236834&sw_lat=48.859288&sw_lng=2.199785&lat=48.8704428&lng=2.21815&is_fallback_result=false",
                 format: "Annonces HTML publiques · relevé ponctuel",
                 license:
                   "Source commerciale ; droit de réutilisation non vérifié",
-                vintage: "Consultation du 02/11/2026",
+                vintage: "Consultation du 03/11/2026",
                 note: "Données déclaratives. Adresses numérotées rapprochées de la BAN/IGN ; aucune preuve de vacance physique ou de lots distincts. Voir le journal de qualité.",
               }
             : runtime.sources[id];

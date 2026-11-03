@@ -1,129 +1,191 @@
 {
-  "source_page": "https://www.bureauxlocaux.com/recherche/?transaction_type=rental&realty_type=office&location=48.876199%7C2.238858%7C48.863129%7C2.217272&location_type=map_moved_boundaries&location_dept=D92&location_zip_code=92150&location_label=92150+Suresnes&ne_lat=48.876199&ne_lng=2.238858&sw_lat=48.863129&sw_lng=2.217272&lat=48.8704428&lng=2.21815&geocode_loc=Suresnes&geocode_loc_type=city&zoom=15&is_fallback_result=false",
-  "retrieved_at": "2026-11-02",
-  "cards_seen": 53,
-  "mapped_listings": 23,
-  "mapped_address_points": 16,
+  "source_page": "https://www.bureauxlocaux.com/recherche/?transaction_type=rental&realty_type=office&location=Suresnes&location_type=city&location_dept=D92&location_zip_code=92150&location_label=Suresnes&ne_lat=48.882764&ne_lng=2.236834&sw_lat=48.859288&sw_lng=2.199785&lat=48.8704428&lng=2.21815&is_fallback_result=false",
+  "retrieved_at": "2026-11-03",
+  "heading_count": 57,
+  "source_sha256": "31ab1d4a4e4948e70eca7dd882b967b1a9b114a88d368f946752368d4681776e",
+  "cards_seen": 57,
+  "mapped_listings": 27,
+  "mapped_address_points": 19,
   "excluded": [
     {
       "id": "43005818",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "Rue Du Port Aux Vins, 92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/bureaux-a-louer-etat-dusage--43005818"
     },
     {
       "id": "37675210",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "Quai Gallieni, 92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/lumineux-terrasse-climatise--37675210"
     },
     {
       "id": "42985602",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/bureaux-avec-terrasse--42985602"
     },
     {
       "id": "42836741",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/location-bureau-suresnes-92150--42836741"
     },
     {
       "id": "42621841",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/immeuble-independant-avec-terrasse-en-dernier-etag--42621841"
     },
     {
       "id": "42516359",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/a-louer-bureaux-suresnes-92--42516359"
     },
     {
       "id": "42357697",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/location-bureau-suresnes-92150--42357697"
     },
     {
       "id": "42480321",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/bureaux-a-louer-220-m2-non-divisibles-suresnes--42480321"
     },
     {
       "id": "42357676",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/location-bureau-suresnes-92150--42357676"
     },
     {
       "id": "42041768",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/bureaux-renoves-avec-terrasse-privative-en-plein-c--42041768"
     },
     {
       "id": "42357675",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/location-bureau-suresnes-92150--42357675"
     },
     {
       "id": "41120019",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/location-bureau-suresnes-92150--41120019"
     },
     {
       "id": "42357664",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/a-vendre-ou-a-louer--42357664"
     },
     {
       "id": "40917430",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/location-bureau-suresnes-92150--40917430"
     },
     {
       "id": "42357658",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/a-vendre-ou-a-louer--42357658"
     },
     {
       "id": "40798269",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/location-suresnes-92150--40798269"
     },
     {
       "id": "42357654",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/location-bureau-suresnes-92150--42357654"
     },
     {
       "id": "40762320",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/a-louer-bureaux-suresnes-92--40762320"
     },
     {
       "id": "42357650",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/a-vendre-ou-a-louer--42357650"
     },
     {
       "id": "39776861",
-      "reason": "Annonce classée commerce"
+      "reason": "Annonce classée commerce",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/location-pure-centre-ville-de-suresnes--39776861"
     },
     {
       "id": "42357624",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/location-bureau-suresnes-92150--42357624"
     },
     {
       "id": "37432411",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/bureaux-avec-terrasse--37432411"
     },
     {
       "id": "42357621",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/location-bureau-suresnes-92150--42357621"
     },
     {
       "id": "36797990",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/bureaux-a-louer--36797990"
     },
     {
       "id": "42357610",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/a-vendre-ou-a-louer--42357610"
     },
     {
       "id": "42357549",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/location-bureau-suresnes-92150--42357549"
     },
     {
       "id": "42357539",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/a-vendre-ou-a-louer--42357539"
     },
     {
       "id": "42621836",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/bel-ensemble-immobilier-avec-terrasses-privatives--42621836"
     },
     {
       "id": "42357648",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/a-vendre-ou-a-louer--42357648"
     },
     {
       "id": "37057588",
-      "reason": "Numéro de rue non publié"
+      "reason": "Numéro de rue non publié",
+      "address_display": "92150 Suresnes",
+      "url": "https://www.bureauxlocaux.com/annonce/reservez-un-bureau-partage-ou-un-espace-de-coworki--37057588"
     }
   ],
   "notes": [

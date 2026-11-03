@@ -48,3 +48,7 @@ Construire avec `pnpm build`, puis publier le dossier `dist/` avec le workflow S
 ## Alimentation et marchés (3 novembre 2026)
 
 32 points et trois filtres dans la couche Aménités de quartier : 23 épiceries / supérettes, 7 supermarchés et 2 marchés. [Sources, limites, reproduction et recette](docs/ALIMENTATION.md).
+
+## BureauxLocaux · relevé communal du 3 novembre 2026
+
+La couche des locations présente 27 annonces à 19 adresses, issues des 57 offres de la nouvelle recherche communale. 29 annonces sans adresse précise et 1 commerce sont exclus. Le relevé, ses sources, le cache BAN et la méthode de reconstruction sont décrits dans [la documentation des données](docs/DONNEES.md).
