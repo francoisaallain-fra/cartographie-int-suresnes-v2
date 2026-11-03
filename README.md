@@ -20,7 +20,7 @@ pnpm test:e2e
 
 Les tests unitaires s'exécutent sans serveur. Les tests navigateur démarrent l'aperçu du build et contrôlent notamment les 75 scénarios de rayon et les cercles de 500 m des six gares. Le fond IGN et le logo SNCF utilisent des services externes ; la disponibilité de ces services n'est pas garantie par le dépôt.
 
-Le zonage PLU est masqué à l'ouverture et reste activable. Les pastilles des bureaux ciblés et des bureaux à louer disposent d'un choix de couleur individuel dans leur fiche ; ce choix est enregistré uniquement dans le navigateur utilisé.
+Le zonage PLU est masqué à l'ouverture et reste activable. Toutes les pastilles disposent dans leur fiche de deux réglages : « Cette pastille uniquement » et « Toutes les pastilles » du même type (supermarchés, épiceries, collèges, etc.). Le réglage du type remplace les choix individuels de toutes ses pastilles, même masquées ; une personnalisation individuelle reste ensuite possible. Le premier bouton de réinitialisation reprend la couleur du type, le second restaure la couleur initiale de tout le type. Ces choix sont enregistrés uniquement dans le navigateur utilisé, sans modifier les couleurs par défaut des autres visiteurs.
 
 Les pastilles des bureaux ciblés et des bureaux proposés à la location ont une pointe en bas à gauche, ancrée sur le point d’adresse géocodé. Celui-ci ne localise pas nécessairement l’entrée exacte de l’immeuble.
 

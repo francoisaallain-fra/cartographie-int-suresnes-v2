@@ -162,3 +162,10 @@ Vérifier les nouvelles adresses et la date de preuve du 03/11/2026, sans réét
 - Pour les cinq immeubles et les quinze rayons de 300 m à 1 km, vérifier le total sous « Statut » et son accord avec le compteur latéral.
 - Vérifier que la fiche reste ouverte lorsque le curseur change ; une fiche fermée reste fermée.
 - Le total porte sur les transports, équipements et aménités de quartier recensés, y compris les couches masquées, après exclusions des revues. Les bureaux sont exclus.
+
+## Couleurs des pastilles individuelles et par type — 3 novembre 2026
+
+- Ouvrir un point de chacun des 18 types : les deux sélecteurs sont accessibles, y compris dans la fiche d’une gare.
+- Colorer un supermarché seul, puis tous les supermarchés depuis un rayon qui n’en affiche qu’une partie : après retour à la vue ville, les 16 sont colorés, sans toucher aux 6 épiceries.
+- Vérifier la légende, une exception individuelle après le changement collectif, la persistance après rechargement et les deux remises à zéro.
+- Une couleur collective de collège ne recolore ni lycées ni écoles primaires ; changer une couleur de gare ne change ni zoom, ni centre, ni cercles.

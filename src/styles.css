@@ -644,7 +644,11 @@ input:focus-visible {
   font-size: 10px;
   font-weight: 600;
 }
+.marker-color-control .marker-type-color-label {
+  margin-top: 10px;
+}
 .marker-color-control input[type="color"] {
+  flex-shrink: 0;
   width: 42px;
   height: 30px;
   padding: 2px;
@@ -1580,9 +1584,9 @@ button.legend-item[aria-pressed="false"] {
 
 /* Compact station card opens beside the icon. */
 .station-card-popup .leaflet-popup-content {
-  width: 144px !important;
-  min-width: 144px;
-  max-width: 144px;
+  width: 240px !important;
+  min-width: 240px;
+  max-width: 240px;
   margin: 6px 7px 5px;
   padding-right: 0;
   overflow: visible;
