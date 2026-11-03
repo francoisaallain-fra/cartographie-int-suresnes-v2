@@ -1316,7 +1316,8 @@ button.legend-item[aria-pressed="false"] {
   }
 }
 
-.radius-setting {
+.radius-setting,
+.surface-setting {
   border: 1px solid var(--line);
   border-radius: 9px;
   padding: 14px 12px;
@@ -1355,6 +1356,59 @@ button.legend-item[aria-pressed="false"] {
   margin: 9px 0 0;
   font-size: 10px;
   color: var(--muted);
+}
+.surface-setting h2 {
+  margin: 0 0 8px;
+  font-size: 12px;
+}
+.surface-setting p {
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.surface-fields {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 10px;
+}
+.surface-fields label {
+  font-size: 10px;
+  font-weight: 650;
+}
+.surface-fields input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 38px;
+  margin-top: 6px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: inherit;
+  background: white;
+  font: inherit;
+}
+.surface-fields input:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+.surface-fields input[aria-invalid="true"] {
+  border-color: #b42318;
+}
+#rental-surface-error {
+  color: #b42318;
+}
+#rental-surface-error:empty,
+.rental-address-list [hidden] {
+  display: none;
+}
+#rental-surface-count {
+  font-weight: 650;
+  color: var(--green);
+}
+.surface-setting .text-button {
+  min-height: 32px;
 }
 
 /* Ligne lumineuse uniforme et continue, halo doux, sans liseré. */

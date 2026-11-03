@@ -52,6 +52,40 @@
             Sélectionnez une adresse sur la carte pour explorer ses alentours.
           </p>
         </section>
+        <section class="surface-setting" aria-labelledby="rental-surface-title">
+          <h2 id="rental-surface-title">Surface des bureaux à louer</h2>
+          <p id="rental-surface-help">
+            Surface retenue par adresse, en m² : maximum annoncé ou cumul de
+            lots distincts vérifiés. Détail dans chaque fiche.
+          </p>
+          <div class="surface-fields">
+            <label for="rental-surface-min"
+              >Minimum (m²)<input
+                id="rental-surface-min"
+                type="number"
+                min="0"
+                step="any"
+                inputmode="decimal"
+                placeholder="Sans minimum"
+                aria-describedby="rental-surface-help rental-surface-error"
+            /></label>
+            <label for="rental-surface-max"
+              >Maximum (m²)<input
+                id="rental-surface-max"
+                type="number"
+                min="0"
+                step="any"
+                inputmode="decimal"
+                placeholder="Sans maximum"
+                aria-describedby="rental-surface-help rental-surface-error"
+            /></label>
+          </div>
+          <p id="rental-surface-error" role="alert"></p>
+          <p id="rental-surface-count" role="status"></p>
+          <button id="rental-surface-reset" type="button" class="text-button">
+            Réinitialiser les surfaces
+          </button>
+        </section>
         <section
           id="radius-panel"
           class="radius-panel"

@@ -1,6 +1,7 @@
 import { layerSpecs } from "./catalog.js";
 export const state = {
   radiusMeters: 500,
+  rentalSurface: { min: null, max: null },
   selected: null,
   selectedStations: new Set(),
   enabled: {

@@ -28,3 +28,5 @@ Le typage TypeScript intégral n'a pas été introduit dans cette refonte : il d
 ## Revue
 
 Lire d'abord les tests et le catalogue, puis suivre `main → data → controls/layers`. Les données et bibliothèques sont identiques octet par octet à la référence initiale (empreintes dans `tests/baseline-sha256.json`). Les clés localStorage et l'identité Sites sont propres à v2. Le build `dist` n'est jamais édité à la main.
+
+`rental-surfaces` analyse les surfaces annoncées, applique une revue des lots liée aux signatures exactes des annonces et expose un prédicat de filtrage pur. `surface-controls` gère les bornes en session, leur validation, le compteur et la liste d’adresses. `layers` applique ce prédicat uniquement aux locations, sans modifier la vue, le rayon des aménités ou les bureaux ciblés. Le chargement calcule les valeurs avant de construire les fiches et contrôles.

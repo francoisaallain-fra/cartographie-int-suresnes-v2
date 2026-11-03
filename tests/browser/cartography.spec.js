@@ -641,6 +641,102 @@ test("food amenities have independent filters and market source popups", async (
   expect(response.ok()).toBe(true);
   expect((await response.json()).features).toHaveLength(32);
 });
+test("rental surface filter uses reviewed totals, inclusive bounds and independent layer controls", async ({
+  page,
+}) => {
+  const min = page.locator("#rental-surface-min");
+  const max = page.locator("#rental-surface-max");
+  const pins = page.locator(".map-pin.rentalOffice");
+  await expect(pins).toHaveCount(19);
+  const view = await page.evaluate(() => window.suresnesDiagnostics());
+  await min.fill("1387");
+  await max.fill("1387");
+  await expect(pins).toHaveCount(1);
+  await expect(page.locator("#rental-surface-count")).toHaveText(
+    "1 / 19 adresses · 2 annonces",
+  );
+  const after = await page.evaluate(() => window.suresnesDiagnostics());
+  expect(after.center).toEqual(view.center);
+  expect(after.zoom).toEqual(view.zoom);
+  expect(after.counts.offices).toBe(5);
+  await page.locator('[data-layer-id="rentalOffices"] .layer-expand').click();
+  await page.locator(".rental-address-list summary").click();
+  await expect(page.locator("[data-rental-id]:visible")).toHaveCount(1);
+  await page.locator("[data-rental-id]:visible").click();
+  await expect(page.locator(".leaflet-popup:visible")).toHaveCount(1);
+  await expect(page.locator(".leaflet-popup:visible")).toContainText(
+    "1 387 m²",
+  );
+  await expect(page.locator(".rental-surface-note:visible")).toContainText(
+    "Cumul de lots distincts",
+  );
+  await min.fill("2000");
+  await expect(page.locator("#rental-surface-error")).toContainText(
+    "filtre précédent",
+  );
+  await expect(pins).toHaveCount(1);
+  await min.fill("1388");
+  await max.fill("1400");
+  await expect(pins).toHaveCount(0);
+  await expect(page.locator("#rental-surface-empty")).toBeVisible();
+  await page.locator("#rental-surface-reset").click();
+  await expect(min).toHaveValue("");
+  await expect(max).toHaveValue("");
+  await expect(pins).toHaveCount(19);
+  await min.fill("1000");
+  await max.fill("1500");
+  await expect(pins).toHaveCount(5);
+  await page.locator("#layer-rentalOffices").uncheck();
+  await expect(pins).toHaveCount(0);
+  await expect(page.locator("#rental-surface-count")).toContainText(
+    "couche masquée",
+  );
+  await page.locator("#layer-rentalOffices").check();
+  await expect(pins).toHaveCount(5);
+  await page.locator(".office-item").first().click();
+  await expect(pins).toHaveCount(5);
+  expect((await page.evaluate(() => window.suresnesDiagnostics())).radius).toBe(
+    true,
+  );
+  await page.locator("#clear-radius").click();
+  await expect(pins).toHaveCount(5);
+  await page.setViewportSize({ width: 390, height: 844 });
+  await min.scrollIntoViewIfNeeded();
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= window.innerWidth,
+    ),
+  ).toBe(true);
+  await max.fill("1200");
+  await expect(pins).toHaveCount(2);
+  await page.locator("#rental-surface-reset").click();
+  await expect(pins).toHaveCount(19);
+  await page.reload();
+  await expect(page.locator("#loading")).toBeHidden();
+  await expect(min).toHaveValue("");
+});
+
+test("surface filter explicitly handles a missing advertised area", async ({
+  page,
+}) => {
+  await page.route("**/data/rental-offices.geojson", async (route) => {
+    const response = await route.fetch();
+    const data = await response.json();
+    data.features[0].properties.listings[0].surface_display = "Nous consulter";
+    await route.fulfill({ response, json: data });
+  });
+  await page.reload();
+  await expect(page.locator("#loading")).toBeHidden();
+  await expect(page.locator(".map-pin.rentalOffice")).toHaveCount(19);
+  await page.locator("#rental-surface-min").fill("0");
+  await expect(page.locator(".map-pin.rentalOffice")).toHaveCount(18);
+  await expect(page.locator("#rental-surface-count")).toContainText(
+    "1 sans surface exclue(s)",
+  );
+  await page.locator("#rental-surface-reset").click();
+  await expect(page.locator(".map-pin.rentalOffice")).toHaveCount(19);
+});
+
 test("sources, downloads and mobile layout", async ({ page }) => {
   await page.locator("#sources-open").click();
   await expect(page.locator("#sources-dialog")).toBeVisible();

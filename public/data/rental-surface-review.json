@@ -1,0 +1,141 @@
+{
+  "checked_on": "2026-11-03",
+  "method": "Tableaux de lots des 13 annonces publiques aux 5 adresses regroupant plusieurs annonces. Même numéro BAN ne suffit pas à autoriser un cumul. Aucun contact avec les annonceurs ; disponibilité non confirmée.",
+  "entries": [
+    {
+      "address": "10 Rue Chevreul 92150 Suresnes",
+      "checked_on": "2026-11-03",
+      "method": "overlap",
+      "listings": [
+        {
+          "id": "42985425",
+          "surface_display": "324 à 1 456 m²",
+          "address_display": "6-10 Rue Chevreul, 92150 Suresnes",
+          "url": "https://www.bureauxlocaux.com/annonce/bureaux_-a-louer_-suresnes--42985425"
+        },
+        {
+          "id": "40977826",
+          "surface_display": "324 à 1 456 m²",
+          "address_display": "10 Rue Chevreul, 92150 Suresnes",
+          "url": "https://www.bureauxlocaux.com/annonce/bureaux-a-louer-etat-dusage--40977826"
+        },
+        {
+          "id": "38634778",
+          "surface_display": "324 à 1 456 m²",
+          "address_display": "10 Rue Chevreul, 92150 Suresnes",
+          "url": "https://www.bureauxlocaux.com/annonce/a-louer-surfaces-en-bon-etat--38634778"
+        }
+      ],
+      "note": "1 456 m² retenus une seule fois. Les trois annonces reprennent les mêmes surfaces aux mêmes étages : RDC 333, 1er 389, 2e 410 et 4e 324 m² ; les lots 4, 98, 11 et 19 sont identiques dans deux tableaux."
+    },
+    {
+      "address": "22 Quai Gallieni 92150 Suresnes",
+      "checked_on": "2026-11-03",
+      "method": "overlap",
+      "listings": [
+        {
+          "id": "39899769",
+          "surface_display": "67 à 1 099 m²",
+          "address_display": "Le 22 QG, 22 Quai Gallieni, 92150 Suresnes",
+          "url": "https://www.bureauxlocaux.com/annonce/bureaux-a-louer--39899769"
+        },
+        {
+          "id": "37799885",
+          "surface_display": "67 à 1 099 m²",
+          "address_display": "Le 22 QG, 22 Quai Gallieni, 92150 Suresnes",
+          "url": "https://www.bureauxlocaux.com/annonce/bureaux-a-louer-a-suresnes-vue-seine-dans-immeuble--37799885"
+        },
+        {
+          "id": "36964619",
+          "surface_display": "242 m²",
+          "address_display": "Le 22 QG, 22 Quai Gallieni, 92150 Suresnes",
+          "url": "https://www.bureauxlocaux.com/annonce/bureaux-a-louer-renove--36964619"
+        },
+        {
+          "id": "38664366",
+          "surface_display": "790 m²",
+          "address_display": "Le 22 QG, 22 Quai Gallieni, 92150 Suresnes",
+          "url": "https://www.bureauxlocaux.com/annonce/location-bureau-suresnes-92150--38664366"
+        }
+      ],
+      "note": "1 099 m² retenus une seule fois. Le tableau de 37799885 comprend 242 m² au 3e, 790 m² au 2e et 67 m² au RDC. Les annonces 36964619 et 38664366 reprennent les deux premiers lots. 39899769 reprend les mêmes surfaces, mais situe 242 m² au jardin et sa description indique 1 009 m² : incohérences signalées, aucun cumul."
+    },
+    {
+      "address": "30 Rue Pasteur 92150 Suresnes",
+      "checked_on": "2026-11-03",
+      "method": "sum_distinct",
+      "listings": [
+        {
+          "id": "43005791",
+          "surface_display": "136 à 565 m²",
+          "address_display": "30 Rue Pasteur, 92150 Suresnes",
+          "url": "https://www.bureauxlocaux.com/annonce/bureaux-a-louer-renove--43005791"
+        },
+        {
+          "id": "36749298",
+          "surface_display": "410 à 822 m²",
+          "address_display": "30 Rue Pasteur, 92150 Suresnes",
+          "url": "https://www.bureauxlocaux.com/annonce/bureaux-lumineux-dans-un-quartier-dynamique-et-bie--36749298"
+        }
+      ],
+      "note": "Cumul de lots distincts à la même adresse publiée : 565 m² au 6e étage (43005791) + 410 m² au 7e et 412 m² au 8e (36749298), soit 1 387 m². Le total de 565 m² est compté une seule fois, sans lui ajouter ses subdivisions de 136, 164 et 266 m² (dont la somme est 566 m²). Disponibilité déclarative.",
+      "components": [
+        {
+          "listing_id": "43005791",
+          "area_m2": 565,
+          "lots": [
+            "6e étage : total annoncé 565 m²"
+          ]
+        },
+        {
+          "listing_id": "36749298",
+          "area_m2": 822,
+          "lots": [
+            "7e étage : 410 m²",
+            "8e étage : 412 m²"
+          ]
+        }
+      ]
+    },
+    {
+      "address": "40 Boulevard Henri Sellier 92150 Suresnes",
+      "checked_on": "2026-11-03",
+      "method": "overlap",
+      "listings": [
+        {
+          "id": "39568004",
+          "surface_display": "20 à 522 m²",
+          "address_display": "40 Boulevard Henri Sellier, 92150 Suresnes",
+          "url": "https://www.bureauxlocaux.com/annonce/location-bureau-suresnes-92150--39568004"
+        },
+        {
+          "id": "35288598",
+          "surface_display": "122 à 532 m²",
+          "address_display": "40 Boulevard Henri Sellier, 92150 Suresnes",
+          "url": "https://www.bureauxlocaux.com/annonce/bureaux-lumineux-a-louer-au-centre-de-suresnes--35288598"
+        }
+      ],
+      "note": "532 m² retenus : maximum annoncé, sans cumul. Les deux tableaux portent sur les 4e et 6e étages ; le 4e est annoncé à 400 ou 410 m², le 6e à 122 m². Écart non résolu entre 522 et 532 m²."
+    },
+    {
+      "address": "48 Rue Carnot 92150 Suresnes",
+      "checked_on": "2026-11-03",
+      "method": "overlap",
+      "listings": [
+        {
+          "id": "39359882",
+          "surface_display": "541 à 5 649 m²",
+          "address_display": "Greenwalk, 48 Rue carnot, 92150 Suresnes",
+          "url": "https://www.bureauxlocaux.com/annonce/immeuble-de-bureaux-beneficiant-de-belles-prestati--39359882"
+        },
+        {
+          "id": "38664824",
+          "surface_display": "541 à 5 674 m²",
+          "address_display": "Greenwalk, 48 Rue carnot, 92150 Suresnes",
+          "url": "https://www.bureauxlocaux.com/annonce/location-bureau-suresnes-92150--38664824"
+        }
+      ],
+      "note": "5 674 m² retenus : maximum annoncé, sans cumul. Les deux tableaux couvrent les RDC, 2e, 3e et 5e étages ; les surfaces sont proches mais divergent (5 649 et 5 674 m²). Leur recouvrement probable ne permet pas une addition."
+    }
+  ]
+}
