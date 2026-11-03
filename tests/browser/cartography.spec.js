@@ -463,7 +463,7 @@ test("PLU starts hidden and each office marker keeps its own chosen color", asyn
   ).toHaveCount(1);
   await expect(
     page.locator('.map-pin.office .pin-disc[style*="#d72e83"]'),
-  ).toHaveCount(2);
+  ).toHaveCount(4);
   await page.reload();
   await expect(page.locator("#loading")).toBeHidden();
   await expect(
