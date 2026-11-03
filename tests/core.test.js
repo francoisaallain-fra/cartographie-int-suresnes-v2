@@ -242,6 +242,36 @@ test("HTTP failures identify the failed resource", async () => {
     /Cannot load commune: HTTP 503/,
   );
 });
+test("food amenities are sourced, inside Suresnes and included in radius exploration", async () => {
+  const data = await loadDatasets(async (url) => ({
+    ok: true,
+    json: async () => JSON.parse(fs.readFileSync(`public/${url}`)),
+  }));
+  const food = data["food-amenities"].features;
+  const quality = read("food-amenities-quality.json");
+  const boundary = data.commune.geometry || data.commune.features[0].geometry;
+  assert.deepEqual(quality.counts, { grocery: 23, supermarket: 7, market: 2 });
+  assert.equal(data.neighborhood.features.length, 64);
+  assert.equal(new Set(data.neighborhood.features.map((f) => f.id)).size, 64);
+  for (const f of food) {
+    assert.ok(pointInPolygonGeometry(f.geometry.coordinates, boundary), f.id);
+    assert.ok(data.sources[f.properties.source]);
+    assert.match(f.properties.source_url, /^https:\/\//);
+    if (f.properties.address_status !== "reported")
+      assert.ok(f.properties.audit.doubts.length);
+  }
+  assert.equal(
+    food.find((f) => f.id === "osm-node-2364399609").properties.market_days,
+    "Mercredi et samedi matin",
+  );
+  assert.equal(
+    food.find((f) => f.id === "osm-way-70961879").properties.market_days,
+    "Jeudi et dimanche matin",
+  );
+  const scenarios = data.radii.offices["ban-92073_7160_00030"];
+  assert.ok(scenarios[500].nearby.some((f) => f.id === "osm-node-7340165351"));
+  assert.ok(!scenarios[500].nearby.some((f) => f.id === "osm-node-2364399609"));
+});
 test("v2 hosting identity is pinned and independent", () => {
   const manifest = JSON.parse(fs.readFileSync(".openai/hosting.json"));
   assert.equal(manifest.project_id, "appgprj_6ae7236180948191be7fac25a4ba93ec");

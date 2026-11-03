@@ -27,6 +27,11 @@ export function popup(f) {
       body += `<p class="popup-notice">${escapeHTML(p.address_note)}</p>`;
     body += `<p class="popup-notice">Les aménités recensées sont filtrées à ${radiusText()} autour du point d’adresse BAN. L’occupation et la disponibilité de l’immeuble ne sont pas établies.</p>`;
   } else body += row("Catégorie", p.category || p.lines?.join(" · "));
+  if (p.market_days) body += row("Jours de marché", p.market_days);
+  if (["grocery", "supermarket", "market"].includes(p.kind)) {
+    body += row("Relevé des sources", p.retrieved_at);
+    body += row("Dernière modification OSM", p.source_updated_at?.slice(0, 10));
+  }
   if (p.kind === "transport")
     body +=
       `<div class="popup-services">${serviceBadges(p.services)}</div>` +

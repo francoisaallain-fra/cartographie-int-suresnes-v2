@@ -1,0 +1,31 @@
+{
+  "osm-node-1401455852": {
+    "address": "49 Avenue Jean Jaurès, 92150 Suresnes",
+    "source_url": "https://www.lidl.fr/s/fr-FR/supermarches/suresnes/avenue-jean-jaures-49/"
+  },
+  "osm-node-4448381563": {
+    "address": "42 Rue Jacques Decour, 92150 Suresnes",
+    "source_url": "https://votresuperettechezabdel.eatbu.com/?lang=fr"
+  },
+  "osm-node-2295513619": {
+    "address": "103 Rue de Verdun, 92150 Suresnes",
+    "kind": "supermarket",
+    "source_url": "https://www.carrefour.fr/magasin/market-suresnes-verdun",
+    "note": "Classé convenience dans OSM ; classé supermarché dans la carte selon la fiche Carrefour Market."
+  },
+  "osm-node-7178996300": {
+    "address": "Avenue Édouard Vaillant, 92150 Suresnes — numéro à confirmer",
+    "source_url": "https://acceslibre.beta.gouv.fr/app/92-suresnes/a/commerce-bio/erp/amelie-naudin/",
+    "doubt": "Adresse divergente : Acceslibre indique 15 avenue Édouard Vaillant, une publicité Biocoop de février 2026 indique 17/25, et la fiche nationale Biocoop mentionne 28 avenue Jean Jaurès. Point OSM conservé ; entrée à confirmer.",
+    "sources": [
+      {
+        "label": "Publicité Biocoop · Suresnes Mag février 2026",
+        "url": "https://cecilesala-asso.org/wp-content/uploads/2026/02/SuresnesMag-maquette-378-Web.pdf"
+      },
+      {
+        "label": "Fiche nationale Biocoop",
+        "url": "https://www.biocoop.fr/ile-de-france/hauts-de-seine/SURESNES/BIOCOOP-SURESNES-JAURES"
+      }
+    ]
+  }
+}

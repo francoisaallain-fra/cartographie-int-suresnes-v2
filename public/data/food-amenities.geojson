@@ -1,0 +1,1085 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "osm-node-493809023",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2247396,
+          48.8690504
+        ]
+      },
+      "properties": {
+        "kind": "supermarket",
+        "name": "Carrefour Market",
+        "address": "4 Allée Jules Ferry 92150 Suresnes",
+        "address_status": "reported",
+        "category": "Supermarché",
+        "osm_shop": "supermarket",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/493809023",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2026-08-29T16:42:53Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-1191783376",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.216311,
+          48.8665534
+        ]
+      },
+      "properties": {
+        "kind": "grocery",
+        "name": "JS supermarché",
+        "address": "Suresnes — adresse non renseignée dans la source",
+        "address_status": "missing",
+        "category": "Épicerie / supérette",
+        "osm_shop": "convenience",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/1191783376",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2026-01-05T17:47:59Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [
+            "Adresse postale absente d’OSM ; localisation conservée au point cartographié, sans attribuer un numéro voisin."
+          ],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-1392799523",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2094012,
+          48.8635531
+        ]
+      },
+      "properties": {
+        "kind": "supermarket",
+        "name": "Intermarché Express",
+        "address": "48 Avenue Jean Jaurès 92150 Suresnes",
+        "address_status": "reported",
+        "category": "Supermarché",
+        "osm_shop": "supermarket",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/1392799523",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2026-09-01T13:09:14Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-1401455852",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.20234,
+          48.8658731
+        ]
+      },
+      "properties": {
+        "kind": "supermarket",
+        "name": "Lidl",
+        "address": "49 Avenue Jean Jaurès, 92150 Suresnes",
+        "address_status": "reported",
+        "category": "Supermarché",
+        "osm_shop": "supermarket",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/1401455852",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2026-09-06T12:46:26Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Adresse / catégorie recoupée",
+              "url": "https://www.lidl.fr/s/fr-FR/supermarches/suresnes/avenue-jean-jaures-49/"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-1423482169",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2250519,
+          48.8816352
+        ]
+      },
+      "properties": {
+        "kind": "grocery",
+        "name": "Carrefour Express",
+        "address": "Suresnes — adresse non renseignée dans la source",
+        "address_status": "missing",
+        "category": "Épicerie / supérette",
+        "osm_shop": "convenience",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/1423482169",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2026-08-29T16:42:53Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [
+            "Adresse postale absente d’OSM ; localisation conservée au point cartographié, sans attribuer un numéro voisin."
+          ],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-1423517463",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2233171,
+          48.8798103
+        ]
+      },
+      "properties": {
+        "kind": "grocery",
+        "name": "Sitis Market",
+        "address": "Suresnes — adresse non renseignée dans la source",
+        "address_status": "missing",
+        "category": "Épicerie / supérette",
+        "osm_shop": "convenience",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/1423517463",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2024-02-04T07:34:58Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [
+            "Adresse postale absente d’OSM ; localisation conservée au point cartographié, sans attribuer un numéro voisin."
+          ],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-2295513619",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2319248,
+          48.8761369
+        ]
+      },
+      "properties": {
+        "kind": "supermarket",
+        "name": "Carrefour Market",
+        "address": "103 Rue de Verdun, 92150 Suresnes",
+        "address_status": "reported",
+        "category": "Supermarché",
+        "osm_shop": "convenience",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/2295513619",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2026-06-06T15:21:17Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [],
+          "notes": [
+            "Classé convenience dans OSM ; classé supermarché dans la carte selon la fiche Carrefour Market."
+          ],
+          "sources": [
+            {
+              "label": "Adresse / catégorie recoupée",
+              "url": "https://www.carrefour.fr/magasin/market-suresnes-verdun"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-2324053186",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2225216,
+          48.8670288
+        ]
+      },
+      "properties": {
+        "kind": "grocery",
+        "name": "Franprix",
+        "address": "Suresnes — adresse non renseignée dans la source",
+        "address_status": "missing",
+        "category": "Épicerie / supérette",
+        "osm_shop": "convenience",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/2324053186",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2026-08-30T18:42:09Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [
+            "Adresse postale absente d’OSM ; localisation conservée au point cartographié, sans attribuer un numéro voisin."
+          ],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-3075147029",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2115571,
+          48.8633336
+        ]
+      },
+      "properties": {
+        "kind": "grocery",
+        "name": "Carrefour City",
+        "address": "Suresnes — adresse non renseignée dans la source",
+        "address_status": "missing",
+        "category": "Épicerie / supérette",
+        "osm_shop": "convenience",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/3075147029",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2026-01-10T10:52:19Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [
+            "Adresse postale absente d’OSM ; localisation conservée au point cartographié, sans attribuer un numéro voisin."
+          ],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-3075148138",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2094609,
+          48.8630556
+        ]
+      },
+      "properties": {
+        "kind": "grocery",
+        "name": "Super Suresnes",
+        "address": "Suresnes — adresse non renseignée dans la source",
+        "address_status": "missing",
+        "category": "Épicerie / supérette",
+        "osm_shop": "convenience",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/3075148138",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2025-11-09T16:46:22Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [
+            "Adresse postale absente d’OSM ; localisation conservée au point cartographié, sans attribuer un numéro voisin."
+          ],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-3663527951",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2272541,
+          48.8681011
+        ]
+      },
+      "properties": {
+        "kind": "grocery",
+        "name": "Naturalia",
+        "address": "Suresnes — adresse non renseignée dans la source",
+        "address_status": "missing",
+        "category": "Épicerie / supérette",
+        "osm_shop": "convenience",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/3663527951",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2025-09-22T19:59:46Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [
+            "Adresse postale absente d’OSM ; localisation conservée au point cartographié, sans attribuer un numéro voisin."
+          ],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-3663527953",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.227439,
+          48.8679383
+        ]
+      },
+      "properties": {
+        "kind": "supermarket",
+        "name": "Monoprix",
+        "address": "Suresnes — adresse non renseignée dans la source",
+        "address_status": "missing",
+        "category": "Supermarché",
+        "osm_shop": "supermarket",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/3663527953",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2026-08-29T14:01:29Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [
+            "Adresse postale absente d’OSM ; localisation conservée au point cartographié, sans attribuer un numéro voisin."
+          ],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-3877278811",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2284295,
+          48.8756102
+        ]
+      },
+      "properties": {
+        "kind": "grocery",
+        "name": "U Express",
+        "address": "Suresnes — adresse non renseignée dans la source",
+        "address_status": "missing",
+        "category": "Épicerie / supérette",
+        "osm_shop": "convenience",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/3877278811",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2025-09-22T19:59:46Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [
+            "Adresse postale absente d’OSM ; localisation conservée au point cartographié, sans attribuer un numéro voisin."
+          ],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-3950812703",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2271913,
+          48.8725252
+        ]
+      },
+      "properties": {
+        "kind": "grocery",
+        "name": "Franprix",
+        "address": "Suresnes — adresse non renseignée dans la source",
+        "address_status": "missing",
+        "category": "Épicerie / supérette",
+        "osm_shop": "convenience",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/3950812703",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2026-08-30T18:42:09Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [
+            "Adresse postale absente d’OSM ; localisation conservée au point cartographié, sans attribuer un numéro voisin."
+          ],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-4141678536",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2259669,
+          48.8727149
+        ]
+      },
+      "properties": {
+        "kind": "grocery",
+        "name": "Épicerie Carnot",
+        "address": "Suresnes — adresse non renseignée dans la source",
+        "address_status": "missing",
+        "category": "Épicerie / supérette",
+        "osm_shop": "convenience",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/4141678536",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2025-09-22T19:59:46Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [
+            "Adresse postale absente d’OSM ; localisation conservée au point cartographié, sans attribuer un numéro voisin."
+          ],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-4290707793",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2337197,
+          48.8746682
+        ]
+      },
+      "properties": {
+        "kind": "grocery",
+        "name": "Suresnes Happy Market",
+        "address": "21 Avenue Georges Pompidou 92150 Suresnes",
+        "address_status": "reported",
+        "category": "Épicerie / supérette",
+        "osm_shop": "convenience",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/4290707793",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2024-04-27T10:38:12Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-4405645637",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2271707,
+          48.8686115
+        ]
+      },
+      "properties": {
+        "kind": "grocery",
+        "name": "Asian store",
+        "address": "Suresnes — adresse non renseignée dans la source",
+        "address_status": "missing",
+        "category": "Épicerie / supérette",
+        "osm_shop": "convenience",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/4405645637",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2025-11-02T20:49:08Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [
+            "Adresse postale absente d’OSM ; localisation conservée au point cartographié, sans attribuer un numéro voisin."
+          ],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-4405645640",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2272858,
+          48.8686846
+        ]
+      },
+      "properties": {
+        "kind": "grocery",
+        "name": "Suresnes fraicheur",
+        "address": "Suresnes — adresse non renseignée dans la source",
+        "address_status": "missing",
+        "category": "Épicerie / supérette",
+        "osm_shop": "convenience",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/4405645640",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2025-10-26T06:46:05Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [
+            "Adresse postale absente d’OSM ; localisation conservée au point cartographié, sans attribuer un numéro voisin."
+          ],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-4448381563",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2230103,
+          48.8760338
+        ]
+      },
+      "properties": {
+        "kind": "grocery",
+        "name": "Chez Abdel",
+        "address": "42 Rue Jacques Decour, 92150 Suresnes",
+        "address_status": "reported",
+        "category": "Épicerie / supérette",
+        "osm_shop": "convenience",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/4448381563",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2023-10-24T15:49:44Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Adresse / catégorie recoupée",
+              "url": "https://votresuperettechezabdel.eatbu.com/?lang=fr"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-6221937570",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2231439,
+          48.8680146
+        ]
+      },
+      "properties": {
+        "kind": "grocery",
+        "name": "Rapid Market",
+        "address": "Suresnes — adresse non renseignée dans la source",
+        "address_status": "missing",
+        "category": "Épicerie / supérette",
+        "osm_shop": "convenience",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/6221937570",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2025-09-22T19:59:46Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [
+            "Adresse postale absente d’OSM ; localisation conservée au point cartographié, sans attribuer un numéro voisin."
+          ],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-6815782468",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.23598,
+          48.8795883
+        ]
+      },
+      "properties": {
+        "kind": "grocery",
+        "name": "CocciMarket",
+        "address": "3 Rue des Bas Rogers 92150 Suresnes",
+        "address_status": "reported",
+        "category": "Épicerie / supérette",
+        "osm_shop": "convenience",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/6815782468",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2026-08-07T16:57:07Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-7149725546",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.21448,
+          48.8650505
+        ]
+      },
+      "properties": {
+        "kind": "grocery",
+        "name": "Coccinelle Express",
+        "address": "Suresnes — adresse non renseignée dans la source",
+        "address_status": "missing",
+        "category": "Épicerie / supérette",
+        "osm_shop": "convenience",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/7149725546",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2026-01-04T18:42:15Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [
+            "Adresse postale absente d’OSM ; localisation conservée au point cartographié, sans attribuer un numéro voisin."
+          ],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-7178996300",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2103246,
+          48.8631594
+        ]
+      },
+      "properties": {
+        "kind": "supermarket",
+        "name": "Biocoop",
+        "address": "Avenue Édouard Vaillant, 92150 Suresnes — numéro à confirmer",
+        "address_status": "uncertain",
+        "category": "Supermarché",
+        "osm_shop": "supermarket",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/7178996300",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2026-09-03T09:18:28Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [
+            "Adresse divergente : Acceslibre indique 15 avenue Édouard Vaillant, une publicité Biocoop de février 2026 indique 17/25, et la fiche nationale Biocoop mentionne 28 avenue Jean Jaurès. Point OSM conservé ; entrée à confirmer."
+          ],
+          "notes": [],
+          "sources": [
+            {
+              "label": "Adresse / catégorie recoupée",
+              "url": "https://acceslibre.beta.gouv.fr/app/92-suresnes/a/commerce-bio/erp/amelie-naudin/"
+            },
+            {
+              "label": "Publicité Biocoop · Suresnes Mag février 2026",
+              "url": "https://cecilesala-asso.org/wp-content/uploads/2026/02/SuresnesMag-maquette-378-Web.pdf"
+            },
+            {
+              "label": "Fiche nationale Biocoop",
+              "url": "https://www.biocoop.fr/ile-de-france/hauts-de-seine/SURESNES/BIOCOOP-SURESNES-JAURES"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-7238515314",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2047041,
+          48.8644104
+        ]
+      },
+      "properties": {
+        "kind": "grocery",
+        "name": "Votre Marché",
+        "address": "Suresnes — adresse non renseignée dans la source",
+        "address_status": "missing",
+        "category": "Épicerie / supérette",
+        "osm_shop": "convenience",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/7238515314",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2025-02-01T16:33:09Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [
+            "Adresse postale absente d’OSM ; localisation conservée au point cartographié, sans attribuer un numéro voisin."
+          ],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-7339991150",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2191377,
+          48.8643328
+        ]
+      },
+      "properties": {
+        "kind": "grocery",
+        "name": "TotalEnergies",
+        "address": "Suresnes — adresse non renseignée dans la source",
+        "address_status": "missing",
+        "category": "Épicerie / supérette",
+        "osm_shop": "convenience",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/7339991150",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2025-11-09T16:46:37Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [
+            "Adresse postale absente d’OSM ; localisation conservée au point cartographié, sans attribuer un numéro voisin."
+          ],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-7340165351",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2220601,
+          48.8614872
+        ]
+      },
+      "properties": {
+        "kind": "grocery",
+        "name": "Franprix",
+        "address": "Suresnes — adresse non renseignée dans la source",
+        "address_status": "missing",
+        "category": "Épicerie / supérette",
+        "osm_shop": "convenience",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/7340165351",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2025-09-22T19:59:46Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [
+            "Adresse postale absente d’OSM ; localisation conservée au point cartographié, sans attribuer un numéro voisin."
+          ],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-8736545584",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2122447,
+          48.8630345
+        ]
+      },
+      "properties": {
+        "kind": "grocery",
+        "name": "Au fin gourmet",
+        "address": "Suresnes — adresse non renseignée dans la source",
+        "address_status": "missing",
+        "category": "Épicerie fine / traiteur",
+        "osm_shop": "deli",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/8736545584",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2024-03-01T10:28:51Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [
+            "Adresse postale absente d’OSM ; localisation conservée au point cartographié, sans attribuer un numéro voisin."
+          ],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-9411229459",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2270518,
+          48.8694238
+        ]
+      },
+      "properties": {
+        "kind": "grocery",
+        "name": "Piccola Terra",
+        "address": "Suresnes — adresse non renseignée dans la source",
+        "address_status": "missing",
+        "category": "Épicerie fine / traiteur",
+        "osm_shop": "deli",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/9411229459",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2025-12-13T12:09:27Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [
+            "Adresse postale absente d’OSM ; localisation conservée au point cartographié, sans attribuer un numéro voisin."
+          ],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-11184027949",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2319084,
+          48.8724743
+        ]
+      },
+      "properties": {
+        "kind": "grocery",
+        "name": "le marché d'à côté",
+        "address": "Suresnes — adresse non renseignée dans la source",
+        "address_status": "missing",
+        "category": "Épicerie / supérette",
+        "osm_shop": "convenience",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/11184027949",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2026-09-03T16:17:50Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [
+            "Adresse postale absente d’OSM ; localisation conservée au point cartographié, sans attribuer un numéro voisin."
+          ],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-11498087625",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2252652,
+          48.8700065
+        ]
+      },
+      "properties": {
+        "kind": "supermarket",
+        "name": "Lidl",
+        "address": "16 Rue Desbassayns de Richemont 92150 Suresnes",
+        "address_status": "reported",
+        "category": "Supermarché",
+        "osm_shop": "supermarket",
+        "source": "food_osm",
+        "source_url": "https://www.openstreetmap.org/node/11498087625",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2026-09-01T17:41:11Z",
+        "precision": "Point OpenStreetMap conservé ; présence et ouverture actuelle non vérifiées sur le terrain. La catégorie décrit la source, sans mesure de surface de vente.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Recensé dans OpenStreetMap",
+          "doubts": [],
+          "notes": [],
+          "sources": []
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-70961879",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.21045195,
+          48.8640451
+        ]
+      },
+      "properties": {
+        "kind": "market",
+        "name": "Marché Caron",
+        "address": "Place Jean Jaurès, 92150 Suresnes",
+        "address_status": "reported",
+        "category": "Marché alimentaire régulier",
+        "market_days": "Jeudi et dimanche matin",
+        "source": "markets_suresnes",
+        "source_url": "https://www.suresnes-tourisme.com/un-samedi-au-marche.html",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2024-01-07T20:12:58Z",
+        "precision": "Point au centre de l’emprise OSM de la halle ; pas une entrée ni le contour complet du marché.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Lieu et jours confirmés par l’Office de tourisme",
+          "doubts": [],
+          "notes": [
+            "Horaires exceptionnels et annulations non suivis automatiquement."
+          ],
+          "sources": [
+            {
+              "label": "Localisation OpenStreetMap",
+              "url": "https://www.openstreetmap.org/way/70961879"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-2364399609",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2265654,
+          48.869362
+        ]
+      },
+      "properties": {
+        "kind": "market",
+        "name": "Marché Zola",
+        "address": "Place du Général Leclerc, 92150 Suresnes",
+        "address_status": "reported",
+        "category": "Marché alimentaire régulier",
+        "market_days": "Mercredi et samedi matin",
+        "source": "markets_suresnes",
+        "source_url": "https://www.suresnes-tourisme.com/un-samedi-au-marche.html",
+        "retrieved_at": "2026-11-03",
+        "source_updated_at": "2016-10-15T14:07:42Z",
+        "precision": "Point OSM du marché ; ne représente pas l’étendue des étals.",
+        "audit": {
+          "date": "2026-11-03",
+          "status": "Lieu et jours confirmés par l’Office de tourisme",
+          "doubts": [],
+          "notes": [
+            "Horaires exceptionnels et annulations non suivis automatiquement."
+          ],
+          "sources": [
+            {
+              "label": "Localisation OpenStreetMap",
+              "url": "https://www.openstreetmap.org/node/2364399609"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

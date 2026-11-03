@@ -30,6 +30,10 @@ export const symbols = {
   bakery:
     '<path d="M7 21 20 5a3 3 0 0 0-4-4L3 17a3 3 0 0 0 4 4ZM5 14l4 3m0-8 4 3m0-8 4 3"/>',
   tea: '<path d="M3 8h15v7a6 6 0 0 1-6 6H9a6 6 0 0 1-6-6V8Zm15 1h2a3 3 0 0 1 0 6h-2M2 22h19M8 2v3m5-3v3"/>',
+  grocery: '<path d="M3 9h18l-2 12H5L3 9ZM7 9l5-7 5 7M9 13v4m6-4v4"/>',
+  supermarket: '<path d="M2 3h3l3 13h11l3-9H6M8 20h.01M18 20h.01"/>',
+  market:
+    '<path d="M3 10h18l-3-7H6l-3 7ZM5 10v11h14V10M3 21h18M8 3l-1 7m5-7v7m4-7 1 7M8 14h8v7"/>',
   office:
     '<path d="M5 21V3h14v18M3 21h18M9 7h1m4 0h1M9 11h1m4 0h1M9 15h1m4 0h1M10 21v-3h4v3"/>',
   mixed:
@@ -48,6 +52,9 @@ export const colors = {
   pharmacy: "#0fff7b",
   bakery: "#f6ad35",
   tea: "#ca9343",
+  grocery: "#bd681c",
+  supermarket: "#8b4a16",
+  market: "#9d3754",
   office: "#d72e83",
   rentalOffice: "#2376b7",
 };
@@ -60,6 +67,9 @@ export const typeLabels = {
   pharmacy: "Pharmacie",
   bakery: "Boulangerie / pâtisserie",
   tea: "Magasin de thé",
+  grocery: "Épicerie / supérette",
+  supermarket: "Supermarché",
+  market: "Marché alimentaire",
   office: "Adresse d’immeuble ciblé",
   rentalOffice: "Bureaux annoncés à la location",
 };

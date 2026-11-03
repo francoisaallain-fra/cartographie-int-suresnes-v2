@@ -89,7 +89,7 @@ export function updateLayers() {
   if (state.selected) {
     const nearby = runtime.allPoints.filter((f) => allowed.has(f.id));
     $("radius-count").textContent =
-      `${nearby.length} aménités recensées : ${nearby.filter((f) => f.properties.kind === "transport").length} transport(s), ${nearby.filter((f) => ["school", "nursery", "health"].includes(f.properties.kind)).length} santé / crèche / école, ${nearby.filter((f) => ["bakery", "tea", "pharmacy"].includes(f.properties.kind)).length} de quartier.`;
+      `${nearby.length} aménités recensées : ${nearby.filter((f) => f.properties.kind === "transport").length} transport(s), ${nearby.filter((f) => ["school", "nursery", "health"].includes(f.properties.kind)).length} santé / crèche / école, ${nearby.filter((f) => groupFor(f) === "neighborhood").length} de quartier.`;
   }
 }
 export function updateZoneLabels() {
