@@ -138,6 +138,26 @@ test("all 75 radius scenarios preserve the visible points", async ({
     for (let distance = 300; distance <= 1000; distance += 50) {
       const state = await page.evaluate(() => window.suresnesDiagnostics());
       expect(state.radiusMeters).toBe(distance);
+      const expectedAmenityCount =
+        radii.offices[office.id][distance].nearby.filter(
+          (item) => !excludedAmenityIds.has(item.id),
+        ).length +
+        foodAmenities.filter(
+          (feature) =>
+            distanceMeters(
+              office.geometry.coordinates,
+              feature.geometry.coordinates,
+            ) <= distance,
+        ).length;
+      await expect(page.locator(".leaflet-popup-content")).toHaveCount(1);
+      const rows = page.locator(".leaflet-popup-content .popup-row");
+      await expect(rows.first()).toContainText("Statut");
+      await expect(rows.nth(1)).toHaveText(
+        `Aménités dans le rayon de ${distance === 1000 ? "1 km" : `${distance} m`}${expectedAmenityCount} recensées`,
+      );
+      await expect(page.locator("#radius-count")).toContainText(
+        `${expectedAmenityCount} aménités recensées`,
+      );
       expect([...state.pointIds].sort()).toEqual(
         [
           ...radii.offices[office.id][distance].nearby
@@ -822,4 +842,20 @@ test("sources, downloads and mobile layout", async ({ page }) => {
       () => document.documentElement.scrollWidth <= window.innerWidth,
     ),
   ).toBe(true);
+});
+
+test("office amenity count ignores hidden layers and does not reopen a closed popup", async ({
+  page,
+}) => {
+  await page.locator(`.office-item[data-id="${offices[0].id}"]`).click();
+  const countRow = page.locator(".leaflet-popup-content .popup-row").nth(1);
+  const originalCount = await countRow.textContent();
+  await page.locator("#layer-neighborhood").uncheck();
+  await page.locator(".map-pin.office").first().press("Enter");
+  await expect(page.locator(".leaflet-popup-content")).toHaveCount(1);
+  await expect(countRow).toHaveText(originalCount);
+  await page.locator(".leaflet-popup-close-button").click();
+  await expect(page.locator(".leaflet-popup-content")).toHaveCount(0);
+  await page.locator("#radius-range").press("ArrowRight");
+  await expect(page.locator(".leaflet-popup-content")).toHaveCount(0);
 });
