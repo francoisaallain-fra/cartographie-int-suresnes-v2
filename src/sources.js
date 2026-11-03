@@ -2,6 +2,16 @@ import { $, escapeHTML } from "./presentation.js";
 import { runtime } from "./state.js";
 export function buildSources() {
   const lines = [
+    [
+      "Épiceries, supérettes et supermarchés",
+      "food_osm",
+      "30 commerces alimentaires dans Suresnes ; catégories et adresses selon OSM, compléments sourcés",
+    ],
+    [
+      "Marchés alimentaires",
+      "markets_suresnes",
+      "Zola et Caron · lieux et jours confirmés par l’Office de tourisme, positions OSM",
+    ],
     ["Fond photo", "ign", "Flux IGN testé · couverture de la ville"],
     [
       "Maintien des surfaces de bureau · PLU",

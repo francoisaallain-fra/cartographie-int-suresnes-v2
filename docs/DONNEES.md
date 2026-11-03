@@ -29,3 +29,7 @@ Le calcul utilise les 5 adresses ciblées, les 16 points d’adresse des bureaux
 Six points remplissent les deux critères : 2 rue de la République (302 m des Coteaux), 39 rue Rouget de Lisle (440 m de Belvédère), 13 boulevard Henri Sellier (361 m de Suresnes-Longchamp), 162 boulevard du Maréchal de Lattre de Tassigny (316 m de Suresnes-Longchamp), 31 avenue du Général de Gaulle (271 m de Suresnes-Mont-Valérien) et 6 boulevard Henri Sellier (384 m de Suresnes-Longchamp). Les distances sont arrondies à l’affichage ; les valeurs non arrondies déterminent le seuil. Les couleurs personnalisées dans le navigateur priment sur ce vert automatique.
 
 Cette couleur est un **repérage cartographique** : les points BAN ne délimitent ni l’entrée exacte, ni la parcelle, ni l’emprise entière d’un immeuble. Être hors du périmètre sur ce point ne valide pas l’absence de restriction sur tout un projet ; les pièces PLU et la faisabilité restent à examiner à l’adresse concernée. La proximité d’une gare ne prouve pas non plus la vacance ou la disponibilité du bureau.
+
+## Alimentation et marchés (3 novembre 2026)
+
+32 points et trois filtres dans la couche Aménités de quartier : 23 épiceries / supérettes, 7 supermarchés et 2 marchés. [Sources, limites, reproduction et recette](ALIMENTATION.md).

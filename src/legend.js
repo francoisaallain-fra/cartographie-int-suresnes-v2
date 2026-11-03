@@ -106,6 +106,9 @@ export function layerLegend(id) {
           ]
         : id === "neighborhood"
           ? [
+              [{ kind: "grocery" }, "Épiceries / supérettes"],
+              [{ kind: "supermarket" }, "Supermarchés"],
+              [{ kind: "market" }, "Marchés alimentaires"],
               [
                 {
                   kind: "bakery",

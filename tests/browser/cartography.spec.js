@@ -1,5 +1,9 @@
 import { test, expect } from "@playwright/test";
 import fs from "node:fs";
+import { distanceMeters } from "../../src/geometry.js";
+const foodAmenities = JSON.parse(
+  fs.readFileSync("public/data/food-amenities.geojson"),
+).features;
 const radii = JSON.parse(fs.readFileSync("public/data/radii.json"));
 Object.assign(
   radii.offices,
@@ -141,6 +145,15 @@ test("all 75 radius scenarios preserve the visible points", async ({
             .map((x) => x.id),
           ...offices.map((x) => x.id),
           ...rentalOffices.map((x) => x.id),
+          ...foodAmenities
+            .filter(
+              (f) =>
+                distanceMeters(
+                  office.geometry.coordinates,
+                  f.geometry.coordinates,
+                ) <= distance,
+            )
+            .map((f) => f.id),
         ].sort(),
       );
       if (distance < 1000)
@@ -512,6 +525,44 @@ test("rename, reorder and collapse survive reload", async ({ page }) => {
       .locator(".layer-card")
       .evaluateAll((cards) => cards.map((x) => x.dataset.layerId)),
   ).toEqual(order);
+});
+test("food amenities have independent filters and market source popups", async ({
+  page,
+}) => {
+  await page.locator("#layer-neighborhood").check();
+  await page.locator('[data-layer-id="neighborhood"] .layer-expand').click();
+  await expect(page.locator(".map-pin.grocery")).toHaveCount(23);
+  await expect(page.locator(".map-pin.supermarket")).toHaveCount(7);
+  await expect(page.locator(".map-pin.market")).toHaveCount(2);
+  await page.locator('[data-category="grocery"]').click();
+  await expect(page.locator(".map-pin.grocery")).toHaveCount(0);
+  await expect(page.locator(".map-pin.supermarket")).toHaveCount(7);
+  await expect(page.locator(".map-pin.market")).toHaveCount(2);
+  await page.locator('[data-category="grocery"]').click();
+  await page.locator("#layer-rentalOffices").uncheck();
+  await page.getByRole("button", { name: "Zoom in", exact: true }).click();
+  await page.locator('.map-pin.market[title="Marché Zola"]').click();
+  await expect(page.locator(".leaflet-popup-content")).toContainText(
+    "Mercredi et samedi matin",
+  );
+  await expect(page.locator(".leaflet-popup-content")).toContainText(
+    "Place du Général Leclerc",
+  );
+  await expect
+    .poll(async () => {
+      const box = await page.locator(".leaflet-popup").boundingBox();
+      const map = await page.locator("#map").boundingBox();
+      return box.y >= map.y && box.y + box.height <= map.y + map.height;
+    })
+    .toBe(true);
+  await expect(
+    page.locator(
+      '.leaflet-popup-content a[href="https://www.suresnes-tourisme.com/un-samedi-au-marche.html"]',
+    ),
+  ).toHaveCount(1);
+  const response = await page.request.get("/data/food-amenities.geojson");
+  expect(response.ok()).toBe(true);
+  expect((await response.json()).features).toHaveLength(32);
 });
 test("sources, downloads and mobile layout", async ({ page }) => {
   await page.locator("#sources-open").click();

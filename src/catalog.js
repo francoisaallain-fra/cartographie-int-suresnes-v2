@@ -90,7 +90,7 @@ export const layerSpecs = [
   {
     id: "neighborhood",
     label: "Aménités de quartier",
-    sub: "19 commerces / activités vérifiés · 13 pharmacies",
+    sub: "23 épiceries / supérettes · 7 supermarchés · 2 marchés · boulangeries, thé et pharmacies",
     icon: "bakery",
     color: colors.bakery,
   },

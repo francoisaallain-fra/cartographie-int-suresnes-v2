@@ -1,0 +1,18 @@
+{
+  "food_osm": {
+    "name": "OpenStreetMap · extrait Magellium (magOSM)",
+    "url": "https://www.data.gouv.fr/datasets/localisations-des-magasins-dans-openstreetmap",
+    "format": "WFS magosm:shops_point → sélection dans la commune → GeoJSON",
+    "license": "ODbL 1.0 · © les contributeurs OpenStreetMap",
+    "vintage": "Extrait le 2026-11-03",
+    "note": "Épiceries, supérettes, épiceries fines et supermarchés. Base contributive non exhaustive ; dates OSM et adresses manquantes signalées dans les fiches. Pas de suivi automatique des fermetures."
+  },
+  "markets_suresnes": {
+    "name": "Office de tourisme de Suresnes · marchés réguliers",
+    "url": "https://www.suresnes-tourisme.com/un-samedi-au-marche.html",
+    "format": "Lieux et jours relevés sur page publique ; coordonnées OSM",
+    "license": "Coordonnées OSM : ODbL ; faits de la page publique, sans licence ouverte identifiée pour la page",
+    "vintage": "Consulté le 2026-11-03",
+    "note": "Deux marchés : Zola place du Général Leclerc (mercredi et samedi matin), Caron place Jean Jaurès (jeudi et dimanche matin). Un point par marché ; pas de suivi des exceptions."
+  }
+}

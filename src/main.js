@@ -250,6 +250,13 @@ export async function start() {
     ];
     for (const f of runtime.allPoints) {
       const [x, y] = f.geometry.coordinates;
+      const framedPopup = [
+        "office",
+        "rentalOffice",
+        "grocery",
+        "supermarket",
+        "market",
+      ].includes(f.properties.kind);
       const marker = L.marker([y, x], {
         pane: "data-" + groupFor(f) + "-markers",
         icon: featureIcon(f),
@@ -269,12 +276,11 @@ export async function start() {
               className: "station-card-popup",
               autoPan: false,
             }
-          : ["office", "rentalOffice"].includes(f.properties.kind)
+          : framedPopup
             ? { autoPan: false }
             : {},
       );
-      if (["office", "rentalOffice"].includes(f.properties.kind))
-        marker.on("popupopen", () => frameOfficePopup(marker));
+      if (framedPopup) marker.on("popupopen", () => frameOfficePopup(marker));
       if (f.properties.kind === "office")
         marker.on("click", () => selectOffice(f));
       if (f.properties.kind === "transport")

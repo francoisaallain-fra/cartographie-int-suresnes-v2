@@ -112,3 +112,7 @@ Les 16 pastilles de la couche « Bureaux proposés à la location » possèdent 
 ## Pointe et double couleur des bureaux ciblés · 3 novembre 2026
 
 Les cinq pastilles « Immeubles ciblés » utilisent maintenant la même pointe en bas à gauche, ancrée sur leur point d’adresse BAN. Les deux adresses qui sont aussi à 500 m ou moins d’une gare et hors des périmètres de maintien affichent le vert de repérage à gauche et le violet des immeubles ciblés à droite. Les trois autres restent violettes. Une couleur personnelle remplace temporairement les deux couleurs ; « Couleur initiale » les rétablit. Les tests contrôlent les cinq ancrages, les deux dégradés à séparation nette et le changement de couleur.
+
+## Alimentation et marchés (3 novembre 2026)
+
+32 points et trois filtres dans la couche Aménités de quartier : 23 épiceries / supérettes, 7 supermarchés et 2 marchés. [Sources, limites, reproduction et recette](ALIMENTATION.md).

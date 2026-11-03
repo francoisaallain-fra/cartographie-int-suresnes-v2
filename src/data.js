@@ -1,5 +1,6 @@
 /** Geographic datasets bundled with the application. */
 import { screenOfficePoint } from "./office-screening.js";
+import { distanceMeters } from "./geometry.js";
 
 export const datasetNames = [
   "commune",
@@ -10,6 +11,7 @@ export const datasetNames = [
   "nurseries",
   "health",
   "neighborhood",
+  "food-amenities",
   "offices",
   "offices-extra",
   "rental-offices",
@@ -91,6 +93,7 @@ export async function loadDatasets(fetcher = fetch) {
     "radii",
     "radii-extra",
     "amenity-review",
+    "food-amenities-sources",
   ];
   const values = await Promise.all(
     names.map(async (name) => {
@@ -113,6 +116,28 @@ export async function loadDatasets(fetcher = fetch) {
   };
   data.offices.features.push(...data["offices-extra"].features);
   Object.assign(data.radii.offices, data["radii-extra"].offices);
+  const food = data["food-amenities"].features;
+  const existingIds = new Set(data.neighborhood.features.map((f) => f.id));
+  if (food.some((f) => existingIds.has(f.id)))
+    throw new Error("Duplicate supplementary neighborhood amenity");
+  data.neighborhood.features.push(...food);
+  Object.assign(data.sources, data["food-amenities-sources"]);
+  for (const office of data.offices.features) {
+    const distances = food.map((f) => ({
+      id: f.id,
+      distance_m: distanceMeters(
+        office.geometry.coordinates,
+        f.geometry.coordinates,
+      ),
+    }));
+    for (const [radius, scenario] of Object.entries(
+      data.radii.offices[office.id],
+    ))
+      scenario.nearby = [
+        ...scenario.nearby,
+        ...distances.filter((f) => f.distance_m <= Number(radius)),
+      ].sort((a, b) => a.distance_m - b.distance_m);
+  }
   for (const office of [
     ...data.offices.features,
     ...data["rental-offices"].features,

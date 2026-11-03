@@ -1,0 +1,316 @@
+{
+  "checked_on": "2026-11-03",
+  "bbox": [
+    2.19,
+    48.85,
+    2.24,
+    48.89
+  ],
+  "candidate_shops": 97,
+  "counts": {
+    "grocery": 23,
+    "supermarket": 7,
+    "market": 2
+  },
+  "missing_addresses": [
+    "osm-node-1191783376",
+    "osm-node-1423482169",
+    "osm-node-1423517463",
+    "osm-node-2324053186",
+    "osm-node-3075147029",
+    "osm-node-3075148138",
+    "osm-node-3663527951",
+    "osm-node-3663527953",
+    "osm-node-3877278811",
+    "osm-node-3950812703",
+    "osm-node-4141678536",
+    "osm-node-4405645637",
+    "osm-node-4405645640",
+    "osm-node-6221937570",
+    "osm-node-7149725546",
+    "osm-node-7238515314",
+    "osm-node-7339991150",
+    "osm-node-7340165351",
+    "osm-node-8736545584",
+    "osm-node-9411229459",
+    "osm-node-11184027949"
+  ],
+  "uncertain_addresses": [
+    "osm-node-7178996300"
+  ],
+  "excluded": [
+    {
+      "id": "osm-node-25209909",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-275347030",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-way-360153007",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-523275886",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-523275891",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-524640861",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-524640865",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-560155715",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-608913097",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-way-639012827",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-640635597",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-640684670",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-722909195",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-825376895",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-887164094",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-956225622",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-1119108158",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-1137858683",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-1192733972",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-1401455853",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-1861492165",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-1862164413",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-1876202746",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-2161521578",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-2167570375",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-2282402455",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-2295513843",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-2331765102",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-2675757610",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-2677682336",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-2682022527",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-2709391115",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-2709391123",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-2818180640",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-2957176064",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-3020202355",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-3037538191",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-3044599817",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-3140771721",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-3175598981",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-3175606038",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-3201703515",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-3223858256",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-3517263237",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-3643120040",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-4406017777",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-4472648918",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-5268212087",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-5268212090",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-5268212094",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-7004135642",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-7389369540",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-7389688996",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-7771147043",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-8829732010",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-9221808089",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-9355469654",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-9449730210",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-9532257109",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-9746971760",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-9944384318",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-11343144823",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-11951866730",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-12030781640",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-12070155869",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-12502513494",
+      "reason": "Point hors de la commune de Suresnes"
+    },
+    {
+      "id": "osm-node-14102674268",
+      "reason": "Point hors de la commune de Suresnes"
+    }
+  ],
+  "limitations": [
+    "Couverture OSM non exhaustive ; pas une certification d’ouverture actuelle.",
+    "Marchés réguliers uniquement, hors événements temporaires.",
+    "Pas de géocodage inverse au numéro pour combler les adresses absentes."
+  ]
+}

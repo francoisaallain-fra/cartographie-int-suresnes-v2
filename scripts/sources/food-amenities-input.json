@@ -1,0 +1,1938 @@
+{
+  "checked_on": "2026-11-03",
+  "license": "ODbL 1.0 · © les contributeurs OpenStreetMap",
+  "bbox": [2.19, 48.85, 2.24, 48.89],
+  "query_count": 663,
+  "response_timestamp": "2026-11-03T13:07:05.576Z",
+  "shops": [
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2224884, 48.8549783]
+      },
+      "properties": {
+        "osm_id": 25209909,
+        "osm_type": "node",
+        "osm_timestamp": "2025-07-01T21:58:37Z",
+        "osm_version": "14",
+        "name": "Relais Saint-Cloud Dassault",
+        "shop": "convenience",
+        "addr-housenumber": "65",
+        "addr-street": "Quai Marcel Dassault",
+        "addr-postcode": "92210",
+        "addr-city": null,
+        "website": "https://store.totalenergies.fr/fr_FR/NF007387"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1934373, 48.8681845]
+      },
+      "properties": {
+        "osm_id": 275347030,
+        "osm_type": "node",
+        "osm_timestamp": "2025-07-25T07:23:15Z",
+        "osm_version": "13",
+        "name": "Carrefour City",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://www.carrefour.fr/magasin/city-rueil-malmaison-18-juin"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.20461561, 48.88320105]
+      },
+      "properties": {
+        "osm_id": 360153007,
+        "osm_type": "way",
+        "osm_timestamp": "2026-10-10T10:38:50Z",
+        "osm_version": "10",
+        "name": "E.Leclerc Nanterre",
+        "shop": "supermarket",
+        "addr-housenumber": null,
+        "addr-street": "Rue Paul Vaillant-Couturier",
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://www.e.leclerc/mag/e-leclerc-nanterre"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2247396, 48.8690504]
+      },
+      "properties": {
+        "osm_id": 493809023,
+        "osm_type": "node",
+        "osm_timestamp": "2026-08-29T16:42:53Z",
+        "osm_version": "18",
+        "name": "Carrefour Market",
+        "shop": "supermarket",
+        "addr-housenumber": "4",
+        "addr-street": "Allée Jules Ferry",
+        "addr-postcode": "92150",
+        "addr-city": "Suresnes",
+        "website": "https://www.carrefour.fr/magasin/market-suresnes-ferry"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1950713, 48.8889267]
+      },
+      "properties": {
+        "osm_id": 523275886,
+        "osm_type": "node",
+        "osm_timestamp": "2016-06-12T17:11:21Z",
+        "osm_version": "5",
+        "name": "CLG Marché",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1943812, 48.8891267]
+      },
+      "properties": {
+        "osm_id": 523275891,
+        "osm_type": "node",
+        "osm_timestamp": "2026-08-30T18:42:09Z",
+        "osm_version": "9",
+        "name": "Franprix",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://www.franprix.fr/magasins/6968"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1956202, 48.8894208]
+      },
+      "properties": {
+        "osm_id": 524640861,
+        "osm_type": "node",
+        "osm_timestamp": "2025-06-23T15:28:57Z",
+        "osm_version": "6",
+        "name": "Zéro Gaspi",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1980349, 48.889791]
+      },
+      "properties": {
+        "osm_id": 524640865,
+        "osm_type": "node",
+        "osm_timestamp": "2026-08-30T18:42:09Z",
+        "osm_version": "11",
+        "name": "Franprix",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://www.franprix.fr/magasins/5294"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2198405, 48.8890882]
+      },
+      "properties": {
+        "osm_id": 560155715,
+        "osm_type": "node",
+        "osm_timestamp": "2026-08-29T16:42:53Z",
+        "osm_version": "9",
+        "name": "Carrefour Market",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://www.carrefour.fr/magasin/market-nanterre-picasso"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1951124, 48.8899119]
+      },
+      "properties": {
+        "osm_id": 608913097,
+        "osm_type": "node",
+        "osm_timestamp": "2026-08-29T17:23:19Z",
+        "osm_version": "19",
+        "name": "Naturalia",
+        "shop": "supermarket",
+        "addr-housenumber": "9 bis",
+        "addr-street": "Rue du Marché",
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://magasins.naturalia.fr/naturalia/fr/store/france/ile-de-france/hauts-de-seine/nanterre/nanterre/3858"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.23956092, 48.8882423]
+      },
+      "properties": {
+        "osm_id": 639012827,
+        "osm_type": "way",
+        "osm_timestamp": "2026-10-12T11:03:17Z",
+        "osm_version": "10",
+        "name": "Proxi",
+        "shop": "convenience",
+        "addr-housenumber": "57",
+        "addr-street": "Jardins Boieldieu",
+        "addr-postcode": "92800",
+        "addr-city": "Puteaux",
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2010241, 48.8868412]
+      },
+      "properties": {
+        "osm_id": 640635597,
+        "osm_type": "node",
+        "osm_timestamp": "2025-06-23T15:28:57Z",
+        "osm_version": "4",
+        "name": "Alimentation Générale",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2083858, 48.8871367]
+      },
+      "properties": {
+        "osm_id": 640684670,
+        "osm_type": "node",
+        "osm_timestamp": "2026-09-06T12:46:26Z",
+        "osm_version": "10",
+        "name": "Lidl",
+        "shop": "supermarket",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://www.lidl.fr/s/fr-FR/supermarches/nanterre/rue-sadi-carnot-73/"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1956996, 48.8851395]
+      },
+      "properties": {
+        "osm_id": 722909195,
+        "osm_type": "node",
+        "osm_timestamp": "2025-09-07T11:52:50Z",
+        "osm_version": "4",
+        "name": "Franprix",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2189873, 48.8799664]
+      },
+      "properties": {
+        "osm_id": 825376895,
+        "osm_type": "node",
+        "osm_timestamp": "2026-09-03T16:17:50Z",
+        "osm_version": "4",
+        "name": "le marché d'à côté",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://www.franprix.fr/magasins/2341/nanterre-110-rte-des-fusilles-de-la-resistance"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2246805, 48.8835986]
+      },
+      "properties": {
+        "osm_id": 887164094,
+        "osm_type": "node",
+        "osm_timestamp": "2025-09-09T10:08:22Z",
+        "osm_version": "4",
+        "name": "Transmontana",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2243019, 48.8837755]
+      },
+      "properties": {
+        "osm_id": 956225622,
+        "osm_type": "node",
+        "osm_timestamp": "2026-08-30T18:42:09Z",
+        "osm_version": "12",
+        "name": "Marché Franprix",
+        "shop": "supermarket",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://www.franprix.fr/magasins/8744"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.235986, 48.8835701]
+      },
+      "properties": {
+        "osm_id": 1119108158,
+        "osm_type": "node",
+        "osm_timestamp": "2020-02-08T18:56:53Z",
+        "osm_version": "3",
+        "name": "Épicerie Générale Victor Hugo",
+        "shop": "convenience",
+        "addr-housenumber": "76",
+        "addr-street": "Rue Victor Hugo",
+        "addr-postcode": "92800",
+        "addr-city": "Puteaux",
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2385666, 48.8812751]
+      },
+      "properties": {
+        "osm_id": 1137858683,
+        "osm_type": "node",
+        "osm_timestamp": "2026-08-29T13:57:59Z",
+        "osm_version": "21",
+        "name": "Monoprix",
+        "shop": "supermarket",
+        "addr-housenumber": "111-123",
+        "addr-street": "Rue Jean Jaurès",
+        "addr-postcode": "92800",
+        "addr-city": "Puteaux",
+        "website": "https://www.monoprix.fr/36.html"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.216311, 48.8665534]
+      },
+      "properties": {
+        "osm_id": 1191783376,
+        "osm_type": "node",
+        "osm_timestamp": "2026-01-05T17:47:59Z",
+        "osm_version": "5",
+        "name": "JS supermarché",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2313707, 48.8862878]
+      },
+      "properties": {
+        "osm_id": 1192733972,
+        "osm_type": "node",
+        "osm_timestamp": "2026-01-30T16:11:31Z",
+        "osm_version": "10",
+        "name": "Franprix",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2094012, 48.8635531]
+      },
+      "properties": {
+        "osm_id": 1392799523,
+        "osm_type": "node",
+        "osm_timestamp": "2026-09-01T13:09:14Z",
+        "osm_version": "25",
+        "name": "Intermarché Express",
+        "shop": "supermarket",
+        "addr-housenumber": "48",
+        "addr-street": "Avenue Jean Jaurès",
+        "addr-postcode": "92150",
+        "addr-city": "Suresnes",
+        "website": "https://www.intermarche.com/magasins/11657/suresnes-92150/infos-pratiques"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.20234, 48.8658731]
+      },
+      "properties": {
+        "osm_id": 1401455852,
+        "osm_type": "node",
+        "osm_timestamp": "2026-09-06T12:46:26Z",
+        "osm_version": "13",
+        "name": "Lidl",
+        "shop": "supermarket",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://www.lidl.fr/s/fr-FR/supermarches/suresnes/avenue-jean-jaures-49/"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2061454, 48.8649444]
+      },
+      "properties": {
+        "osm_id": 1401455853,
+        "osm_type": "node",
+        "osm_timestamp": "2026-01-11T17:14:49Z",
+        "osm_version": "11",
+        "name": "Franprix",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2250519, 48.8816352]
+      },
+      "properties": {
+        "osm_id": 1423482169,
+        "osm_type": "node",
+        "osm_timestamp": "2026-08-29T16:42:53Z",
+        "osm_version": "15",
+        "name": "Carrefour Express",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://www.carrefour.fr/magasin/express-suresnes-bas-rogers"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2233171, 48.8798103]
+      },
+      "properties": {
+        "osm_id": 1423517463,
+        "osm_type": "node",
+        "osm_timestamp": "2024-02-04T07:34:58Z",
+        "osm_version": "10",
+        "name": "Sitis Market",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2015218, 48.8764105]
+      },
+      "properties": {
+        "osm_id": 1861492165,
+        "osm_type": "node",
+        "osm_timestamp": "2026-09-02T05:12:27Z",
+        "osm_version": "15",
+        "name": "So.bio",
+        "shop": "supermarket",
+        "addr-housenumber": "6",
+        "addr-street": "Rue Eugène Sue",
+        "addr-postcode": "92500",
+        "addr-city": "Rueil-Malmaison",
+        "website": "https://www.sobio.fr/magasin/so-bio-rueil-malmaison"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2137457, 48.8587886]
+      },
+      "properties": {
+        "osm_id": 1862164413,
+        "osm_type": "node",
+        "osm_timestamp": "2022-07-09T15:15:43Z",
+        "osm_version": "4",
+        "name": "Superette du Val d'Or",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2348955, 48.8686446]
+      },
+      "properties": {
+        "osm_id": 1876202746,
+        "osm_type": "node",
+        "osm_timestamp": "2026-07-29T17:29:21Z",
+        "osm_version": "2",
+        "name": "Épicerie",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2375873, 48.8805159]
+      },
+      "properties": {
+        "osm_id": 2161521578,
+        "osm_type": "node",
+        "osm_timestamp": "2026-08-29T16:42:53Z",
+        "osm_version": "12",
+        "name": "Carrefour City",
+        "shop": "convenience",
+        "addr-housenumber": "135",
+        "addr-street": "Rue Jean Jaurès",
+        "addr-postcode": "92800",
+        "addr-city": "Puteaux",
+        "website": "https://www.carrefour.fr/magasin/city-puteaux-jj-133"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.238563, 48.8825079]
+      },
+      "properties": {
+        "osm_id": 2167570375,
+        "osm_type": "node",
+        "osm_timestamp": "2025-07-11T16:55:35Z",
+        "osm_version": "10",
+        "name": "Aldi",
+        "shop": "supermarket",
+        "addr-housenumber": "63/67",
+        "addr-street": "Rue Eugène Eichenberger",
+        "addr-postcode": "92800",
+        "addr-city": null,
+        "website": "https://www.aldi.fr/magasins-et-horaires-d-ouverture.html/l/puteaux/63-67-rue-eugene-eichenberger/3436200"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2000992, 48.8673634]
+      },
+      "properties": {
+        "osm_id": 2282402455,
+        "osm_type": "node",
+        "osm_timestamp": "2025-09-22T19:59:43Z",
+        "osm_version": "6",
+        "name": "Supérette Alimentation générale",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2319248, 48.8761369]
+      },
+      "properties": {
+        "osm_id": 2295513619,
+        "osm_type": "node",
+        "osm_timestamp": "2026-06-06T15:21:17Z",
+        "osm_version": "16",
+        "name": "Carrefour Market",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://www.carrefour.fr/magasin/market-suresnes-verdun"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2355994, 48.8753395]
+      },
+      "properties": {
+        "osm_id": 2295513843,
+        "osm_type": "node",
+        "osm_timestamp": "2026-09-14T09:50:40Z",
+        "osm_version": "8",
+        "name": "Franprix",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://www.franprix.fr/magasins/2251/suresnes-4-rue-salomon-de-rothschild"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2225216, 48.8670288]
+      },
+      "properties": {
+        "osm_id": 2324053186,
+        "osm_type": "node",
+        "osm_timestamp": "2026-08-30T18:42:09Z",
+        "osm_version": "14",
+        "name": "Franprix",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://www.franprix.fr/magasins/8362"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2028193, 48.8894003]
+      },
+      "properties": {
+        "osm_id": 2331765102,
+        "osm_type": "node",
+        "osm_timestamp": "2025-10-28T10:32:08Z",
+        "osm_version": "7",
+        "name": "Épicerie Bio Solidaire",
+        "shop": "convenience",
+        "addr-housenumber": "27",
+        "addr-street": "Rue Sadi Carnot",
+        "addr-postcode": "92000",
+        "addr-city": "Nanterre",
+        "website": "https://lasoupeauxcailloux.wordpress.com/"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2036609, 48.8520438]
+      },
+      "properties": {
+        "osm_id": 2675757610,
+        "osm_type": "node",
+        "osm_timestamp": "2026-08-30T18:42:09Z",
+        "osm_version": "8",
+        "name": "Franprix",
+        "shop": "convenience",
+        "addr-housenumber": "117",
+        "addr-street": "Rue de Buzenval",
+        "addr-postcode": "92380",
+        "addr-city": null,
+        "website": "https://www.franprix.fr/magasins/1520"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2039622, 48.8507739]
+      },
+      "properties": {
+        "osm_id": 2677682336,
+        "osm_type": "node",
+        "osm_timestamp": "2026-08-11T08:41:24Z",
+        "osm_version": "7",
+        "name": "Carrefour Express",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1941708, 48.8616555]
+      },
+      "properties": {
+        "osm_id": 2682022527,
+        "osm_type": "node",
+        "osm_timestamp": "2026-10-10T10:37:37Z",
+        "osm_version": "23",
+        "name": "E. Leclerc Rueil",
+        "shop": "supermarket",
+        "addr-housenumber": "58",
+        "addr-street": "Avenue de Fouilleuse",
+        "addr-postcode": "92500",
+        "addr-city": "Rueil-Malmaison",
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2289058, 48.8817112]
+      },
+      "properties": {
+        "osm_id": 2709391115,
+        "osm_type": "node",
+        "osm_timestamp": "2025-10-12T09:31:38Z",
+        "osm_version": "2",
+        "name": "Alimentation Générale",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2305741, 48.8819335]
+      },
+      "properties": {
+        "osm_id": 2709391123,
+        "osm_type": "node",
+        "osm_timestamp": "2014-03-09T18:05:05Z",
+        "osm_version": "1",
+        "name": null,
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.236147, 48.8793042]
+      },
+      "properties": {
+        "osm_id": 2818180640,
+        "osm_type": "node",
+        "osm_timestamp": "2019-12-20T20:10:51Z",
+        "osm_version": "4",
+        "name": "Miranda Services",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2054972, 48.886548]
+      },
+      "properties": {
+        "osm_id": 2957176064,
+        "osm_type": "node",
+        "osm_timestamp": "2025-09-30T17:38:49Z",
+        "osm_version": "5",
+        "name": "CocciMarket",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2306436, 48.8898899]
+      },
+      "properties": {
+        "osm_id": 3020202355,
+        "osm_type": "node",
+        "osm_timestamp": "2017-12-06T16:28:05Z",
+        "osm_version": "2",
+        "name": "Fruit et Légume",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2211968, 48.856601]
+      },
+      "properties": {
+        "osm_id": 3037538191,
+        "osm_type": "node",
+        "osm_timestamp": "2026-08-30T18:42:09Z",
+        "osm_version": "9",
+        "name": "Franprix",
+        "shop": "convenience",
+        "addr-housenumber": "76",
+        "addr-street": "Boulevard Senard",
+        "addr-postcode": "92210",
+        "addr-city": null,
+        "website": "https://www.franprix.fr/magasins/1829"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2215414, 48.8529768]
+      },
+      "properties": {
+        "osm_id": 3044599817,
+        "osm_type": "node",
+        "osm_timestamp": "2025-07-31T09:20:16Z",
+        "osm_version": "6",
+        "name": "ATOO",
+        "shop": "supermarket",
+        "addr-housenumber": "14",
+        "addr-street": "Avenue Bernard Palissy",
+        "addr-postcode": "92210",
+        "addr-city": "Saint-Cloud",
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2115571, 48.8633336]
+      },
+      "properties": {
+        "osm_id": 3075147029,
+        "osm_type": "node",
+        "osm_timestamp": "2026-01-10T10:52:19Z",
+        "osm_version": "8",
+        "name": "Carrefour City",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://www.carrefour.fr/magasin/city-suresnes"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2094609, 48.8630556]
+      },
+      "properties": {
+        "osm_id": 3075148138,
+        "osm_type": "node",
+        "osm_timestamp": "2025-11-09T16:46:22Z",
+        "osm_version": "3",
+        "name": "Super Suresnes",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.195881, 48.8895713]
+      },
+      "properties": {
+        "osm_id": 3140771721,
+        "osm_type": "node",
+        "osm_timestamp": "2015-12-20T00:02:26Z",
+        "osm_version": "3",
+        "name": null,
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2340221, 48.8860526]
+      },
+      "properties": {
+        "osm_id": 3175598981,
+        "osm_type": "node",
+        "osm_timestamp": "2023-08-09T07:19:46Z",
+        "osm_version": "6",
+        "name": "AZMarket",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2313709, 48.8889811]
+      },
+      "properties": {
+        "osm_id": 3175606038,
+        "osm_type": "node",
+        "osm_timestamp": "2024-11-04T15:01:14Z",
+        "osm_version": "3",
+        "name": "Alimentation Marcelin Berthelot",
+        "shop": "convenience",
+        "addr-housenumber": "18",
+        "addr-street": "Rue Marcelin Berthelot",
+        "addr-postcode": "92800",
+        "addr-city": "Puteaux",
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1949199, 48.8712403]
+      },
+      "properties": {
+        "osm_id": 3201703515,
+        "osm_type": "node",
+        "osm_timestamp": "2026-08-30T18:42:09Z",
+        "osm_version": "13",
+        "name": "Franprix",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://www.franprix.fr/magasins/4787"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.238534, 48.8815114]
+      },
+      "properties": {
+        "osm_id": 3223858256,
+        "osm_type": "node",
+        "osm_timestamp": "2024-11-09T17:14:22Z",
+        "osm_version": "6",
+        "name": "L'épicerie de monde",
+        "shop": "deli",
+        "addr-housenumber": "132",
+        "addr-street": "Rue Jean Jaurès",
+        "addr-postcode": "92800",
+        "addr-city": "Puteaux",
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2384482, 48.8846014]
+      },
+      "properties": {
+        "osm_id": 3517263237,
+        "osm_type": "node",
+        "osm_timestamp": "2023-10-28T13:05:17Z",
+        "osm_version": "11",
+        "name": "Naturenville",
+        "shop": "convenience",
+        "addr-housenumber": "110",
+        "addr-street": "Rue de la République",
+        "addr-postcode": "92800",
+        "addr-city": "Puteaux",
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2326111, 48.8845434]
+      },
+      "properties": {
+        "osm_id": 3643120040,
+        "osm_type": "node",
+        "osm_timestamp": "2018-03-31T21:02:56Z",
+        "osm_version": "2",
+        "name": "Alimentation Générale",
+        "shop": "convenience",
+        "addr-housenumber": "1",
+        "addr-street": "Rue Charles Lorilleux",
+        "addr-postcode": "92800",
+        "addr-city": "Puteaux",
+        "website": "https://www.epicerie-corse-paris.fr"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2272541, 48.8681011]
+      },
+      "properties": {
+        "osm_id": 3663527951,
+        "osm_type": "node",
+        "osm_timestamp": "2025-09-22T19:59:46Z",
+        "osm_version": "14",
+        "name": "Naturalia",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://magasins.naturalia.fr/naturalia/fr/store/france/ile-de-france/hauts-de-seine/suresnes/bagatelle-suresnes/3879"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.227439, 48.8679383]
+      },
+      "properties": {
+        "osm_id": 3663527953,
+        "osm_type": "node",
+        "osm_timestamp": "2026-08-29T14:01:29Z",
+        "osm_version": "12",
+        "name": "Monoprix",
+        "shop": "supermarket",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://www.monoprix.fr/1645.html"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2284295, 48.8756102]
+      },
+      "properties": {
+        "osm_id": 3877278811,
+        "osm_type": "node",
+        "osm_timestamp": "2025-09-22T19:59:46Z",
+        "osm_version": "11",
+        "name": "U Express",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2271913, 48.8725252]
+      },
+      "properties": {
+        "osm_id": 3950812703,
+        "osm_type": "node",
+        "osm_timestamp": "2026-08-30T18:42:09Z",
+        "osm_version": "8",
+        "name": "Franprix",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://www.franprix.fr/magasins/5743"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2259669, 48.8727149]
+      },
+      "properties": {
+        "osm_id": 4141678536,
+        "osm_type": "node",
+        "osm_timestamp": "2025-09-22T19:59:46Z",
+        "osm_version": "7",
+        "name": "Épicerie Carnot",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2337197, 48.8746682]
+      },
+      "properties": {
+        "osm_id": 4290707793,
+        "osm_type": "node",
+        "osm_timestamp": "2024-04-27T10:38:12Z",
+        "osm_version": "4",
+        "name": "Suresnes Happy Market",
+        "shop": "convenience",
+        "addr-housenumber": "21",
+        "addr-street": "Avenue Georges Pompidou",
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2271707, 48.8686115]
+      },
+      "properties": {
+        "osm_id": 4405645637,
+        "osm_type": "node",
+        "osm_timestamp": "2025-11-02T20:49:08Z",
+        "osm_version": "7",
+        "name": "Asian store",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2272858, 48.8686846]
+      },
+      "properties": {
+        "osm_id": 4405645640,
+        "osm_type": "node",
+        "osm_timestamp": "2025-10-26T06:46:05Z",
+        "osm_version": "4",
+        "name": "Suresnes fraicheur",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1929015, 48.8626977]
+      },
+      "properties": {
+        "osm_id": 4406017777,
+        "osm_type": "node",
+        "osm_timestamp": "2026-08-29T17:23:19Z",
+        "osm_version": "7",
+        "name": "Naturalia",
+        "shop": "supermarket",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://magasins.naturalia.fr/naturalia/fr/store/france/ile-de-france/hauts-de-seine/rueil-malmaison/rueil-fouilleuse/4979"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2230103, 48.8760338]
+      },
+      "properties": {
+        "osm_id": 4448381563,
+        "osm_type": "node",
+        "osm_timestamp": "2023-10-24T15:49:44Z",
+        "osm_version": "7",
+        "name": "Chez Abdel",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.238536, 48.8824257]
+      },
+      "properties": {
+        "osm_id": 4472648918,
+        "osm_type": "node",
+        "osm_timestamp": "2024-11-09T17:14:16Z",
+        "osm_version": "8",
+        "name": "Bio C' Bon",
+        "shop": "supermarket",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2268665, 48.8881651]
+      },
+      "properties": {
+        "osm_id": 5268212087,
+        "osm_type": "node",
+        "osm_timestamp": "2025-09-22T19:59:46Z",
+        "osm_version": "6",
+        "name": "Déstockage Alimentaire",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2249567, 48.8880196]
+      },
+      "properties": {
+        "osm_id": 5268212090,
+        "osm_type": "node",
+        "osm_timestamp": "2025-06-23T15:28:57Z",
+        "osm_version": "2",
+        "name": "SMS Exoland",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2244255, 48.8882826]
+      },
+      "properties": {
+        "osm_id": 5268212094,
+        "osm_type": "node",
+        "osm_timestamp": "2021-10-30T09:52:33Z",
+        "osm_version": "2",
+        "name": "El Ness",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2231439, 48.8680146]
+      },
+      "properties": {
+        "osm_id": 6221937570,
+        "osm_type": "node",
+        "osm_timestamp": "2025-09-22T19:59:46Z",
+        "osm_version": "7",
+        "name": "Rapid Market",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.23598, 48.8795883]
+      },
+      "properties": {
+        "osm_id": 6815782468,
+        "osm_type": "node",
+        "osm_timestamp": "2026-08-07T16:57:07Z",
+        "osm_version": "8",
+        "name": "CocciMarket",
+        "shop": "convenience",
+        "addr-housenumber": "3",
+        "addr-street": "Rue des Bas Rogers",
+        "addr-postcode": "92150",
+        "addr-city": null,
+        "website": "https://www.coccinelle.fr/magasin/suresnes"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2359974, 48.8804353]
+      },
+      "properties": {
+        "osm_id": 7004135642,
+        "osm_type": "node",
+        "osm_timestamp": "2026-09-01T13:09:14Z",
+        "osm_version": "9",
+        "name": "Intermarché",
+        "shop": "supermarket",
+        "addr-housenumber": "19",
+        "addr-street": "Rue Eugène Eichenberger",
+        "addr-postcode": "92800",
+        "addr-city": "Puteaux",
+        "website": "https://www.intermarche.com/magasins/08214/puteaux-92800/infos-pratiques"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.21448, 48.8650505]
+      },
+      "properties": {
+        "osm_id": 7149725546,
+        "osm_type": "node",
+        "osm_timestamp": "2026-01-04T18:42:15Z",
+        "osm_version": "5",
+        "name": "Coccinelle Express",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2103246, 48.8631594]
+      },
+      "properties": {
+        "osm_id": 7178996300,
+        "osm_type": "node",
+        "osm_timestamp": "2026-09-03T09:18:28Z",
+        "osm_version": "14",
+        "name": "Biocoop",
+        "shop": "supermarket",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://www.facebook.com/biocoopsuresnesjaures/"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2047041, 48.8644104]
+      },
+      "properties": {
+        "osm_id": 7238515314,
+        "osm_type": "node",
+        "osm_timestamp": "2025-02-01T16:33:09Z",
+        "osm_version": "3",
+        "name": "Votre Marché",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2191377, 48.8643328]
+      },
+      "properties": {
+        "osm_id": 7339991150,
+        "osm_type": "node",
+        "osm_timestamp": "2025-11-09T16:46:37Z",
+        "osm_version": "6",
+        "name": "TotalEnergies",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2220601, 48.8614872]
+      },
+      "properties": {
+        "osm_id": 7340165351,
+        "osm_type": "node",
+        "osm_timestamp": "2025-09-22T19:59:46Z",
+        "osm_version": "7",
+        "name": "Franprix",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://www.franprix.fr/magasins/4279"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1966766, 48.8807412]
+      },
+      "properties": {
+        "osm_id": 7389369540,
+        "osm_type": "node",
+        "osm_timestamp": "2024-08-13T08:25:21Z",
+        "osm_version": "3",
+        "name": "Franprix",
+        "shop": "convenience",
+        "addr-housenumber": "52",
+        "addr-street": "Rue Gambetta",
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://www.franprix.fr/magasins/2204"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1926552, 48.8727924]
+      },
+      "properties": {
+        "osm_id": 7389688996,
+        "osm_type": "node",
+        "osm_timestamp": "2025-09-22T19:59:48Z",
+        "osm_version": "7",
+        "name": "Les Bons Raisins",
+        "shop": "convenience",
+        "addr-housenumber": "10",
+        "addr-street": "Place des Maîtres Vignerons",
+        "addr-postcode": "92500",
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2377616, 48.8775341]
+      },
+      "properties": {
+        "osm_id": 7771147043,
+        "osm_type": "node",
+        "osm_timestamp": "2025-12-08T20:04:20Z",
+        "osm_version": "8",
+        "name": "G20",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://www.supermarchesg20.com/nos-magasins/supermarche-g20-216"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2122447, 48.8630345]
+      },
+      "properties": {
+        "osm_id": 8736545584,
+        "osm_type": "node",
+        "osm_timestamp": "2024-03-01T10:28:51Z",
+        "osm_version": "4",
+        "name": "Au fin gourmet",
+        "shop": "deli",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1991239, 48.8718088]
+      },
+      "properties": {
+        "osm_id": 8829732010,
+        "osm_type": "node",
+        "osm_timestamp": "2024-07-12T08:31:22Z",
+        "osm_version": "6",
+        "name": "La Vie Claire",
+        "shop": "convenience",
+        "addr-housenumber": "76",
+        "addr-street": "Rue des Bons Raisins",
+        "addr-postcode": "92500",
+        "addr-city": "Rueil-Malmaison",
+        "website": "https://magasins.lavieclaire.com/lavieclaire/fr/store/france/ile-de-france/hauts-de-seine/rueil-malmaison/rueil-malmaison-bons-raisins/19228"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2248936, 48.8850494]
+      },
+      "properties": {
+        "osm_id": 9221808089,
+        "osm_type": "node",
+        "osm_timestamp": "2026-10-17T09:27:01Z",
+        "osm_version": "7",
+        "name": "Bio C' Bon",
+        "shop": "convenience",
+        "addr-housenumber": "155",
+        "addr-street": "Avenue du Président Wilson",
+        "addr-postcode": "92800",
+        "addr-city": "Puteaux",
+        "website": "https://bio-c-bon.eu/fr/nos_magasins/bio-c-bon-puteaux-wilson"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2275464, 48.8884773]
+      },
+      "properties": {
+        "osm_id": 9355469654,
+        "osm_type": "node",
+        "osm_timestamp": "2025-06-23T15:28:57Z",
+        "osm_version": "2",
+        "name": "Chez Baba",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2270518, 48.8694238]
+      },
+      "properties": {
+        "osm_id": 9411229459,
+        "osm_type": "node",
+        "osm_timestamp": "2025-12-13T12:09:27Z",
+        "osm_version": "3",
+        "name": "Piccola Terra",
+        "shop": "deli",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2375295, 48.8813294]
+      },
+      "properties": {
+        "osm_id": 9449730210,
+        "osm_type": "node",
+        "osm_timestamp": "2026-08-29T17:23:19Z",
+        "osm_version": "5",
+        "name": "Naturalia",
+        "shop": "supermarket",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://magasins.naturalia.fr/naturalia/fr/store/france/ile-de-france/hauts-de-seine/puteaux/puteaux/4028"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2233685, 48.8881615]
+      },
+      "properties": {
+        "osm_id": 9532257109,
+        "osm_type": "node",
+        "osm_timestamp": "2026-09-02T17:29:34Z",
+        "osm_version": "6",
+        "name": "Aldi",
+        "shop": "supermarket",
+        "addr-housenumber": "27",
+        "addr-street": "Rue de la Paix",
+        "addr-postcode": "92000",
+        "addr-city": "Nanterre",
+        "website": "https://www.aldi.fr/magasins-et-horaires-d-ouverture.html/l/nanterre/27-rue-de-la-paix/3436269"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1989022, 48.8729685]
+      },
+      "properties": {
+        "osm_id": 9746971760,
+        "osm_type": "node",
+        "osm_timestamp": "2026-04-10T11:00:54Z",
+        "osm_version": "9",
+        "name": "Carrefour Market",
+        "shop": "supermarket",
+        "addr-housenumber": "59",
+        "addr-street": "Rue des Bons Raisins",
+        "addr-postcode": "92500",
+        "addr-city": "Rueil-Malmaison",
+        "website": "https://www.carrefour.fr/magasin/market-rueil-malmaison-arsenal"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1962032, 48.8896612]
+      },
+      "properties": {
+        "osm_id": 9944384318,
+        "osm_type": "node",
+        "osm_timestamp": "2025-06-23T15:28:57Z",
+        "osm_version": "3",
+        "name": "Paristanbul",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2319084, 48.8724743]
+      },
+      "properties": {
+        "osm_id": 11184027949,
+        "osm_type": "node",
+        "osm_timestamp": "2026-09-03T16:17:50Z",
+        "osm_version": "3",
+        "name": "le marché d'à côté",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://www.franprix.fr/magasins/2251/suresnes-4-rue-salomon-de-rothschild"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1903563, 48.8574294]
+      },
+      "properties": {
+        "osm_id": 11343144823,
+        "osm_type": "node",
+        "osm_timestamp": "2023-11-12T10:20:38Z",
+        "osm_version": "1",
+        "name": "Supermarché Diagonal",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2252652, 48.8700065]
+      },
+      "properties": {
+        "osm_id": 11498087625,
+        "osm_type": "node",
+        "osm_timestamp": "2026-09-01T17:41:11Z",
+        "osm_version": "6",
+        "name": "Lidl",
+        "shop": "supermarket",
+        "addr-housenumber": "16",
+        "addr-street": "Rue Desbassayns de Richemont",
+        "addr-postcode": "92150",
+        "addr-city": "Suresnes",
+        "website": "https://www.lidl.fr/s/fr-FR/supermarches/suresnes/rue-desbassayns-de-richemont-16"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2217021, 48.8508906]
+      },
+      "properties": {
+        "osm_id": 11951866730,
+        "osm_type": "node",
+        "osm_timestamp": "2026-09-01T12:28:09Z",
+        "osm_version": "4",
+        "name": "Intermarché",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://www.intermarche.com/magasins/09616/saint-cloud-92210/infos-pratiques"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2282034, 48.8861347]
+      },
+      "properties": {
+        "osm_id": 12030781640,
+        "osm_type": "node",
+        "osm_timestamp": "2026-10-12T19:52:56Z",
+        "osm_version": "6",
+        "name": "Super U",
+        "shop": "supermarket",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": "https://www.magasins-u.com/magasin/superu-puteaux"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1993576, 48.8871409]
+      },
+      "properties": {
+        "osm_id": 12070155869,
+        "osm_type": "node",
+        "osm_timestamp": "2025-09-07T11:52:50Z",
+        "osm_version": "2",
+        "name": "G20",
+        "shop": "supermarket",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1990954, 48.8682747]
+      },
+      "properties": {
+        "osm_id": 12502513494,
+        "osm_type": "node",
+        "osm_timestamp": "2025-01-14T21:58:52Z",
+        "osm_version": "2",
+        "name": "TotalEnergies",
+        "shop": "convenience",
+        "addr-housenumber": "119",
+        "addr-street": "Avenue du Président Pompidou",
+        "addr-postcode": "92500",
+        "addr-city": "Rueil-Malmaison",
+        "website": "https://locator.totalenergies.com/fr_FR/NF006489?type=FUELING"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1908923, 48.8681297]
+      },
+      "properties": {
+        "osm_id": 14102674268,
+        "osm_type": "node",
+        "osm_timestamp": "2026-08-18T10:15:09Z",
+        "osm_version": "1",
+        "name": "Bonjour",
+        "shop": "convenience",
+        "addr-housenumber": null,
+        "addr-street": null,
+        "addr-postcode": null,
+        "addr-city": null,
+        "website": null
+      }
+    }
+  ],
+  "markets": [
+    {
+      "id": "osm-way-70961879",
+      "name": "Marché Caron",
+      "address": "Place Jean Jaurès, 92150 Suresnes",
+      "days": "Jeudi et dimanche matin",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [2.2103413, 48.8638266],
+            [2.2102394, 48.8638528],
+            [2.2100565, 48.8639008],
+            [2.2100507, 48.8638909],
+            [2.2099807, 48.863909],
+            [2.2099935, 48.8639302],
+            [2.2100077, 48.8639265],
+            [2.2100174, 48.8639428],
+            [2.2100032, 48.8639465],
+            [2.2100315, 48.863994],
+            [2.2100648, 48.8640501],
+            [2.210079, 48.8640464],
+            [2.210086, 48.8640581],
+            [2.2100887, 48.8640626],
+            [2.2100745, 48.8640663],
+            [2.2101591, 48.8642086],
+            [2.2101733, 48.8642049],
+            [2.210183, 48.8642211],
+            [2.2101688, 48.8642248],
+            [2.2102256, 48.8643201],
+            [2.2102398, 48.8643164],
+            [2.2102494, 48.8643325],
+            [2.2102352, 48.8643362],
+            [2.2102476, 48.8643569],
+            [2.2103654, 48.8643261],
+            [2.2103598, 48.8643167],
+            [2.2103855, 48.8643101],
+            [2.2103908, 48.8643193],
+            [2.2104812, 48.8642956],
+            [2.2105579, 48.8642759],
+            [2.2105521, 48.8642665],
+            [2.2105778, 48.8642597],
+            [2.2106062, 48.8642522],
+            [2.2106115, 48.8642615],
+            [2.2107777, 48.8642179],
+            [2.2107721, 48.8642088],
+            [2.2107973, 48.8642021],
+            [2.2108029, 48.8642113],
+            [2.2109232, 48.8641798],
+            [2.2108454, 48.864048],
+            [2.2108314, 48.8640516],
+            [2.2108218, 48.8640352],
+            [2.2108357, 48.8640315],
+            [2.2107521, 48.8638902],
+            [2.2107381, 48.8638938],
+            [2.2107282, 48.8638771],
+            [2.2107422, 48.8638735],
+            [2.2106815, 48.8637707],
+            [2.2106676, 48.8637743],
+            [2.2106577, 48.8637576],
+            [2.2106719, 48.8637541],
+            [2.2106596, 48.8637333],
+            [2.2105908, 48.8637512],
+            [2.2105966, 48.863761],
+            [2.2103413, 48.8638266]
+          ]
+        ]
+      },
+      "osm_url": "https://www.openstreetmap.org/way/70961879",
+      "osm_updated": "2024-01-07T20:12:58Z",
+      "source_url": "https://www.suresnes-tourisme.com/un-samedi-au-marche.html"
+    },
+    {
+      "id": "osm-node-2364399609",
+      "name": "Marché Zola",
+      "address": "Place du Général Leclerc, 92150 Suresnes",
+      "days": "Mercredi et samedi matin",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2265654, 48.869362]
+      },
+      "osm_url": "https://www.openstreetmap.org/node/2364399609",
+      "osm_updated": "2016-10-15T14:07:42Z",
+      "source_url": "https://www.suresnes-tourisme.com/un-samedi-au-marche.html"
+    }
+  ]
+}
