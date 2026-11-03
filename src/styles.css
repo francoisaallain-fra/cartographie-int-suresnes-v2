@@ -1712,7 +1712,7 @@ button.legend-item[aria-pressed="false"] {
   margin-left: 10px;
   margin-right: 4px;
   position: relative;
-  border: 3px dotted #ffff00;
+  border: 2px dashed #ffff00;
   background: transparent;
   border-radius: 2px;
 }

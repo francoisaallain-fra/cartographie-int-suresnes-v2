@@ -80,6 +80,7 @@ export async function start() {
     });
     L.geoJSON(runtime.data.commune, {
       style: {
+        className: "city-boundary",
         color: "#effff1",
         weight: 2,
         dashArray: "5 5",
@@ -140,8 +141,8 @@ export async function start() {
         style: {
           className: "office-retention-outline",
           color: officeRetentionColors.outline,
-          weight: 5,
-          dashArray: "1 10",
+          weight: 2,
+          dashArray: "5 5",
           lineCap: "round",
           opacity: 1,
           fill: false,
@@ -155,8 +156,8 @@ export async function start() {
         style: {
           className: "office-retention-center",
           color: officeRetentionColors.center,
-          weight: 4,
-          dashArray: "1 10",
+          weight: 2,
+          dashArray: "5 5",
           lineCap: "round",
           opacity: 1,
           fill: false,

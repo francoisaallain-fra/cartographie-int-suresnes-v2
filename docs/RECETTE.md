@@ -134,3 +134,7 @@ MOS Activités passe au bleu électrique `#0055ff` avec son opacité initiale de
 - Une surface inconnue reste visible sans filtre, puis est exclue et comptée quand une borne est renseignée.
 - Le filtre ne réactive pas une couche masquée, ne déplace pas la carte et ne modifie ni les cinq immeubles ciblés ni leur rayon. Le bouton Vue ville ne supprime pas les bornes de surface.
 - Contrôler clavier et mobile à 390 px, sans débordement horizontal. Les tests Node couvrent les bornes inclusives, les données manquantes, les doublons, l’invalidation des revues et l’addition des seuls étages distincts.
+
+## Contour de maintien aligné sur la limite communale · 3 novembre 2026
+
+Le contour de maintien reprend l’épaisseur de 2 px, les tirets de 5 px espacés de 5 px, les extrémités et jointures arrondies de la frontière communale. Sa couleur reste jaune fluo `#ffff00`, sans remplissage. Les cinq géométries PLU restent inchangées. La recette navigateur compare les attributs SVG des deux contours et conserve les vérifications d’opacité et de visibilité.

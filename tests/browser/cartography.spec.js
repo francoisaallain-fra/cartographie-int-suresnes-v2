@@ -387,7 +387,7 @@ for (const viewport of [
         .toBe(true);
   });
 }
-test("office retention has a thicker fluorescent yellow dotted boundary", async ({
+test("office retention matches the city boundary stroke in fluorescent yellow", async ({
   page,
 }) => {
   const outline = page
@@ -404,10 +404,23 @@ test("office retention has a thicker fluorescent yellow dotted boundary", async 
   await expect(center).toHaveAttribute("fill", "none");
   await expect(outline).toHaveAttribute("stroke", "#ffff00");
   await expect(center).toHaveAttribute("stroke", "#ffff00");
-  await expect(outline).toHaveAttribute("stroke-width", "5");
-  await expect(center).toHaveAttribute("stroke-width", "4");
-  await expect(outline).toHaveAttribute("stroke-dasharray", /1[ ,]10/);
-  await expect(center).toHaveAttribute("stroke-dasharray", /1[ ,]10/);
+  await expect(outline).toHaveAttribute("stroke-width", "2");
+  await expect(center).toHaveAttribute("stroke-width", "2");
+  await expect(outline).toHaveAttribute("stroke-dasharray", /5[ ,]5/);
+  await expect(center).toHaveAttribute("stroke-dasharray", /5[ ,]5/);
+  const city = page.locator("path.city-boundary").first();
+  for (const attribute of [
+    "stroke-width",
+    "stroke-dasharray",
+    "stroke-linecap",
+    "stroke-linejoin",
+    "fill",
+  ]) {
+    await expect(center).toHaveAttribute(
+      attribute,
+      await city.getAttribute(attribute),
+    );
+  }
   await expect(outline).not.toHaveClass(/leaflet-interactive/);
   await expect(center).toHaveClass(/leaflet-interactive/);
   await page
