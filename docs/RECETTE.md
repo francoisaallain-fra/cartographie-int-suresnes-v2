@@ -120,3 +120,7 @@ Les cinq pastilles « Immeubles ciblés » utilisent maintenant la même pointe 
 ## Palette et bureaux à louer · 3 novembre 2026
 
 MOS Activités passe au bleu électrique `#0055ff` avec son opacité initiale de 50 %. Le maintien des surfaces de bureau utilise un liseré jaune fluo `#ffff00` de 5 px, pointillé et sans remplissage. Les 16 bureaux à louer sont bleus avec un point blanc de 5 px ; le nombre d’annonces reste dans la fiche. Le calcul et la mention du repérage gare/maintien sont retirés de cette couche. Une migration efface une seule fois ses anciennes couleurs enregistrées sans toucher aux bureaux ciblés ; les nouveaux choix individuels persistent ensuite. Les contrôles portent sur cette migration, les marqueurs, les fiches, les styles et les parcours existants.
+
+## Nouveau relevé BureauxLocaux · 3 novembre 2026
+
+57 annonces uniques, dont 27 conservées à 19 adresses, 29 sans adresse précise et 1 commerce exclus. Le journal donne les identifiants, motifs, adresses affichées et liens des exclusions. Les tests réconcilient les 57 identifiants avec le TSV, interdisent un commerce dans la couche, contrôlent les coordonnées dans Suresnes et les quatre nouvelles annonces. La recette navigateur vérifie la liste des trois nouvelles adresses, leurs liens et l’avertissement de plage 5–7 rue Frédéric Clavel. Les 19 pastilles conservent le bleu et le point blanc ; le ciblage gare/maintien reste absent de cette couche.

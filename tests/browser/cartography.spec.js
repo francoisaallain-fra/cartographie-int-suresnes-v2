@@ -243,19 +243,23 @@ test("rental listings have their own layer and linked popup", async ({
   const toggle = page.locator("#layer-rentalOffices");
   await expect(toggle).toBeChecked();
   const marker = page.locator(".map-pin.rentalOffice");
-  await expect(marker).toHaveCount(16);
-  await expect(marker.locator(".address-pin-shape")).toHaveCount(16);
-  await expect(marker.locator(".rental-pin-dot")).toHaveCount(16);
+  await expect(marker).toHaveCount(rentalOffices.length);
+  await expect(marker.locator(".address-pin-shape")).toHaveCount(
+    rentalOffices.length,
+  );
+  await expect(marker.locator(".rental-pin-dot")).toHaveCount(
+    rentalOffices.length,
+  );
   await expect(marker.locator(".rental-pin-dot").first()).toHaveCSS(
     "background-color",
     "rgb(255, 255, 255)",
   );
   expect(await marker.locator(".address-pin-label").allTextContents()).toEqual(
-    Array(16).fill(""),
+    Array(rentalOffices.length).fill(""),
   );
   await expect(
     page.locator('.map-pin.rentalOffice .pin-disc[style*="#2376b7"]'),
-  ).toHaveCount(16);
+  ).toHaveCount(rentalOffices.length);
   await expect(marker.first()).toHaveCSS("margin-left", "-1px");
   await expect(marker.first()).toHaveCSS("margin-top", "-39px");
   await expect(
@@ -272,7 +276,7 @@ test("rental listings have their own layer and linked popup", async ({
   await toggle.uncheck();
   await expect(marker).toHaveCount(0);
   await toggle.check();
-  await expect(marker).toHaveCount(16);
+  await expect(marker).toHaveCount(rentalOffices.length);
   await page.locator('[data-layer-id="rentalOffices"] .layer-expand').click();
   await page.locator(".rental-address-list summary").click();
   await page.locator("[data-rental-id]").first().click();
@@ -285,11 +289,41 @@ test("rental listings have their own layer and linked popup", async ({
   await expect(page.locator(".leaflet-popup-content")).not.toContainText(
     "Repérage vert",
   );
+  await expect(page.locator(".leaflet-popup-content")).toContainText(
+    "03/11/2026",
+  );
   await expect(
     page.locator(
       ".leaflet-popup-content a[href*='bureauxlocaux.com/annonce/']",
     ),
   ).toHaveCount(1);
+});
+test("refreshed rentals expose the new addresses and all four new listings", async ({
+  page,
+}) => {
+  await page.locator('[data-layer-id="rentalOffices"] .layer-expand').click();
+  await expect(page.locator('[data-layer-id="rentalOffices"]')).toContainText(
+    "27 annonces · 19 adresses",
+  );
+  await page.locator(".rental-address-list summary").click();
+  for (const [address, ids] of [
+    ["30 Rue Pasteur", ["43005791", "36749298"]],
+    ["24 Rue des Moulineaux", ["38689730"]],
+    ["7 Rue Frédéric Clavel", ["38262835"]],
+  ]) {
+    await page.locator("[data-rental-id]").filter({ hasText: address }).click();
+    await expect(page.locator(".leaflet-popup:visible")).toHaveCount(1);
+    for (const id of ids)
+      await expect(
+        page.locator(
+          `.leaflet-popup:visible .leaflet-popup-content a[href$="--${id}"]`,
+        ),
+      ).toHaveCount(1);
+    if (address.startsWith("7 "))
+      await expect(
+        page.locator(".leaflet-popup:visible .leaflet-popup-content"),
+      ).toContainText("Plage de numéros : point représentatif au numéro 7");
+  }
 });
 for (const viewport of [
   { width: 1440, height: 900 },
@@ -453,7 +487,7 @@ test("PLU starts hidden and each office marker keeps its own chosen color", asyn
   ).toHaveCount(1);
   await expect(
     page.locator('.map-pin.rentalOffice .pin-disc[style*="#2376b7"]'),
-  ).toHaveCount(14);
+  ).toHaveCount(rentalOffices.length - 2);
   await page.reload();
   await expect(page.locator("#loading")).toBeHidden();
   await expect(
@@ -483,7 +517,7 @@ test("previous rental colors reset once without erasing targeted-office colors",
   await expect(page.locator("#loading")).toBeHidden();
   await expect(
     page.locator('.map-pin.rentalOffice .pin-disc[style*="#2376b7"]'),
-  ).toHaveCount(16);
+  ).toHaveCount(rentalOffices.length);
   await expect(
     page.locator('.map-pin.office .pin-disc[style*="#8844ff"]'),
   ).toHaveCount(1);

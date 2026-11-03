@@ -213,14 +213,67 @@ test("malformed data fails with an actionable dataset name", () =>
 test("rental-office snapshot maps numbered addresses without hiding exclusions", () => {
   const data = read("rental-offices.geojson");
   const quality = read("rental-offices-quality.json");
-  assert.equal(data.features.length, 16);
+  assert.equal(data.features.length, 19);
   assert.equal(
     data.features.reduce((n, f) => n + f.properties.listings.length, 0),
-    23,
+    27,
   );
-  assert.equal(quality.cards_seen, 53);
+  assert.equal(quality.cards_seen, 57);
   assert.equal(quality.excluded.length, 30);
-  assert.equal(new Set(data.features.map((f) => f.properties.ban_id)).size, 16);
+  assert.equal(quality.heading_count, quality.cards_seen);
+  assert.equal(quality.mapped_listings, 27);
+  assert.equal(quality.mapped_address_points, 19);
+  assert.equal(quality.retrieved_at, "2026-11-03");
+  assert.equal(
+    new URL(quality.source_page).searchParams.get("location_type"),
+    "city",
+  );
+  const source = fs.readFileSync(
+    "data-source/bureauxlocaux-2026-11-03.tsv",
+    "utf8",
+  );
+  assert.equal(
+    createHash("sha256").update(source).digest("hex"),
+    quality.source_sha256,
+  );
+  const sourceIds = source
+    .trim()
+    .split("\n")
+    .slice(1)
+    .map((row) => row.split("\t")[0]);
+  const mapped = data.features.flatMap((f) => f.properties.listings);
+  const excludedIds = quality.excluded.map((f) => f.id);
+  assert.deepEqual(
+    [...mapped.map((f) => f.id), ...excludedIds].sort(),
+    sourceIds.sort(),
+  );
+  assert.equal(new Set([...mapped.map((f) => f.id), ...excludedIds]).size, 57);
+  assert.equal(
+    quality.excluded.filter((f) => f.reason === "Numéro de rue non publié")
+      .length,
+    29,
+  );
+  assert.deepEqual(
+    quality.excluded
+      .filter((f) => f.reason === "Annonce classée commerce")
+      .map((f) => f.id),
+    ["39776861"],
+  );
+  assert.ok(mapped.every((f) => f.type !== "commerce"));
+  for (const id of ["36749298", "38262835", "38689730", "43005791"])
+    assert.ok(mapped.some((f) => f.id === id));
+  const commune = read("commune.geojson");
+  for (const feature of data.features) {
+    assert.ok(
+      pointInPolygonGeometry(
+        feature.geometry.coordinates,
+        commune.geometry || commune.features[0].geometry,
+      ),
+    );
+    assert.match(feature.properties.name, /^\d+ /);
+    assert.equal(feature.properties.retrieved_at, "2026-11-03");
+  }
+  assert.equal(new Set(data.features.map((f) => f.properties.ban_id)).size, 19);
   assert.ok(
     data.features.every((f) =>
       f.properties.listings.every(
