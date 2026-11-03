@@ -142,3 +142,7 @@ Le contour de maintien reprend l’épaisseur de 2 px, les tirets de 5 px espac�
 ## Immeubles ciblés en violet uni · 3 novembre 2026
 
 Les cinq pastilles ciblées reprennent la couleur de la couche `#d72e83`, sans dégradé ni double couleur. Les anciens choix personnels de cette couche sont réinitialisés une seule fois ; les locations gardent leurs couleurs. La sélection, les rayons et le choix individuel de couleur restent utilisables ; « Couleur initiale » restaure le violet uni. Les informations de proximité dans les fiches ne décrivent plus un repérage vert.
+
+## Commerces alimentaires en rouge clair · 3 novembre 2026
+
+Les épiceries/supérettes utilisent le rouge pâle `#ffc2c2` et les supermarchés le rouge clair `#ff9e9e`. Les pictogrammes sont rouge foncé `#752929` pour rester lisibles sur ces fonds clairs. La carte et les boutons de légende partagent ces couleurs. Les marchés et les autres catégories conservent leurs couleurs.
