@@ -29,7 +29,17 @@ export function popup(f) {
     body += `<p class="popup-notice">Les aménités recensées sont filtrées à ${radiusText()} autour du point d’adresse BAN. L’occupation et la disponibilité de l’immeuble ne sont pas établies.</p>`;
   } else body += row("Catégorie", p.category || p.lines?.join(" · "));
   if (p.market_days) body += row("Jours de marché", p.market_days);
-  if (["grocery", "supermarket", "market"].includes(p.kind)) {
+  if (
+    [
+      "grocery",
+      "supermarket",
+      "market",
+      "produce",
+      "organic",
+      "preparedFood",
+      "stationShop",
+    ].includes(p.kind)
+  ) {
     body += row("Relevé des sources", p.retrieved_at);
     body += row("Dernière modification OSM", p.source_updated_at?.slice(0, 10));
   }
@@ -66,6 +76,11 @@ export function popup(f) {
   if (p.audit) {
     const a = p.audit;
     body += `<div class="audit-popup"><span class="audit-status ${a.doubts.length ? "is-uncertain" : ""}">${escapeHTML(a.status)}</span>`;
+    if (a.uncertainty_1_to_3)
+      body += row(
+        "Incertitude restante",
+        `${a.uncertainty_1_to_3}/3 · indice qualitatif`,
+      );
     if (a.address_checked && a.address_checked !== p.address)
       body += row("Adresse recoupée", a.address_checked);
     if (a.doubts.length)

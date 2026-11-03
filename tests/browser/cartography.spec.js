@@ -3,7 +3,7 @@ import fs from "node:fs";
 import { distanceMeters } from "../../src/geometry.js";
 const foodAmenities = JSON.parse(
   fs.readFileSync("public/data/food-amenities.geojson"),
-).features;
+).features.filter((f) => f.id !== "osm-node-7149725546");
 const radii = JSON.parse(fs.readFileSync("public/data/radii.json"));
 Object.assign(
   radii.offices,
@@ -610,12 +610,12 @@ test("food amenities have independent filters and market source popups", async (
 }) => {
   await page.locator("#layer-neighborhood").check();
   await page.locator('[data-layer-id="neighborhood"] .layer-expand').click();
-  await expect(page.locator(".map-pin.grocery")).toHaveCount(23);
-  await expect(page.locator(".map-pin.supermarket")).toHaveCount(7);
+  await expect(page.locator(".map-pin.grocery")).toHaveCount(6);
+  await expect(page.locator(".map-pin.supermarket")).toHaveCount(16);
   await expect(page.locator(".map-pin.market")).toHaveCount(2);
   for (const [kind, color, count] of [
-    ["grocery", "#ffc2c2", 23],
-    ["supermarket", "#ff9e9e", 7],
+    ["grocery", "#ffc2c2", 6],
+    ["supermarket", "#ff9e9e", 16],
   ]) {
     await expect(
       page.locator(`.map-pin.${kind} .pin-disc[style*="${color}"]`),
@@ -631,7 +631,7 @@ test("food amenities have independent filters and market source popups", async (
 
   await page.locator('[data-category="grocery"]').click();
   await expect(page.locator(".map-pin.grocery")).toHaveCount(0);
-  await expect(page.locator(".map-pin.supermarket")).toHaveCount(7);
+  await expect(page.locator(".map-pin.supermarket")).toHaveCount(16);
   await expect(page.locator(".map-pin.market")).toHaveCount(2);
   await page.locator('[data-category="grocery"]').click();
   await page.locator("#layer-rentalOffices").uncheck();
@@ -658,6 +658,60 @@ test("food amenities have independent filters and market source popups", async (
   const response = await page.request.get("/data/food-amenities.geojson");
   expect(response.ok()).toBe(true);
   expect((await response.json()).features).toHaveLength(32);
+});
+test("reviewed neighborhood filters, names and remaining doubts agree with the map", async ({
+  page,
+}) => {
+  await page.locator("#layer-neighborhood").check();
+  await page.locator('[data-layer-id="neighborhood"] .layer-expand').click();
+  await expect(
+    page.locator('.map-pin[title="Coccinelle Express"]'),
+  ).toHaveCount(0);
+  await expect(page.locator('.map-pin[title="Épicerie Carnot"]')).toHaveCount(
+    0,
+  );
+  await expect(
+    page.locator('.map-pin[title="RC – Alimentation Générale"]'),
+  ).toHaveCount(1);
+  await expect(
+    page.locator(".leaflet-data-neighborhood-markers-pane .audit-question"),
+  ).toHaveCount(6);
+  for (const [kind, count] of [
+    ["produce", 2],
+    ["organic", 2],
+    ["preparedFood", 2],
+    ["stationShop", 1],
+  ]) {
+    await expect(page.locator(`.map-pin.${kind}`)).toHaveCount(count);
+    await page.locator(`[data-category="${kind}"]`).click();
+    await expect(page.locator(`.map-pin.${kind}`)).toHaveCount(0);
+    await expect(page.locator(".map-pin.supermarket")).toHaveCount(16);
+    await page.locator(`[data-category="${kind}"]`).click();
+    await expect(page.locator(`.map-pin.${kind}`)).toHaveCount(count);
+  }
+  for (const [name, expected] of [
+    ["RC – Alimentation Générale", ["33 rue Carnot", "1/3", "03/11/2026"]],
+    [
+      "Fin Gourmet",
+      ["Magasin de plats préparés", "21 rue du Docteur-Marc-Bombiger"],
+    ],
+    [
+      "Biocoop Suresnes Jaurès",
+      ["17 avenue Édouard-Vaillant", "28 avenue Jean-Jaurès", "2/3"],
+    ],
+    ["Votre Marché", ["numéro non confirmé", "3/3", "octobre 2025"]],
+    [
+      "TotalEnergies – Relais Suresnes",
+      ["Station-service avec boutique", "2/3"],
+    ],
+  ]) {
+    await page.locator(`.map-pin[title="${name}"]`).press("Enter");
+    await expect(page.locator(".leaflet-popup-content")).toHaveCount(1);
+    for (const text of expected)
+      await expect(page.locator(".leaflet-popup-content")).toContainText(text);
+    await page.locator(".leaflet-popup-close-button").click();
+    await expect(page.locator(".leaflet-popup-content")).toHaveCount(0);
+  }
 });
 test("rental surface filter uses reviewed totals, inclusive bounds and independent layer controls", async ({
   page,

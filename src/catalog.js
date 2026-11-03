@@ -90,7 +90,7 @@ export const layerSpecs = [
   {
     id: "neighborhood",
     label: "Aménités de quartier",
-    sub: "23 épiceries / supérettes · 7 supermarchés · 2 marchés · boulangeries, thé et pharmacies",
+    sub: "6 épiceries / supérettes · 16 supermarchés · 2 marchés · primeurs, bio, traiteurs, boutique de station, boulangeries, thé et pharmacies",
     icon: "bakery",
     color: colors.bakery,
   },

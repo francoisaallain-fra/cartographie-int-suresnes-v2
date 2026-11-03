@@ -105,6 +105,10 @@ export function layerLegend(id) {
               [{ kind: "grocery" }, "Épiceries / supérettes"],
               [{ kind: "supermarket" }, "Supermarchés"],
               [{ kind: "market" }, "Marchés alimentaires"],
+              [{ kind: "produce" }, "Primeurs"],
+              [{ kind: "organic" }, "Magasins bio"],
+              [{ kind: "preparedFood" }, "Traiteurs / plats préparés"],
+              [{ kind: "stationShop" }, "Stations-service avec boutique"],
               [
                 {
                   kind: "bakery",
@@ -126,6 +130,6 @@ export function layerLegend(id) {
             ]
           : [];
   return entries.length
-    ? `<div class="layer-legend">${entries.map(([p, label]) => legendItem(p, label)).join("")}</div>`
+    ? `<div class="layer-legend">${entries.map(([p, label]) => legendItem(p, label)).join("")}</div>${id === "neighborhood" ? '<p class="transport-scope">Catégories selon les sources et la revue Google Maps du 03/11/2026, sans contrôle de surface de vente. Les pastilles « ? » conservent une réserve expliquée dans leur fiche.</p>' : ""}`
     : "";
 }

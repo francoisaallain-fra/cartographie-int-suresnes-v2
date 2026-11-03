@@ -47,7 +47,7 @@ Construire avec `pnpm build`, puis publier le dossier `dist/` avec le workflow S
 
 ## Alimentation et marchés (3 novembre 2026)
 
-32 points et trois filtres dans la couche Aménités de quartier : 23 épiceries / supérettes, 7 supermarchés et 2 marchés. [Sources, limites, reproduction et recette](docs/ALIMENTATION.md).
+Après revue Google Maps : 31 points alimentaires/marchés, avec filtres distincts pour 6 épiceries/supérettes, 16 supermarchés, 2 primeurs, 2 magasins bio, 2 traiteurs, 1 boutique de station-service et 2 marchés. La couche complète compte 63 aménités, dont 6 avec réserve. [Sources, limites, reproduction et recette](docs/ALIMENTATION.md).
 
 ## BureauxLocaux · relevé communal du 3 novembre 2026
 

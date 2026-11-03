@@ -75,12 +75,17 @@ export function applyAmenityReview(data, review) {
     feature.properties.audit = {
       ...feature.properties.audit,
       date: review.checked_on,
+      uncertainty_1_to_3: entry.uncertainty_1_to_3,
+      address_checked: feature.properties.address,
       status: entry.status,
       doubts: entry.remaining_doubts || [],
       notes: [entry.reason],
       sources: [
         ...(feature.properties.audit?.sources || []),
-        { label: "Google Maps · contrôle du 02/11/2026", url: entry.maps_url },
+        {
+          label: `Google Maps · contrôle du ${review.checked_on.split("-").reverse().join("/")}`,
+          url: entry.maps_url,
+        },
         ...(entry.sources || []),
       ],
     };
@@ -94,6 +99,7 @@ export async function loadDatasets(fetcher = fetch) {
     "radii",
     "radii-extra",
     "amenity-review",
+    "neighborhood-review-2026-11-03",
     "food-amenities-sources",
     "rental-surface-review",
   ];
@@ -111,14 +117,15 @@ export async function loadDatasets(fetcher = fetch) {
     names.map((name, index) => [name, values[index]]),
   );
   applyAmenityReview(data, data["amenity-review"]);
+  applyAmenityReview(data, data["neighborhood-review-2026-11-03"]);
   applyRentalSurfaces(
     data["rental-offices"].features,
     data["rental-surface-review"],
   );
   data.sources.crosscheck = {
     ...data.sources.crosscheck,
-    vintage: "Revue Google Maps et sources officielles du 02/11/2026",
-    note: "19 commerces / activités et 13 pharmacies affichés. Cinq points commerciaux sans boutique suffisamment recoupée sont exclus de l’affichage ; leurs décisions restent dans le fichier de revue. Google Maps ne démontre pas à lui seul l’existence ou l’absence d’une activité.",
+    vintage: "Revues Google Maps des 02 et 03/11/2026",
+    note: "63 aménités de quartier affichées. Cinq points historiques non corroborés et Coccinelle Express, signalé fermé, sont exclus ; six réserves restent visibles. Coordonnées source conservées. Google Maps ne démontre pas à lui seul l’existence ou l’absence d’une activité.",
   };
   data.offices.features.push(...data["offices-extra"].features);
   Object.assign(data.radii.offices, data["radii-extra"].offices);

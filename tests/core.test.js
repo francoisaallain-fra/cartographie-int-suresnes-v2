@@ -299,8 +299,8 @@ test("food amenities are sourced, inside Suresnes and included in radius explora
   const quality = read("food-amenities-quality.json");
   const boundary = data.commune.geometry || data.commune.features[0].geometry;
   assert.deepEqual(quality.counts, { grocery: 23, supermarket: 7, market: 2 });
-  assert.equal(data.neighborhood.features.length, 64);
-  assert.equal(new Set(data.neighborhood.features.map((f) => f.id)).size, 64);
+  assert.equal(data.neighborhood.features.length, 63);
+  assert.equal(new Set(data.neighborhood.features.map((f) => f.id)).size, 63);
   for (const f of food) {
     assert.ok(pointInPolygonGeometry(f.geometry.coordinates, boundary), f.id);
     assert.ok(data.sources[f.properties.source]);

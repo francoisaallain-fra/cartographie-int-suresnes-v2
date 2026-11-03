@@ -3,9 +3,9 @@ import { runtime } from "./state.js";
 export function buildSources() {
   const lines = [
     [
-      "Épiceries, supérettes et supermarchés",
+      "Commerces alimentaires et boutiques",
       "food_osm",
-      "30 commerces alimentaires dans Suresnes ; catégories et adresses selon OSM, compléments sourcés",
+      "29 points commerciaux affichés après revue du 03/11/2026 ; Coccinelle Express signalé fermé exclu. Primeurs, bio, traiteurs et boutique de station distingués",
     ],
     [
       "Marchés alimentaires",
@@ -67,7 +67,7 @@ export function buildSources() {
     [
       "Quartier",
       "crosscheck",
-      "19 commerces / activités affichés après contrôle Google Maps du 02/11/2026 ; 5 points sans boutique recoupée retirés",
+      "63 aménités de quartier affichées ; revues des 02 et 03/11/2026, six réserves conservées et expliquées dans les fiches",
     ],
     [
       "Immeubles ciblés",

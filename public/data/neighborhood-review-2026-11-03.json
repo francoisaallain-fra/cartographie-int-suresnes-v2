@@ -1,0 +1,413 @@
+{
+  "checked_on": "2026-11-03",
+  "method": "Revue manuelle des 23 aménités signalées : fiches et résultats Google Maps rapprochés des points source, adresses, noms et catégories ; Street View pour Votre Marché, sites Biocoop et TotalEnergies pour les divergences. Aucun déplacement de coordonnées. Échelle 1 faible, 2 divergence résiduelle, 3 identification insuffisante : indice qualitatif, pas probabilité statistique.",
+  "rights": "Faits ponctuellement vérifiés et attribués. Aucune photo, aucun avis ni description commerciale reproduits. Les sources externes ne reçoivent pas la licence ODbL des coordonnées OSM.",
+  "entries": [
+    {
+      "dataset": "food-amenities",
+      "id": "osm-node-1191783376",
+      "decision": "keep",
+      "uncertainty_1_to_3": 1,
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=JS%20SUPERETTE%20112%20boulevard%20du%20Mar%C3%A9chal-de-Lattre-de-Tassigny%2C%2092150%20Suresnes",
+      "properties": {
+        "name": "JS SUPERETTE",
+        "address": "112 boulevard du Maréchal-de-Lattre-de-Tassigny, 92150 Suresnes",
+        "address_status": "reported",
+        "kind": "supermarket",
+        "category": "Supermarché"
+      },
+      "status": "Confirmé sur Google Maps · nom, activité et adresse",
+      "remaining_doubts": [],
+      "reason": "Google Maps affiche JS SUPERETTE, catégorie « Supermarché », à cette adresse. Rapprochement avec le point OSM ; coordonnées source conservées."
+    },
+    {
+      "dataset": "food-amenities",
+      "id": "osm-node-1423482169",
+      "decision": "keep",
+      "uncertainty_1_to_3": 1,
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Carrefour%20Express%2071%20bis%20rue%20des%20Bas-Rogers%2C%2092150%20Suresnes",
+      "properties": {
+        "name": "Carrefour Express",
+        "address": "71 bis rue des Bas-Rogers, 92150 Suresnes",
+        "address_status": "reported",
+        "kind": "supermarket",
+        "category": "Supermarché"
+      },
+      "status": "Confirmé sur Google Maps · nom, activité et adresse",
+      "remaining_doubts": [],
+      "reason": "Google Maps affiche Carrefour Express, catégorie « Supermarché », à cette adresse. Rapprochement avec le point OSM ; coordonnées source conservées."
+    },
+    {
+      "dataset": "food-amenities",
+      "id": "osm-node-1423517463",
+      "decision": "keep",
+      "uncertainty_1_to_3": 1,
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=SiTis%20Market%2024%20rue%20%C3%89milien-Colin%2C%2092150%20Suresnes",
+      "properties": {
+        "name": "SiTis Market",
+        "address": "24 rue Émilien-Colin, 92150 Suresnes",
+        "address_status": "reported",
+        "kind": "supermarket",
+        "category": "Supermarché"
+      },
+      "status": "Confirmé sur Google Maps · nom, activité et adresse",
+      "remaining_doubts": [],
+      "reason": "Google Maps affiche SiTis Market, catégorie « Supermarché », à cette adresse. Rapprochement avec le point OSM ; coordonnées source conservées."
+    },
+    {
+      "dataset": "food-amenities",
+      "id": "osm-node-2324053186",
+      "decision": "keep",
+      "uncertainty_1_to_3": 1,
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Franprix%2017%20rue%20Chevreul%2C%2092150%20Suresnes",
+      "properties": {
+        "name": "Franprix",
+        "address": "17 rue Chevreul, 92150 Suresnes",
+        "address_status": "reported",
+        "kind": "supermarket",
+        "category": "Supermarché"
+      },
+      "status": "Confirmé sur Google Maps · nom, activité et adresse",
+      "remaining_doubts": [],
+      "reason": "Google Maps affiche Franprix, catégorie « Supermarché », à cette adresse. Rapprochement avec le point OSM ; coordonnées source conservées."
+    },
+    {
+      "dataset": "food-amenities",
+      "id": "osm-node-3075147029",
+      "decision": "keep",
+      "uncertainty_1_to_3": 1,
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Carrefour%20City%2035%20avenue%20%C3%89douard-Vaillant%2C%2092150%20Suresnes",
+      "properties": {
+        "name": "Carrefour City",
+        "address": "35 avenue Édouard-Vaillant, 92150 Suresnes",
+        "address_status": "reported",
+        "kind": "supermarket",
+        "category": "Supermarché"
+      },
+      "status": "Confirmé sur Google Maps · nom, activité et adresse",
+      "remaining_doubts": [],
+      "reason": "Google Maps affiche Carrefour City, catégorie « Supermarché », à cette adresse. Rapprochement avec le point OSM ; coordonnées source conservées."
+    },
+    {
+      "dataset": "food-amenities",
+      "id": "osm-node-3075148138",
+      "decision": "keep",
+      "uncertainty_1_to_3": 1,
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Super%20Suresnes%20Fruits%20Et%20Legumes%20Libre%20Service%2017%20avenue%20Jean-Jaur%C3%A8s%2C%2092150%20Suresnes",
+      "properties": {
+        "name": "Super Suresnes Fruits Et Legumes Libre Service",
+        "address": "17 avenue Jean-Jaurès, 92150 Suresnes",
+        "address_status": "reported",
+        "kind": "produce",
+        "category": "Primeur"
+      },
+      "status": "Confirmé sur Google Maps · nom, activité et adresse",
+      "remaining_doubts": [],
+      "reason": "Google Maps affiche Super Suresnes Fruits Et Legumes Libre Service, catégorie « Primeur », à cette adresse. Rapprochement avec le point OSM ; coordonnées source conservées."
+    },
+    {
+      "dataset": "food-amenities",
+      "id": "osm-node-3663527951",
+      "decision": "keep",
+      "uncertainty_1_to_3": 1,
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Naturalia%202%20bis%20rue%20Diderot%2C%2092150%20Suresnes",
+      "properties": {
+        "name": "Naturalia",
+        "address": "2 bis rue Diderot, 92150 Suresnes",
+        "address_status": "reported",
+        "kind": "organic",
+        "category": "Magasin bio"
+      },
+      "status": "Confirmé sur Google Maps · nom, activité et adresse",
+      "remaining_doubts": [],
+      "reason": "Google Maps affiche Naturalia, catégorie « Magasin bio », à cette adresse. Rapprochement avec le point OSM ; coordonnées source conservées."
+    },
+    {
+      "dataset": "food-amenities",
+      "id": "osm-node-3663527953",
+      "decision": "keep",
+      "uncertainty_1_to_3": 1,
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Monoprix%206%20rue%20des%20Bourets%2C%2092150%20Suresnes",
+      "properties": {
+        "name": "Monoprix",
+        "address": "6 rue des Bourets, 92150 Suresnes",
+        "address_status": "reported",
+        "kind": "supermarket",
+        "category": "Supermarché"
+      },
+      "status": "Confirmé sur Google Maps · nom, activité et adresse",
+      "remaining_doubts": [],
+      "reason": "Google Maps affiche Monoprix, catégorie « Supermarché », à cette adresse. Rapprochement avec le point OSM ; coordonnées source conservées."
+    },
+    {
+      "dataset": "food-amenities",
+      "id": "osm-node-3877278811",
+      "decision": "keep",
+      "uncertainty_1_to_3": 1,
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=U%20Express%20et%20Drive%2085%20rue%20Carnot%2C%2092150%20Suresnes",
+      "properties": {
+        "name": "U Express et Drive",
+        "address": "85 rue Carnot, 92150 Suresnes",
+        "address_status": "reported",
+        "kind": "supermarket",
+        "category": "Supermarché"
+      },
+      "status": "Confirmé sur Google Maps · nom, activité et adresse",
+      "remaining_doubts": [],
+      "reason": "Google Maps affiche U Express et Drive, catégorie « Supermarché », à cette adresse. Rapprochement avec le point OSM ; coordonnées source conservées."
+    },
+    {
+      "dataset": "food-amenities",
+      "id": "osm-node-3950812703",
+      "decision": "keep",
+      "uncertainty_1_to_3": 1,
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Franprix%204%20rue%20Honor%C3%A9-d%E2%80%99Estienne-d%E2%80%99Orves%2C%2092150%20Suresnes",
+      "properties": {
+        "name": "Franprix",
+        "address": "4 rue Honoré-d’Estienne-d’Orves, 92150 Suresnes",
+        "address_status": "reported",
+        "kind": "supermarket",
+        "category": "Supermarché"
+      },
+      "status": "Confirmé sur Google Maps · nom, activité et adresse",
+      "remaining_doubts": [],
+      "reason": "Google Maps affiche Franprix, catégorie « Supermarché », à cette adresse. Rapprochement avec le point OSM ; coordonnées source conservées."
+    },
+    {
+      "dataset": "food-amenities",
+      "id": "osm-node-4141678536",
+      "decision": "keep",
+      "uncertainty_1_to_3": 1,
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=RC%20%E2%80%93%20Alimentation%20G%C3%A9n%C3%A9rale%2033%20rue%20Carnot%2C%2092150%20Suresnes",
+      "properties": {
+        "name": "RC – Alimentation Générale",
+        "address": "33 rue Carnot, 92150 Suresnes",
+        "address_status": "reported",
+        "kind": "grocery",
+        "category": "Épicerie"
+      },
+      "status": "Confirmé sur Google Maps · nom, activité et adresse",
+      "remaining_doubts": [],
+      "reason": "Google Maps signale l’ancienne Épicerie Carnot définitivement fermée et affiche RC – Alimentation Générale, épicerie, à la même adresse et aux mêmes coordonnées. L’ancien libellé est remplacé ; le point source est conservé."
+    },
+    {
+      "dataset": "food-amenities",
+      "id": "osm-node-4405645637",
+      "decision": "keep",
+      "uncertainty_1_to_3": 1,
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=RML%20Asian%20Store%2023%20rue%20des%20Bourets%2C%2092150%20Suresnes",
+      "properties": {
+        "name": "RML Asian Store",
+        "address": "23 rue des Bourets, 92150 Suresnes",
+        "address_status": "reported",
+        "kind": "grocery",
+        "category": "Épicerie asiatique"
+      },
+      "status": "Confirmé sur Google Maps · nom, activité et adresse",
+      "remaining_doubts": [],
+      "reason": "Google Maps affiche RML Asian Store, catégorie « Épicerie asiatique », à cette adresse. Rapprochement avec le point OSM ; coordonnées source conservées."
+    },
+    {
+      "dataset": "food-amenities",
+      "id": "osm-node-4405645640",
+      "decision": "keep",
+      "uncertainty_1_to_3": 1,
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Suresnes%20fra%C3%AEcheur%2029%20rue%20des%20Bourets%2C%2092150%20Suresnes",
+      "properties": {
+        "name": "Suresnes fraîcheur",
+        "address": "29 rue des Bourets, 92150 Suresnes",
+        "address_status": "reported",
+        "kind": "produce",
+        "category": "Primeur"
+      },
+      "status": "Confirmé sur Google Maps · nom, activité et adresse",
+      "remaining_doubts": [],
+      "reason": "Google Maps affiche Suresnes fraîcheur, catégorie « Primeur », à cette adresse. Rapprochement avec le point OSM ; coordonnées source conservées."
+    },
+    {
+      "dataset": "food-amenities",
+      "id": "osm-node-6221937570",
+      "decision": "keep",
+      "uncertainty_1_to_3": 1,
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Rapid%E2%80%99market%2029%20rue%20Pierre-Dupont%2C%2092150%20Suresnes",
+      "properties": {
+        "name": "Rapid’market",
+        "address": "29 rue Pierre-Dupont, 92150 Suresnes",
+        "address_status": "reported",
+        "kind": "supermarket",
+        "category": "Supermarché"
+      },
+      "status": "Confirmé sur Google Maps · nom, activité et adresse",
+      "remaining_doubts": [],
+      "reason": "Google Maps affiche Rapid’market, catégorie « Supermarché », à cette adresse. Rapprochement avec le point OSM ; coordonnées source conservées."
+    },
+    {
+      "dataset": "food-amenities",
+      "id": "osm-node-7178996300",
+      "decision": "keep",
+      "uncertainty_1_to_3": 2,
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Biocoop%20Suresnes%20Jaur%C3%A8s%2017%20avenue%20%C3%89douard-Vaillant%2C%2092150%20Suresnes",
+      "properties": {
+        "name": "Biocoop Suresnes Jaurès",
+        "address": "17 avenue Édouard-Vaillant, 92150 Suresnes",
+        "address_status": "reported",
+        "kind": "organic",
+        "category": "Magasin d’alimentation bio"
+      },
+      "status": "Vérification Google Maps · réserve conservée",
+      "remaining_doubts": [
+        "Google Maps indique 17 avenue Édouard-Vaillant ; le site Biocoop indique 28 avenue Jean-Jaurès avec le même téléphone. Entrée exacte à confirmer."
+      ],
+      "reason": "Nom et activité bio confirmés. L’adresse Maps est retenue pour l’affichage, sans déplacer le point OSM.",
+      "sources": [
+        {
+          "label": "Biocoop · adresse officielle divergente",
+          "url": "https://www.biocoop.fr/ile-de-france/hauts-de-seine/SURESNES/BIOCOOP-SURESNES-JAURES"
+        }
+      ]
+    },
+    {
+      "dataset": "food-amenities",
+      "id": "osm-node-7238515314",
+      "decision": "keep",
+      "uncertainty_1_to_3": 3,
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=48.8644104%2C2.2047041",
+      "properties": {
+        "name": "Votre Marché",
+        "address": "Suresnes — secteur avenue de l’Abbé-Saint-Pierre, numéro non confirmé",
+        "address_status": "unconfirmed",
+        "kind": "grocery",
+        "category": "Commerce alimentaire · enseigne et activité actuelles à confirmer"
+      },
+      "status": "Vérification Google Maps · réserve conservée",
+      "remaining_doubts": [
+        "Nom actuel, adresse exacte et maintien de l’activité non confirmés ; image Street View d’octobre 2025."
+      ],
+      "reason": "Aucune fiche Google Maps concordante. Street View d’octobre 2025 montre un commerce avec des fruits et légumes au point source, sans enseigne lisible. Aucun numéro n’est attribué à partir de la position de prise de vue."
+    },
+    {
+      "dataset": "food-amenities",
+      "id": "osm-node-7339991150",
+      "decision": "keep",
+      "uncertainty_1_to_3": 2,
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=TotalEnergies%20%E2%80%93%20Relais%20Suresnes%20131%20boulevard%20Henri-Sellier%2C%2092150%20Suresnes",
+      "properties": {
+        "name": "TotalEnergies – Relais Suresnes",
+        "address": "131 boulevard Henri-Sellier, 92150 Suresnes",
+        "address_status": "reported",
+        "kind": "stationShop",
+        "category": "Station-service avec boutique"
+      },
+      "status": "Vérification Google Maps · réserve conservée",
+      "remaining_doubts": [
+        "L’offre d’épicerie généraliste n’est pas démontrée ; boutique et café seulement confirmés par l’exploitant."
+      ],
+      "reason": "Maps identifie une station-service ; l’exploitant confirme une boutique et un espace café. Retenue dans une catégorie distincte, hors des épiceries/supérettes.",
+      "sources": [
+        {
+          "label": "TotalEnergies · boutique et café",
+          "url": "https://locator.totalenergies.com/NF042036?type=FUELING&business_type=RETAIL"
+        }
+      ]
+    },
+    {
+      "dataset": "food-amenities",
+      "id": "osm-node-7340165351",
+      "decision": "keep",
+      "uncertainty_1_to_3": 2,
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Franprix%2018%20rue%20de%20la%20R%C3%A9publique%2C%2092150%20Suresnes",
+      "properties": {
+        "name": "Franprix",
+        "address": "18 rue de la République, 92150 Suresnes",
+        "address_status": "divergent",
+        "kind": "supermarket",
+        "category": "Supermarché",
+        "precision": "Point OSM conservé, non repositionné sur l’adresse Maps : rapprochement géographique à confirmer."
+      },
+      "status": "Vérification Google Maps · réserve conservée",
+      "remaining_doubts": [
+        "Adresse de la fiche Maps : 18 rue de la République. Le point cartographié provient toujours d’OSM, à environ 75 m du repère Maps ; rattachement et position à confirmer."
+      ],
+      "reason": "Google Maps affiche Franprix au 18 rue de la République. Le point OSM d’origine est conservé : le rapprochement avec le repère Maps, à environ 75 m, reste incertain."
+    },
+    {
+      "dataset": "food-amenities",
+      "id": "osm-node-8736545584",
+      "decision": "keep",
+      "uncertainty_1_to_3": 1,
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Fin%20Gourmet%2021%20rue%20du%20Docteur-Marc-Bombiger%2C%2092150%20Suresnes",
+      "properties": {
+        "name": "Fin Gourmet",
+        "address": "21 rue du Docteur-Marc-Bombiger, 92150 Suresnes",
+        "address_status": "reported",
+        "kind": "preparedFood",
+        "category": "Magasin de plats préparés"
+      },
+      "status": "Confirmé sur Google Maps · nom, activité et adresse",
+      "remaining_doubts": [],
+      "reason": "Google Maps affiche Fin Gourmet, catégorie « Magasin de plats préparés », à cette adresse. Rapprochement avec le point OSM ; coordonnées source conservées."
+    },
+    {
+      "dataset": "food-amenities",
+      "id": "osm-node-9411229459",
+      "decision": "keep",
+      "uncertainty_1_to_3": 1,
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Piccola%20Terra%2012%20place%20du%20G%C3%A9n%C3%A9ral-Leclerc%2C%2092150%20Suresnes",
+      "properties": {
+        "name": "Piccola Terra",
+        "address": "12 place du Général-Leclerc, 92150 Suresnes",
+        "address_status": "reported",
+        "kind": "preparedFood",
+        "category": "Traiteur"
+      },
+      "status": "Confirmé sur Google Maps · nom, activité et adresse",
+      "remaining_doubts": [],
+      "reason": "Google Maps affiche Piccola Terra, catégorie « Traiteur », à cette adresse. Rapprochement avec le point OSM ; coordonnées source conservées."
+    },
+    {
+      "dataset": "food-amenities",
+      "id": "osm-node-11184027949",
+      "decision": "keep",
+      "uncertainty_1_to_3": 2,
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=March%C3%A9%20d%E2%80%99%C3%A0%20C%C3%B4t%C3%A9%204%20rue%20Salomon-de-Rothschild%2C%2092150%20Suresnes",
+      "properties": {
+        "name": "Marché d’à Côté",
+        "address": "4 rue Salomon-de-Rothschild, 92150 Suresnes",
+        "address_status": "reported",
+        "kind": "supermarket",
+        "category": "Supermarché"
+      },
+      "status": "Vérification Google Maps · réserve conservée",
+      "remaining_doubts": [
+        "La fiche Maps affiche Marché d’à Côté mais son lien de site renvoie vers Franprix : enseigne actuelle à confirmer."
+      ],
+      "reason": "Le nom affiché par Maps est retenu. Il s’agit d’un commerce alimentaire permanent et non d’un marché périodique."
+    },
+    {
+      "dataset": "food-amenities",
+      "id": "osm-node-7149725546",
+      "decision": "exclude",
+      "uncertainty_1_to_3": 1,
+      "maps_url": "https://www.google.com/maps/place/Coccinelle+Express/@48.865046,2.2118998,17z/data=!3m2!4b1!5s0x47e664c96bd06719:0x3e96d6386945b24d!4m6!3m5!1s0x47e6656f0b5c291f:0xd618ad53e1b871!8m2!3d48.865046!4d2.2144747!16s%2Fg%2F11n6j4r8tr",
+      "reason": "Coccinelle Express est indiqué définitivement fermé sur Google Maps au point correspondant, boulevard du Maréchal-de-Lattre-de-Tassigny. Numéro non affiché dans l’adresse Maps. Retiré des commerces actifs ; source OSM conservée."
+    },
+    {
+      "dataset": "neighborhood",
+      "id": "osm-node-6250448542",
+      "decision": "keep",
+      "uncertainty_1_to_3": 2,
+      "maps_url": "https://www.google.com/maps/place/L%27Atelier+de+Flo/@48.8631896,2.2075948,17z/data=!3m1!4b1!4m6!3m5!1s0x47e664b5f785fe7b:0xa6fc6e44e8d59770!8m2!3d48.8631896!4d2.2101697!16s%2Fg%2F11h1z84233",
+      "properties": {
+        "name": "L’Atelier de Flo",
+        "address": "28 avenue Jean-Jaurès, 92150 Suresnes",
+        "kind": "bakery",
+        "category": "Boulangerie"
+      },
+      "status": "Boulangerie confirmée · adresse divergente",
+      "remaining_doubts": [
+        "Google Maps confirme 28 avenue Jean-Jaurès ; les sources antérieures indiquaient 28 avenue Édouard-Vaillant. Accès exact à confirmer."
+      ],
+      "reason": "Nouvelle vérification du nom, de la boulangerie et de l’adresse dans Google Maps le 03/11/2026 ; point source conservé."
+    }
+  ]
+}

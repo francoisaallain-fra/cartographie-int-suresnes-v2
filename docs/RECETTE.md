@@ -150,3 +150,9 @@ Les épiceries/supérettes utilisent le rouge pâle `#ffc2c2` et les supermarch�
 ## MOS Activités plus vif et opacité initiale · 3 novembre 2026
 
 MOS Activités utilise le bleu saturé `#0080ff` et une opacité initiale de 75 %. Ce réglage s’applique à chaque chargement ; le curseur reste ajustable de 0 à 100 %. Le contour conserve son opacité de référence. Les couches MOS Habitat pavillonnaire et Habitat collectif restent à 55 %. La recette initiale vérifie couleur, valeur du curseur et opacité SVG réelle.
+
+## Corrections des aménités après revue Google Maps · 3 novembre 2026
+
+Contrôler 63 aménités de quartier, dont 31 points alimentaires/marchés ; absence de Coccinelle Express et de l’ancien nom Épicerie Carnot, présence de RC – Alimentation Générale. Vérifier les quatre filtres ajoutés (primeurs, bio, traiteurs/plats préparés, boutiques de station), indépendants des supermarchés, avec pictogrammes lisibles.
+
+Vérifier les nouvelles adresses et la date de preuve du 03/11/2026, sans réétiqueter les anciennes vérifications du 02/11. Les six réserves demeurent dans les fiches et portent leur indice 1–3 ; Votre Marché n’a aucun numéro inventé et le point Franprix République n’est pas déplacé. Les 75 scénarios excluent Coccinelle Express et intègrent toutes les catégories reclassées. Les fichiers sources restent identiques ; le téléchargement de la revue complète l’extrait OSM initial.
