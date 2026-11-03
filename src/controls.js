@@ -4,6 +4,7 @@ import { radiusText } from "./radius.js";
 import {
   clearSelection,
   clearStationRadii,
+  frameOfficePopup,
   redrawRadius,
   scrollMapIntoViewOnMobile,
   selectOffice,
@@ -24,19 +25,25 @@ export function buildControls() {
     $("radius-range-value").textContent = radiusText();
     e.target.setAttribute("aria-valuetext", radiusText());
     if (state.selected) {
+      const marker = runtime.markers.get(state.selected);
+      const wasOpen = marker.isPopupOpen();
       redrawRadius();
       updateLayers();
+      if (wasOpen) marker.openPopup();
     }
   });
   $("radius-range").addEventListener("change", () => {
     if (state.selected) {
-      runtime.map.closePopup();
+      const marker = runtime.markers.get(state.selected);
+      const wasOpen = marker.isPopupOpen();
+      if (!wasOpen) runtime.map.closePopup();
       runtime.map.stop();
       runtime.map.fitBounds(runtime.radiusLayer.getBounds(), {
         padding: [55, 55],
         maxZoom: 17,
         animate: false,
       });
+      if (wasOpen) frameOfficePopup(marker);
     }
   });
   $("layer-controls").innerHTML = layerSpecs

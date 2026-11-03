@@ -1,4 +1,4 @@
-import { allowedIds, radiusText } from "./radius.js";
+import { allowedIds, nearbyAmenities, radiusText } from "./radius.js";
 
 import { layerSpecs } from "./catalog.js";
 import { groupFor, polygonOutlineOpacity, runtime, state } from "./state.js";
@@ -91,7 +91,7 @@ export function updateLayers() {
       el.classList.toggle("active", el.dataset.id === state.selected),
     );
   if (state.selected) {
-    const nearby = runtime.allPoints.filter((f) => allowed.has(f.id));
+    const nearby = nearbyAmenities();
     $("radius-count").textContent =
       `${nearby.length} aménités recensées : ${nearby.filter((f) => f.properties.kind === "transport").length} transport(s), ${nearby.filter((f) => ["school", "nursery", "health"].includes(f.properties.kind)).length} santé / crèche / école, ${nearby.filter((f) => groupFor(f) === "neighborhood").length} de quartier.`;
   }

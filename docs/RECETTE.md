@@ -156,3 +156,9 @@ MOS Activités utilise le bleu saturé `#0080ff` et une opacité initiale de 75 
 Contrôler 63 aménités de quartier, dont 31 points alimentaires/marchés ; absence de Coccinelle Express et de l’ancien nom Épicerie Carnot, présence de RC – Alimentation Générale. Vérifier les quatre filtres ajoutés (primeurs, bio, traiteurs/plats préparés, boutiques de station), indépendants des supermarchés, avec pictogrammes lisibles.
 
 Vérifier les nouvelles adresses et la date de preuve du 03/11/2026, sans réétiqueter les anciennes vérifications du 02/11. Les six réserves demeurent dans les fiches et portent leur indice 1–3 ; Votre Marché n’a aucun numéro inventé et le point Franprix République n’est pas déplacé. Les 75 scénarios excluent Coccinelle Express et intègrent toutes les catégories reclassées. Les fichiers sources restent identiques ; le téléchargement de la revue complète l’extrait OSM initial.
+
+## Compteur d’aménités dans les fiches ciblées — 3 novembre 2026
+
+- Pour les cinq immeubles et les quinze rayons de 300 m à 1 km, vérifier le total sous « Statut » et son accord avec le compteur latéral.
+- Vérifier que la fiche reste ouverte lorsque le curseur change ; une fiche fermée reste fermée.
+- Le total porte sur les transports, équipements et aménités de quartier recensés, y compris les couches masquées, après exclusions des revues. Les bureaux sont exclus.

@@ -1,7 +1,7 @@
 import { formatSurface } from "./rental-surfaces.js";
 import { escapeHTML, typeLabels } from "./presentation.js";
 import { isSncfStation, serviceBadges, stationServices } from "./markers.js";
-import { radiusText, selectedRadius } from "./radius.js";
+import { nearbyAmenities, radiusText, selectedRadius } from "./radius.js";
 import { markerColorControl } from "./marker-colors.js";
 
 import { runtime, state } from "./state.js";
@@ -22,6 +22,10 @@ export function popup(f) {
   let body = `<div class="popup-tag">${escapeHTML(typeLabels[p.kind])}</div><h3 class="popup-title">${escapeHTML(p.name)}</h3><div class="popup-address">${escapeHTML(p.address || p.lines?.join(" · ") || "")}</div>`;
   if (p.kind === "office") {
     body += row("Statut", "Adresse ciblée · vacance non vérifiée");
+    body += row(
+      `Aménités dans le rayon de ${radiusText()}`,
+      `${nearbyAmenities(f.id).length} recensées`,
+    );
     body += markerColorControl(f);
     body += officeScreeningNote(p);
     if (p.address_note)
