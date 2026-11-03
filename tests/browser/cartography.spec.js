@@ -231,15 +231,20 @@ test("rental listings have their own layer and linked popup", async ({
   await expect(toggle).toBeChecked();
   const marker = page.locator(".map-pin.rentalOffice");
   await expect(marker).toHaveCount(16);
-  await expect(marker.locator(".rental-pin-shape")).toHaveCount(16);
+  await expect(marker.locator(".address-pin-shape")).toHaveCount(16);
   await expect(marker.first()).toHaveCSS("margin-left", "-1px");
   await expect(marker.first()).toHaveCSS("margin-top", "-39px");
   await expect(
-    marker.first().locator(".rental-pin-shape path"),
+    marker.first().locator(".address-pin-shape path"),
   ).toHaveAttribute("d", /L1 39V9/);
-  await expect(page.locator(".map-pin.office .rental-pin-shape")).toHaveCount(
-    0,
-  );
+  const targeted = page.locator(".map-pin.office");
+  await expect(targeted).toHaveCount(5);
+  await expect(targeted.locator(".address-pin-shape")).toHaveCount(5);
+  await expect(targeted.first()).toHaveCSS("margin-left", "-1px");
+  await expect(targeted.first()).toHaveCSS("margin-top", "-39px");
+  await expect(
+    targeted.first().locator(".address-pin-shape path"),
+  ).toHaveAttribute("d", /L1 39V9/);
   await toggle.uncheck();
   await expect(marker).toHaveCount(0);
   await toggle.check();
@@ -438,6 +443,27 @@ test("green office markers meet both spatial criteria and can be recolored", asy
     page.locator('.map-pin.office .pin-disc[style*="#007f3f"]'),
   ).toHaveCount(2);
   await expect(
+    page.locator(".map-pin.office .address-pin-shape linearGradient"),
+  ).toHaveCount(2);
+  await expect(
+    page.locator(
+      '.map-pin.office .address-pin-shape stop[stop-color="#007f3f"]',
+    ),
+  ).toHaveCount(2);
+  await expect(
+    page.locator(
+      '.map-pin.office .address-pin-shape stop[stop-color="#d72e83"]',
+    ),
+  ).toHaveCount(2);
+  await expect(
+    page.locator(
+      '.map-pin.office .address-pin-shape path[fill^="url(#office-pin-gradient-"]',
+    ),
+  ).toHaveCount(2);
+  await expect(
+    page.locator('.map-pin.office .address-pin-shape path[fill="#d72e83"]'),
+  ).toHaveCount(3);
+  await expect(
     page.locator('.map-pin.rentalOffice .pin-disc[style*="#007f3f"]'),
   ).toHaveCount(4);
   await expect(
@@ -452,9 +478,17 @@ test("green office markers meet both spatial criteria and can be recolored", asy
   );
   await popup.locator("input[data-marker-color]").fill("#88cc33");
   await expect(
+    page.locator('.map-pin.office .address-pin-shape path[fill="#88cc33"]'),
+  ).toHaveCount(1);
+  await expect(
     page.locator('.map-pin.office .pin-disc[style*="#007f3f"]'),
   ).toHaveCount(1);
   await popup.locator("button[data-marker-color-reset]").click();
+  await expect(
+    page.locator(
+      '.map-pin.office .address-pin-shape path[fill^="url(#office-pin-gradient-"]',
+    ),
+  ).toHaveCount(2);
   await expect(
     page.locator('.map-pin.office .pin-disc[style*="#007f3f"]'),
   ).toHaveCount(2);

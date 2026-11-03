@@ -496,15 +496,7 @@ input:focus-visible {
   stroke-linejoin: round;
   stroke-linecap: round;
 }
-.map-pin.office .pin-disc {
-  width: 34px;
-  height: 36px;
-  border-radius: 8px 8px 8px 1px;
-  font-size: 14px;
-  font-weight: 650;
-  transform: rotate(-7deg);
-}
-.map-pin.rentalOffice .pin-disc {
+.map-pin:is(.office, .rentalOffice) .pin-disc {
   position: relative;
   width: 32px;
   height: 40px;
@@ -516,7 +508,7 @@ input:focus-visible {
   font-size: 13px;
   font-weight: 750;
 }
-.map-pin.rentalOffice .rental-pin-shape {
+.map-pin:is(.office, .rentalOffice) .address-pin-shape {
   display: block;
   width: 32px;
   height: 40px;
@@ -524,13 +516,15 @@ input:focus-visible {
   stroke: none;
   filter: drop-shadow(0 2px 2px #0005);
 }
-.map-pin.rentalOffice .rental-pin-shape path {
-  fill: var(--color);
+.map-pin:is(.office, .rentalOffice) .address-pin-shape path {
   stroke: #e8f4ff;
   stroke-width: 2;
   stroke-linejoin: round;
 }
-.rental-pin-count {
+.map-pin.rentalOffice .address-pin-shape path {
+  fill: var(--color);
+}
+.address-pin-label {
   position: absolute;
   top: 1px;
   left: 1px;
@@ -578,10 +572,10 @@ input:focus-visible {
   outline: 3px solid #ffe381;
   outline-offset: 2px;
 }
-.map-pin.selected.rentalOffice .pin-disc {
+.map-pin.selected:is(.office, .rentalOffice) .pin-disc {
   outline: 0;
 }
-.map-pin.selected.rentalOffice .rental-pin-shape {
+.map-pin.selected:is(.office, .rentalOffice) .address-pin-shape {
   filter: drop-shadow(0 0 3px #ffe381) drop-shadow(0 2px 2px #0005);
 }
 .map-pin:hover {

@@ -2,26 +2,26 @@
 
 Référence des contrôles : jeux de données et ressources identifiés dans `tests/baseline-sha256.json`. Les nombres ci-dessous décrivent cet instantané.
 
-| Fonction         | Attendu                                                                                                                                                  |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Douze couches    | Activation indépendante, tout masquer, ordre visuel correspondant à l'ordre des cartes                                                                   |
-| Repli Notion     | Triangle visible ; nom, icône, interrupteur et poignée conservés ; corps masqué ; état persistant                                                        |
-| Personnalisation | Renommer, annuler, nom d'origine ; ordre au clavier et par glisser ; persistance après rechargement                                                      |
-| Opacité          | 0 à 100 %, surfaces réellement opaques à 100 %, objets invisibles non interactifs                                                                        |
-| Zonage PLU       | Couche désactivée à chaque ouverture ; réactivation possible par son interrupteur                                                                        |
-| Maintien bureaux | Liseré rouge vif, fin, pointillé et sans remplissage ; curseur agissant sur les deux traits                                                              |
-| Bureaux à louer  | Pastilles bleues hors repérage vert ; couleur modifiable séparément pour chaque adresse dans sa fiche                                                    |
-| Bureaux ciblés   | Couleur modifiable séparément dans chaque fiche, restaurable et conservée dans ce navigateur                                                             |
-| Repérage vert    | Deux couches de points : gare à 500 m ou moins et point hors maintien PLU ; 2 adresses ciblées et 4 à louer, avec couleur manuelle prioritaire           |
-| Sous-catégories  | Gares indépendantes des lignes L/U/T2 ; axes routiers, santé, crèches, niveaux scolaires, commerces et pharmacies                                        |
-| Cinq adresses    | Sélection par liste et marqueur, changement d'adresse sans ancien cadrage résiduel                                                                       |
-| 75 rayons        | 300 à 1 000 m par pas de 50 ; listes et géométries pré-calculées préservées                                                                              |
-| Six gares        | Clic sur chacune : cercle de 500 m cumulable ; second clic sur la même gare : retrait individuel ; masquage des transports : retrait de tous les cercles |
-| Retour ville     | Bouton ou clic hors cercle ; restauration des couches antérieures                                                                                        |
-| Rotation         | Ctrl/Commande avant ou après clic, marqueurs utilisables, retour nord                                                                                    |
-| Sources          | Dialogue, fermeture Échap et extérieure, liens et téléchargements                                                                                        |
-| Accessibilité    | Libellés accessibles, focus visible, clavier, affichage mobile sans débordement                                                                          |
-| Panne réseau     | Message de chargement et reprise ; erreur de fond IGN distincte des données                                                                              |
+| Fonction         | Attendu                                                                                                                                                           |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Douze couches    | Activation indépendante, tout masquer, ordre visuel correspondant à l'ordre des cartes                                                                            |
+| Repli Notion     | Triangle visible ; nom, icône, interrupteur et poignée conservés ; corps masqué ; état persistant                                                                 |
+| Personnalisation | Renommer, annuler, nom d'origine ; ordre au clavier et par glisser ; persistance après rechargement                                                               |
+| Opacité          | 0 à 100 %, surfaces réellement opaques à 100 %, objets invisibles non interactifs                                                                                 |
+| Zonage PLU       | Couche désactivée à chaque ouverture ; réactivation possible par son interrupteur                                                                                 |
+| Maintien bureaux | Liseré rouge vif, fin, pointillé et sans remplissage ; curseur agissant sur les deux traits                                                                       |
+| Bureaux à louer  | Pastilles bleues hors repérage vert ; couleur modifiable séparément pour chaque adresse dans sa fiche                                                             |
+| Bureaux ciblés   | Même pointe ancrée sur le point d’adresse que les bureaux à louer ; couleur modifiable séparément, restaurable et conservée dans ce navigateur                    |
+| Repérage vert    | Deux couches de points : gare à 500 m ou moins et point hors maintien PLU ; 2 adresses ciblées vert/violet et 4 à louer vertes, avec couleur manuelle prioritaire |
+| Sous-catégories  | Gares indépendantes des lignes L/U/T2 ; axes routiers, santé, crèches, niveaux scolaires, commerces et pharmacies                                                 |
+| Cinq adresses    | Sélection par liste et marqueur, changement d'adresse sans ancien cadrage résiduel                                                                                |
+| 75 rayons        | 300 à 1 000 m par pas de 50 ; listes et géométries pré-calculées préservées                                                                                       |
+| Six gares        | Clic sur chacune : cercle de 500 m cumulable ; second clic sur la même gare : retrait individuel ; masquage des transports : retrait de tous les cercles          |
+| Retour ville     | Bouton ou clic hors cercle ; restauration des couches antérieures                                                                                                 |
+| Rotation         | Ctrl/Commande avant ou après clic, marqueurs utilisables, retour nord                                                                                             |
+| Sources          | Dialogue, fermeture Échap et extérieure, liens et téléchargements                                                                                                 |
+| Accessibilité    | Libellés accessibles, focus visible, clavier, affichage mobile sans débordement                                                                                   |
+| Panne réseau     | Message de chargement et reprise ; erreur de fond IGN distincte des données                                                                                       |
 
 Les tests Node contrôlent les empreintes, les 75 scénarios, la validation des données, l'échappement et l'identité du site. Les tests Playwright du dépôt contrôlent les interactions, les 75 ensembles de points affichés et les six cercles de gare. Les contrôles visuels et gestes de rotation restent à revoir pour toute modification du rendu ou de Leaflet.
 
@@ -108,3 +108,7 @@ Le vert de repérage passe de `#00a846` à `#007f3f`, plus sombre et accompagné
 ## Pointe des bureaux à louer · 3 novembre 2026
 
 Les 16 pastilles de la couche « Bureaux proposés à la location » possèdent une pointe en bas à gauche. L’ancrage Leaflet coïncide avec l’extrémité de cette pointe et donc avec le point d’adresse géocodé. Les immeubles ciblés conservent leur symbole. La position géocodée ne garantit pas la localisation de l’entrée réelle.
+
+## Pointe et double couleur des bureaux ciblés · 3 novembre 2026
+
+Les cinq pastilles « Immeubles ciblés » utilisent maintenant la même pointe en bas à gauche, ancrée sur leur point d’adresse BAN. Les deux adresses qui sont aussi à 500 m ou moins d’une gare et hors des périmètres de maintien affichent le vert de repérage à gauche et le violet des immeubles ciblés à droite. Les trois autres restent violettes. Une couleur personnelle remplace temporairement les deux couleurs ; « Couleur initiale » les rétablit. Les tests contrôlent les cinq ancrages, les deux dégradés à séparation nette et le changement de couleur.

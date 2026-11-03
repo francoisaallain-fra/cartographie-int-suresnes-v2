@@ -28,6 +28,16 @@ export function markerColor(feature) {
   return overrides[featureKey(feature)] || defaultMarkerColor(feature);
 }
 
+export function officePinFill(feature) {
+  if (
+    feature.properties.kind === "office" &&
+    feature.properties.officeScreening?.highlighted &&
+    markerColor(feature) === defaultMarkerColor(feature)
+  )
+    return `url(#office-pin-gradient-${feature.properties.number})`;
+  return markerColor(feature);
+}
+
 export function markerInk(color) {
   const channels = [1, 3, 5].map((start) => {
     const value = Number.parseInt(color.slice(start, start + 2), 16) / 255;
@@ -53,7 +63,12 @@ export function saveMarkerColor(feature, color) {
 
 export function markerColorControl(feature) {
   const color = markerColor(feature);
-  return `<div class="marker-color-control"><label>Couleur de cette pastille <input type="color" data-marker-color="${escapeHTML(feature.id)}" value="${color}" aria-label="Couleur de la pastille : ${escapeHTML(feature.properties.name)}"></label><button type="button" data-marker-color-reset="${escapeHTML(feature.id)}" ${color === defaultMarkerColor(feature) ? "disabled" : ""}>Couleur initiale</button><small>Choix enregistré dans ce navigateur pour cette adresse uniquement.</small></div>`;
+  const dualColorNote =
+    feature.properties.kind === "office" &&
+    feature.properties.officeScreening?.highlighted
+      ? " Par défaut, ce bureau ciblé est vert et violet."
+      : "";
+  return `<div class="marker-color-control"><label>Couleur de cette pastille <input type="color" data-marker-color="${escapeHTML(feature.id)}" value="${color}" aria-label="Couleur de la pastille : ${escapeHTML(feature.properties.name)}"></label><button type="button" data-marker-color-reset="${escapeHTML(feature.id)}" ${color === defaultMarkerColor(feature) ? "disabled" : ""}>Couleur initiale</button><small>Choix enregistré dans ce navigateur pour cette adresse uniquement.${dualColorNote}</small></div>`;
 }
 
 function officeFeature(id) {
@@ -71,6 +86,10 @@ function paintMarker(feature) {
   const color = markerColor(feature);
   disc.style.setProperty("--color", color);
   disc.style.color = markerInk(color);
+  if (feature.properties.kind === "office")
+    disc
+      .querySelector(".address-pin-shape path")
+      ?.setAttribute("fill", officePinFill(feature));
 }
 
 export function bindMarkerColorControls() {

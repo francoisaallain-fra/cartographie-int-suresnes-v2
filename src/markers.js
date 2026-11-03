@@ -1,7 +1,13 @@
-import { colors, escapeHTML, svg } from "./presentation.js";
+import {
+  colors,
+  escapeHTML,
+  officeScreeningColor,
+  svg,
+} from "./presentation.js";
 import { state } from "./state.js";
-import { markerColor, markerInk } from "./marker-colors.js";
-const rentalPinTip = [1, 39];
+import { markerColor, markerInk, officePinFill } from "./marker-colors.js";
+const addressPinTip = [1, 39];
+const addressPinPath = `M8 1H23C27.4 1 31 4.6 31 9V22C31 26.4 27.4 30 23 30H12L${addressPinTip[0]} ${addressPinTip[1]}V9C1 4.6 4.6 1 8 1Z`;
 export function markerAppearance(p) {
   let color = colors[p.kind],
     ink = "#ffffff",
@@ -78,16 +84,20 @@ export function featureIcon(f) {
     a.color = markerColor(f);
     a.ink = markerInk(a.color);
   }
-  const rentalPin = p.kind === "rentalOffice";
-  const markerBody = rentalPin
-    ? `<div class="pin-disc" style="--color:${a.color};color:${a.ink}"><svg class="rental-pin-shape" viewBox="0 0 32 40" aria-hidden="true"><path d="M8 1H23C27.4 1 31 4.6 31 9V22C31 26.4 27.4 30 23 30H12L${rentalPinTip[0]} ${rentalPinTip[1]}V9C1 4.6 4.6 1 8 1Z"/></svg><span class="rental-pin-count">${p.listings.length}</span></div>`
-    : `<div class="pin-disc" style="--color:${a.color};color:${a.ink}">${p.kind === "office" ? p.number : svg(a.icon)}</div>`;
+  const addressPin = ["office", "rentalOffice"].includes(p.kind);
+  const officeGradientId = `office-pin-gradient-${p.number}`;
+  const officeGradient =
+    p.kind === "office" && p.officeScreening?.highlighted
+      ? `<defs><linearGradient id="${officeGradientId}"><stop offset="50%" stop-color="${officeScreeningColor}"/><stop offset="50%" stop-color="${colors.office}"/></linearGradient></defs>`
+      : "";
+  const markerBody = addressPin
+    ? `<div class="pin-disc" style="--color:${a.color};color:${a.ink}"><svg class="address-pin-shape" viewBox="0 0 32 40" aria-hidden="true">${officeGradient}<path d="${addressPinPath}"${p.kind === "office" ? ` fill="${officePinFill(f)}"` : ""}/></svg><span class="address-pin-label">${p.kind === "office" ? p.number : p.listings.length}</span></div>`
+    : `<div class="pin-disc" style="--color:${a.color};color:${a.ink}">${svg(a.icon)}</div>`;
   return L.divIcon({
     className: `map-pin ${p.kind} ${a.variant}${p.audit?.added ? " audit-added" : ""}${p.audit?.doubts?.length ? " audit-doubt" : ""}${state.selected === f.id ? " selected" : ""}`,
     html: `${markerBody}${p.audit?.doubts?.length ? '<span class="audit-question" aria-hidden="true">?</span>' : ""}`,
-    iconSize: p.kind === "office" ? [34, 36] : rentalPin ? [32, 40] : [28, 28],
-    iconAnchor:
-      p.kind === "office" ? [17, 34] : rentalPin ? rentalPinTip : [14, 14],
-    popupAnchor: rentalPin ? [15, -40] : [0, -15],
+    iconSize: addressPin ? [32, 40] : [28, 28],
+    iconAnchor: addressPin ? addressPinTip : [14, 14],
+    popupAnchor: addressPin ? [15, -40] : [0, -15],
   });
 }
