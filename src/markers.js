@@ -1,6 +1,13 @@
 import { colors, escapeHTML, svg } from "./presentation.js";
 import { state } from "./state.js";
-import { markerColor, markerInk, officePinFill } from "./marker-colors.js";
+import {
+  markerColor,
+  markerInk,
+  officePinFill,
+  markerType,
+  markerTypeColor,
+  hasTypeColor,
+} from "./marker-colors.js";
 const addressPinTip = [1, 39];
 const addressPinPath = `M8 1H23C27.4 1 31 4.6 31 9V22C31 26.4 27.4 30 23 30H12L${addressPinTip[0]} ${addressPinTip[1]}V9C1 4.6 4.6 1 8 1Z`;
 export function markerAppearance(p) {
@@ -50,6 +57,10 @@ export function markerAppearance(p) {
           ? "train"
           : "transport";
   }
+  if (hasTypeColor(markerType(p))) {
+    color = markerTypeColor(markerType(p));
+    ink = markerInk(color);
+  }
   return {
     color,
     ink,
@@ -79,14 +90,17 @@ export function featureIcon(f) {
   if (p.kind === "transport") {
     return L.divIcon({
       className: "map-pin transport station-icon",
-      html: `<div class="pin-disc" style="--color:${colors.transport};color:#fff">${svg("transport")}</div>`,
+      html: `<div class="pin-disc" style="--color:${markerColor(f)};color:${markerInk(markerColor(f))}">${svg("transport")}</div>`,
       iconSize: [28, 28],
       iconAnchor: [14, 14],
       popupAnchor: [100, 37],
     });
   }
   const a = markerAppearance(p);
-  if (["office", "rentalOffice"].includes(p.kind)) {
+  if (
+    markerColor(f) !== a.color ||
+    ["office", "rentalOffice"].includes(p.kind)
+  ) {
     a.color = markerColor(f);
     a.ink = markerInk(a.color);
   }

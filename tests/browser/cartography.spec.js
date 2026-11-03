@@ -859,3 +859,123 @@ test("office amenity count ignores hidden layers and does not reopen a closed po
   await page.locator("#radius-range").press("ArrowRight");
   await expect(page.locator(".leaflet-popup-content")).toHaveCount(0);
 });
+
+test("individual and type colors include hidden supermarkets, persist and reset independently", async ({
+  page,
+}) => {
+  await page.locator("#layer-neighborhood").check();
+  await page.locator(".map-pin.supermarket").first().press("Enter");
+  const popup = page.locator(".leaflet-popup:visible");
+  await expect(popup).toHaveCount(1);
+  await popup.locator("[data-marker-color]").fill("#7700aa");
+  await expect(
+    page.locator('.map-pin.supermarket .pin-disc[style*="#7700aa"]'),
+  ).toHaveCount(1);
+  await expect(
+    page.locator('.map-pin.supermarket .pin-disc[style*="#ff9e9e"]'),
+  ).toHaveCount(15);
+  await page.locator(".office-item").first().click();
+  expect(await page.locator(".map-pin.supermarket").count()).toBeLessThan(16);
+  await page.locator(".map-pin.supermarket").first().press("Enter");
+  await expect(popup).toHaveCount(1);
+  await popup.locator('[data-marker-type-color="supermarket"]').fill("#1122cc");
+  await expect(popup.locator("[data-marker-color]")).toHaveValue("#1122cc");
+  await page.locator("#clear-radius").click();
+  await expect(
+    page.locator('.map-pin.supermarket .pin-disc[style*="#1122cc"]'),
+  ).toHaveCount(16);
+  await expect(
+    page.locator('.map-pin.grocery .pin-disc[style*="#ffc2c2"]'),
+  ).toHaveCount(6);
+  await page.locator('[data-layer-id="neighborhood"] .layer-expand').click();
+  await expect(page.locator('[data-marker-type="supermarket"]')).toHaveCSS(
+    "background-color",
+    "rgb(17, 34, 204)",
+  );
+  await page.locator(".map-pin.supermarket").first().press("Enter");
+  await expect(popup).toHaveCount(1);
+  await popup.locator("[data-marker-color]").fill("#ffaa00");
+  await page.reload();
+  await expect(page.locator("#loading")).toBeHidden();
+  await page.locator("#layer-neighborhood").check();
+  await expect(
+    page.locator('.map-pin.supermarket .pin-disc[style*="#1122cc"]'),
+  ).toHaveCount(15);
+  await expect(
+    page.locator('.map-pin.supermarket .pin-disc[style*="#ffaa00"]'),
+  ).toHaveCount(1);
+  await page.locator(".map-pin.supermarket").first().press("Enter");
+  await expect(popup).toHaveCount(1);
+  await expect(popup.locator("[data-marker-color]")).toHaveValue("#ffaa00");
+  await expect(popup.locator("[data-marker-type-color]")).toHaveValue(
+    "#1122cc",
+  );
+  await popup.locator("[data-marker-color-reset]").click();
+  await expect(
+    page.locator('.map-pin.supermarket .pin-disc[style*="#1122cc"]'),
+  ).toHaveCount(16);
+  await popup.locator("[data-marker-type-color-reset]").click();
+  await expect(
+    page.locator('.map-pin.supermarket .pin-disc[style*="#ff9e9e"]'),
+  ).toHaveCount(16);
+});
+
+test("every point category exposes both color choices and school types stay separate", async ({
+  page,
+}) => {
+  await page.locator("#layer-equipment").check();
+  await page.locator("#layer-neighborhood").check();
+  const types = [
+    "nursery",
+    "primary",
+    "college",
+    "lycee",
+    "health",
+    "pharmacy",
+    "bakery",
+    "tea",
+    "grocery",
+    "supermarket",
+    "market",
+    "produce",
+    "organic",
+    "preparedFood",
+    "stationShop",
+    "office",
+    "rentalOffice",
+    "transport",
+  ];
+  for (const type of types) {
+    await page.locator(`.map-pin.${type}`).first().press("Enter");
+    const popup = page.locator(".leaflet-popup:visible");
+    await expect(popup).toHaveCount(1);
+    await expect(popup.locator("[data-marker-color]")).toBeVisible();
+    await expect(
+      popup.locator(`[data-marker-type-color="${type}"]`),
+    ).toBeVisible();
+    await popup.locator(".leaflet-popup-close-button").click();
+  }
+  await page.locator(".map-pin.college").first().press("Enter");
+  const popup = page.locator(".leaflet-popup:visible");
+  await expect(popup).toHaveCount(1);
+  await popup.locator("[data-marker-type-color]").fill("#884400");
+  await expect(
+    page.locator('.map-pin.college .pin-disc[style*="#884400"]'),
+  ).toHaveCount(await page.locator(".map-pin.college").count());
+  await expect(
+    page.locator(
+      '.map-pin.primary .pin-disc[style*="#884400"], .map-pin.lycee .pin-disc[style*="#884400"]',
+    ),
+  ).toHaveCount(0);
+  await page.locator(".map-pin.transport").first().press("Enter");
+  await expect(popup).toHaveCount(1);
+  const before = await page.evaluate(() => window.suresnesDiagnostics());
+  await popup.locator("[data-marker-type-color]").fill("#004466");
+  await expect(
+    page.locator('.map-pin.transport .pin-disc[style*="#004466"]'),
+  ).toHaveCount(6);
+  const after = await page.evaluate(() => window.suresnesDiagnostics());
+  expect(after.center).toEqual(before.center);
+  expect(after.zoom).toEqual(before.zoom);
+  expect(after.selectedStations).toEqual(before.selectedStations);
+});

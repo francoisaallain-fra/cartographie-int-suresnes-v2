@@ -251,17 +251,7 @@ export async function start() {
     ];
     for (const f of runtime.allPoints) {
       const [x, y] = f.geometry.coordinates;
-      const framedPopup = [
-        "office",
-        "rentalOffice",
-        "grocery",
-        "supermarket",
-        "market",
-        "produce",
-        "organic",
-        "preparedFood",
-        "stationShop",
-      ].includes(f.properties.kind);
+      const framedPopup = f.properties.kind !== "transport";
       const marker = L.marker([y, x], {
         pane: "data-" + groupFor(f) + "-markers",
         icon: featureIcon(f),

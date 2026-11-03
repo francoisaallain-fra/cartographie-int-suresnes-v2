@@ -18,7 +18,7 @@ export function popup(f) {
   if (p.kind === "rentalOffice")
     return `<div class="popup-tag">ANNONCES · BUREAUXLOCAUX · ${escapeHTML(p.retrieved_at.split("-").reverse().join("/"))}</div><h3 class="popup-title">${escapeHTML(p.name)}</h3><div class="popup-address">${escapeHTML(p.address)}</div>${markerColorControl(f)}${row("Annonces à cette adresse", String(p.listings.length))}${row("Surface retenue pour le filtre", formatSurface(p.surface?.value_m2))}<p class="popup-notice rental-surface-note">${escapeHTML(p.surface?.note || "Surface non renseignée.")}</p><p class="popup-notice">Point BAN au numéro. L’entrée et l’immeuble exacts, la disponibilité et la surface réellement libre restent à confirmer. Plusieurs annonces peuvent désigner les mêmes lots.</p>${p.listings.map((listing) => `<div class="rental-listing">${row("Surface annoncée", listing.surface_display)}${row("Loyer affiché", listing.rent_display)}${row("Type", listing.type === "coworking" ? "Coworking" : "Bureau")}${listing.address_note ? `<small>${escapeHTML(listing.address_note)}</small>` : ""}<a class="popup-link" href="${escapeHTML(listing.url)}" target="_blank" rel="noopener noreferrer">Annonce ${escapeHTML(listing.id)} ↗</a></div>`).join("")}<small>Relevé ponctuel du ${escapeHTML(p.retrieved_at.split("-").reverse().join("/"))} · sans suivi automatique. Les loyers sont repris tels qu’affichés, sans contrôle des charges ni de la TVA.</small>`;
   if (p.kind === "transport")
-    return `<div class="station-card"><strong class="station-card-name">${escapeHTML(p.name)}</strong><div class="station-card-services">${serviceBadges(stationServices(p))}${isSncfStation(p) ? '<img class="station-card-sncf" src="https://upload.wikimedia.org/wikipedia/fr/a/a1/Logo_SNCF_%282011%29.svg" alt="SNCF" width="63" height="32" referrerpolicy="no-referrer">' : ""}</div><small>Rayon de 500 m à vol d’oiseau depuis le point IDFM. Recliquez sur cette gare pour retirer son cercle.</small></div>`;
+    return `<div class="station-card"><strong class="station-card-name">${escapeHTML(p.name)}</strong><div class="station-card-services">${serviceBadges(stationServices(p))}${isSncfStation(p) ? '<img class="station-card-sncf" src="https://upload.wikimedia.org/wikipedia/fr/a/a1/Logo_SNCF_%282011%29.svg" alt="SNCF" width="63" height="32" referrerpolicy="no-referrer">' : ""}</div><small>Rayon de 500 m à vol d’oiseau depuis le point IDFM. Recliquez sur cette gare pour retirer son cercle.</small>${markerColorControl(f)}</div>`;
   let body = `<div class="popup-tag">${escapeHTML(typeLabels[p.kind])}</div><h3 class="popup-title">${escapeHTML(p.name)}</h3><div class="popup-address">${escapeHTML(p.address || p.lines?.join(" · ") || "")}</div>`;
   if (p.kind === "office") {
     body += row("Statut", "Adresse ciblée · vacance non vérifiée");
@@ -31,7 +31,10 @@ export function popup(f) {
     if (p.address_note)
       body += `<p class="popup-notice">${escapeHTML(p.address_note)}</p>`;
     body += `<p class="popup-notice">Les aménités recensées sont filtrées à ${radiusText()} autour du point d’adresse BAN. L’occupation et la disponibilité de l’immeuble ne sont pas établies.</p>`;
-  } else body += row("Catégorie", p.category || p.lines?.join(" · "));
+  } else {
+    body += row("Catégorie", p.category || p.lines?.join(" · "));
+    body += markerColorControl(f);
+  }
   if (p.market_days) body += row("Jours de marché", p.market_days);
   if (
     [
