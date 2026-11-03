@@ -539,62 +539,51 @@ test("previous rental colors reset once without erasing targeted-office colors",
   );
   expect(Object.keys(saved)).toEqual([`office:${offices[0].id}`]);
 });
-test("green targeted-office markers meet both spatial criteria and can be recolored", async ({
+test("targeted-office markers are solid purple and reset previous colors once", async ({
   page,
 }) => {
+  await page.evaluate(
+    ({ officeId, rentalId }) => {
+      localStorage.removeItem("suresnes-v2-targeted-marker-purple-reset-v1");
+      localStorage.setItem(
+        "suresnes-v2-office-marker-colors",
+        JSON.stringify({
+          [`office:${officeId}`]: "#007f3f",
+          [`rentalOffice:${rentalId}`]: "#9933ff",
+        }),
+      );
+    },
+    { officeId: offices[0].id, rentalId: rentalOffices[0].id },
+  );
+  await page.reload();
+  await expect(page.locator("#loading")).toBeHidden();
+  const purple = page.locator(
+    '.map-pin.office .address-pin-shape path[fill="#d72e83"]',
+  );
+  await expect(purple).toHaveCount(5);
+  await expect(page.locator(".map-pin.office linearGradient")).toHaveCount(0);
   await expect(
-    page.locator('.map-pin.office .pin-disc[style*="#007f3f"]'),
-  ).toHaveCount(2);
-  await expect(
-    page.locator(".map-pin.office .address-pin-shape linearGradient"),
-  ).toHaveCount(2);
-  await expect(
-    page.locator(
-      '.map-pin.office .address-pin-shape stop[stop-color="#007f3f"]',
-    ),
-  ).toHaveCount(2);
-  await expect(
-    page.locator(
-      '.map-pin.office .address-pin-shape stop[stop-color="#d72e83"]',
-    ),
-  ).toHaveCount(2);
-  await expect(
-    page.locator(
-      '.map-pin.office .address-pin-shape path[fill^="url(#office-pin-gradient-"]',
-    ),
-  ).toHaveCount(2);
-  await expect(
-    page.locator('.map-pin.office .address-pin-shape path[fill="#d72e83"]'),
-  ).toHaveCount(3);
-  await expect(
-    page.locator('.map-pin.rentalOffice .pin-disc[style*="#007f3f"]'),
-  ).toHaveCount(0);
-  await expect(
-    page.locator('.map-pin.office .pin-disc[style*="#007f3f"]').first(),
-  ).toHaveCSS("color", "rgb(255, 255, 255)");
+    page.locator('.map-pin.rentalOffice .pin-disc[style*="#9933ff"]'),
+  ).toHaveCount(1);
   await page.locator(".office-item").nth(2).click();
   const popup = page.locator(".leaflet-popup:visible");
-  await expect(popup).toContainText("Les Coteaux");
-  await expect(popup).toContainText("hors du périmètre cartographié");
+  await expect(popup).not.toContainText("Repérage vert");
   await expect(popup.locator("input[data-marker-color]")).toHaveValue(
-    "#007f3f",
+    "#d72e83",
   );
   await popup.locator("input[data-marker-color]").fill("#88cc33");
+  await expect(purple).toHaveCount(4);
+  await page.reload();
+  await expect(page.locator("#loading")).toBeHidden();
   await expect(
     page.locator('.map-pin.office .address-pin-shape path[fill="#88cc33"]'),
   ).toHaveCount(1);
-  await expect(
-    page.locator('.map-pin.office .pin-disc[style*="#007f3f"]'),
-  ).toHaveCount(1);
-  await popup.locator("button[data-marker-color-reset]").click();
-  await expect(
-    page.locator(
-      '.map-pin.office .address-pin-shape path[fill^="url(#office-pin-gradient-"]',
-    ),
-  ).toHaveCount(2);
-  await expect(
-    page.locator('.map-pin.office .pin-disc[style*="#007f3f"]'),
-  ).toHaveCount(2);
+  await page.locator(".office-item").nth(2).click();
+  await page
+    .locator(".leaflet-popup:visible button[data-marker-color-reset]")
+    .click();
+  await expect(purple).toHaveCount(5);
+  await expect(page.locator(".map-pin.office linearGradient")).toHaveCount(0);
 });
 test("rename, reorder and collapse survive reload", async ({ page }) => {
   const card = page.locator('[data-layer-id="plu"]');

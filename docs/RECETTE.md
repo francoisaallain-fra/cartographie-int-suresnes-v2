@@ -138,3 +138,7 @@ MOS Activités passe au bleu électrique `#0055ff` avec son opacité initiale de
 ## Contour de maintien aligné sur la limite communale · 3 novembre 2026
 
 Le contour de maintien reprend l’épaisseur de 2 px, les tirets de 5 px espacés de 5 px, les extrémités et jointures arrondies de la frontière communale. Sa couleur reste jaune fluo `#ffff00`, sans remplissage. Les cinq géométries PLU restent inchangées. La recette navigateur compare les attributs SVG des deux contours et conserve les vérifications d’opacité et de visibilité.
+
+## Immeubles ciblés en violet uni · 3 novembre 2026
+
+Les cinq pastilles ciblées reprennent la couleur de la couche `#d72e83`, sans dégradé ni double couleur. Les anciens choix personnels de cette couche sont réinitialisés une seule fois ; les locations gardent leurs couleurs. La sélection, les rayons et le choix individuel de couleur restent utilisables ; « Couleur initiale » restaure le violet uni. Les informations de proximité dans les fiches ne décrivent plus un repérage vert.

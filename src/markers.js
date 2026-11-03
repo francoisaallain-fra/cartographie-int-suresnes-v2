@@ -1,9 +1,4 @@
-import {
-  colors,
-  escapeHTML,
-  officeScreeningColor,
-  svg,
-} from "./presentation.js";
+import { colors, escapeHTML, svg } from "./presentation.js";
 import { state } from "./state.js";
 import { markerColor, markerInk, officePinFill } from "./marker-colors.js";
 const addressPinTip = [1, 39];
@@ -85,13 +80,8 @@ export function featureIcon(f) {
     a.ink = markerInk(a.color);
   }
   const addressPin = ["office", "rentalOffice"].includes(p.kind);
-  const officeGradientId = `office-pin-gradient-${p.number}`;
-  const officeGradient =
-    p.kind === "office" && p.officeScreening?.highlighted
-      ? `<defs><linearGradient id="${officeGradientId}"><stop offset="50%" stop-color="${officeScreeningColor}"/><stop offset="50%" stop-color="${colors.office}"/></linearGradient></defs>`
-      : "";
   const markerBody = addressPin
-    ? `<div class="pin-disc" style="--color:${a.color};color:${a.ink}"><svg class="address-pin-shape" viewBox="0 0 32 40" aria-hidden="true">${officeGradient}<path d="${addressPinPath}"${p.kind === "office" ? ` fill="${officePinFill(f)}"` : ""}/></svg><span class="address-pin-label">${p.kind === "office" ? p.number : '<span class="rental-pin-dot" aria-hidden="true"></span>'}</span></div>`
+    ? `<div class="pin-disc" style="--color:${a.color};color:${a.ink}"><svg class="address-pin-shape" viewBox="0 0 32 40" aria-hidden="true"><path d="${addressPinPath}"${p.kind === "office" ? ` fill="${officePinFill(f)}"` : ""}/></svg><span class="address-pin-label">${p.kind === "office" ? p.number : '<span class="rental-pin-dot" aria-hidden="true"></span>'}</span></div>`
     : `<div class="pin-disc" style="--color:${a.color};color:${a.ink}">${svg(a.icon)}</div>`;
   return L.divIcon({
     className: `map-pin ${p.kind} ${a.variant}${p.audit?.added ? " audit-added" : ""}${p.audit?.doubts?.length ? " audit-doubt" : ""}${state.selected === f.id ? " selected" : ""}`,
