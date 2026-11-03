@@ -257,6 +257,10 @@ export async function start() {
         "grocery",
         "supermarket",
         "market",
+        "produce",
+        "organic",
+        "preparedFood",
+        "stationShop",
       ].includes(f.properties.kind);
       const marker = L.marker([y, x], {
         pane: "data-" + groupFor(f) + "-markers",

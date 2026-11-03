@@ -50,6 +50,10 @@ export function groupFor(f) {
               "grocery",
               "supermarket",
               "market",
+              "produce",
+              "organic",
+              "preparedFood",
+              "stationShop",
             ].includes(f.properties.kind)
           ? "neighborhood"
           : "offices";

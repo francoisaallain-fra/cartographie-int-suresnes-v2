@@ -1,6 +1,6 @@
 # Commerces alimentaires et marchés · 3 novembre 2026
 
-32 points ajoutés à « Aménités de quartier » : 23 épiceries / supérettes (dont 2 épiceries fines / traiteurs), 7 supermarchés et 2 marchés réguliers. Les catégories viennent d’OSM, sauf Carrefour Market Verdun reclassé en supermarché selon sa fiche officielle. Elles ne prouvent pas une surface de vente. La boutique TotalEnergies est incluse car recensée comme commerce de proximité dans OSM.
+Instantané initial avant revue : 32 points ajoutés à « Aménités de quartier » : 23 épiceries / supérettes (dont 2 épiceries fines / traiteurs), 7 supermarchés et 2 marchés réguliers. Les catégories viennent d’OSM, sauf Carrefour Market Verdun reclassé en supermarché selon sa fiche officielle. Elles ne prouvent pas une surface de vente. La boutique TotalEnergies est incluse car recensée comme commerce de proximité dans OSM.
 
 ## Source ouverte et périmètre
 
@@ -33,3 +33,15 @@ Entrées : `scripts/sources/food-amenities-input.json` et `food-amenities-review
 Les nouveaux points complètent en mémoire les 75 scénarios de rayon avec la distance sphérique `distanceMeters` utilisée par Leaflet. Les scénarios historiques WGS84 restent inchangés ; un écart métrique entre les deux méthodes est possible. Compteurs, distances des fiches et filtres incluent les nouvelles aménités.
 
 Trois filtres indépendants permettent de masquer les épiceries / supérettes, les supermarchés ou les marchés. La couche reste désactivée à l’ouverture. La recette contrôle les filtres, fiches, jours de marché, téléchargements, périmètre communal, provenance, doublons et intégration aux 75 parcours de rayon.
+
+## Revue Google Maps du 3 novembre 2026
+
+Les 23 points signalés ont été vérifiés dans Google Maps par nom, adresse lorsqu’elle était connue, et rapprochement avec les coordonnées source. Le journal `public/data/neighborhood-review-2026-11-03.json` conserve les décisions, liens, réserves et indices qualitatifs de 1 à 3. Ce journal complète celui du 2 novembre et s’applique au chargement, avant l’ajout des commerces aux scénarios de rayon ; les GeoJSON sources et les empreintes de référence sont inchangés. Aucun point n’est déplacé.
+
+Coccinelle Express, indiqué définitivement fermé, est exclu des commerces actifs. Épicerie Carnot est remplacé au même point par RC – Alimentation Générale. Les noms JS SUPERETTE, RML Asian Store, Fin Gourmet et U Express et Drive sont harmonisés. Les adresses des fiches sont renseignées avec les données relevées.
+
+Les 31 points alimentaires/marchés encore affichés sont répartis en 6 épiceries/supérettes, 16 supermarchés, 2 primeurs, 2 magasins bio, 2 traiteurs/plats préparés, 1 station-service avec boutique et 2 marchés. Avec les 32 aménités antérieures retenues, la couche compte 63 points. Les catégories reproduisent celles des sources/Maps ; « supermarché » n’atteste pas une surface de vente. Les nouvelles catégories disposent de filtres séparés et de pictogrammes dans la palette rouge clair existante.
+
+Six réserves restent matérialisées par un « ? » : Votre Marché (3/3, enseigne/adresse/activité actuelle non confirmées ; Street View d’octobre 2025), Biocoop (2/3, Maps au 17 avenue Édouard-Vaillant contre 28 avenue Jean-Jaurès sur le site officiel), L’Atelier de Flo (2/3, divergence de voie antérieure), Franprix République (2/3, adresse Maps au 18 mais point source distant d’environ 75 m conservé), TotalEnergies (2/3, boutique/café confirmés mais pas épicerie généraliste) et Marché d’à Côté (2/3, lien de fiche vers Franprix). Ce sont des indices qualitatifs d’incertitude, pas des probabilités.
+
+Les téléchargements distinguent l’extrait OSM initial et la revue factuelle. Les coordonnées conservent leur provenance OSM/ODbL ; aucune licence ouverte n’est attribuée aux vérifications Maps ou aux pages opérateurs. Aucune photo, aucun avis ni description commerciale n’est repris. Le chargement est la transformation reproductible : appliquer les deux journaux dans l’ordre, puis calculer les scénarios complémentaires. La collecte manuelle n’est pas une actualisation automatique.

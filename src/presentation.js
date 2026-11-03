@@ -34,6 +34,13 @@ export const symbols = {
   supermarket: '<path d="M2 3h3l3 13h11l3-9H6M8 20h.01M18 20h.01"/>',
   market:
     '<path d="M3 10h18l-3-7H6l-3 7ZM5 10v11h14V10M3 21h18M8 3l-1 7m5-7v7m4-7 1 7M8 14h8v7"/>',
+  produce:
+    '<path d="M12 7c-7-6-12 5-6 13 2 3 4 1 6 1s4 2 6-1c6-8 1-19-6-13ZM12 7V3m0 2c2-4 5-4 6-3-1 3-3 4-6 3"/>',
+  organic: '<path d="M20 3C5 1 1 9 7 17c8 5 15-1 13-14ZM5 21 16 9"/>',
+  preparedFood:
+    '<path d="M3 17h18M5 17a7 7 0 0 1 14 0M12 10V7M10 7h4M2 21h20"/>',
+  stationShop:
+    '<path d="M4 21V3h10v18M3 21h12M6 6h6v6H6Zm8 3h2l3 4v5a2 2 0 0 0 4 0V8l-4-4"/>',
   office:
     '<path d="M5 21V3h14v18M3 21h18M9 7h1m4 0h1M9 11h1m4 0h1M9 15h1m4 0h1M10 21v-3h4v3"/>',
   mixed:
@@ -55,6 +62,10 @@ export const colors = {
   grocery: "#ffc2c2",
   supermarket: "#ff9e9e",
   market: "#9d3754",
+  produce: "#ffc2c2",
+  organic: "#ffc2c2",
+  preparedFood: "#ffc2c2",
+  stationShop: "#ffc2c2",
   office: "#d72e83",
   rentalOffice: "#2376b7",
 };
@@ -69,6 +80,10 @@ export const typeLabels = {
   grocery: "Épicerie / supérette",
   supermarket: "Supermarché",
   market: "Marché alimentaire",
+  produce: "Primeur",
+  organic: "Magasin bio",
+  preparedFood: "Traiteur / plats préparés",
+  stationShop: "Station-service avec boutique",
   office: "Adresse d’immeuble ciblé",
   rentalOffice: "Bureaux annoncés à la location",
 };

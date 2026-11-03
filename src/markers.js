@@ -25,7 +25,17 @@ export function markerAppearance(p) {
   } else if (p.kind === "nursery") ink = "#334155";
   else if (["health", "pharmacy"].includes(p.kind)) ink = "#06462c";
   else if (["bakery", "tea"].includes(p.kind)) ink = "#663508";
-  else if (["grocery", "supermarket"].includes(p.kind)) ink = "#752929";
+  else if (
+    [
+      "grocery",
+      "supermarket",
+      "produce",
+      "organic",
+      "preparedFood",
+      "stationShop",
+    ].includes(p.kind)
+  )
+    ink = "#752929";
   else if (p.kind === "transport") {
     const lines = (p.lines || [])
       .join(" ")
