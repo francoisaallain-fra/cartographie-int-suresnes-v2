@@ -613,6 +613,22 @@ test("food amenities have independent filters and market source popups", async (
   await expect(page.locator(".map-pin.grocery")).toHaveCount(23);
   await expect(page.locator(".map-pin.supermarket")).toHaveCount(7);
   await expect(page.locator(".map-pin.market")).toHaveCount(2);
+  for (const [kind, color, count] of [
+    ["grocery", "#ffc2c2", 23],
+    ["supermarket", "#ff9e9e", 7],
+  ]) {
+    await expect(
+      page.locator(`.map-pin.${kind} .pin-disc[style*="${color}"]`),
+    ).toHaveCount(count);
+    await expect(page.locator(`.map-pin.${kind} .pin-disc`).first()).toHaveCSS(
+      "color",
+      "rgb(117, 41, 41)",
+    );
+    await expect(
+      page.locator(`[data-category="${kind}"] .legend-symbol`),
+    ).toHaveAttribute("style", new RegExp(color));
+  }
+
   await page.locator('[data-category="grocery"]').click();
   await expect(page.locator(".map-pin.grocery")).toHaveCount(0);
   await expect(page.locator(".map-pin.supermarket")).toHaveCount(7);
