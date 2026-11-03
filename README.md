@@ -24,7 +24,7 @@ Le zonage PLU est masqué à l'ouverture et reste activable. Les pastilles des b
 
 Les pastilles des bureaux ciblés et des bureaux proposés à la location ont une pointe en bas à gauche, ancrée sur le point d’adresse géocodé. Celui-ci ne localise pas nécessairement l’entrée exacte de l’immeuble.
 
-Les bureaux à louer sont bleus avec un point blanc central, sans numéro ni repérage par les deux critères gare/maintien. Les anciennes couleurs personnelles de cette couche sont réinitialisées une seule fois ; de nouveaux choix individuels restent possibles. Le repérage vert et violet reste réservé aux deux bureaux ciblés dont le point d’adresse est à 500 m ou moins d’une gare et hors des périmètres de maintien. Il ne vérifie pas l’emprise du bâtiment ni sa faisabilité. Le maintien apparaît en liseré jaune fluo pointillé de 5 px, sans remplissage ; MOS Activités utilise un bleu électrique `#0055ff`.
+Les bureaux à louer sont bleus avec un point blanc central, sans numéro ni repérage par les deux critères gare/maintien. Les anciennes couleurs personnelles de cette couche sont réinitialisées une seule fois ; de nouveaux choix individuels restent possibles. Le repérage vert et violet reste réservé aux deux bureaux ciblés dont le point d’adresse est à 500 m ou moins d’une gare et hors des périmètres de maintien. Il ne vérifie pas l’emprise du bâtiment ni sa faisabilité. Le maintien apparaît en liseré jaune fluo de 2 px, en tirets de 5 px espacés de 5 px comme la limite communale, sans remplissage ; MOS Activités utilise un bleu électrique `#0055ff`.
 
 Les rayons blancs de 500 m des gares se cumulent : un clic ajoute le cercle de la gare, un second clic sur la même gare retire seulement ce cercle. Masquer la couche Transports retire tous les rayons de gare.
 
