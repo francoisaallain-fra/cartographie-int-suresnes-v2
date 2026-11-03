@@ -124,3 +124,13 @@ MOS Activités passe au bleu électrique `#0055ff` avec son opacité initiale de
 ## Nouveau relevé BureauxLocaux · 3 novembre 2026
 
 57 annonces uniques, dont 27 conservées à 19 adresses, 29 sans adresse précise et 1 commerce exclus. Le journal donne les identifiants, motifs, adresses affichées et liens des exclusions. Les tests réconcilient les 57 identifiants avec le TSV, interdisent un commerce dans la couche, contrôlent les coordonnées dans Suresnes et les quatre nouvelles annonces. La recette navigateur vérifie la liste des trois nouvelles adresses, leurs liens et l’avertissement de plage 5–7 rue Frédéric Clavel. Les 19 pastilles conservent le bleu et le point blanc ; le ciblage gare/maintien reste absent de cette couche.
+
+## Filtre de surface des locations · 3 novembre 2026
+
+- Deux champs immédiatement sous le réglage du rayon, vides à l’ouverture ; aucune location filtrée par défaut.
+- Minimum = maximum = 1 387 m² : seul le 30 rue Pasteur reste visible ; sa fiche indique les deux annonces, les étages distincts et le cumul.
+- 1 000–1 500 m² : cinq adresses ; 1 000–1 200 m² : deux adresses. Liste, marqueurs et compteurs concordent.
+- Une borne négative, illisible ou un minimum supérieur au maximum laisse le dernier filtre valide et affiche une erreur. La remise à zéro restaure toutes les locations admissibles.
+- Une surface inconnue reste visible sans filtre, puis est exclue et comptée quand une borne est renseignée.
+- Le filtre ne réactive pas une couche masquée, ne déplace pas la carte et ne modifie ni les cinq immeubles ciblés ni leur rayon. Le bouton Vue ville ne supprime pas les bornes de surface.
+- Contrôler clavier et mobile à 390 px, sans débordement horizontal. Les tests Node couvrent les bornes inclusives, les données manquantes, les doublons, l’invalidation des revues et l’addition des seuls étages distincts.

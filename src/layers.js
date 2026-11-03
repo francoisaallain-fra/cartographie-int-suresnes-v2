@@ -8,6 +8,8 @@ import { popup } from "./popups.js";
 import { categoryKey, hiddenCategories } from "./legend.js";
 import { $ } from "./presentation.js";
 import { applyOpacity } from "./opacity.js";
+import { matchesRentalSurface } from "./rental-surfaces.js";
+import { updateSurfaceControls } from "./surface-controls.js";
 export function updateLayers() {
   const allowed = allowedIds();
   let visible = 0;
@@ -36,6 +38,7 @@ export function updateLayers() {
         marker.setIcon(featureIcon(f));
         marker.setPopupContent(popup(f));
         if (
+          matchesRentalSurface(f, state.rentalSurface) &&
           (f.properties.kind === "transport"
             ? !hiddenCategories.has("stations")
             : !hiddenCategories.has(categoryKey(f.properties))) &&
@@ -60,6 +63,7 @@ export function updateLayers() {
     el.disabled = !state.enabled[el.dataset.group];
   });
   updateZoneLabels();
+  updateSurfaceControls();
   for (const s of layerSpecs) applyOpacity(s.id);
   $("visible-count").textContent =
     `${visible} points affichés${state.enabled.pluOfficeRetention ? " · 5 périmètres maintien bureaux" : ""}${state.enabled.mosOffices ? " · 25 emprises bureaux" : ""}${state.enabled.mixedBuildings ? " · 3 mixtes potentiels" : ""}${[

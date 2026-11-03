@@ -52,3 +52,5 @@ Construire avec `pnpm build`, puis publier le dossier `dist/` avec le workflow S
 ## BureauxLocaux · relevé communal du 3 novembre 2026
 
 La couche des locations présente 27 annonces à 19 adresses, issues des 57 offres de la nouvelle recherche communale. 29 annonces sans adresse précise et 1 commerce sont exclus. Le relevé, ses sources, le cache BAN et la méthode de reconstruction sont décrits dans [la documentation des données](docs/DONNEES.md).
+
+Le filtre **Surface des bureaux à louer**, sous le rayon, accepte un minimum et un maximum en m². Il sélectionne les adresses selon leur surface de référence : maximum annoncé sans doublon, ou cumul de lots distincts documenté. La fiche explique chaque valeur ; le bouton de réinitialisation retire les bornes. Les immeubles ciblés, leurs rayons et les autres couches restent indépendants. Voir [la méthode de calcul](docs/DONNEES.md#filtre-de-surface-des-locations--3-novembre-2026).

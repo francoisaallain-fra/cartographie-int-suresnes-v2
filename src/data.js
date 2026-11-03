@@ -1,6 +1,7 @@
 /** Geographic datasets bundled with the application. */
 import { screenOfficePoint } from "./office-screening.js";
 import { distanceMeters } from "./geometry.js";
+import { applyRentalSurfaces } from "./rental-surfaces.js";
 
 export const datasetNames = [
   "commune",
@@ -94,6 +95,7 @@ export async function loadDatasets(fetcher = fetch) {
     "radii-extra",
     "amenity-review",
     "food-amenities-sources",
+    "rental-surface-review",
   ];
   const values = await Promise.all(
     names.map(async (name) => {
@@ -109,6 +111,10 @@ export async function loadDatasets(fetcher = fetch) {
     names.map((name, index) => [name, values[index]]),
   );
   applyAmenityReview(data, data["amenity-review"]);
+  applyRentalSurfaces(
+    data["rental-offices"].features,
+    data["rental-surface-review"],
+  );
   data.sources.crosscheck = {
     ...data.sources.crosscheck,
     vintage: "Revue Google Maps et sources officielles du 02/11/2026",

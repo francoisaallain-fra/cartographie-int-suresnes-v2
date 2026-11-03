@@ -24,7 +24,7 @@ Quatre annonces s’ajoutent au relevé précédent, sans retrait : 43005791 et 
 
 Le script `python3 scripts/build-rental-offices.py` régénère les données hors ligne depuis le TSV et les réponses IGN/BAN conservées dans `data-source/geocoding-bureauxlocaux-2026-11-03.json`. L’option `--refresh-geocoding` interroge à nouveau l’API publique IGN. Une correspondance exige le numéro, la voie normalisée (accents/casse/tirets), le type `housenumber`, le code commune 92073 et un score d’au moins 0,7 ; les 19 résultats retenus ont un score supérieur à 0,95. Les tests contrôlent aussi leur appartenance géométrique à Suresnes. Un score de géocodage n’est pas une probabilité de disponibilité.
 
-Les annonces d’une même adresse sont regroupées, sans additionner les surfaces ni dédupliquer les lots. Seuls identifiant, type, surface, loyer affiché, adresse et lien sont repris ; aucune photo ni description commerciale. Le loyer n’est pas recalculé et son régime de charges/TVA n’est pas déduit. La disponibilité, la vacance et le nombre de lots distincts restent non vérifiés. Source commerciale, sans droit général de réutilisation commerciale établi ; relevé ponctuel sans synchronisation automatique.
+Les annonces d’une même adresse sont regroupées. Depuis l’ajout du filtre de surface, une revue distincte documente les recouvrements et le seul cumul admis (voir ci-dessous). Seuls identifiant, type, surface, loyer affiché, adresse et lien sont repris ; aucune photo ni description commerciale. Le loyer n’est pas recalculé et son régime de charges/TVA n’est pas déduit. La disponibilité, la vacance et le nombre de lots distincts restent non vérifiés. Source commerciale, sans droit général de réutilisation commerciale établi ; relevé ponctuel sans synchronisation automatique.
 
 ## Repérage vert des bureaux ciblés · actualisé le 3 novembre 2026
 
@@ -37,3 +37,21 @@ Cette couleur est un **repérage cartographique** : les points BAN ne délimiten
 ## Alimentation et marchés (3 novembre 2026)
 
 32 points et trois filtres dans la couche Aménités de quartier : 23 épiceries / supérettes, 7 supermarchés et 2 marchés. [Sources, limites, reproduction et recette](ALIMENTATION.md).
+
+## Filtre de surface des locations · 3 novembre 2026
+
+Sous le rayon, deux bornes facultatives en m² sélectionnent uniquement les **19 adresses de bureaux à louer**. Elles portent sur la **surface de référence à l’adresse**, pas sur le plus petit lot divisible ni sur la surface bâtie/MOS. Les bornes sont inclusives. Sans bornes, toutes les adresses restent admissibles ; les valeurs sont réinitialisées au chargement. Une surface inconnue est exclue uniquement lorsqu’une borne est active, et son exclusion est comptée.
+
+La règle par défaut retient la surface maximale de la plus grande annonce à cette adresse, sans addition. Un cumul exige une revue manuelle de tableaux de lots, une adresse précise identique et des lots distincts. La revue publique `public/data/rental-surface-review.json` contient les liens et signatures des **13 annonces aux cinq adresses multi-annonces**, consultées dans le navigateur le 03/11/2026. Ce sont des faits déclaratifs publiés par les intermédiaires, sans confirmation de disponibilité ni de mesure sur place.
+
+| Adresse                    | Surface utilisée | Décision                                                                                                                                                                                                      |
+| -------------------------- | ---------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 30 rue Pasteur             |         1 387 m² | 565 m² au 6e (43005791) + 822 m² aux 7e et 8e (36749298). Les subdivisions du 6e ne sont pas ajoutées à leur total. Leur somme affiche 566 m², contre 565 m² pour le plateau ; le total déclaré est conservé. |
+| 10 rue Chevreul / 6–10     |         1 456 m² | Trois annonces reprennent les mêmes quatre étages et surfaces : un seul total. Le géocodage au 10 représente la plage 6–10, sans créer un cumul entre numéros.                                                |
+| 22 quai Gallieni           |         1 099 m² | Les annonces individuelles de 242 et 790 m² figurent déjà dans le total de 1 099 m², avec 67 m² au RDC. Une autre annonce contient des incohérences d’étage et de total ; aucun cumul.                        |
+| 40 boulevard Henri Sellier |           532 m² | Les deux annonces couvrent les 4e et 6e étages, avec 400/410 m² et 122 m² : maximum annoncé retenu, écart 522/532 non résolu.                                                                                 |
+| 48 rue Carnot              |         5 674 m² | Mêmes niveaux et surfaces proches dans les deux tableaux ; maximum annoncé retenu, écart 5 649/5 674 non résolu.                                                                                              |
+
+Les autres adresses utilisent le maximum d’une seule annonce, y compris le coworking (105 m²). Les bureaux sans adresse numérotée et le commerce restent exclus ; aucun rapprochement par seul nom d’immeuble ou par proximité géographique n’est effectué. Ces valeurs de filtrage ne sont pas des métrés certifiés ni un inventaire exhaustif de surfaces libres.
+
+`src/rental-surfaces.js` reproduit le calcul à chaque chargement depuis le GeoJSON daté et la revue. Si une signature (identifiant, surface affichée, adresse publiée, URL) ou la composition du groupe change, le cumul est désactivé et la fiche indique que la revue doit être actualisée. Une surface illisible n’est pas transformée en zéro. Les annotations sont échappées dans les fiches.

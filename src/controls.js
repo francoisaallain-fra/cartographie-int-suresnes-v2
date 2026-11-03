@@ -16,7 +16,9 @@ import { hiddenCategories, layerLegend } from "./legend.js";
 import { setupLayerReordering } from "./ordering.js";
 import { collapsedLayers, setLayerCollapsed } from "./collapse.js";
 import { applyOpacity } from "./opacity.js";
+import { setupSurfaceControls } from "./surface-controls.js";
 export function buildControls() {
+  setupSurfaceControls(updateLayers);
   $("radius-range").addEventListener("input", (e) => {
     state.radiusMeters = Number(e.target.value);
     $("radius-range-value").textContent = radiusText();
