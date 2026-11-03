@@ -138,10 +138,7 @@ export async function loadDatasets(fetcher = fetch) {
         ...distances.filter((f) => f.distance_m <= Number(radius)),
       ].sort((a, b) => a.distance_m - b.distance_m);
   }
-  for (const office of [
-    ...data.offices.features,
-    ...data["rental-offices"].features,
-  ])
+  for (const office of data.offices.features)
     office.properties.officeScreening = screenOfficePoint(
       office,
       data.transport.features,

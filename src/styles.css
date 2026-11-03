@@ -537,6 +537,12 @@ input:focus-visible {
   border-top: 1px solid #d9e2e5;
   padding: 7px 0;
 }
+.rental-pin-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ffffff;
+}
 .rental-listing .popup-link {
   display: inline-block;
   margin-top: 4px;
@@ -1643,7 +1649,7 @@ button.legend-item[aria-pressed="false"] {
   color: #c66a21;
 }
 
-/* Bright red dotted office-retention boundary, with no polygon fill. */
+/* Fluorescent yellow dotted office-retention boundary, without polygon fill. */
 .plu-office-retention-key {
   display: inline-block;
   vertical-align: middle;
@@ -1652,14 +1658,14 @@ button.legend-item[aria-pressed="false"] {
   margin-left: 10px;
   margin-right: 4px;
   position: relative;
-  border: 2px dotted #ff0000;
+  border: 3px dotted #ffff00;
   background: transparent;
   border-radius: 2px;
 }
 .layer-card[data-layer-id="pluOfficeRetention"] .layer-icon {
-  background: #fff0f0;
-  color: #ff0000;
-  box-shadow: inset 0 0 0 1px #ff0000;
+  background: #ffff00;
+  color: #665c00;
+  box-shadow: inset 0 0 0 1px #ffff00;
 }
 
 /* Collapsible layer settings: the compact row keeps only identity, visibility and ordering. */

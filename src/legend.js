@@ -7,7 +7,7 @@ import {
   svg,
 } from "./presentation.js";
 export const hiddenCategories = new Set();
-const officeScreeningLegend = `<p class="transport-scope"><span class="office-screening-swatch" style="background:${officeScreeningColor}" aria-hidden="true"></span>Pastille verte, ou verte et violette pour un bureau ciblé : point d’adresse à 500 m ou moins d’une gare, hors du périmètre cartographié de maintien des surfaces de bureau. Une couleur personnalisée reste prioritaire.</p>`;
+const officeScreeningLegend = `<p class="transport-scope"><span class="office-screening-swatch" style="background:${officeScreeningColor}" aria-hidden="true"></span>Pastille verte et violette pour un bureau ciblé : point d’adresse à 500 m ou moins d’une gare, hors du périmètre cartographié de maintien des surfaces de bureau. Une couleur personnalisée reste prioritaire.</p>`;
 export function categoryKey(p) {
   const a = markerAppearance(p);
   return p.kind === "transport" ? a.icon : a.variant;
@@ -23,7 +23,7 @@ export function legendItem(p, label) {
 }
 export function layerLegend(id) {
   if (id === "rentalOffices")
-    return `<details class="rental-address-list"><summary>Voir les 16 adresses</summary><div>${runtime.data["rental-offices"].features.map((f) => `<button type="button" data-rental-id="${escapeHTML(f.id)}">${escapeHTML(f.properties.name)} <small>· ${f.properties.listings.length} annonce${f.properties.listings.length > 1 ? "s" : ""}</small></button>`).join("")}</div></details>${officeScreeningLegend}<p class="transport-scope">Annonces déclaratives, relevées le 02/11/2026. Les 29 fiches sans numéro de rue ne sont pas placées sur la carte.</p>`;
+    return `<details class="rental-address-list"><summary>Voir les 16 adresses</summary><div>${runtime.data["rental-offices"].features.map((f) => `<button type="button" data-rental-id="${escapeHTML(f.id)}">${escapeHTML(f.properties.name)} <small>· ${f.properties.listings.length} annonce${f.properties.listings.length > 1 ? "s" : ""}</small></button>`).join("")}</div></details><p class="transport-scope">Annonces déclaratives, relevées le 02/11/2026. Les 29 fiches sans numéro de rue ne sont pas placées sur la carte.</p>`;
   if (id === "offices") return officeScreeningLegend;
   if (id === "transport")
     return `<div class="layer-legend"><button type="button" class="legend-item" data-category="stations" data-group="transport" aria-pressed="true" aria-label="Afficher ou masquer les gares et stations"><span class="legend-symbol" style="background:${colors.transport};color:white">${svg("train")}</span>Gares et stations</button>${runtime.data.rail.features

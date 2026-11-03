@@ -73,7 +73,7 @@ test("opening layer layout matches the supplied MOS view", async ({ page }) => {
     await expect(page.locator(`#layerOpacity-${id}`)).toHaveValue(opacity);
   await expect(
     page.locator(".leaflet-data-mosActivities-pane path").first(),
-  ).toHaveAttribute("fill", "#1f6fb2");
+  ).toHaveAttribute("fill", "#0055ff");
   await expect(
     page.locator(".leaflet-data-mosActivities-pane path").first(),
   ).toHaveAttribute("fill-opacity", "0.5");
@@ -245,6 +245,17 @@ test("rental listings have their own layer and linked popup", async ({
   const marker = page.locator(".map-pin.rentalOffice");
   await expect(marker).toHaveCount(16);
   await expect(marker.locator(".address-pin-shape")).toHaveCount(16);
+  await expect(marker.locator(".rental-pin-dot")).toHaveCount(16);
+  await expect(marker.locator(".rental-pin-dot").first()).toHaveCSS(
+    "background-color",
+    "rgb(255, 255, 255)",
+  );
+  expect(await marker.locator(".address-pin-label").allTextContents()).toEqual(
+    Array(16).fill(""),
+  );
+  await expect(
+    page.locator('.map-pin.rentalOffice .pin-disc[style*="#2376b7"]'),
+  ).toHaveCount(16);
   await expect(marker.first()).toHaveCSS("margin-left", "-1px");
   await expect(marker.first()).toHaveCSS("margin-top", "-39px");
   await expect(
@@ -270,6 +281,9 @@ test("rental listings have their own layer and linked popup", async ({
   );
   await expect(page.locator(".leaflet-popup-content")).toContainText(
     "Loyer affiché",
+  );
+  await expect(page.locator(".leaflet-popup-content")).not.toContainText(
+    "Repérage vert",
   );
   await expect(
     page.locator(
@@ -339,7 +353,7 @@ for (const viewport of [
         .toBe(true);
   });
 }
-test("office retention has a thin bright red dotted boundary", async ({
+test("office retention has a thicker fluorescent yellow dotted boundary", async ({
   page,
 }) => {
   const outline = page
@@ -354,12 +368,12 @@ test("office retention has a thin bright red dotted boundary", async ({
     .first();
   await expect(outline).toHaveAttribute("fill", "none");
   await expect(center).toHaveAttribute("fill", "none");
-  await expect(outline).toHaveAttribute("stroke", "#ff0000");
-  await expect(center).toHaveAttribute("stroke", "#ff0000");
-  await expect(outline).toHaveAttribute("stroke-width", "3");
-  await expect(center).toHaveAttribute("stroke-width", "2");
-  await expect(outline).toHaveAttribute("stroke-dasharray", /1[ ,]8/);
-  await expect(center).toHaveAttribute("stroke-dasharray", /1[ ,]8/);
+  await expect(outline).toHaveAttribute("stroke", "#ffff00");
+  await expect(center).toHaveAttribute("stroke", "#ffff00");
+  await expect(outline).toHaveAttribute("stroke-width", "5");
+  await expect(center).toHaveAttribute("stroke-width", "4");
+  await expect(outline).toHaveAttribute("stroke-dasharray", /1[ ,]10/);
+  await expect(center).toHaveAttribute("stroke-dasharray", /1[ ,]10/);
   await expect(outline).not.toHaveClass(/leaflet-interactive/);
   await expect(center).toHaveClass(/leaflet-interactive/);
   await page
@@ -439,7 +453,7 @@ test("PLU starts hidden and each office marker keeps its own chosen color", asyn
   ).toHaveCount(1);
   await expect(
     page.locator('.map-pin.rentalOffice .pin-disc[style*="#2376b7"]'),
-  ).toHaveCount(10);
+  ).toHaveCount(14);
   await page.reload();
   await expect(page.locator("#loading")).toBeHidden();
   await expect(
@@ -449,7 +463,36 @@ test("PLU starts hidden and each office marker keeps its own chosen color", asyn
     page.locator('.map-pin.rentalOffice .pin-disc[style*="#9933ff"]'),
   ).toHaveCount(1);
 });
-test("green office markers meet both spatial criteria and can be recolored", async ({
+test("previous rental colors reset once without erasing targeted-office colors", async ({
+  page,
+}) => {
+  await page.evaluate(
+    ({ officeId, rentalId }) => {
+      localStorage.removeItem("suresnes-v2-rental-marker-blue-reset-v1");
+      localStorage.setItem(
+        "suresnes-v2-office-marker-colors",
+        JSON.stringify({
+          [`office:${officeId}`]: "#8844ff",
+          [`rentalOffice:${rentalId}`]: "#007f3f",
+        }),
+      );
+    },
+    { officeId: offices[0].id, rentalId: rentalOffices[0].id },
+  );
+  await page.reload();
+  await expect(page.locator("#loading")).toBeHidden();
+  await expect(
+    page.locator('.map-pin.rentalOffice .pin-disc[style*="#2376b7"]'),
+  ).toHaveCount(16);
+  await expect(
+    page.locator('.map-pin.office .pin-disc[style*="#8844ff"]'),
+  ).toHaveCount(1);
+  const saved = await page.evaluate(() =>
+    JSON.parse(localStorage.getItem("suresnes-v2-office-marker-colors")),
+  );
+  expect(Object.keys(saved)).toEqual([`office:${offices[0].id}`]);
+});
+test("green targeted-office markers meet both spatial criteria and can be recolored", async ({
   page,
 }) => {
   await expect(
@@ -478,7 +521,7 @@ test("green office markers meet both spatial criteria and can be recolored", asy
   ).toHaveCount(3);
   await expect(
     page.locator('.map-pin.rentalOffice .pin-disc[style*="#007f3f"]'),
-  ).toHaveCount(4);
+  ).toHaveCount(0);
   await expect(
     page.locator('.map-pin.office .pin-disc[style*="#007f3f"]').first(),
   ).toHaveCSS("color", "rgb(255, 255, 255)");

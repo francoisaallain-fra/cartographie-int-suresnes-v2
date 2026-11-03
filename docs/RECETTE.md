@@ -2,26 +2,26 @@
 
 Référence des contrôles : jeux de données et ressources identifiés dans `tests/baseline-sha256.json`. Les nombres ci-dessous décrivent cet instantané.
 
-| Fonction         | Attendu                                                                                                                                                           |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Douze couches    | Activation indépendante, tout masquer, ordre visuel correspondant à l'ordre des cartes                                                                            |
-| Repli Notion     | Triangle visible ; nom, icône, interrupteur et poignée conservés ; corps masqué ; état persistant                                                                 |
-| Personnalisation | Renommer, annuler, nom d'origine ; ordre au clavier et par glisser ; persistance après rechargement                                                               |
-| Opacité          | 0 à 100 %, surfaces réellement opaques à 100 %, objets invisibles non interactifs                                                                                 |
-| Zonage PLU       | Couche désactivée à chaque ouverture ; réactivation possible par son interrupteur                                                                                 |
-| Maintien bureaux | Liseré rouge vif, fin, pointillé et sans remplissage ; curseur agissant sur les deux traits                                                                       |
-| Bureaux à louer  | Pastilles bleues hors repérage vert ; couleur modifiable séparément pour chaque adresse dans sa fiche                                                             |
-| Bureaux ciblés   | Même pointe ancrée sur le point d’adresse que les bureaux à louer ; couleur modifiable séparément, restaurable et conservée dans ce navigateur                    |
-| Repérage vert    | Deux couches de points : gare à 500 m ou moins et point hors maintien PLU ; 2 adresses ciblées vert/violet et 4 à louer vertes, avec couleur manuelle prioritaire |
-| Sous-catégories  | Gares indépendantes des lignes L/U/T2 ; axes routiers, santé, crèches, niveaux scolaires, commerces et pharmacies                                                 |
-| Cinq adresses    | Sélection par liste et marqueur, changement d'adresse sans ancien cadrage résiduel                                                                                |
-| 75 rayons        | 300 à 1 000 m par pas de 50 ; listes et géométries pré-calculées préservées                                                                                       |
-| Six gares        | Clic sur chacune : cercle de 500 m cumulable ; second clic sur la même gare : retrait individuel ; masquage des transports : retrait de tous les cercles          |
-| Retour ville     | Bouton ou clic hors cercle ; restauration des couches antérieures                                                                                                 |
-| Rotation         | Ctrl/Commande avant ou après clic, marqueurs utilisables, retour nord                                                                                             |
-| Sources          | Dialogue, fermeture Échap et extérieure, liens et téléchargements                                                                                                 |
-| Accessibilité    | Libellés accessibles, focus visible, clavier, affichage mobile sans débordement                                                                                   |
-| Panne réseau     | Message de chargement et reprise ; erreur de fond IGN distincte des données                                                                                       |
+| Fonction         | Attendu                                                                                                                                                  |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Douze couches    | Activation indépendante, tout masquer, ordre visuel correspondant à l'ordre des cartes                                                                   |
+| Repli Notion     | Triangle visible ; nom, icône, interrupteur et poignée conservés ; corps masqué ; état persistant                                                        |
+| Personnalisation | Renommer, annuler, nom d'origine ; ordre au clavier et par glisser ; persistance après rechargement                                                      |
+| Opacité          | 0 à 100 %, surfaces réellement opaques à 100 %, objets invisibles non interactifs                                                                        |
+| Zonage PLU       | Couche désactivée à chaque ouverture ; réactivation possible par son interrupteur                                                                        |
+| Maintien bureaux | Liseré jaune fluo, épais (5 px), pointillé et sans remplissage ; curseur agissant sur les deux traits                                                    |
+| Bureaux à louer  | Pastilles bleues avec un point blanc, sans numéro ni repérage vert ; anciennes couleurs réinitialisées une fois, nouveaux choix individuels persistants  |
+| Bureaux ciblés   | Même pointe ancrée sur le point d’adresse que les bureaux à louer ; couleur modifiable séparément, restaurable et conservée dans ce navigateur           |
+| Repérage vert    | Bureaux ciblés uniquement : gare à 500 m ou moins et point hors maintien PLU ; 2 adresses vert/violet, avec couleur manuelle prioritaire                 |
+| Sous-catégories  | Gares indépendantes des lignes L/U/T2 ; axes routiers, santé, crèches, niveaux scolaires, commerces et pharmacies                                        |
+| Cinq adresses    | Sélection par liste et marqueur, changement d'adresse sans ancien cadrage résiduel                                                                       |
+| 75 rayons        | 300 à 1 000 m par pas de 50 ; listes et géométries pré-calculées préservées                                                                              |
+| Six gares        | Clic sur chacune : cercle de 500 m cumulable ; second clic sur la même gare : retrait individuel ; masquage des transports : retrait de tous les cercles |
+| Retour ville     | Bouton ou clic hors cercle ; restauration des couches antérieures                                                                                        |
+| Rotation         | Ctrl/Commande avant ou après clic, marqueurs utilisables, retour nord                                                                                    |
+| Sources          | Dialogue, fermeture Échap et extérieure, liens et téléchargements                                                                                        |
+| Accessibilité    | Libellés accessibles, focus visible, clavier, affichage mobile sans débordement                                                                          |
+| Panne réseau     | Message de chargement et reprise ; erreur de fond IGN distincte des données                                                                              |
 
 Les tests Node contrôlent les empreintes, les 75 scénarios, la validation des données, l'échappement et l'identité du site. Les tests Playwright du dépôt contrôlent les interactions, les 75 ensembles de points affichés et les six cercles de gare. Les contrôles visuels et gestes de rotation restent à revoir pour toute modification du rendu ou de Leaflet.
 
@@ -116,3 +116,7 @@ Les cinq pastilles « Immeubles ciblés » utilisent maintenant la même pointe 
 ## Alimentation et marchés (3 novembre 2026)
 
 32 points et trois filtres dans la couche Aménités de quartier : 23 épiceries / supérettes, 7 supermarchés et 2 marchés. [Sources, limites, reproduction et recette](ALIMENTATION.md).
+
+## Palette et bureaux à louer · 3 novembre 2026
+
+MOS Activités passe au bleu électrique `#0055ff` avec son opacité initiale de 50 %. Le maintien des surfaces de bureau utilise un liseré jaune fluo `#ffff00` de 5 px, pointillé et sans remplissage. Les 16 bureaux à louer sont bleus avec un point blanc de 5 px ; le nombre d’annonces reste dans la fiche. Le calcul et la mention du repérage gare/maintien sont retirés de cette couche. Une migration efface une seule fois ses anciennes couleurs enregistrées sans toucher aux bureaux ciblés ; les nouveaux choix individuels persistent ensuite. Les contrôles portent sur cette migration, les marqueurs, les fiches, les styles et les parcours existants.
