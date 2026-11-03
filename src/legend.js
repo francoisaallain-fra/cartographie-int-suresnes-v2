@@ -1,14 +1,9 @@
 import { formatSurface } from "./rental-surfaces.js";
 import { markerAppearance, serviceBadges } from "./markers.js";
 import { groupFor, runtime } from "./state.js";
-import {
-  colors,
-  escapeHTML,
-  officeScreeningColor,
-  svg,
-} from "./presentation.js";
+import { colors, escapeHTML, svg } from "./presentation.js";
 export const hiddenCategories = new Set();
-const officeScreeningLegend = `<p class="transport-scope"><span class="office-screening-swatch" style="background:${officeScreeningColor}" aria-hidden="true"></span>Pastille verte et violette pour un bureau ciblé : point d’adresse à 500 m ou moins d’une gare, hors du périmètre cartographié de maintien des surfaces de bureau. Une couleur personnalisée reste prioritaire.</p>`;
+const officeLegend = `<p class="transport-scope"><span class="office-screening-swatch" style="background:${colors.office}" aria-hidden="true"></span>Immeubles ciblés : pastilles violettes unies. La proximité d’une gare et la zone de maintien ne changent pas leur couleur.</p>`;
 export function categoryKey(p) {
   const a = markerAppearance(p);
   return p.kind === "transport" ? a.icon : a.variant;
@@ -25,7 +20,7 @@ export function legendItem(p, label) {
 export function layerLegend(id) {
   if (id === "rentalOffices")
     return `<details class="rental-address-list"><summary>Voir les ${runtime.data["rental-offices"].features.length} adresses</summary><div>${runtime.data["rental-offices"].features.map((f) => `<button type="button" data-rental-id="${escapeHTML(f.id)}">${escapeHTML(f.properties.name)} <small>· ${formatSurface(f.properties.surface?.value_m2)}</small> <small>· ${f.properties.listings.length} annonce${f.properties.listings.length > 1 ? "s" : ""}</small></button>`).join("")}</div><p id="rental-surface-empty" hidden>Aucune adresse ne correspond aux surfaces choisies.</p></details><p class="transport-scope">Annonces déclaratives, relevées le 03/11/2026. 29 annonces sans adresse précise et 1 commerce ont été écartés.</p>`;
-  if (id === "offices") return officeScreeningLegend;
+  if (id === "offices") return officeLegend;
   if (id === "transport")
     return `<div class="layer-legend"><button type="button" class="legend-item" data-category="stations" data-group="transport" aria-pressed="true" aria-label="Afficher ou masquer les gares et stations"><span class="legend-symbol" style="background:${colors.transport};color:white">${svg("train")}</span>Gares et stations</button>${runtime.data.rail.features
       .map((f) => {

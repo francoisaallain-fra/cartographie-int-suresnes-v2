@@ -11,7 +11,7 @@ export function row(label, value) {
 function officeScreeningNote(p) {
   const screening = p.officeScreening;
   if (!screening?.highlighted) return "";
-  return `<p class="popup-notice">Repérage vert : point d’adresse à ${Math.round(screening.distanceMeters)} m à vol d’oiseau de ${escapeHTML(screening.stationName)}, hors du périmètre cartographié de maintien des surfaces de bureau. Le contour du bâtiment et sa faisabilité ne sont pas vérifiés.</p>`;
+  return `<p class="popup-notice">Point d’adresse à ${Math.round(screening.distanceMeters)} m à vol d’oiseau de ${escapeHTML(screening.stationName)}, hors du périmètre cartographié de maintien des surfaces de bureau. Le contour du bâtiment et sa faisabilité ne sont pas vérifiés.</p>`;
 }
 export function popup(f) {
   const p = f.properties;

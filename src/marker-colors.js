@@ -1,4 +1,4 @@
-import { colors, escapeHTML, officeScreeningColor } from "./presentation.js";
+import { colors, escapeHTML } from "./presentation.js";
 import { runtime } from "./state.js";
 
 export const markerColorsKey = "suresnes-v2-office-marker-colors";
@@ -29,24 +29,25 @@ try {
   }
 } catch {}
 
+// Apply the requested uniform targeted-office color once to existing browsers.
+try {
+  const resetKey = "suresnes-v2-targeted-marker-purple-reset-v1";
+  if (localStorage.getItem(resetKey) !== "1") {
+    for (const key of Object.keys(overrides))
+      if (key.startsWith("office:")) delete overrides[key];
+    localStorage.setItem(markerColorsKey, JSON.stringify(overrides));
+    localStorage.setItem(resetKey, "1");
+  }
+} catch {}
+
 const featureKey = (feature) => `${feature.properties.kind}:${feature.id}`;
-export const defaultMarkerColor = (feature) =>
-  feature.properties.kind === "office" &&
-  feature.properties.officeScreening?.highlighted
-    ? officeScreeningColor
-    : colors[feature.properties.kind];
+export const defaultMarkerColor = (feature) => colors[feature.properties.kind];
 
 export function markerColor(feature) {
   return overrides[featureKey(feature)] || defaultMarkerColor(feature);
 }
 
 export function officePinFill(feature) {
-  if (
-    feature.properties.kind === "office" &&
-    feature.properties.officeScreening?.highlighted &&
-    markerColor(feature) === defaultMarkerColor(feature)
-  )
-    return `url(#office-pin-gradient-${feature.properties.number})`;
   return markerColor(feature);
 }
 
@@ -75,12 +76,7 @@ export function saveMarkerColor(feature, color) {
 
 export function markerColorControl(feature) {
   const color = markerColor(feature);
-  const dualColorNote =
-    feature.properties.kind === "office" &&
-    feature.properties.officeScreening?.highlighted
-      ? " Par défaut, ce bureau ciblé est vert et violet."
-      : "";
-  return `<div class="marker-color-control"><label>Couleur de cette pastille <input type="color" data-marker-color="${escapeHTML(feature.id)}" value="${color}" aria-label="Couleur de la pastille : ${escapeHTML(feature.properties.name)}"></label><button type="button" data-marker-color-reset="${escapeHTML(feature.id)}" ${color === defaultMarkerColor(feature) ? "disabled" : ""}>Couleur initiale</button><small>Choix enregistré dans ce navigateur pour cette adresse uniquement.${dualColorNote}</small></div>`;
+  return `<div class="marker-color-control"><label>Couleur de cette pastille <input type="color" data-marker-color="${escapeHTML(feature.id)}" value="${color}" aria-label="Couleur de la pastille : ${escapeHTML(feature.properties.name)}"></label><button type="button" data-marker-color-reset="${escapeHTML(feature.id)}" ${color === defaultMarkerColor(feature) ? "disabled" : ""}>Couleur initiale</button><small>Choix enregistré dans ce navigateur pour cette adresse uniquement.</small></div>`;
 }
 
 function officeFeature(id) {
