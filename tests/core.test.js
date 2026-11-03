@@ -140,25 +140,20 @@ test("office screening respects 500 m and polygon holes and boundaries", () => {
     false,
   );
 });
-test("six mapped office addresses meet both screening criteria", () => {
-  const stations = read("transport.geojson").features;
-  const zones = read("plu-maintien-bureaux.geojson").features;
-  const offices = [
-    ...read("offices.geojson").features,
-    ...read("offices-extra.geojson").features,
-    ...read("rental-offices.geojson").features,
-  ];
-  const highlighted = offices
-    .filter((office) => screenOfficePoint(office, stations, zones).highlighted)
+test("screening only applies to targeted offices, never rentals", async () => {
+  const data = await loadDatasets(async (url) => ({
+    ok: true,
+    json: async () => JSON.parse(fs.readFileSync(`public/${url}`)),
+  }));
+  const highlighted = data.offices.features
+    .filter((office) => office.properties.officeScreening.highlighted)
     .map((office) => office.id);
   assert.deepEqual(highlighted, [
     "ban-92073_8131_00002",
     "ban-92073_3o60ni_00039",
-    "rental-92073_4440_00013",
-    "rental-92073_6110_00162",
-    "rental-92073_4152_00031",
-    "rental-92073_4440_00006",
   ]);
+  for (const rental of data["rental-offices"].features)
+    assert.equal(rental.properties.officeScreening, undefined);
 });
 test("all 60 address/radius scenarios contain their origin and monotonic nearby sets", () => {
   const radii = read("radii.json");

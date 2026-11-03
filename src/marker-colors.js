@@ -18,8 +18,20 @@ try {
         overrides[key] = value.toLowerCase();
 } catch {}
 
+// Reset earlier rental colors once, while preserving targeted-office choices.
+try {
+  const resetKey = "suresnes-v2-rental-marker-blue-reset-v1";
+  if (localStorage.getItem(resetKey) !== "1") {
+    for (const key of Object.keys(overrides))
+      if (key.startsWith("rentalOffice:")) delete overrides[key];
+    localStorage.setItem(markerColorsKey, JSON.stringify(overrides));
+    localStorage.setItem(resetKey, "1");
+  }
+} catch {}
+
 const featureKey = (feature) => `${feature.properties.kind}:${feature.id}`;
 export const defaultMarkerColor = (feature) =>
+  feature.properties.kind === "office" &&
   feature.properties.officeScreening?.highlighted
     ? officeScreeningColor
     : colors[feature.properties.kind];
