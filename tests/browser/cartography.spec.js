@@ -67,16 +67,16 @@ test("opening layer layout matches the supplied MOS view", async ({ page }) => {
   for (const [id, opacity] of [
     ["mosPavilion", "55"],
     ["mosCollective", "55"],
-    ["mosActivities", "50"],
+    ["mosActivities", "75"],
     ["mosOffices", "100"],
   ])
     await expect(page.locator(`#layerOpacity-${id}`)).toHaveValue(opacity);
   await expect(
     page.locator(".leaflet-data-mosActivities-pane path").first(),
-  ).toHaveAttribute("fill", "#0055ff");
+  ).toHaveAttribute("fill", "#0080ff");
   await expect(
     page.locator(".leaflet-data-mosActivities-pane path").first(),
-  ).toHaveAttribute("fill-opacity", "0.5");
+  ).toHaveAttribute("fill-opacity", "0.75");
   await page.evaluate(() => {
     localStorage.setItem(
       "suresnes-v2-layer-order",

@@ -27,7 +27,7 @@ export const polygonDefaultOpacity = {
   mosOffices: 100,
   mosPavilion: 55,
   mosCollective: 55,
-  mosActivities: 50,
+  mosActivities: 75,
   plu: 5,
 };
 export const layerOpacity = Object.fromEntries(

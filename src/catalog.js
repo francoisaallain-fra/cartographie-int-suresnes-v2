@@ -7,7 +7,7 @@ export const mosColors = {
   offices: "#2878c6",
   pavilion: "#edc448",
   collective: "#ed8652",
-  activities: "#0055ff",
+  activities: "#0080ff",
 };
 export const layerSpecs = [
   {

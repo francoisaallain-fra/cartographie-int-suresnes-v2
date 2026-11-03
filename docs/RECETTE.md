@@ -146,3 +146,7 @@ Les cinq pastilles ciblées reprennent la couleur de la couche `#d72e83`, sans d
 ## Commerces alimentaires en rouge clair · 3 novembre 2026
 
 Les épiceries/supérettes utilisent le rouge pâle `#ffc2c2` et les supermarchés le rouge clair `#ff9e9e`. Les pictogrammes sont rouge foncé `#752929` pour rester lisibles sur ces fonds clairs. La carte et les boutons de légende partagent ces couleurs. Les marchés et les autres catégories conservent leurs couleurs.
+
+## MOS Activités plus vif et opacité initiale · 3 novembre 2026
+
+MOS Activités utilise le bleu saturé `#0080ff` et une opacité initiale de 75 %. Ce réglage s’applique à chaque chargement ; le curseur reste ajustable de 0 à 100 %. Le contour conserve son opacité de référence. Les couches MOS Habitat pavillonnaire et Habitat collectif restent à 55 %. La recette initiale vérifie couleur, valeur du curseur et opacité SVG réelle.
