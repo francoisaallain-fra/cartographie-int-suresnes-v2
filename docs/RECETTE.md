@@ -4,7 +4,7 @@ Référence des contrôles : jeux de données et ressources identifiés dans `te
 
 | Fonction         | Attendu                                                                                                                                                  |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Douze couches    | Activation indépendante, tout masquer, ordre visuel correspondant à l'ordre des cartes                                                                   |
+| Treize couches   | Activation indépendante, tout masquer, ordre visuel correspondant à l'ordre des cartes                                                                   |
 | Repli Notion     | Triangle visible ; nom, icône, interrupteur et poignée conservés ; corps masqué ; état persistant                                                        |
 | Personnalisation | Renommer, annuler, nom d'origine ; ordre au clavier et par glisser ; persistance après rechargement                                                      |
 | Opacité          | 0 à 100 %, surfaces réellement opaques à 100 %, objets invisibles non interactifs                                                                        |
@@ -169,3 +169,9 @@ Vérifier les nouvelles adresses et la date de preuve du 03/11/2026, sans réét
 - Colorer un supermarché seul, puis tous les supermarchés depuis un rayon qui n’en affiche qu’une partie : après retour à la vue ville, les 16 sont colorés, sans toucher aux 6 épiceries.
 - Vérifier la légende, une exception individuelle après le changement collectif, la persistance après rechargement et les deux remises à zéro.
 - Une couleur collective de collège ne recolore ni lycées ni écoles primaires ; changer une couleur de gare ne change ni zoom, ni centre, ni cercles.
+
+## Panneau, zoom et hubs · 17 novembre 2026
+
+Le panneau est redimensionnable de 240 à 560 pixels selon l’espace disponible, au pointeur et au clavier, repliable et mémorisé. Le passage par le format mobile conserve la largeur de bureau. Les pastilles diminuent au zoom avant sans déplacer leur ancrage. La treizième couche affiche les six cercles de 500 m indépendamment des transports, avec ordre, repli et opacité habituels.
+
+Contrôles locaux : analyse ESLint, format Prettier, 20 tests Node, build Vite et 25 parcours Playwright réussis avec Chrome (23 lors de la suite puis les 2 derniers après correction de l’attente d’animation du test). Les nouveaux parcours vérifient glisser, clavier, repli/rechargement, aller-retour mobile, réduction mesurée et ancrage des pastilles, centres exacts et rayon 500 m, indépendance vis-à-vis des transports et de la sélection d’adresse, opacité et tout masquer. Le rendu des cercles et du panneau a également été inspecté dans le navigateur local. Les GeoJSON sources restent inchangés.

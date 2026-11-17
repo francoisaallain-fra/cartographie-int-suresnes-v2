@@ -7,7 +7,7 @@
 | main                                           | Chargement, création de Leaflet, construction des couches et démarrage               |
 | data                                           | Chargement HTTP et validation des géométries avant affichage                         |
 | state                                          | État partagé de la session et références Leaflet, sans variables globales implicites |
-| catalog                                        | Définition des douze couches                                                         |
+| catalog                                        | Définition des treize couches                                                        |
 | layers, opacity                                | Synchronisation de visibilité, transparence et libellés                              |
 | transport                                      | Routes, halo et décalage graphique des voies L/U                                     |
 | radius, geometry                               | Accès aux scénarios et calcul d'appartenance au cercle affiché                       |
@@ -32,3 +32,5 @@ Lire d'abord les tests et le catalogue, puis suivre `main → data → controls/
 `rental-surfaces` analyse les surfaces annoncées, applique une revue des lots liée aux signatures exactes des annonces et expose un prédicat de filtrage pur. `surface-controls` gère les bornes en session, leur validation, le compteur et la liste d’adresses. `layers` applique ce prédicat uniquement aux locations, sans modifier la vue, le rayon des aménités ou les bureaux ciblés. Le chargement calcule les valeurs avant de construire les fiches et contrôles.
 
 `marker-colors` conserve les couleurs individuelles sous la clé historique des bureaux et les couleurs par type sous `suresnes-v2-marker-type-colors`. Les écoles sont réparties en maternelles/primaires, collèges et lycées comme les filtres. Une action par type efface les exceptions individuelles des points chargés de ce type, y compris masqués. Le rendu et les légendes réutilisent ces préférences ; les contrôles se synchronisent à l’ouverture de chaque fiche pour éviter une valeur périmée. Les choix ne modifient ni données sources, ni rayons, ni couleurs des lignes de transport.
+
+`sidebar` règle la largeur et le repli du panneau avec une préférence locale `suresnes-v2-sidebar` et recalcule la taille Leaflet. `marker-zoom` adapte le rendu des symboles au zoom, autour de leur ancrage géographique. `transportHubs` est un groupe de six cercles de 500 m dans un pane propre, avec les contrôles habituels. Cette couche ne filtre pas les aménités ; les cercles individuels des gares sont rendus transparents tant qu’elle est active pour éviter les superpositions.

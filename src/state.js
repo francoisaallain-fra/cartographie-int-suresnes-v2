@@ -11,6 +11,7 @@ export const state = {
     mixedBuildings: false,
     mosOffices: false,
     transport: true,
+    transportHubs: false,
     offices: true,
     rentalOffices: true,
     pluOfficeRetention: true,

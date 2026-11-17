@@ -20,6 +20,8 @@ export function legendItem(p, label) {
   )}" aria-pressed="false" aria-label="Afficher ou masquer : ${label}" title="Afficher ou masquer : ${label}"><span class="legend-symbol" data-marker-type="${markerType(p)}" style="background:${a.color};color:${a.ink}">${svg(a.icon)}</span>${label}</button>`;
 }
 export function layerLegend(id) {
+  if (id === "transportHubs")
+    return `<p class="transport-scope"><span class="hub-radius-swatch" aria-hidden="true"></span>Cercles de 500 m autour des ${runtime.data.transport.features.length} gares et stations recensées. Couche indépendante des pastilles et des lignes de transport, également visible pendant l’exploration d’une adresse. Distance à vol d’oiseau, sans calcul de trajet piéton.</p>`;
   if (id === "rentalOffices")
     return `<details class="rental-address-list"><summary>Voir les ${runtime.data["rental-offices"].features.length} adresses</summary><div>${runtime.data["rental-offices"].features.map((f) => `<button type="button" data-rental-id="${escapeHTML(f.id)}">${escapeHTML(f.properties.name)} <small>· ${formatSurface(f.properties.surface?.value_m2)}</small> <small>· ${f.properties.listings.length} annonce${f.properties.listings.length > 1 ? "s" : ""}</small></button>`).join("")}</div><p id="rental-surface-empty" hidden>Aucune adresse ne correspond aux surfaces choisies.</p></details><p class="transport-scope">Annonces déclaratives, relevées le 03/11/2026. 29 annonces sans adresse précise et 1 commerce ont été écartés.</p>`;
   if (id === "offices") return officeLegend();

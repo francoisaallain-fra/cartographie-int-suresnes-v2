@@ -18,6 +18,13 @@ export const layerSpecs = [
     color: colors.transport,
   },
   {
+    id: "transportHubs",
+    label: "Hubs de transport · rayon 500 m",
+    sub: "6 gares et stations · distance à vol d’oiseau",
+    icon: "transport",
+    color: "#466c5d",
+  },
+  {
     id: "offices",
     label: "Immeubles ciblés",
     sub: "5 adresses · vacance non vérifiée",

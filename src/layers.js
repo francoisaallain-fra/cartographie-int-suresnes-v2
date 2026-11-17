@@ -17,6 +17,7 @@ export function updateLayers() {
     const group = runtime.groups[spec.id];
     if (
       ![
+        "transportHubs",
         "plu",
         "pluOfficeRetention",
         "mosOffices",

@@ -36,7 +36,7 @@ Les rayons blancs de 500 m des gares se cumulent : un clic ajoute le cercle de l
 
 1. `docs/ARCHITECTURE.md` : responsabilités, état et dépendances.
 2. `src/main.js` : initialisation et assemblage de la carte.
-3. `src/catalog.js` : douze couches et libellés.
+3. `src/catalog.js` : treize couches et libellés.
 4. `src/controls.js`, `src/layers.js`, `src/selection.js` : interactions et rendu.
 5. `tests/` et `docs/RECETTE.md` : contrat fonctionnel et contrôles.
 6. `docs/DONNEES.md` : sources, scripts historiques et limites.
@@ -56,3 +56,11 @@ Après revue Google Maps : 31 points alimentaires/marchés, avec filtres distinc
 La couche des locations présente 27 annonces à 19 adresses, issues des 57 offres de la nouvelle recherche communale. 29 annonces sans adresse précise et 1 commerce sont exclus. Le relevé, ses sources, le cache BAN et la méthode de reconstruction sont décrits dans [la documentation des données](docs/DONNEES.md).
 
 Le filtre **Surface des bureaux à louer**, sous le rayon, accepte un minimum et un maximum en m². Il sélectionne les adresses selon leur surface de référence : maximum annoncé sans doublon, ou cumul de lots distincts documenté. La fiche explique chaque valeur ; le bouton de réinitialisation retire les bornes. Les immeubles ciblés, leurs rayons et les autres couches restent indépendants. Voir [la méthode de calcul](docs/DONNEES.md#filtre-de-surface-des-locations--3-novembre-2026).
+
+## Panneau, zoom et hubs · 17 novembre 2026
+
+Le bord droit du panneau des couches se glisse pour régler sa largeur entre 240 et 560 pixels, dans la limite de la place disponible. Les flèches gauche/droite du clavier règlent aussi la largeur ; un double-clic sur la poignée rétablit 316 pixels. Le bouton chevron placé sur la carte replie ou rouvre le panneau. Largeur et repli sont mémorisés dans ce navigateur. Sur mobile, les couches restent sous la carte.
+
+Les pastilles diminuent progressivement lors d’un zoom avant : taille nominale au zoom 15, environ 84 % au zoom 18 et 74 % au zoom 20 ; les points d’ancrage restent fixes.
+
+La couche « Hubs de transport · rayon 500 m », désactivée initialement, affiche les six cercles simultanément. Son interrupteur, son ordre, son repli et son opacité sont indépendants des transports et du rayon d’une adresse. Les cercles individuels sélectionnés par clic sur les gares restent disponibles lorsque cette couche est masquée.
