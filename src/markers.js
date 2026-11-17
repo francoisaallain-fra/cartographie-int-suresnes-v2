@@ -90,7 +90,7 @@ export function featureIcon(f) {
   if (p.kind === "transport") {
     return L.divIcon({
       className: "map-pin transport station-icon",
-      html: `<div class="pin-disc" style="--color:${markerColor(f)};color:${markerInk(markerColor(f))}">${svg("transport")}</div>`,
+      html: `<div class="marker-visual"><div class="pin-disc" style="--color:${markerColor(f)};color:${markerInk(markerColor(f))}">${svg("transport")}</div></div>`,
       iconSize: [28, 28],
       iconAnchor: [14, 14],
       popupAnchor: [100, 37],
@@ -110,7 +110,7 @@ export function featureIcon(f) {
     : `<div class="pin-disc" style="--color:${a.color};color:${a.ink}">${svg(a.icon)}</div>`;
   return L.divIcon({
     className: `map-pin ${p.kind} ${a.variant}${p.audit?.added ? " audit-added" : ""}${p.audit?.doubts?.length ? " audit-doubt" : ""}${state.selected === f.id ? " selected" : ""}`,
-    html: `${markerBody}${p.audit?.doubts?.length ? '<span class="audit-question" aria-hidden="true">?</span>' : ""}`,
+    html: `<div class="marker-visual">${markerBody}${p.audit?.doubts?.length ? '<span class="audit-question" aria-hidden="true">?</span>' : ""}</div>`,
     iconSize: addressPin ? [32, 40] : [28, 28],
     iconAnchor: addressPin ? addressPinTip : [14, 14],
     popupAnchor: addressPin ? [15, -40] : [0, -15],

@@ -66,7 +66,7 @@ export function selectStation(feature) {
     weight: 2,
     dashArray: "6 5",
     fill: false,
-    opacity: layerOpacity.transport / 100,
+    opacity: state.enabled.transportHubs ? 0 : layerOpacity.transport / 100,
     interactive: false,
   }).addTo(runtime.map);
   runtime.stationRadiusLayers.set(feature.id, layer);

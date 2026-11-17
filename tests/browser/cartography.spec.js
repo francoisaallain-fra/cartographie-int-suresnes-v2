@@ -24,11 +24,12 @@ const excludedAmenityIds = new Set(
 test.beforeEach(async ({ page }) => {
   await page.goto("/");
   await expect(page.locator("#loading")).toBeHidden();
-  await expect(page.locator(".layer-card")).toHaveCount(12);
+  await expect(page.locator(".layer-card")).toHaveCount(13);
 });
 test("opening layer layout matches the supplied MOS view", async ({ page }) => {
   const expectedOrder = [
     "transport",
+    "transportHubs",
     "offices",
     "rentalOffices",
     "pluOfficeRetention",
@@ -57,6 +58,7 @@ test("opening layer layout matches the supplied MOS view", async ({ page }) => {
   ])
     await expect(page.locator(`#layer-${id}`)).toBeChecked();
   for (const id of [
+    "transportHubs",
     "mixedBuildings",
     "mosOffices",
     "plu",
@@ -115,7 +117,7 @@ test("a new session starts with every layer collapsed", async ({
 }) => {
   await expect(
     page.locator('.layer-expand[aria-expanded="false"]'),
-  ).toHaveCount(12);
+  ).toHaveCount(13);
   await expect(page.locator(".layer-body:not([hidden])")).toHaveCount(0);
   await page.locator('[data-layer-id="plu"] .layer-expand').click();
   await page.reload();
@@ -125,7 +127,7 @@ test("a new session starts with every layer collapsed", async ({
   await expect(newSession.locator("#loading")).toBeHidden();
   await expect(
     newSession.locator('.layer-expand[aria-expanded="false"]'),
-  ).toHaveCount(12);
+  ).toHaveCount(13);
   await expect(newSession.locator(".layer-body:not([hidden])")).toHaveCount(0);
   await newSession.close();
 });
@@ -978,4 +980,143 @@ test("every point category exposes both color choices and school types stay sepa
   expect(after.center).toEqual(before.center);
   expect(after.zoom).toEqual(before.zoom);
   expect(after.selectedStations).toEqual(before.selectedStations);
+});
+
+test("sidebar resizes, collapses and restores without breaking the map", async ({
+  page,
+}) => {
+  const sidebar = page.locator("#sidebar");
+  const handle = page.getByRole("separator", {
+    name: "Largeur du panneau des couches",
+  });
+  await handle.focus();
+  await page.keyboard.press("End");
+  await expect(handle).toHaveAttribute("aria-valuenow", "560");
+  expect((await sidebar.boundingBox()).width).toBe(560);
+  await page.keyboard.press("Home");
+  expect((await sidebar.boundingBox()).width).toBe(240);
+  const grip = await handle.boundingBox();
+  await page.mouse.move(grip.x + grip.width / 2, grip.y + 250);
+  await page.mouse.down();
+  await page.mouse.move(420, grip.y + 250, { steps: 8 });
+  await page.mouse.up();
+  await expect(handle).toHaveAttribute("aria-valuenow", "420");
+  await page.reload();
+  await expect(page.locator("#loading")).toBeHidden();
+  expect((await sidebar.boundingBox()).width).toBe(420);
+  const mapBefore = await page.locator("#map").boundingBox();
+  await page
+    .getByRole("button", {
+      name: "Réduire le panneau des couches",
+      exact: true,
+    })
+    .click();
+  await expect(sidebar).toBeHidden();
+  expect((await page.locator("#map").boundingBox()).width).toBeGreaterThan(
+    mapBefore.width + 400,
+  );
+  await page.reload();
+  await expect(page.locator("#loading")).toBeHidden();
+  await expect(sidebar).toBeHidden();
+  await page.setViewportSize({ width: 390, height: 844 });
+  await expect(sidebar).toBeVisible();
+  await expect(handle).toBeHidden();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(
+    390,
+  );
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await expect(sidebar).toBeHidden();
+  await page
+    .getByRole("button", {
+      name: "Agrandir le panneau des couches",
+      exact: true,
+    })
+    .click();
+  await expect(sidebar).toBeVisible();
+  expect((await sidebar.boundingBox()).width).toBe(420);
+  await page.locator(".leaflet-control-zoom-in").click();
+  await expect(page.locator(".map-pin.office")).toHaveCount(5);
+});
+
+test("pastilles shrink on zoom while their geographic anchor stays fixed", async ({
+  page,
+}) => {
+  const read = () =>
+    page
+      .locator(".map-pin.office")
+      .first()
+      .evaluate((marker) => {
+        const body = marker.querySelector(".marker-visual");
+        const box = body.getBoundingClientRect();
+        const pin = marker.getBoundingClientRect();
+        const scale = new window.DOMMatrix(
+          window.getComputedStyle(body).transform,
+        ).a;
+        return {
+          scale,
+          width: box.width,
+          anchorX: box.left + scale - pin.left,
+          anchorY: box.top + 39 * scale - pin.top,
+        };
+      });
+  const before = await read();
+  const initialZoom = await page.evaluate(
+    () => window.suresnesDiagnostics().zoom,
+  );
+  for (let i = 0; i < 4; i++) {
+    await page.locator(".leaflet-control-zoom-in").click();
+    await expect
+      .poll(() => page.evaluate(() => window.suresnesDiagnostics().zoom))
+      .toBe(initialZoom + (i + 1) * 0.5);
+    await expect(page.locator(".leaflet-map-pane")).not.toHaveClass(
+      /leaflet-zoom-anim/,
+    );
+  }
+  const after = await read();
+  expect(after.width).toBeLessThan(before.width * 0.92);
+  expect(after.scale).toBeGreaterThanOrEqual(0.72);
+  expect(after.anchorX).toBeCloseTo(1, 2);
+  expect(after.anchorY).toBeCloseTo(39, 2);
+  await page.locator(".office-item").first().click();
+  await expect(page.locator(".leaflet-popup-content")).toHaveCount(1);
+});
+
+test("independent hub layer shows six exact 500 metre circles", async ({
+  page,
+}) => {
+  const stations = JSON.parse(
+    fs.readFileSync("public/data/transport.geojson"),
+  ).features;
+  await expect(page.locator(".hub-radius")).toHaveCount(0);
+  await page.locator("#layer-transportHubs").check();
+  await expect(page.locator(".hub-radius")).toHaveCount(6);
+  const circles = await page.evaluate(
+    () => window.suresnesDiagnostics().hubRadii,
+  );
+  expect(circles).toEqual(
+    stations.map((f) => ({ center: f.geometry.coordinates, radius: 500 })),
+  );
+  await page.locator("#layer-transport").uncheck();
+  await expect(page.locator(".hub-radius")).toHaveCount(6);
+  await page.locator(".office-item").first().click();
+  await expect(page.locator(".hub-radius")).toHaveCount(6);
+  await page.locator('[data-layer-id="transportHubs"] .layer-expand').click();
+  await page.locator("#layerOpacity-transportHubs").fill("40");
+  await expect(page.locator(".hub-radius").first()).toHaveAttribute(
+    "stroke-opacity",
+    "0.4",
+  );
+  await page.locator("#layerOpacity-transportHubs").fill("0");
+  await expect(page.locator(".hub-radius").last()).toHaveAttribute(
+    "stroke-opacity",
+    "0",
+  );
+  await page.locator("#hide-all").click();
+  await expect(page.locator(".hub-radius")).toHaveCount(0);
+  await page.locator("#layer-transportHubs").check();
+  await page.locator("#layerOpacity-transportHubs").fill("100");
+  await expect(page.locator(".hub-radius")).toHaveCount(6);
+  await expect(page.locator("#layer-transport")).not.toBeChecked();
+  await page.locator("#layer-transportHubs").uncheck();
+  await expect(page.locator(".hub-radius")).toHaveCount(0);
 });

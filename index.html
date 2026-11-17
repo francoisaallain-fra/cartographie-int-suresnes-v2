@@ -16,7 +16,7 @@
   </head>
   <body>
     <main class="workspace">
-      <aside class="sidebar" aria-label="Couches cartographiques">
+      <aside id="sidebar" class="sidebar" aria-label="Couches cartographiques">
         <div class="intro"><h1>Suresnes</h1></div>
 
         <div class="layers-title">
@@ -138,6 +138,30 @@
           </button>
         </p>
       </aside>
+      <div
+        id="sidebar-resize"
+        class="sidebar-resize"
+        role="separator"
+        tabindex="0"
+        aria-label="Largeur du panneau des couches"
+        aria-controls="sidebar"
+        aria-orientation="vertical"
+        aria-valuemin="240"
+        aria-valuemax="560"
+        aria-valuenow="316"
+        title="Glisser pour redimensionner · flèches gauche/droite au clavier"
+      ></div>
+      <button
+        id="sidebar-toggle"
+        class="sidebar-toggle"
+        type="button"
+        aria-controls="sidebar"
+        aria-expanded="true"
+        aria-label="Réduire le panneau des couches"
+        title="Réduire le panneau des couches"
+      >
+        ‹
+      </button>
       <section class="map-panel" aria-label="Carte interactive">
         <div class="map-wrap">
           <button id="reset-view" class="button map-reset">⌖ Vue ville</button

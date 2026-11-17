@@ -1,3 +1,5 @@
+import { setupSidebar } from "./sidebar.js";
+import { setupMarkerZoom } from "./marker-zoom.js";
 import { configureMapClickHandler } from "./map-events.js";
 import { loadDatasets } from "./data.js";
 import { groupFor, runtime, state } from "./state.js";
@@ -53,6 +55,7 @@ export async function start() {
       })
       .addTo(runtime.map);
     setupMapRotation();
+    setupSidebar();
     let loadedTiles = 0,
       failedTiles = 0;
     runtime.tiles = L.tileLayer(
@@ -232,6 +235,21 @@ export async function start() {
         },
       });
     }
+    runtime.groups.transportHubs = L.layerGroup(
+      runtime.data.transport.features.map((feature) => {
+        const [lng, lat] = feature.geometry.coordinates;
+        return L.circle([lat, lng], {
+          radius: 500,
+          pane: "data-transportHubs",
+          className: "hub-radius",
+          color: "#ffffff",
+          weight: 2,
+          dashArray: "6 5",
+          fill: false,
+          interactive: false,
+        });
+      }),
+    );
     for (const id of [
       "transport",
       "equipment",
@@ -286,6 +304,7 @@ export async function start() {
         );
       runtime.markers.set(f.id, marker);
     }
+    setupMarkerZoom();
     buildControls();
     bindMarkerColorControls();
     buildSources();
@@ -305,6 +324,10 @@ export async function start() {
         ? runtime.roadLayers.map((r) => r.id)
         : [],
       radiusMeters: state.radiusMeters,
+      hubRadii: runtime.groups.transportHubs.getLayers().map((circle) => ({
+        center: [circle.getLatLng().lng, circle.getLatLng().lat],
+        radius: circle.getRadius(),
+      })),
       selected: state.selected,
       selectedStations: [...state.selectedStations],
       stationRadiusMeters: Object.fromEntries(

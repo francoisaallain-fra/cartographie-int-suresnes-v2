@@ -3,11 +3,14 @@ import {
   layerOpacity,
   polygonOutlineOpacity,
   runtime,
+  state,
 } from "./state.js";
 import { $ } from "./presentation.js";
 export function applyOpacity(id) {
   const opacity = layerOpacity[id] / 100;
-  if (id === "plu") {
+  if (id === "transportHubs") {
+    runtime.groups[id].eachLayer((circle) => circle.setStyle({ opacity }));
+  } else if (id === "plu") {
     runtime.groups.plu.setStyle({
       opacity: polygonOutlineOpacity(id, 0.95),
       fillOpacity: opacity,
@@ -79,7 +82,7 @@ export function applyOpacity(id) {
       }
   if (id === "transport")
     for (const layer of runtime.stationRadiusLayers.values())
-      layer.setStyle({ opacity });
+      layer.setStyle({ opacity: state.enabled.transportHubs ? 0 : opacity });
   const control = $("layerOpacity-" + id);
   control.value = layerOpacity[id];
   control.setAttribute("aria-valuetext", layerOpacity[id] + " % d’opacité");
