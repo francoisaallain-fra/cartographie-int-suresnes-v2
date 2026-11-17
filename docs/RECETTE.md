@@ -2,26 +2,26 @@
 
 Référence des contrôles : jeux de données et ressources identifiés dans `tests/baseline-sha256.json`. Les nombres ci-dessous décrivent cet instantané.
 
-| Fonction         | Attendu                                                                                                                                                  |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Treize couches   | Activation indépendante, tout masquer, ordre visuel correspondant à l'ordre des cartes                                                                   |
-| Repli Notion     | Triangle visible ; nom, icône, interrupteur et poignée conservés ; corps masqué ; état persistant                                                        |
-| Personnalisation | Renommer, annuler, nom d'origine ; ordre au clavier et par glisser ; persistance après rechargement                                                      |
-| Opacité          | 0 à 100 %, surfaces réellement opaques à 100 %, objets invisibles non interactifs                                                                        |
-| Zonage PLU       | Couche désactivée à chaque ouverture ; réactivation possible par son interrupteur                                                                        |
-| Maintien bureaux | Liseré jaune fluo, épais (5 px), pointillé et sans remplissage ; curseur agissant sur les deux traits                                                    |
-| Bureaux à louer  | Pastilles bleues avec un point blanc, sans numéro ni repérage vert ; anciennes couleurs réinitialisées une fois, nouveaux choix individuels persistants  |
-| Bureaux ciblés   | Même pointe ancrée sur le point d’adresse que les bureaux à louer ; couleur modifiable séparément, restaurable et conservée dans ce navigateur           |
-| Repérage vert    | Bureaux ciblés uniquement : gare à 500 m ou moins et point hors maintien PLU ; 2 adresses vert/violet, avec couleur manuelle prioritaire                 |
-| Sous-catégories  | Gares indépendantes des lignes L/U/T2 ; axes routiers, santé, crèches, niveaux scolaires, commerces et pharmacies                                        |
-| Cinq adresses    | Sélection par liste et marqueur, changement d'adresse sans ancien cadrage résiduel                                                                       |
-| 75 rayons        | 300 à 1 000 m par pas de 50 ; listes et géométries pré-calculées préservées                                                                              |
-| Six gares        | Clic sur chacune : cercle de 500 m cumulable ; second clic sur la même gare : retrait individuel ; masquage des transports : retrait de tous les cercles |
-| Retour ville     | Bouton ou clic hors cercle ; restauration des couches antérieures                                                                                        |
-| Rotation         | Ctrl/Commande avant ou après clic, marqueurs utilisables, retour nord                                                                                    |
-| Sources          | Dialogue, fermeture Échap et extérieure, liens et téléchargements                                                                                        |
-| Accessibilité    | Libellés accessibles, focus visible, clavier, affichage mobile sans débordement                                                                          |
-| Panne réseau     | Message de chargement et reprise ; erreur de fond IGN distincte des données                                                                              |
+| Fonction         | Attendu                                                                                                                                                   |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Treize couches   | Activation indépendante, tout masquer, ordre visuel correspondant à l'ordre des cartes                                                                    |
+| Repli Notion     | Triangle visible ; nom, icône, interrupteur et poignée conservés ; corps masqué ; état persistant                                                         |
+| Personnalisation | Renommer, annuler, nom d'origine ; ordre au clavier et par glisser ; persistance après rechargement                                                       |
+| Opacité          | 0 à 100 %, surfaces réellement opaques à 100 %, objets invisibles non interactifs                                                                         |
+| Zonage PLU       | Couche désactivée à chaque ouverture ; réactivation possible par son interrupteur                                                                         |
+| Maintien bureaux | Liseré jaune fluo, épais (5 px), pointillé et sans remplissage ; curseur agissant sur les deux traits                                                     |
+| Bureaux à louer  | Pastilles bleues avec un point blanc, sans numéro ni repérage vert ; anciennes couleurs réinitialisées une fois, anciens choix conservés en lecture seule |
+| Bureaux ciblés   | Même pointe ancrée sur le point d’adresse que les bureaux à louer ; couleur conservée sans réglage dans les fiches                                        |
+| Repérage vert    | Bureaux ciblés uniquement : gare à 500 m ou moins et point hors maintien PLU ; 2 adresses vert/violet, avec couleur manuelle prioritaire                  |
+| Sous-catégories  | Gares indépendantes des lignes L/U/T2 ; axes routiers, santé, crèches, niveaux scolaires, commerces et pharmacies                                         |
+| Cinq adresses    | Sélection par liste et marqueur, changement d'adresse sans ancien cadrage résiduel                                                                        |
+| 75 rayons        | 300 à 1 000 m par pas de 50 ; listes et géométries pré-calculées préservées                                                                               |
+| Six gares        | Clic sur chacune : cercle de 500 m cumulable ; second clic sur la même gare : retrait individuel ; masquage des transports : retrait de tous les cercles  |
+| Retour ville     | Bouton ou clic hors cercle ; restauration des couches antérieures                                                                                         |
+| Rotation         | Ctrl/Commande avant ou après clic, marqueurs utilisables, retour nord                                                                                     |
+| Sources          | Dialogue, fermeture Échap et extérieure, liens et téléchargements                                                                                         |
+| Accessibilité    | Libellés accessibles, focus visible, clavier, affichage mobile sans débordement                                                                           |
+| Panne réseau     | Message de chargement et reprise ; erreur de fond IGN distincte des données                                                                               |
 
 Les tests Node contrôlent les empreintes, les 75 scénarios, la validation des données, l'échappement et l'identité du site. Les tests Playwright du dépôt contrôlent les interactions, les 75 ensembles de points affichés et les six cercles de gare. Les contrôles visuels et gestes de rotation restent à revoir pour toute modification du rendu ou de Leaflet.
 
@@ -175,3 +175,9 @@ Vérifier les nouvelles adresses et la date de preuve du 03/11/2026, sans réét
 Le panneau est redimensionnable de 240 à 560 pixels selon l’espace disponible, au pointeur et au clavier, repliable et mémorisé. Le passage par le format mobile conserve la largeur de bureau. Les pastilles diminuent au zoom avant sans déplacer leur ancrage. La treizième couche affiche les six cercles de 500 m indépendamment des transports, avec ordre, repli et opacité habituels.
 
 Contrôles locaux : analyse ESLint, format Prettier, 20 tests Node, build Vite et 25 parcours Playwright réussis avec Chrome (23 lors de la suite puis les 2 derniers après correction de l’attente d’animation du test). Les nouveaux parcours vérifient glisser, clavier, repli/rechargement, aller-retour mobile, réduction mesurée et ancrage des pastilles, centres exacts et rayon 500 m, indépendance vis-à-vis des transports et de la sélection d’adresse, opacité et tout masquer. Le rendu des cercles et du panneau a également été inspecté dans le navigateur local. Les GeoJSON sources restent inchangés.
+
+## Fiches compactes · 17 novembre 2026
+
+Les fiches des deux couches de bureaux sont limitées à l’adresse, aux surfaces annoncées connues et au décompte d’aménités. Vérifier le cumul de 1 387 m² au 30 rue Pasteur, la mention « Non renseignée » en l’absence de correspondance BAN, le suivi du rayon et l’indépendance des couches masquées. Sur bureau et mobile, le cadre doit rester inférieur à 265 pixels de large et à 260 pixels de haut pour les cinq adresses ciblées. Aucun des 18 types de pastilles ne doit proposer de réglage de couleur ; les préférences antérieures restent lues sans être modifiées. Les sections plus anciennes ci-dessus décrivent les comportements historiques, remplacés par cette recette.
+
+Validation locale : ESLint, format Prettier, 20 tests Node, build Vite et 24 parcours Playwright avec Chrome réussis (23 lors de la suite, puis le dernier après correction d’une comparaison textuelle du test). Inspection visuelle du cas 30 rue Pasteur : adresse, surface cumulée, détail des surfaces et aménités dans un cadre compact. Les données sources et leurs empreintes sont inchangées.

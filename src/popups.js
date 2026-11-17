@@ -1,40 +1,64 @@
-import { formatSurface } from "./rental-surfaces.js";
+import { formatSurface, parseAdvertisedSurface } from "./rental-surfaces.js";
 import { escapeHTML, typeLabels } from "./presentation.js";
 import { isSncfStation, serviceBadges, stationServices } from "./markers.js";
 import { nearbyAmenities, radiusText, selectedRadius } from "./radius.js";
-import { markerColorControl } from "./marker-colors.js";
 
-import { runtime, state } from "./state.js";
+import { runtime, state, groupFor } from "./state.js";
+import { distanceMeters } from "./geometry.js";
 export function row(label, value) {
   return `<div class="popup-row"><span>${escapeHTML(label)}</span><strong>${escapeHTML(value)}</strong></div>`;
 }
-function officeScreeningNote(p) {
-  const screening = p.officeScreening;
-  if (!screening?.highlighted) return "";
-  return `<p class="popup-notice">Point d’adresse à ${Math.round(screening.distanceMeters)} m à vol d’oiseau de ${escapeHTML(screening.stationName)}, hors du périmètre cartographié de maintien des surfaces de bureau. Le contour du bâtiment et sa faisabilité ne sont pas vérifiés.</p>`;
+/** Compact address card. Advertised areas never stand for total building area. */
+export function buildingPopup(f) {
+  const p = f.properties;
+  const rental =
+    p.kind === "rentalOffice"
+      ? f
+      : runtime.data["rental-offices"].features.find(
+          (item) => p.ban_id && item.properties.ban_id === p.ban_id,
+        );
+  const surface = rental?.properties.surface;
+  const areas = [
+    ...new Set(
+      (rental?.properties.listings || []).map(
+        (listing) => listing.surface_display,
+      ),
+    ),
+  ];
+  const singleArea =
+    areas.length === 1 ? parseAdvertisedSurface(areas[0]) : null;
+  const detail =
+    singleArea?.min === singleArea?.max && areas.length === 1
+      ? ""
+      : areas.join(" · ");
+  const amenities =
+    p.kind === "office"
+      ? nearbyAmenities(f.id)
+      : runtime.allPoints.filter(
+          (item) =>
+            ["transport", "equipment", "neighborhood"].includes(
+              groupFor(item),
+            ) &&
+            distanceMeters(f.geometry.coordinates, item.geometry.coordinates) <=
+              state.radiusMeters,
+        );
+  const count = (group) =>
+    amenities.filter((item) => groupFor(item) === group).length;
+  const method =
+    surface?.method === "sum_distinct"
+      ? " · cumul de lots distincts"
+      : surface?.method === "maximum"
+        ? " · maximum, sans doublon"
+        : "";
+  return `<div class="building-card"><h3 class="popup-title">${escapeHTML(p.address || p.name)}</h3><section class="building-surfaces">${row(rental ? "Surface annoncée à l’adresse" : "Surface", formatSurface(surface?.value_m2))}${detail ? `<p class="building-surface-detail">${escapeHTML(detail)}${escapeHTML(method)}</p>` : ""}</section><section class="building-amenities">${row(`Aménités dans le rayon de ${radiusText()}`, `${amenities.length} recensées`)}<p class="building-amenity-detail">${count("transport")} transports · ${count("equipment")} équipements<br>${count("neighborhood")} commerces et services<br><span>À vol d’oiseau</span></p></section></div>`;
 }
 export function popup(f) {
   const p = f.properties;
-  if (p.kind === "rentalOffice")
-    return `<div class="popup-tag">ANNONCES · BUREAUXLOCAUX · ${escapeHTML(p.retrieved_at.split("-").reverse().join("/"))}</div><h3 class="popup-title">${escapeHTML(p.name)}</h3><div class="popup-address">${escapeHTML(p.address)}</div>${markerColorControl(f)}${row("Annonces à cette adresse", String(p.listings.length))}${row("Surface retenue pour le filtre", formatSurface(p.surface?.value_m2))}<p class="popup-notice rental-surface-note">${escapeHTML(p.surface?.note || "Surface non renseignée.")}</p><p class="popup-notice">Point BAN au numéro. L’entrée et l’immeuble exacts, la disponibilité et la surface réellement libre restent à confirmer. Plusieurs annonces peuvent désigner les mêmes lots.</p>${p.listings.map((listing) => `<div class="rental-listing">${row("Surface annoncée", listing.surface_display)}${row("Loyer affiché", listing.rent_display)}${row("Type", listing.type === "coworking" ? "Coworking" : "Bureau")}${listing.address_note ? `<small>${escapeHTML(listing.address_note)}</small>` : ""}<a class="popup-link" href="${escapeHTML(listing.url)}" target="_blank" rel="noopener noreferrer">Annonce ${escapeHTML(listing.id)} ↗</a></div>`).join("")}<small>Relevé ponctuel du ${escapeHTML(p.retrieved_at.split("-").reverse().join("/"))} · sans suivi automatique. Les loyers sont repris tels qu’affichés, sans contrôle des charges ni de la TVA.</small>`;
+  if (["office", "rentalOffice"].includes(p.kind)) return buildingPopup(f);
   if (p.kind === "transport")
-    return `<div class="station-card"><strong class="station-card-name">${escapeHTML(p.name)}</strong><div class="station-card-services">${serviceBadges(stationServices(p))}${isSncfStation(p) ? '<img class="station-card-sncf" src="https://upload.wikimedia.org/wikipedia/fr/a/a1/Logo_SNCF_%282011%29.svg" alt="SNCF" width="63" height="32" referrerpolicy="no-referrer">' : ""}</div><small>Rayon de 500 m à vol d’oiseau depuis le point IDFM. Recliquez sur cette gare pour retirer son cercle.</small>${markerColorControl(f)}</div>`;
+    return `<div class="station-card"><strong class="station-card-name">${escapeHTML(p.name)}</strong><div class="station-card-services">${serviceBadges(stationServices(p))}${isSncfStation(p) ? '<img class="station-card-sncf" src="https://upload.wikimedia.org/wikipedia/fr/a/a1/Logo_SNCF_%282011%29.svg" alt="SNCF" width="63" height="32" referrerpolicy="no-referrer">' : ""}</div><small>Rayon de 500 m à vol d’oiseau depuis le point IDFM. Recliquez sur cette gare pour retirer son cercle.</small></div>`;
   let body = `<div class="popup-tag">${escapeHTML(typeLabels[p.kind])}</div><h3 class="popup-title">${escapeHTML(p.name)}</h3><div class="popup-address">${escapeHTML(p.address || p.lines?.join(" · ") || "")}</div>`;
-  if (p.kind === "office") {
-    body += row("Statut", "Adresse ciblée · vacance non vérifiée");
-    body += row(
-      `Aménités dans le rayon de ${radiusText()}`,
-      `${nearbyAmenities(f.id).length} recensées`,
-    );
-    body += markerColorControl(f);
-    body += officeScreeningNote(p);
-    if (p.address_note)
-      body += `<p class="popup-notice">${escapeHTML(p.address_note)}</p>`;
-    body += `<p class="popup-notice">Les aménités recensées sont filtrées à ${radiusText()} autour du point d’adresse BAN. L’occupation et la disponibilité de l’immeuble ne sont pas établies.</p>`;
-  } else {
-    body += row("Catégorie", p.category || p.lines?.join(" · "));
-    body += markerColorControl(f);
-  }
+  body += row("Catégorie", p.category || p.lines?.join(" · "));
   if (p.market_days) body += row("Jours de marché", p.market_days);
   if (
     [

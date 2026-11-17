@@ -21,7 +21,6 @@ import {
 } from "./popups.js";
 import { featureIcon } from "./markers.js";
 import { buildControls } from "./controls.js";
-import { bindMarkerColorControls } from "./marker-colors.js";
 import { buildSources } from "./sources.js";
 import { updateLayers, updateZoneLabels } from "./layers.js";
 export async function start() {
@@ -290,7 +289,14 @@ export async function start() {
               autoPan: false,
             }
           : framedPopup
-            ? { autoPan: false }
+            ? {
+                autoPan: false,
+                className: ["office", "rentalOffice"].includes(
+                  f.properties.kind,
+                )
+                  ? "building-card-popup"
+                  : "",
+              }
             : {},
       );
       if (framedPopup) marker.on("popupopen", () => frameOfficePopup(marker));
@@ -306,7 +312,6 @@ export async function start() {
     }
     setupMarkerZoom();
     buildControls();
-    bindMarkerColorControls();
     buildSources();
     updateLayers();
     runtime.map.on("zoomend", updateZoneLabels);

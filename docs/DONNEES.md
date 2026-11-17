@@ -71,3 +71,9 @@ Les téléchargements distinguent l’extrait OSM initial et la revue factuelle.
 ## Rayons des hubs de transport · 17 novembre 2026
 
 La couche utilise exclusivement les six points IDFM déjà présents dans `public/data/transport.geojson`, sans nouvelle collecte ni déplacement. `src/main.js` construit à chaque chargement un cercle Leaflet de rayon fixe 500 m pour chaque coordonnée source. Les licences, dates et couverture sont celles de l’entrée transport dans `sources.json` : Suresnes et 500 m autour des limites communales. « Hubs » désigne ici ces gares et stations recensées, sans nouvelle qualification d’intermodalité. Ce sont des distances à vol d’oiseau, pas des itinéraires, durées de marche ou périmètres réglementaires. Les fichiers sources et leurs empreintes sont conservés.
+
+## Fiches compactes · 17 novembre 2026
+
+Les surfaces des fiches ciblées sont reprises des locations uniquement sur égalité non vide de `ban_id`. Elles restent des surfaces annoncées à l’adresse, et non des surfaces totales certifiées d’immeuble. À défaut de correspondance, « Non renseignée » est affiché. Les locations conservent le calcul de référence maximum/cumul documenté plus haut. Le détail des offres distinctes reste condensé sans addition implicite.
+
+Pour les locations, les aménités sont les points revus des groupes transports, équipements et quartier, situés à une distance sphérique inférieure ou égale au rayon choisi. Les immeubles ciblés conservent leurs scénarios pré-calculés. Masquer une couche ou appliquer un filtre de surface n’altère pas les décomptes. Les listes d’annonces et leurs liens demeurent dans les données téléchargeables et les sources ; les fiches ne montrent plus loyers, statuts, développements méthodologiques ou réglages de couleurs.
