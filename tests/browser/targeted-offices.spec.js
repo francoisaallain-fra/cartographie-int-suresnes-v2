@@ -113,7 +113,9 @@ test("mobile address addition remains within viewport", async ({ page }) => {
     ),
   ).toBe(true);
   await page.locator("#office-heading").scrollIntoViewIfNeeded();
-  await page.screenshot({ path: "/private/tmp/suresnes-targeted-mobile.png" });
+  await page.screenshot({
+    path: test.info().outputPath("suresnes-targeted-mobile.png"),
+  });
 });
 test("storage errors are explicit and additions remain usable in session", async ({
   page,
@@ -129,5 +131,7 @@ test("storage errors are explicit and additions remain usable in session", async
   );
   expect((await diag(page)).pointIds).toContain(customId);
   await page.locator("#office-heading").scrollIntoViewIfNeeded();
-  await page.screenshot({ path: "/private/tmp/suresnes-targeted-desktop.png" });
+  await page.screenshot({
+    path: test.info().outputPath("suresnes-targeted-desktop.png"),
+  });
 });
