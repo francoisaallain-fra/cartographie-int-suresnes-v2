@@ -1,3 +1,4 @@
+import { popup } from "./popups.js";
 import { $, escapeHTML, svg } from "./presentation.js";
 import { layerOpacity, runtime, state } from "./state.js";
 import { radiusText } from "./radius.js";
@@ -24,6 +25,9 @@ export function buildControls() {
     state.radiusMeters = Number(e.target.value);
     $("radius-range-value").textContent = radiusText();
     e.target.setAttribute("aria-valuetext", radiusText());
+    const openRental = runtime.data["rental-offices"].features.find((feature) =>
+      runtime.markers.get(feature.id).isPopupOpen(),
+    );
     if (state.selected) {
       const marker = runtime.markers.get(state.selected);
       const wasOpen = marker.isPopupOpen();
@@ -31,10 +35,18 @@ export function buildControls() {
       updateLayers();
       if (wasOpen) marker.openPopup();
     }
+    if (openRental) {
+      const marker = runtime.markers.get(openRental.id);
+      marker.setPopupContent(popup(openRental));
+      marker.openPopup();
+    }
   });
   $("radius-range").addEventListener("change", () => {
     if (state.selected) {
-      const marker = runtime.markers.get(state.selected);
+      const openFeature = runtime.allPoints.find((feature) =>
+        runtime.markers.get(feature.id).isPopupOpen(),
+      );
+      const marker = runtime.markers.get(openFeature?.id || state.selected);
       const wasOpen = marker.isPopupOpen();
       if (!wasOpen) runtime.map.closePopup();
       runtime.map.stop();

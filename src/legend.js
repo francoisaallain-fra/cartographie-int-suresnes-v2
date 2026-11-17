@@ -5,7 +5,7 @@ import { escapeHTML, svg } from "./presentation.js";
 import { markerInk, markerType, markerTypeColor } from "./marker-colors.js";
 export const hiddenCategories = new Set();
 const officeLegend = () =>
-  `<p class="transport-scope"><span class="office-screening-swatch" data-marker-type="office" style="background:${markerTypeColor("office")}" aria-hidden="true"></span>Immeubles ciblés : couleur initiale violette, personnalisable dans les fiches. La proximité d’une gare et la zone de maintien ne changent pas leur couleur.</p>`;
+  `<p class="transport-scope"><span class="office-screening-swatch" data-marker-type="office" style="background:${markerTypeColor("office")}" aria-hidden="true"></span>Immeubles ciblés : couleur initiale violette. La proximité d’une gare et la zone de maintien ne changent pas leur couleur.</p>`;
 export function categoryKey(p) {
   const a = markerAppearance(p);
   return p.kind === "transport" ? a.icon : a.variant;

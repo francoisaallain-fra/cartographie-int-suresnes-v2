@@ -153,7 +153,7 @@ test("all 75 radius scenarios preserve the visible points", async ({
         ).length;
       await expect(page.locator(".leaflet-popup-content")).toHaveCount(1);
       const rows = page.locator(".leaflet-popup-content .popup-row");
-      await expect(rows.first()).toContainText("Statut");
+      await expect(rows.first()).toContainText("Surface");
       await expect(rows.nth(1)).toHaveText(
         `Aménités dans le rayon de ${distance === 1000 ? "1 km" : `${distance} m`}${expectedAmenityCount} recensées`,
       );
@@ -302,25 +302,17 @@ test("rental listings have their own layer and linked popup", async ({
   await page.locator('[data-layer-id="rentalOffices"] .layer-expand').click();
   await page.locator(".rental-address-list summary").click();
   await page.locator("[data-rental-id]").first().click();
-  await expect(page.locator(".leaflet-popup-content")).toContainText(
-    /BUREAUXLOCAUX/i,
+  const card = page.locator(".building-card");
+  await expect(card).toHaveCount(1);
+  await expect(card.locator(".popup-title")).toHaveText(
+    rentalOffices[0].properties.address,
   );
-  await expect(page.locator(".leaflet-popup-content")).toContainText(
-    "Loyer affiché",
-  );
-  await expect(page.locator(".leaflet-popup-content")).not.toContainText(
-    "Repérage vert",
-  );
-  await expect(page.locator(".leaflet-popup-content")).toContainText(
-    "03/11/2026",
-  );
-  await expect(
-    page.locator(
-      ".leaflet-popup-content a[href*='bureauxlocaux.com/annonce/']",
-    ),
-  ).toHaveCount(1);
+  await expect(card).toContainText("350 m²");
+  await expect(card).toContainText("Aménités dans le rayon de 500 m");
+  await expect(card).not.toContainText(/Loyer|Statut|BUREAUXLOCAUX|Couleur/);
+  await expect(card.locator("a, input, button")).toHaveCount(0);
 });
-test("refreshed rentals expose the new addresses and all four new listings", async ({
+test("rental cards show the reviewed areas at the correct address", async ({
   page,
 }) => {
   await page.locator('[data-layer-id="rentalOffices"] .layer-expand').click();
@@ -328,23 +320,21 @@ test("refreshed rentals expose the new addresses and all four new listings", asy
     "27 annonces · 19 adresses",
   );
   await page.locator(".rental-address-list summary").click();
-  for (const [address, ids] of [
-    ["30 Rue Pasteur", ["43005791", "36749298"]],
-    ["24 Rue des Moulineaux", ["38689730"]],
-    ["7 Rue Frédéric Clavel", ["38262835"]],
+  for (const address of [
+    "30 Rue Pasteur",
+    "24 Rue des Moulineaux",
+    "7 Rue Frédéric Clavel",
   ]) {
     await page.locator("[data-rental-id]").filter({ hasText: address }).click();
-    await expect(page.locator(".leaflet-popup:visible")).toHaveCount(1);
-    for (const id of ids)
-      await expect(
-        page.locator(
-          `.leaflet-popup:visible .leaflet-popup-content a[href$="--${id}"]`,
-        ),
-      ).toHaveCount(1);
-    if (address.startsWith("7 "))
-      await expect(
-        page.locator(".leaflet-popup:visible .leaflet-popup-content"),
-      ).toContainText("Plage de numéros : point représentatif au numéro 7");
+    const card = page.locator(".building-card");
+    await expect(card).toHaveCount(1);
+    await expect(card.locator(".popup-title")).toContainText(address);
+    await expect(card).toContainText("Surface annoncée à l’adresse");
+    await expect(card).toContainText("Aménités");
+    if (address === "30 Rue Pasteur") {
+      await expect(card).toContainText("1 387 m²");
+      await expect(card).toContainText("cumul de lots distincts");
+    }
   }
 });
 for (const viewport of [
@@ -466,146 +456,43 @@ test("office retention matches the city boundary stroke in fluorescent yellow", 
     page.locator('[data-layer-id="rentalOffices"] .layer-icon'),
   ).toHaveAttribute("style", /--color:#2376b7/);
 });
-test("PLU starts hidden and each office marker keeps its own chosen color", async ({
+test("PLU starts hidden and existing marker colors remain read-only", async ({
   page,
 }) => {
-  const plu = page.locator("#layer-plu");
-  await expect(plu).not.toBeChecked();
-  await plu.check();
-  await page.reload();
-  await expect(page.locator("#loading")).toBeHidden();
-  await expect(plu).not.toBeChecked();
-
-  await page.locator(".office-item").first().click();
-  await page
-    .locator(".leaflet-popup:visible input[data-marker-color]")
-    .fill("#88cc33");
-  await expect(
-    page.locator('.map-pin.office .pin-disc[style*="#88cc33"]'),
-  ).toHaveCount(1);
-  await expect(
-    page.locator('.map-pin.office .pin-disc[style*="#d72e83"]'),
-  ).toHaveCount(4);
-  await page.reload();
-  await expect(page.locator("#loading")).toBeHidden();
-  await expect(
-    page.locator('.map-pin.office .pin-disc[style*="#88cc33"]'),
-  ).toHaveCount(1);
-  await page.locator(".office-item").first().click();
-  await expect(
-    page.locator(".leaflet-popup:visible input[data-marker-color]"),
-  ).toHaveValue("#88cc33");
-  await page
-    .locator(".leaflet-popup:visible button[data-marker-color-reset]")
-    .click();
-  await expect(
-    page.locator('.map-pin.office .pin-disc[style*="#88cc33"]'),
-  ).toHaveCount(0);
-
-  await page.locator('[data-layer-id="rentalOffices"] .layer-expand').click();
-  await page.locator(".rental-address-list summary").click();
-  await page.locator("[data-rental-id]").first().click();
-  await expect(page.locator(".leaflet-popup:visible")).toHaveCount(1);
-  await page
-    .locator(".leaflet-popup:visible input[data-marker-color]")
-    .fill("#ffcc00");
-  await page.locator("[data-rental-id]").nth(1).click();
-  await expect(page.locator(".leaflet-popup:visible")).toHaveCount(1);
-  await page
-    .locator(".leaflet-popup:visible input[data-marker-color]")
-    .fill("#9933ff");
-  await expect(
-    page.locator('.map-pin.rentalOffice .pin-disc[style*="#ffcc00"]'),
-  ).toHaveCount(1);
-  await expect(
-    page.locator('.map-pin.rentalOffice .pin-disc[style*="#9933ff"]'),
-  ).toHaveCount(1);
-  await expect(
-    page.locator('.map-pin.rentalOffice .pin-disc[style*="#2376b7"]'),
-  ).toHaveCount(rentalOffices.length - 2);
-  await page.reload();
-  await expect(page.locator("#loading")).toBeHidden();
-  await expect(
-    page.locator('.map-pin.rentalOffice .pin-disc[style*="#ffcc00"]'),
-  ).toHaveCount(1);
-  await expect(
-    page.locator('.map-pin.rentalOffice .pin-disc[style*="#9933ff"]'),
-  ).toHaveCount(1);
-});
-test("previous rental colors reset once without erasing targeted-office colors", async ({
-  page,
-}) => {
+  await page.locator("#layer-plu").check();
   await page.evaluate(
     ({ officeId, rentalId }) => {
-      localStorage.removeItem("suresnes-v2-rental-marker-blue-reset-v1");
       localStorage.setItem(
         "suresnes-v2-office-marker-colors",
         JSON.stringify({
           [`office:${officeId}`]: "#8844ff",
-          [`rentalOffice:${rentalId}`]: "#007f3f",
-        }),
-      );
-    },
-    { officeId: offices[0].id, rentalId: rentalOffices[0].id },
-  );
-  await page.reload();
-  await expect(page.locator("#loading")).toBeHidden();
-  await expect(
-    page.locator('.map-pin.rentalOffice .pin-disc[style*="#2376b7"]'),
-  ).toHaveCount(rentalOffices.length);
-  await expect(
-    page.locator('.map-pin.office .pin-disc[style*="#8844ff"]'),
-  ).toHaveCount(1);
-  const saved = await page.evaluate(() =>
-    JSON.parse(localStorage.getItem("suresnes-v2-office-marker-colors")),
-  );
-  expect(Object.keys(saved)).toEqual([`office:${offices[0].id}`]);
-});
-test("targeted-office markers are solid purple and reset previous colors once", async ({
-  page,
-}) => {
-  await page.evaluate(
-    ({ officeId, rentalId }) => {
-      localStorage.removeItem("suresnes-v2-targeted-marker-purple-reset-v1");
-      localStorage.setItem(
-        "suresnes-v2-office-marker-colors",
-        JSON.stringify({
-          [`office:${officeId}`]: "#007f3f",
           [`rentalOffice:${rentalId}`]: "#9933ff",
         }),
       );
+      localStorage.setItem(
+        "suresnes-v2-marker-type-colors",
+        JSON.stringify({ supermarket: "#1122cc" }),
+      );
     },
     { officeId: offices[0].id, rentalId: rentalOffices[0].id },
   );
   await page.reload();
   await expect(page.locator("#loading")).toBeHidden();
-  const purple = page.locator(
-    '.map-pin.office .address-pin-shape path[fill="#d72e83"]',
-  );
-  await expect(purple).toHaveCount(5);
-  await expect(page.locator(".map-pin.office linearGradient")).toHaveCount(0);
+  await expect(page.locator("#layer-plu")).not.toBeChecked();
+  await expect(
+    page.locator('.map-pin.office .pin-disc[style*="#8844ff"]'),
+  ).toHaveCount(1);
   await expect(
     page.locator('.map-pin.rentalOffice .pin-disc[style*="#9933ff"]'),
   ).toHaveCount(1);
-  await page.locator(".office-item").nth(2).click();
-  const popup = page.locator(".leaflet-popup:visible");
-  await expect(popup).not.toContainText("Repérage vert");
-  await expect(popup.locator("input[data-marker-color]")).toHaveValue(
-    "#d72e83",
-  );
-  await popup.locator("input[data-marker-color]").fill("#88cc33");
-  await expect(purple).toHaveCount(4);
-  await page.reload();
-  await expect(page.locator("#loading")).toBeHidden();
+  await page.locator("#layer-neighborhood").check();
   await expect(
-    page.locator('.map-pin.office .address-pin-shape path[fill="#88cc33"]'),
-  ).toHaveCount(1);
-  await page.locator(".office-item").nth(2).click();
-  await page
-    .locator(".leaflet-popup:visible button[data-marker-color-reset]")
-    .click();
-  await expect(purple).toHaveCount(5);
-  await expect(page.locator(".map-pin.office linearGradient")).toHaveCount(0);
+    page.locator('.map-pin.supermarket .pin-disc[style*="#1122cc"]'),
+  ).toHaveCount(16);
+  await page.locator(".office-item").first().click();
+  await expect(
+    page.locator('.leaflet-popup input[type="color"], .marker-color-control'),
+  ).toHaveCount(0);
 });
 test("rename, reorder and collapse survive reload", async ({ page }) => {
   const card = page.locator('[data-layer-id="plu"]');
@@ -761,8 +648,8 @@ test("rental surface filter uses reviewed totals, inclusive bounds and independe
   await expect(page.locator(".leaflet-popup:visible")).toContainText(
     "1 387 m²",
   );
-  await expect(page.locator(".rental-surface-note:visible")).toContainText(
-    "Cumul de lots distincts",
+  await expect(page.locator(".building-surface-detail:visible")).toContainText(
+    "cumul de lots distincts",
   );
   await min.fill("2000");
   await expect(page.locator("#rental-surface-error")).toContainText(
@@ -862,69 +749,7 @@ test("office amenity count ignores hidden layers and does not reopen a closed po
   await expect(page.locator(".leaflet-popup-content")).toHaveCount(0);
 });
 
-test("individual and type colors include hidden supermarkets, persist and reset independently", async ({
-  page,
-}) => {
-  await page.locator("#layer-neighborhood").check();
-  await page.locator(".map-pin.supermarket").first().press("Enter");
-  const popup = page.locator(".leaflet-popup:visible");
-  await expect(popup).toHaveCount(1);
-  await popup.locator("[data-marker-color]").fill("#7700aa");
-  await expect(
-    page.locator('.map-pin.supermarket .pin-disc[style*="#7700aa"]'),
-  ).toHaveCount(1);
-  await expect(
-    page.locator('.map-pin.supermarket .pin-disc[style*="#ff9e9e"]'),
-  ).toHaveCount(15);
-  await page.locator(".office-item").first().click();
-  expect(await page.locator(".map-pin.supermarket").count()).toBeLessThan(16);
-  await page.locator(".map-pin.supermarket").first().press("Enter");
-  await expect(popup).toHaveCount(1);
-  await popup.locator('[data-marker-type-color="supermarket"]').fill("#1122cc");
-  await expect(popup.locator("[data-marker-color]")).toHaveValue("#1122cc");
-  await page.locator("#clear-radius").click();
-  await expect(
-    page.locator('.map-pin.supermarket .pin-disc[style*="#1122cc"]'),
-  ).toHaveCount(16);
-  await expect(
-    page.locator('.map-pin.grocery .pin-disc[style*="#ffc2c2"]'),
-  ).toHaveCount(6);
-  await page.locator('[data-layer-id="neighborhood"] .layer-expand').click();
-  await expect(page.locator('[data-marker-type="supermarket"]')).toHaveCSS(
-    "background-color",
-    "rgb(17, 34, 204)",
-  );
-  await page.locator(".map-pin.supermarket").first().press("Enter");
-  await expect(popup).toHaveCount(1);
-  await popup.locator("[data-marker-color]").fill("#ffaa00");
-  await page.reload();
-  await expect(page.locator("#loading")).toBeHidden();
-  await page.locator("#layer-neighborhood").check();
-  await expect(
-    page.locator('.map-pin.supermarket .pin-disc[style*="#1122cc"]'),
-  ).toHaveCount(15);
-  await expect(
-    page.locator('.map-pin.supermarket .pin-disc[style*="#ffaa00"]'),
-  ).toHaveCount(1);
-  await page.locator(".map-pin.supermarket").first().press("Enter");
-  await expect(popup).toHaveCount(1);
-  await expect(popup.locator("[data-marker-color]")).toHaveValue("#ffaa00");
-  await expect(popup.locator("[data-marker-type-color]")).toHaveValue(
-    "#1122cc",
-  );
-  await popup.locator("[data-marker-color-reset]").click();
-  await expect(
-    page.locator('.map-pin.supermarket .pin-disc[style*="#1122cc"]'),
-  ).toHaveCount(16);
-  await popup.locator("[data-marker-type-color-reset]").click();
-  await expect(
-    page.locator('.map-pin.supermarket .pin-disc[style*="#ff9e9e"]'),
-  ).toHaveCount(16);
-});
-
-test("every point category exposes both color choices and school types stay separate", async ({
-  page,
-}) => {
+test("no point category exposes marker color editing", async ({ page }) => {
   await page.locator("#layer-equipment").check();
   await page.locator("#layer-neighborhood").check();
   const types = [
@@ -951,35 +776,13 @@ test("every point category exposes both color choices and school types stay sepa
     await page.locator(`.map-pin.${type}`).first().press("Enter");
     const popup = page.locator(".leaflet-popup:visible");
     await expect(popup).toHaveCount(1);
-    await expect(popup.locator("[data-marker-color]")).toBeVisible();
     await expect(
-      popup.locator(`[data-marker-type-color="${type}"]`),
-    ).toBeVisible();
+      popup.locator(
+        'input[type="color"], [data-marker-color], [data-marker-type-color]',
+      ),
+    ).toHaveCount(0);
     await popup.locator(".leaflet-popup-close-button").click();
   }
-  await page.locator(".map-pin.college").first().press("Enter");
-  const popup = page.locator(".leaflet-popup:visible");
-  await expect(popup).toHaveCount(1);
-  await popup.locator("[data-marker-type-color]").fill("#884400");
-  await expect(
-    page.locator('.map-pin.college .pin-disc[style*="#884400"]'),
-  ).toHaveCount(await page.locator(".map-pin.college").count());
-  await expect(
-    page.locator(
-      '.map-pin.primary .pin-disc[style*="#884400"], .map-pin.lycee .pin-disc[style*="#884400"]',
-    ),
-  ).toHaveCount(0);
-  await page.locator(".map-pin.transport").first().press("Enter");
-  await expect(popup).toHaveCount(1);
-  const before = await page.evaluate(() => window.suresnesDiagnostics());
-  await popup.locator("[data-marker-type-color]").fill("#004466");
-  await expect(
-    page.locator('.map-pin.transport .pin-disc[style*="#004466"]'),
-  ).toHaveCount(6);
-  const after = await page.evaluate(() => window.suresnesDiagnostics());
-  expect(after.center).toEqual(before.center);
-  expect(after.zoom).toEqual(before.zoom);
-  expect(after.selectedStations).toEqual(before.selectedStations);
 });
 
 test("sidebar resizes, collapses and restores without breaking the map", async ({
@@ -1119,4 +922,57 @@ test("independent hub layer shows six exact 500 metre circles", async ({
   await expect(page.locator("#layer-transport")).not.toBeChecked();
   await page.locator("#layer-transportHubs").uncheck();
   await expect(page.locator(".hub-radius")).toHaveCount(0);
+});
+
+test("compact building cards show only address, areas and amenities on desktop and mobile", async ({
+  page,
+}) => {
+  for (const viewport of [
+    { width: 1440, height: 900 },
+    { width: 390, height: 844 },
+  ]) {
+    await page.setViewportSize(viewport);
+    await page.reload();
+    await expect(page.locator("#loading")).toBeHidden();
+    for (let i = 0; i < offices.length; i++) {
+      await page.locator(".office-item").nth(i).click();
+      const card = page.locator(".building-card");
+      await expect(card).toHaveCount(1);
+      await expect(card.locator(".popup-title")).toHaveText(
+        offices[i].properties.address,
+      );
+      await expect(card.locator("section")).toHaveCount(2);
+      await expect(card.locator(".building-amenities")).toContainText(
+        "recensées",
+      );
+      await expect(card).not.toContainText(/Statut|vacance|Couleur|Loyer/);
+      if ([2, 4].includes(i))
+        await expect(card).toContainText("Non renseignée");
+      if (i === 3) await expect(card).toContainText("1 387 m²");
+      const box = await page.locator(".building-card-popup").boundingBox();
+      expect(box.width).toBeLessThanOrEqual(265);
+      expect(box.height).toBeLessThan(260);
+    }
+  }
+});
+
+test("rental amenity counts follow the radius and ignore hidden amenity layers", async ({
+  page,
+}) => {
+  await page.locator(".map-pin.rentalOffice").first().press("Enter");
+  const total = page.locator(".building-amenities .popup-row");
+  const initial = await total.textContent();
+  await page.locator("#layer-transport").uncheck();
+  await page.locator(".map-pin.rentalOffice").first().press("Enter");
+  await expect(total).toHaveText(initial);
+  await page.locator("#radius-range").fill("1000");
+  await expect(total).toContainText("1 km");
+  const count = Number(
+    (await total.locator("strong").innerText()).split(" ")[0],
+  );
+  const original = Number(initial.match(/(\d+) recensées/)[1]);
+  expect(count).toBeGreaterThan(original);
+  await page.locator(".leaflet-popup-close-button").click();
+  await page.locator("#radius-range").fill("500");
+  await expect(page.locator(".leaflet-popup-content")).toHaveCount(0);
 });
