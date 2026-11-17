@@ -1,3 +1,4 @@
+import { setupOfficeControls } from "./office-controls.js";
 import { popup } from "./popups.js";
 import { $, escapeHTML, svg } from "./presentation.js";
 import { layerOpacity, runtime, state } from "./state.js";
@@ -8,7 +9,6 @@ import {
   frameOfficePopup,
   redrawRadius,
   scrollMapIntoViewOnMobile,
-  selectOffice,
   showCityView,
 } from "./selection.js";
 import { updateLayers } from "./layers.js";
@@ -146,21 +146,7 @@ export function buildControls() {
       updateLayers();
     }),
   );
-  $("office-list").innerHTML = runtime.data.offices.features
-    .map(
-      (f) =>
-        `<button class="office-item" data-id="${escapeHTML(f.id)}"><span class="office-number">${f.properties.number}</span><span>${escapeHTML(f.properties.name)}<small>Adresse BAN · vacance non vérifiée</small></span></button>`,
-    )
-    .join("");
-  document
-    .querySelectorAll(".office-item")
-    .forEach((el) =>
-      el.addEventListener("click", () =>
-        selectOffice(
-          runtime.data.offices.features.find((f) => f.id === el.dataset.id),
-        ),
-      ),
-    );
+  setupOfficeControls();
   $("clear-radius").addEventListener("click", showCityView);
   $("hide-all").addEventListener("click", () => {
     if (state.selected) clearSelection(false);
