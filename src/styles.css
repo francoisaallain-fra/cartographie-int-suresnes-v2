@@ -496,7 +496,7 @@ input:focus-visible {
   stroke-linejoin: round;
   stroke-linecap: round;
 }
-.map-pin:is(.office, .rentalOffice) .pin-disc {
+.map-pin.office .pin-disc {
   position: relative;
   width: 32px;
   height: 40px;
@@ -508,7 +508,7 @@ input:focus-visible {
   font-size: 13px;
   font-weight: 750;
 }
-.map-pin:is(.office, .rentalOffice) .address-pin-shape {
+.map-pin.office .address-pin-shape {
   display: block;
   width: 32px;
   height: 40px;
@@ -516,13 +516,10 @@ input:focus-visible {
   stroke: none;
   filter: drop-shadow(0 2px 2px #0005);
 }
-.map-pin:is(.office, .rentalOffice) .address-pin-shape path {
+.map-pin.office .address-pin-shape path {
   stroke: #e8f4ff;
   stroke-width: 2;
   stroke-linejoin: round;
-}
-.map-pin.rentalOffice .address-pin-shape path {
-  fill: var(--color);
 }
 .address-pin-label {
   position: absolute;
@@ -536,12 +533,6 @@ input:focus-visible {
 .rental-listing {
   border-top: 1px solid #d9e2e5;
   padding: 7px 0;
-}
-.rental-pin-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: #ffffff;
 }
 .rental-listing .popup-link {
   display: inline-block;
@@ -578,10 +569,10 @@ input:focus-visible {
   outline: 3px solid #ffe381;
   outline-offset: 2px;
 }
-.map-pin.selected:is(.office, .rentalOffice) .pin-disc {
+.map-pin.selected.office .pin-disc {
   outline: 0;
 }
-.map-pin.selected:is(.office, .rentalOffice) .address-pin-shape {
+.map-pin.selected.office .address-pin-shape {
   filter: drop-shadow(0 0 3px #ffe381) drop-shadow(0 2px 2px #0005);
 }
 .map-pin:hover {
@@ -1808,7 +1799,7 @@ button.legend-item[aria-pressed="false"] {
   transform: scale(var(--marker-scale, 1));
   transform-origin: 14px 14px;
 }
-.map-pin:is(.office, .rentalOffice) .marker-visual {
+.map-pin.office .marker-visual {
   width: 32px;
   height: 40px;
   transform-origin: 1px 39px;
@@ -1891,4 +1882,15 @@ button.legend-item[aria-pressed="false"] {
 }
 .building-amenity-detail span {
   font-size: 9px;
+}
+
+.map-pin.rentalOffice .pin-disc {
+  width: 24px;
+  height: 24px;
+  border-radius: 0;
+}
+.map-pin.rentalOffice .marker-visual {
+  width: 24px;
+  height: 24px;
+  transform-origin: 12px 12px;
 }

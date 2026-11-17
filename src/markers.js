@@ -87,6 +87,15 @@ export function serviceBadges(services) {
 }
 export function featureIcon(f) {
   const p = f.properties;
+  if (p.kind === "rentalOffice") {
+    return L.divIcon({
+      className: "map-pin rentalOffice",
+      html: `<div class="marker-visual"><div class="pin-disc" style="--color:${colors.rentalOffice};color:#ffffff"></div></div>`,
+      iconSize: [24, 24],
+      iconAnchor: [12, 12],
+      popupAnchor: [0, -12],
+    });
+  }
   if (p.kind === "transport") {
     return L.divIcon({
       className: "map-pin transport station-icon",
@@ -104,9 +113,9 @@ export function featureIcon(f) {
     a.color = markerColor(f);
     a.ink = markerInk(a.color);
   }
-  const addressPin = ["office", "rentalOffice"].includes(p.kind);
+  const addressPin = p.kind === "office";
   const markerBody = addressPin
-    ? `<div class="pin-disc" style="--color:${a.color};color:${a.ink}"><svg class="address-pin-shape" viewBox="0 0 32 40" aria-hidden="true"><path d="${addressPinPath}"${p.kind === "office" ? ` fill="${officePinFill(f)}"` : ""}/></svg><span class="address-pin-label">${p.kind === "office" ? p.number : '<span class="rental-pin-dot" aria-hidden="true"></span>'}</span></div>`
+    ? `<div class="pin-disc" style="--color:${a.color};color:${a.ink}"><svg class="address-pin-shape" viewBox="0 0 32 40" aria-hidden="true"><path d="${addressPinPath}"${p.kind === "office" ? ` fill="${officePinFill(f)}"` : ""}/></svg><span class="address-pin-label">${p.number}</span></div>`
     : `<div class="pin-disc" style="--color:${a.color};color:${a.ink}">${svg(a.icon)}</div>`;
   return L.divIcon({
     className: `map-pin ${p.kind} ${a.variant}${p.audit?.added ? " audit-added" : ""}${p.audit?.doubts?.length ? " audit-doubt" : ""}${state.selected === f.id ? " selected" : ""}`,

@@ -181,3 +181,9 @@ Contrôles locaux : analyse ESLint, format Prettier, 20 tests Node, build Vite e
 Les fiches des deux couches de bureaux sont limitées à l’adresse, aux surfaces annoncées connues et au décompte d’aménités. Vérifier le cumul de 1 387 m² au 30 rue Pasteur, la mention « Non renseignée » en l’absence de correspondance BAN, le suivi du rayon et l’indépendance des couches masquées. Sur bureau et mobile, le cadre doit rester inférieur à 265 pixels de large et à 260 pixels de haut pour les cinq adresses ciblées. Aucun des 18 types de pastilles ne doit proposer de réglage de couleur ; les préférences antérieures restent lues sans être modifiées. Les sections plus anciennes ci-dessus décrivent les comportements historiques, remplacés par cette recette.
 
 Validation locale : ESLint, format Prettier, 20 tests Node, build Vite et 24 parcours Playwright avec Chrome réussis (23 lors de la suite, puis le dernier après correction d’une comparaison textuelle du test). Inspection visuelle du cas 30 rue Pasteur : adresse, surface cumulée, détail des surfaces et aménités dans un cadre compact. Les données sources et leurs empreintes sont inchangées.
+
+## Carrés bleus des locations · 17 novembre 2026
+
+Les 19 marqueurs de bureaux à louer sont des carrés bleus unis `#2376b7` de 24 × 24 px au zoom nominal, avec contour blanc et centre ancré au point BAN. La réduction au zoom, les filtres, l’opacité et les fiches compactes restent actifs. Les anciennes couleurs individuelles ou collectives des locations ne modifient plus le bleu demandé ; les autres types conservent leurs préférences. La recette vérifie forme, couleur, dimensions, absence de pointe/numéro/point central et ouverture des fiches.
+
+Validation : ESLint, Prettier, 20 tests Node, build Vite et 24 tests Playwright avec Chrome réussis. Les carrés ont été contrôlés visuellement sur l’aperçu local.
