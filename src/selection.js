@@ -75,6 +75,7 @@ export function selectStation(feature) {
   runtime.markers.get(feature.id).openPopup();
 }
 export function selectOffice(f) {
+  if (state.hiddenOffices.has(f.id)) return;
   if (!state.selected)
     state.beforeSelection = {
       ...state.enabled,

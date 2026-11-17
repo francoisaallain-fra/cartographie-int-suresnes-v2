@@ -1,9 +1,15 @@
+import { buildRadiusScenario } from "./dynamic-radius.js";
 import { state, runtime, amenityGroups, groupFor } from "./state.js";
 export function radiusText() {
   return state.radiusMeters === 1000 ? "1 km" : state.radiusMeters + " m";
 }
 export function selectedRadius(id = state.selected) {
-  return runtime.data.radii.offices[id][state.radiusMeters];
+  const scenarios = (runtime.data.radii.offices[id] ??= {});
+  return (scenarios[state.radiusMeters] ??= buildRadiusScenario(
+    runtime.data.offices.features.find((feature) => feature.id === id),
+    state.radiusMeters,
+    runtime.data,
+  ));
 }
 /** Count the reviewed amenities, independently of display filters. */
 export function nearbyAmenities(id = state.selected) {

@@ -187,3 +187,11 @@ Validation locale : ESLint, format Prettier, 20 tests Node, build Vite et 24 par
 Les 19 marqueurs de bureaux à louer sont des carrés bleus unis `#2376b7` de 24 × 24 px au zoom nominal, avec contour blanc et centre ancré au point BAN. La réduction au zoom, les filtres, l’opacité et les fiches compactes restent actifs. Les anciennes couleurs individuelles ou collectives des locations ne modifient plus le bleu demandé ; les autres types conservent leurs préférences. La recette vérifie forme, couleur, dimensions, absence de pointe/numéro/point central et ouverture des fiches.
 
 Validation : ESLint, Prettier, 20 tests Node, build Vite et 24 tests Playwright avec Chrome réussis. Les carrés ont été contrôlés visuellement sur l’aperçu local.
+
+### Gestion des immeubles ciblés
+
+- Rechercher une adresse numérotée de Suresnes et choisir le résultat exact : une sixième adresse apparaît, avec sa fiche et son rayon réglable. Rechercher la même adresse : aucun doublon.
+- Recharger : l’ajout et les choix de visibilité restent présents dans le même navigateur. Aucun partage inter-appareils n’est attendu.
+- Désactiver une seule adresse : sa pastille disparaît et les autres restent présentes. Si elle était sélectionnée, son rayon est retiré. Masquer/réafficher la couche globale ne réactive pas cette adresse.
+- Vérifier les rayons 300 m, 500 m et 1 km autour d’un ajout, les routes/voies découpées et les aménités recensées. Tester une recherche sans résultat, une panne du service et un refus du stockage.
+- Vérifier les mêmes contrôles sur écran de 390 px sans débordement horizontal.

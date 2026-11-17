@@ -1894,3 +1894,68 @@ button.legend-item[aria-pressed="false"] {
   height: 24px;
   transform-origin: 12px 12px;
 }
+
+.office-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.office-row > input {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  accent-color: #2376b7;
+  cursor: pointer;
+}
+.office-item:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.office-search {
+  margin: 12px 0;
+}
+.office-search label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+.office-search-line {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.office-search-line input {
+  min-width: 120px;
+  flex: 1;
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #cbd5cf;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 12px;
+}
+.office-search-line .button {
+  padding: 8px;
+}
+#office-status:empty {
+  display: none;
+}
+#office-results {
+  display: grid;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.office-result {
+  text-align: left;
+  padding: 9px;
+  border: 1px solid #cbd5cf;
+  border-radius: 6px;
+  background: #f3f8f5;
+  color: #19392c;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+.office-result:hover {
+  background: #e1eee6;
+}

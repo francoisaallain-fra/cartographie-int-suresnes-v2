@@ -39,6 +39,7 @@ export function updateLayers() {
         marker.setIcon(featureIcon(f));
         marker.setPopupContent(popup(f));
         if (
+          !state.hiddenOffices.has(f.id) &&
           matchesRentalSurface(f, state.rentalSurface) &&
           (f.properties.kind === "transport"
             ? !hiddenCategories.has("stations")
@@ -86,11 +87,13 @@ export function updateLayers() {
       .join(
         "",
       )}${state.enabled.transport && runtime.roadLayers.length ? " · " + runtime.roadLayers.length + " axes" : ""}${state.enabled.transport && runtime.railLayers.length ? " · " + runtime.railLayers.length + " lignes" : ""}${state.selected ? " · aménités à " + radiusText() : ""}`;
-  document
-    .querySelectorAll(".office-item")
-    .forEach((el) =>
-      el.classList.toggle("active", el.dataset.id === state.selected),
-    );
+  document.querySelectorAll(".office-item").forEach((el) => {
+    el.classList.toggle("active", el.dataset.id === state.selected);
+    el.disabled = state.hiddenOffices.has(el.dataset.id);
+  });
+  document.querySelectorAll("[data-office-toggle]").forEach((el) => {
+    el.checked = !state.hiddenOffices.has(el.dataset.officeToggle);
+  });
   if (state.selected) {
     const nearby = nearbyAmenities();
     $("radius-count").textContent =

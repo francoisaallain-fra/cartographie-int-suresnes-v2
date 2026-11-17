@@ -6,20 +6,15 @@ import { groupFor, runtime, state } from "./state.js";
 import { setupMapRotation } from "./rotation.js";
 import { $, escapeHTML } from "./presentation.js";
 import { layerSpecs, mosColors, officeRetentionColors } from "./catalog.js";
-import {
-  frameOfficePopup,
-  handleMapClick,
-  selectOffice,
-  selectStation,
-} from "./selection.js";
+import { handleMapClick } from "./selection.js";
 import {
   mixedBuildingPopup,
   mosGroupPopup,
   mosOfficePopup,
   pluOfficeRetentionPopup,
-  popup,
 } from "./popups.js";
-import { featureIcon } from "./markers.js";
+import { addPointMarker } from "./point-markers.js";
+import { readTargetedOffices, readHiddenOffices } from "./targeted-offices.js";
 import { buildControls } from "./controls.js";
 import { buildSources } from "./sources.js";
 import { updateLayers, updateZoneLabels } from "./layers.js";
@@ -27,6 +22,10 @@ export async function start() {
   configureMapClickHandler(handleMapClick);
   try {
     runtime.data = await loadDatasets();
+    runtime.data.offices.features.push(
+      ...readTargetedOffices(localStorage, runtime.data.offices.features),
+    );
+    state.hiddenOffices = readHiddenOffices(localStorage);
     runtime.sources = runtime.data.sources;
     runtime.map = L.map("map", {
       zoomControl: false,
@@ -266,50 +265,7 @@ export async function start() {
       ...runtime.data.offices.features,
       ...runtime.data["rental-offices"].features,
     ];
-    for (const f of runtime.allPoints) {
-      const [x, y] = f.geometry.coordinates;
-      const framedPopup = f.properties.kind !== "transport";
-      const marker = L.marker([y, x], {
-        pane: "data-" + groupFor(f) + "-markers",
-        icon: featureIcon(f),
-        title: f.properties.kind === "transport" ? "" : f.properties.name,
-        alt: f.properties.name,
-        keyboard: true,
-        zIndexOffset:
-          f.properties.kind === "office"
-            ? 900
-            : f.properties.kind === "transport"
-              ? 1200
-              : 0,
-      }).bindPopup(
-        popup(f),
-        f.properties.kind === "transport"
-          ? {
-              className: "station-card-popup",
-              autoPan: false,
-            }
-          : framedPopup
-            ? {
-                autoPan: false,
-                className: ["office", "rentalOffice"].includes(
-                  f.properties.kind,
-                )
-                  ? "building-card-popup"
-                  : "",
-              }
-            : {},
-      );
-      if (framedPopup) marker.on("popupopen", () => frameOfficePopup(marker));
-      if (f.properties.kind === "office")
-        marker.on("click", () => selectOffice(f));
-      if (f.properties.kind === "transport")
-        marker.on("click", () => selectStation(f));
-      if (f.properties.kind === "transport")
-        marker.on("add", () =>
-          marker.getElement()?.setAttribute("aria-label", f.properties.name),
-        );
-      runtime.markers.set(f.id, marker);
-    }
+    for (const f of runtime.allPoints) addPointMarker(f);
     setupMarkerZoom();
     buildControls();
     buildSources();

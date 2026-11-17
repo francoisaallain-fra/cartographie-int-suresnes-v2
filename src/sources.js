@@ -72,7 +72,7 @@ export function buildSources() {
     [
       "Immeubles ciblés",
       "provided_addresses",
-      "5 adresses communiquées et géocodées au numéro dans Suresnes",
+      "5 adresses de référence ; ajouts personnels possibles par recherche IGN/BAN, enregistrés dans ce navigateur",
     ],
     [
       "Bureaux proposés à la location",
@@ -91,6 +91,19 @@ export function buildSources() {
     ["7 · Habitat collectif · Mos", "mosGroups", "314 emprises"],
     ["8 · Activités · Mos", "mosGroups", "64 emprises, dont 25 de bureaux"],
   );
+  runtime.sources.user_addresses = {
+    name: "IGN · Géoplateforme / Base Adresse Nationale",
+    url: "https://cartes.gouv.fr/aide/fr/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/geocodage/",
+    format: "Recherche au numéro · commune 92073",
+    license: "BAN · Licence Ouverte Etalab 2.0",
+    vintage: "Service consulté à chaque recherche",
+    note: "L’adresse saisie est transmise au géocodeur IGN. Le résultat choisi est enregistré localement ; il ne prouve ni emprise, ni surface, ni disponibilité. Les aménités restent celles de la carte.",
+  };
+  lines.push([
+    "Adresses ajoutées",
+    "user_addresses",
+    "Choix explicite de l’adresse ; doublons contrôlés par identifiant BAN",
+  ]);
   $("sources-table").innerHTML =
     "<table><thead><tr><th>Couche</th><th>Source & accès</th><th>Test & millésime</th></tr></thead><tbody>" +
     lines

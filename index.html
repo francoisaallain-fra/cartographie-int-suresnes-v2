@@ -116,11 +116,33 @@
           </p>
         </div>
         <section class="offices-section">
-          <h2>Les 5 adresses ciblées</h2>
+          <h2 id="office-heading">Les 5 adresses ciblées</h2>
+          <form id="office-search" class="office-search">
+            <label for="office-address">Ajouter une adresse à Suresnes</label>
+            <div class="office-search-line">
+              <input
+                id="office-address"
+                type="search"
+                required
+                minlength="3"
+                maxlength="180"
+                placeholder="Numéro et nom de rue"
+                autocomplete="street-address"
+              /><button class="button" type="submit">Rechercher</button>
+            </div>
+          </form>
+          <p
+            id="office-status"
+            class="note"
+            role="status"
+            aria-live="polite"
+          ></p>
+          <div id="office-results" aria-label="Adresses proposées"></div>
           <div id="office-list"></div>
           <p class="note">
-            Adresses communiquées les 28 octobre et 2 novembre 2026. Leur
-            vacance et leur disponibilité n’ont pas été vérifiées.
+            Ajouts et choix de visibilité enregistrés dans ce navigateur.
+            Recherche d’adresses : IGN / BAN. Les aménités restent limitées aux
+            données de la carte. Vacance et disponibilité non vérifiées.
           </p>
         </section>
         <p class="audit-map-key">

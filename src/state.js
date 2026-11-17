@@ -3,6 +3,7 @@ export const state = {
   radiusMeters: 500,
   rentalSurface: { min: null, max: null },
   selected: null,
+  hiddenOffices: new Set(),
   selectedStations: new Set(),
   enabled: {
     mosPavilion: true,

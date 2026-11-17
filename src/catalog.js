@@ -27,7 +27,7 @@ export const layerSpecs = [
   {
     id: "offices",
     label: "Immeubles ciblés",
-    sub: "5 adresses · vacance non vérifiée",
+    sub: "Adresses ciblées · vacance non vérifiée",
     icon: "office",
     color: colors.office,
   },
