@@ -266,27 +266,24 @@ test("rental listings have their own layer and linked popup", async ({
   await expect(toggle).toBeChecked();
   const marker = page.locator(".map-pin.rentalOffice");
   await expect(marker).toHaveCount(rentalOffices.length);
-  await expect(marker.locator(".address-pin-shape")).toHaveCount(
-    rentalOffices.length,
-  );
-  await expect(marker.locator(".rental-pin-dot")).toHaveCount(
-    rentalOffices.length,
-  );
-  await expect(marker.locator(".rental-pin-dot").first()).toHaveCSS(
+  await expect(
+    marker.locator("svg, .address-pin-label, .rental-pin-dot"),
+  ).toHaveCount(0);
+  await expect(marker.locator(".pin-disc").first()).toHaveCSS(
     "background-color",
-    "rgb(255, 255, 255)",
+    "rgb(35, 118, 183)",
   );
-  expect(await marker.locator(".address-pin-label").allTextContents()).toEqual(
-    Array(rentalOffices.length).fill(""),
+  await expect(marker.locator(".pin-disc").first()).toHaveCSS("width", "24px");
+  await expect(marker.locator(".pin-disc").first()).toHaveCSS("height", "24px");
+  await expect(marker.locator(".pin-disc").first()).toHaveCSS(
+    "border-radius",
+    "0px",
   );
+  await expect(marker.first()).toHaveCSS("margin-left", "-12px");
+  await expect(marker.first()).toHaveCSS("margin-top", "-12px");
   await expect(
     page.locator('.map-pin.rentalOffice .pin-disc[style*="#2376b7"]'),
   ).toHaveCount(rentalOffices.length);
-  await expect(marker.first()).toHaveCSS("margin-left", "-1px");
-  await expect(marker.first()).toHaveCSS("margin-top", "-39px");
-  await expect(
-    marker.first().locator(".address-pin-shape path"),
-  ).toHaveAttribute("d", /L1 39V9/);
   const targeted = page.locator(".map-pin.office");
   await expect(targeted).toHaveCount(5);
   await expect(targeted.locator(".address-pin-shape")).toHaveCount(5);
@@ -471,7 +468,7 @@ test("PLU starts hidden and existing marker colors remain read-only", async ({
       );
       localStorage.setItem(
         "suresnes-v2-marker-type-colors",
-        JSON.stringify({ supermarket: "#1122cc" }),
+        JSON.stringify({ supermarket: "#1122cc", rentalOffice: "#ff0000" }),
       );
     },
     { officeId: offices[0].id, rentalId: rentalOffices[0].id },
@@ -483,8 +480,8 @@ test("PLU starts hidden and existing marker colors remain read-only", async ({
     page.locator('.map-pin.office .pin-disc[style*="#8844ff"]'),
   ).toHaveCount(1);
   await expect(
-    page.locator('.map-pin.rentalOffice .pin-disc[style*="#9933ff"]'),
-  ).toHaveCount(1);
+    page.locator('.map-pin.rentalOffice .pin-disc[style*="#2376b7"]'),
+  ).toHaveCount(rentalOffices.length);
   await page.locator("#layer-neighborhood").check();
   await expect(
     page.locator('.map-pin.supermarket .pin-disc[style*="#1122cc"]'),

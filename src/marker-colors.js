@@ -64,9 +64,12 @@ const featureKey = (feature) => `${feature.properties.kind}:${feature.id}`;
 export const defaultMarkerColor = (feature) =>
   baseTypeColor(markerType(feature.properties));
 export const markerTypeColor = (type) =>
-  typeOverrides[type] || baseTypeColor(type);
+  type === "rentalOffice"
+    ? colors.rentalOffice
+    : typeOverrides[type] || baseTypeColor(type);
 export const hasTypeColor = (type) => Object.hasOwn(typeOverrides, type);
 export function markerColor(feature) {
+  if (feature.properties.kind === "rentalOffice") return colors.rentalOffice;
   return (
     overrides[featureKey(feature)] ||
     markerTypeColor(markerType(feature.properties))
