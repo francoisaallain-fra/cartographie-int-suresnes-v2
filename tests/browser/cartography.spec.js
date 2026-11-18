@@ -921,7 +921,7 @@ test("independent hub layer shows six exact 500 metre circles", async ({
   await expect(page.locator(".hub-radius")).toHaveCount(0);
 });
 
-test("compact building cards show only address, areas and amenities on desktop and mobile", async ({
+test("compact building cards show address, reviewed facade, areas and amenities on desktop and mobile", async ({
   page,
 }) => {
   for (const viewport of [
@@ -939,6 +939,12 @@ test("compact building cards show only address, areas and amenities on desktop a
         offices[i].properties.address,
       );
       await expect(card.locator("section")).toHaveCount(2);
+      await expect(card.locator(".building-facade")).toHaveCount(
+        [0, 1, 3].includes(i) ? 1 : 0,
+      );
+      await expect(card.locator(".building-photo-unavailable")).toHaveCount(
+        [2, 4].includes(i) ? 1 : 0,
+      );
       await expect(card.locator(".building-amenities")).toContainText(
         "recensées",
       );
@@ -948,7 +954,7 @@ test("compact building cards show only address, areas and amenities on desktop a
       if (i === 3) await expect(card).toContainText("1 387 m²");
       const box = await page.locator(".building-card-popup").boundingBox();
       expect(box.width).toBeLessThanOrEqual(265);
-      expect(box.height).toBeLessThan(260);
+      expect(box.height).toBeLessThan(410);
     }
   }
 });
@@ -972,4 +978,32 @@ test("rental amenity counts follow the radius and ignore hidden amenity layers",
   await page.locator(".leaflet-popup-close-button").click();
   await page.locator("#radius-range").fill("500");
   await expect(page.locator(".leaflet-popup-content")).toHaveCount(0);
+});
+
+test("targeted facade photos use exact addresses and fail without breaking the card", async ({
+  page,
+}) => {
+  await page.route("https://jll-global-gdim-res.cloudinary.com/**", (route) =>
+    route.abort(),
+  );
+  await page.locator(".office-item").first().click();
+  await expect(page.locator(".building-photo-fallback")).toBeVisible();
+  await expect(page.locator(".building-facade")).toBeHidden();
+  await expect(page.locator(".building-photo a")).toHaveAttribute(
+    "href",
+    "https://immobilier.jll.fr/location-bureaux/bureaux-a-louer-suresnes-92150-678486",
+  );
+  await expect(page.locator(".building-surfaces")).toBeVisible();
+  await page.locator(".office-item").nth(2).click();
+  await expect(page.locator(".building-card")).toHaveCount(1);
+  await expect(page.locator(".building-photo-unavailable")).toHaveText(
+    "Photo de façade non disponible.",
+  );
+  await expect(page.locator(".building-facade")).toHaveCount(0);
+  await page.locator("#clear-radius").click();
+  await page.locator(".map-pin.rentalOffice").first().press("Enter");
+  await expect(page.locator(".building-card")).toHaveCount(1);
+  await expect(
+    page.locator(".building-photo, .building-photo-unavailable"),
+  ).toHaveCount(0);
 });

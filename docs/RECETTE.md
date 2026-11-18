@@ -199,3 +199,7 @@ Validation : ESLint, Prettier, 20 tests Node, build Vite et 24 tests Playwright 
 ### Pastilles de location rondes · 18 novembre 2026
 
 Les 19 pastilles des bureaux à louer sont désormais des disques bleus de 20 px de diamètre au zoom nominal, au lieu de carrés de 24 px. Le contour blanc et le bleu `#2376b7` sont conservés. Vérifier le centre ancré au point BAN, la réduction au zoom et l’ouverture des fiches au clic et au clavier. Cette présentation remplace celle décrite dans la recette précédente des carrés.
+
+### Photos des immeubles ciblés
+
+Vérifier les trois façades référencées, les crédits cliquables et la mention d’absence aux deux autres adresses. Une location ne reçoit pas de photo. Tester une image distante en erreur : les surfaces et aménités restent lisibles, avec une mention d’indisponibilité. Les fiches restent contenues dans la carte sur ordinateur et mobile ; leur contenu défile si nécessaire.
