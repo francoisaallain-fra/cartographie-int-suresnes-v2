@@ -2052,3 +2052,40 @@ button.legend-item[aria-pressed="false"] {
 .photo-upload-status:empty {
   display: none;
 }
+
+.office-row .office-item {
+  flex: 1;
+  min-width: 0;
+}
+.office-row .office-item > span:last-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.office-remove {
+  flex: 0 0 28px;
+  width: 28px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background: transparent;
+  color: #93616b;
+  cursor: pointer;
+}
+.office-remove:hover {
+  background: #f9e9ed;
+  color: #a32443;
+}
+.office-remove:focus-visible {
+  outline: 2px solid #2376b7;
+  outline-offset: 2px;
+}
+#office-undo {
+  margin-top: 10px;
+  font-size: 10px;
+}
+#office-undo[hidden] {
+  display: none;
+}

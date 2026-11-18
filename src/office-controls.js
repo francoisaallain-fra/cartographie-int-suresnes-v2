@@ -6,21 +6,31 @@ import { addPointMarker } from "./point-markers.js";
 import {
   addressCandidate,
   toOffice,
-  saveTargetedOffices,
   hiddenOfficesKey,
   geocodingEndpoint,
 } from "./targeted-offices.js";
+
+import { saveOfficeList } from "./office-list-storage.js";
 
 const status = (message) => {
   $("office-status").textContent = message;
 };
 function renderOffices() {
   const offices = runtime.data.offices.features;
-  $("office-heading").textContent = `Les ${offices.length} adresses ciblées`;
+  offices.forEach((f, i) => {
+    f.properties.number = i + 1;
+  });
+  $("office-undo").hidden = runtime.deletedOffices.length === 0;
+  $("office-heading").textContent =
+    offices.length === 0
+      ? "Aucun immeuble ciblé"
+      : offices.length === 1
+        ? "1 adresse ciblée"
+        : `Les ${offices.length} adresses ciblées`;
   $("office-list").innerHTML = offices
     .map(
       (f) =>
-        `<div class="office-row"><input type="checkbox" data-office-toggle="${escapeHTML(f.id)}" aria-label="Afficher ${escapeHTML(f.properties.name)}" ${state.hiddenOffices.has(f.id) ? "" : "checked"}/><button class="office-item" data-id="${escapeHTML(f.id)}" ${state.hiddenOffices.has(f.id) ? "disabled" : ""}><span class="office-number">${f.properties.number}</span><span>${escapeHTML(f.properties.name)}<small>Adresse BAN · vacance non vérifiée</small></span></button></div>`,
+        `<div class="office-row"><input type="checkbox" data-office-toggle="${escapeHTML(f.id)}" aria-label="Afficher ${escapeHTML(f.properties.name)}" ${state.hiddenOffices.has(f.id) ? "" : "checked"}/><button class="office-item" data-id="${escapeHTML(f.id)}" ${state.hiddenOffices.has(f.id) ? "disabled" : ""}><span class="office-number">${f.properties.number}</span><span>${escapeHTML(f.properties.name)}<small>Adresse BAN · vacance non vérifiée</small></span></button><button type="button" class="office-remove" data-office-remove="${escapeHTML(f.id)}" aria-label="Supprimer ${escapeHTML(f.properties.name)}" title="Supprimer cet immeuble ciblé"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7M14 10v7"/></svg></button></div>`,
     )
     .join("");
 }
@@ -34,25 +44,43 @@ function addOffice(candidate) {
     return;
   }
   if (
+    !runtime.referenceOffices.some(
+      (f) => f.properties.ban_id === candidate.id,
+    ) &&
     runtime.data.offices.features.filter((f) => f.properties.custom).length >=
-    200
+      200
   ) {
     status("La limite de 200 adresses ajoutées est atteinte.");
     return;
   }
-  const feature = toOffice(candidate, runtime.data.offices.features.length + 1);
+  const feature =
+    runtime.referenceOffices.find(
+      (f) => f.properties.ban_id === candidate.id,
+    ) ||
+    runtime.deletedOffices.find(
+      ({ feature: f }) => f.properties.ban_id === candidate.id,
+    )?.feature ||
+    toOffice(candidate, runtime.data.offices.features.length + 1);
+  runtime.deletedOffices = runtime.deletedOffices.filter(
+    ({ feature: f }) => f.id !== feature.id,
+  );
   runtime.data.offices.features.push(feature);
   runtime.allPoints.push(feature);
   addPointMarker(feature);
   let saved = true;
   try {
-    saveTargetedOffices(localStorage, runtime.data.offices.features);
+    saveOfficeList(
+      localStorage,
+      runtime.data.offices.features,
+      runtime.deletedOffices,
+    );
   } catch {
     saved = false;
   }
   renderOffices();
   $("office-results").replaceChildren();
   $("office-address").value = "";
+  updateLayers();
   selectOffice(feature);
   status(
     saved
@@ -60,9 +88,76 @@ function addOffice(candidate) {
       : `${candidate.name} ajouté pour cette session seulement : enregistrement indisponible.`,
   );
 }
+function persistChange(features, removed) {
+  try {
+    saveOfficeList(localStorage, features, removed);
+    return true;
+  } catch {
+    status(
+      "Modification non enregistrée : stockage indisponible. La liste est conservée, réessayez.",
+    );
+    return false;
+  }
+}
+function removeOffice(id) {
+  const offices = runtime.data.offices.features;
+  const index = offices.findIndex((f) => f.id === id);
+  if (index < 0) return;
+  const feature = offices[index];
+  const features = offices.filter((f) => f.id !== id);
+  const removed = [...runtime.deletedOffices, { feature, index }].slice(-20);
+  if (!persistChange(features, removed)) return;
+  if (state.selected === id) clearSelection();
+  const marker = runtime.markers.get(id);
+  if (marker) {
+    runtime.groups.offices.removeLayer(marker);
+    marker.off().remove();
+    runtime.markers.delete(id);
+  }
+  runtime.allPoints = runtime.allPoints.filter((f) => f.id !== id);
+  runtime.data.offices.features = features;
+  runtime.deletedOffices = removed;
+  renderOffices();
+  updateLayers();
+  status(
+    `${feature.properties.name} supprimé. Vous pouvez annuler cette suppression.`,
+  );
+  $("office-undo").focus({ preventScroll: true });
+}
+function undoRemoval() {
+  const entry = runtime.deletedOffices.at(-1);
+  if (!entry) return;
+  const features = [...runtime.data.offices.features];
+  if (
+    entry.feature.properties.custom &&
+    features.filter((f) => f.properties.custom).length >= 200
+  ) {
+    status("La limite de 200 adresses ajoutées est atteinte.");
+    return;
+  }
+  features.splice(Math.min(entry.index, features.length), 0, entry.feature);
+  const removed = runtime.deletedOffices.slice(0, -1);
+  if (!persistChange(features, removed)) return;
+  runtime.data.offices.features = features;
+  runtime.deletedOffices = removed;
+  runtime.allPoints.push(entry.feature);
+  renderOffices();
+  addPointMarker(entry.feature);
+  updateLayers();
+  status(`${entry.feature.properties.name} rétabli.`);
+  $("office-list")
+    .querySelector(`[data-office-remove="${entry.feature.id}"]`)
+    .focus({ preventScroll: true });
+}
 export function setupOfficeControls() {
   renderOffices();
+  $("office-undo").addEventListener("click", undoRemoval);
   $("office-list").addEventListener("click", (event) => {
+    const remove = event.target.closest("[data-office-remove]");
+    if (remove) {
+      removeOffice(remove.dataset.officeRemove);
+      return;
+    }
     const button = event.target.closest(".office-item");
     if (button)
       selectOffice(

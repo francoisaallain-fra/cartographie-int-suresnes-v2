@@ -64,3 +64,7 @@ Le bord droit du panneau des couches se glisse pour régler sa largeur entre 240
 Les pastilles diminuent progressivement lors d’un zoom avant : taille nominale au zoom 15, environ 84 % au zoom 18 et 74 % au zoom 20 ; les points d’ancrage restent fixes.
 
 La couche « Hubs de transport · rayon 500 m », désactivée initialement, affiche les six cercles simultanément. Son interrupteur, son ordre, son repli et son opacité sont indépendants des transports et du rayon d’une adresse. Les cercles individuels sélectionnés par clic sur les gares restent disponibles lorsque cette couche est masquée.
+
+## Suppression des immeubles ciblés
+
+Chaque immeuble ciblé, initial ou ajouté, peut être supprimé avec la corbeille à droite de son adresse. « Annuler la dernière suppression » permet de rétablir successivement les 20 dernières suppressions, même après rechargement. Les modifications restent propres au navigateur ; les photos personnelles sont conservées pour permettre la restauration.

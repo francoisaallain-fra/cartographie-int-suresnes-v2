@@ -17,7 +17,8 @@ import {
   pluOfficeRetentionPopup,
 } from "./popups.js";
 import { addPointMarker } from "./point-markers.js";
-import { readTargetedOffices, readHiddenOffices } from "./targeted-offices.js";
+import { readHiddenOffices } from "./targeted-offices.js";
+import { readOfficeList } from "./office-list-storage.js";
 import { buildControls } from "./controls.js";
 import { buildSources } from "./sources.js";
 import { updateLayers, updateZoneLabels } from "./layers.js";
@@ -28,9 +29,13 @@ export async function start() {
   try {
     const [data] = await Promise.all([loadDatasets(), loadLocalOfficePhotos()]);
     runtime.data = data;
-    runtime.data.offices.features.push(
-      ...readTargetedOffices(localStorage, runtime.data.offices.features),
-    );
+    runtime.referenceOffices = [...runtime.data.offices.features];
+    const offices = readOfficeList(localStorage, runtime.referenceOffices);
+    runtime.data.offices.features = offices.features;
+    offices.features.forEach((f, i) => {
+      f.properties.number = i + 1;
+    });
+    runtime.deletedOffices = offices.removed;
     state.hiddenOffices = readHiddenOffices(localStorage);
     runtime.sources = runtime.data.sources;
     runtime.map = L.map("map", {
