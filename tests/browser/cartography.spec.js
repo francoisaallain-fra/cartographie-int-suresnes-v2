@@ -273,14 +273,14 @@ test("rental listings have their own layer and linked popup", async ({
     "background-color",
     "rgb(35, 118, 183)",
   );
-  await expect(marker.locator(".pin-disc").first()).toHaveCSS("width", "24px");
-  await expect(marker.locator(".pin-disc").first()).toHaveCSS("height", "24px");
+  await expect(marker.locator(".pin-disc").first()).toHaveCSS("width", "20px");
+  await expect(marker.locator(".pin-disc").first()).toHaveCSS("height", "20px");
   await expect(marker.locator(".pin-disc").first()).toHaveCSS(
     "border-radius",
-    "0px",
+    "50%",
   );
-  await expect(marker.first()).toHaveCSS("margin-left", "-12px");
-  await expect(marker.first()).toHaveCSS("margin-top", "-12px");
+  await expect(marker.first()).toHaveCSS("margin-left", "-10px");
+  await expect(marker.first()).toHaveCSS("margin-top", "-10px");
   await expect(
     page.locator('.map-pin.rentalOffice .pin-disc[style*="#2376b7"]'),
   ).toHaveCount(rentalOffices.length);
