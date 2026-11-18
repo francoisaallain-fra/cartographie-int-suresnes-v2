@@ -954,7 +954,7 @@ test("compact building cards show address, reviewed facade, areas and amenities 
       if (i === 3) await expect(card).toContainText("1 387 m²");
       const box = await page.locator(".building-card-popup").boundingBox();
       expect(box.width).toBeLessThanOrEqual(265);
-      expect(box.height).toBeLessThan(410);
+      expect(box.height).toBeLessThan(500);
     }
   }
 });

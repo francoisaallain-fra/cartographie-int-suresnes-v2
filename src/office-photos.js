@@ -1,3 +1,4 @@
+import { localOfficePhotos } from "./photo-storage.js";
 import { escapeHTML } from "./presentation.js";
 
 // Exact BAN matches, checked against the listing address and the actual image.
@@ -25,12 +26,18 @@ export const officePhotos = {
     checked: "2026-11-18",
   },
 };
+export const photoUploadStates = new Map();
 export function officePhoto(feature) {
   if (feature.properties.kind !== "office") return "";
-  const photo = officePhotos[feature.properties.ban_id];
-  if (!photo)
-    return '<p class="building-photo-unavailable">Photo de façade non disponible.</p>';
-  return `<figure class="building-photo"><div class="building-photo-frame"><img class="building-facade" src="${escapeHTML(photo.src)}" alt="Façade — ${escapeHTML(feature.properties.address)}" width="230" height="120" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="building-photo-fallback" hidden>Photo momentanément indisponible.</span></div><figcaption><a href="${escapeHTML(photo.source)}" target="_blank" rel="noopener noreferrer">Photo : ${escapeHTML(photo.credit)} ↗</a></figcaption></figure>`;
+  const id = feature.properties.ban_id;
+  const local = localOfficePhotos.get(id);
+  const photo = officePhotos[id];
+  const src = local || photo?.src;
+  const state = photoUploadStates.get(id) || {};
+  const visual = src
+    ? `<figure class="building-photo"><div class="building-photo-frame"><img class="building-facade" src="${escapeHTML(src)}" alt="Façade — ${escapeHTML(feature.properties.address)}" width="230" height="120" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="building-photo-fallback" hidden>Photo momentanément indisponible.</span></div><figcaption>${local ? "Photo personnelle" : `<a href="${escapeHTML(photo.source)}" target="_blank" rel="noopener noreferrer">Photo : ${escapeHTML(photo.credit)} ↗</a>`}</figcaption></figure>`
+    : '<p class="building-photo-unavailable">Photo de façade non disponible.</p>';
+  return `${visual}<div class="photo-upload-controls"><label class="photo-upload-button">${local ? "Remplacer la photo" : "Importer une photo"}<input type="file" accept="image/jpeg,image/png,image/webp" data-photo-upload="${escapeHTML(id)}" ${state.busy ? "disabled" : ""}></label>${local ? `<button type="button" class="photo-remove" data-photo-remove="${escapeHTML(id)}" ${state.busy ? "disabled" : ""}>Retirer ma photo</button>` : ""}<small>JPG, PNG, WebP · 15 Mo max.<br>Recadrage centré automatique · dans ce navigateur</small><p class="photo-upload-status" role="status" aria-live="polite">${escapeHTML(state.message || "")}</p></div>`;
 }
 export function setupOfficePhotoFallback() {
   document.addEventListener(

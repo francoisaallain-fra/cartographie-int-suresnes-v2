@@ -203,3 +203,7 @@ Les 19 pastilles des bureaux à louer sont désormais des disques bleus de 20 px
 ### Photos des immeubles ciblés
 
 Vérifier les trois façades référencées, les crédits cliquables et la mention d’absence aux deux autres adresses. Une location ne reçoit pas de photo. Tester une image distante en erreur : les surfaces et aménités restent lisibles, avec une mention d’indisponibilité. Les fiches restent contenues dans la carte sur ordinateur et mobile ; leur contenu défile si nécessaire.
+
+### Import de photos personnelles
+
+Importer une photo paysage puis portrait : même sortie 920 × 480 px et cadre 230 × 120 px, sans déformation. Recharger : la photo reste liée à la même adresse et ne modifie aucune autre fiche. Remplacer puis retirer : retour à la photo source ou à l’état sans photo. Tester format non accepté, fichier illisible et refus du stockage : aucune perte de la photo précédente. Vérifier également les contrôles sur mobile et sur une adresse ajoutée manuellement.

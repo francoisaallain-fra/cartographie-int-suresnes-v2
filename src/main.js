@@ -1,3 +1,5 @@
+import { loadLocalOfficePhotos } from "./photo-storage.js";
+import { setupPhotoUploads } from "./photo-upload.js";
 import { setupOfficePhotoFallback } from "./office-photos.js";
 import { setupSidebar } from "./sidebar.js";
 import { setupMarkerZoom } from "./marker-zoom.js";
@@ -21,9 +23,11 @@ import { buildSources } from "./sources.js";
 import { updateLayers, updateZoneLabels } from "./layers.js";
 export async function start() {
   setupOfficePhotoFallback();
+  setupPhotoUploads();
   configureMapClickHandler(handleMapClick);
   try {
-    runtime.data = await loadDatasets();
+    const [data] = await Promise.all([loadDatasets(), loadLocalOfficePhotos()]);
+    runtime.data = data;
     runtime.data.offices.features.push(
       ...readTargetedOffices(localStorage, runtime.data.offices.features),
     );
