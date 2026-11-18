@@ -1,3 +1,4 @@
+import { officePhoto } from "./office-photos.js";
 import { formatSurface, parseAdvertisedSurface } from "./rental-surfaces.js";
 import { escapeHTML, typeLabels } from "./presentation.js";
 import { isSncfStation, serviceBadges, stationServices } from "./markers.js";
@@ -50,7 +51,7 @@ export function buildingPopup(f) {
       : surface?.method === "maximum"
         ? " · maximum, sans doublon"
         : "";
-  return `<div class="building-card"><h3 class="popup-title">${escapeHTML(p.address || p.name)}</h3><section class="building-surfaces">${row(rental ? "Surface annoncée à l’adresse" : "Surface", formatSurface(surface?.value_m2))}${detail ? `<p class="building-surface-detail">${escapeHTML(detail)}${escapeHTML(method)}</p>` : ""}</section><section class="building-amenities">${row(`Aménités dans le rayon de ${radiusText()}`, `${amenities.length} recensées`)}<p class="building-amenity-detail">${count("transport")} transports · ${count("equipment")} équipements<br>${count("neighborhood")} commerces et services<br><span>À vol d’oiseau</span></p></section></div>`;
+  return `<div class="building-card"><h3 class="popup-title">${escapeHTML(p.address || p.name)}</h3>${officePhoto(f)}<section class="building-surfaces">${row(rental ? "Surface annoncée à l’adresse" : "Surface", formatSurface(surface?.value_m2))}${detail ? `<p class="building-surface-detail">${escapeHTML(detail)}${escapeHTML(method)}</p>` : ""}</section><section class="building-amenities">${row(`Aménités dans le rayon de ${radiusText()}`, `${amenities.length} recensées`)}<p class="building-amenity-detail">${count("transport")} transports · ${count("equipment")} équipements<br>${count("neighborhood")} commerces et services<br><span>À vol d’oiseau</span></p></section></div>`;
 }
 export function popup(f) {
   const p = f.properties;

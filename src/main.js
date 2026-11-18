@@ -1,3 +1,4 @@
+import { setupOfficePhotoFallback } from "./office-photos.js";
 import { setupSidebar } from "./sidebar.js";
 import { setupMarkerZoom } from "./marker-zoom.js";
 import { configureMapClickHandler } from "./map-events.js";
@@ -19,6 +20,7 @@ import { buildControls } from "./controls.js";
 import { buildSources } from "./sources.js";
 import { updateLayers, updateZoneLabels } from "./layers.js";
 export async function start() {
+  setupOfficePhotoFallback();
   configureMapClickHandler(handleMapClick);
   try {
     runtime.data = await loadDatasets();
