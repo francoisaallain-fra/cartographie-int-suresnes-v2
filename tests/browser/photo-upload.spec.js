@@ -64,6 +64,17 @@ test("landscape and portrait uploads normalize, persist per address and restore 
     /^blob:/,
   );
   await page
+    .getByRole("button", { name: "Supprimer 25 Quai Gallieni", exact: true })
+    .click();
+  await page.reload();
+  await expect(page.locator("#loading")).toBeHidden();
+  await page.locator("#office-undo").click();
+  await first.click();
+  await expect(page.locator(".building-facade")).toHaveAttribute(
+    "src",
+    /^blob:/,
+  );
+  await page
     .getByLabel("Remplacer la photo", { exact: true })
     .setInputFiles(await png(page, 600, 1600));
   await expect(page.locator(".photo-upload-status")).toHaveText(

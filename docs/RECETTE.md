@@ -207,3 +207,7 @@ Vérifier les trois façades référencées, les crédits cliquables et la menti
 ### Import de photos personnelles
 
 Importer une photo paysage puis portrait : même sortie 920 × 480 px et cadre 230 × 120 px, sans déformation. Recharger : la photo reste liée à la même adresse et ne modifie aucune autre fiche. Remplacer puis retirer : retour à la photo source ou à l’état sans photo. Tester format non accepté, fichier illisible et refus du stockage : aucune perte de la photo précédente. Vérifier également les contrôles sur mobile et sur une adresse ajoutée manuellement.
+
+## Suppression des immeubles ciblés
+
+Vérifier la corbeille pour les adresses initiales et ajoutées, y compris désactivées. Supprimer un immeuble sélectionné : fiche et rayon fermés, pastille retirée, locations inchangées. Recharger puis annuler : position, visibilité et photo conservées. Supprimer toute la liste : aucun retour automatique des cinq adresses au rechargement. Tester aussi un refus de stockage et les contrôles au clavier et sur mobile.

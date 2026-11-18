@@ -72,6 +72,8 @@ export const runtime = {
   stationRadiusLayers: new Map(),
   zoneLabels: [],
   allPoints: [],
+  referenceOffices: [],
+  deletedOffices: [],
   roadLayers: [],
   railLayers: [],
 };
