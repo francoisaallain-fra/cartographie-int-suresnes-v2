@@ -91,9 +91,9 @@ export function featureIcon(f) {
     return L.divIcon({
       className: "map-pin rentalOffice",
       html: `<div class="marker-visual"><div class="pin-disc" style="--color:${colors.rentalOffice};color:#ffffff"></div></div>`,
-      iconSize: [24, 24],
-      iconAnchor: [12, 12],
-      popupAnchor: [0, -12],
+      iconSize: [20, 20],
+      iconAnchor: [10, 10],
+      popupAnchor: [0, -10],
     });
   }
   if (p.kind === "transport") {

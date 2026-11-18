@@ -195,3 +195,7 @@ Validation : ESLint, Prettier, 20 tests Node, build Vite et 24 tests Playwright 
 - Désactiver une seule adresse : sa pastille disparaît et les autres restent présentes. Si elle était sélectionnée, son rayon est retiré. Masquer/réafficher la couche globale ne réactive pas cette adresse.
 - Vérifier les rayons 300 m, 500 m et 1 km autour d’un ajout, les routes/voies découpées et les aménités recensées. Tester une recherche sans résultat, une panne du service et un refus du stockage.
 - Vérifier les mêmes contrôles sur écran de 390 px sans débordement horizontal.
+
+### Pastilles de location rondes · 18 novembre 2026
+
+Les 19 pastilles des bureaux à louer sont désormais des disques bleus de 20 px de diamètre au zoom nominal, au lieu de carrés de 24 px. Le contour blanc et le bleu `#2376b7` sont conservés. Vérifier le centre ancré au point BAN, la réduction au zoom et l’ouverture des fiches au clic et au clavier. Cette présentation remplace celle décrite dans la recette précédente des carrés.
